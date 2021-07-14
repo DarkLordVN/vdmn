@@ -8,6 +8,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using PVS.AVPlayer;
 using PVS.MediaPlayer;
 
 #endregion
@@ -23,77 +24,82 @@ namespace PVSPlayerExample
     {
         #region Fields
 
-        private const int           START_AUDIO_DEVICE_ITEMS    = 1;
-        private const int           COPY_TIMER_INTERVAL         = 1500; // milliseconds
+        private const int START_AUDIO_DEVICE_ITEMS = 1;
+        private const int COPY_TIMER_INTERVAL = 1500; // milliseconds
 
 
         // Main Window
-        MainWindow                  _baseForm;
+        MainWindow _baseForm;
 
-        private double              _oldOpacity;
-        private Size                _formSize;
-        private bool                _shapeBorder;
-        private bool                _disposed;
+        private double _oldOpacity;
+        private Size _formSize;
+        private bool _shapeBorder;
+        private bool _disposed;
 
         // Players
-        private Player              _webcamPlayer;
-        private Player              _audioPlayer;
+        private PVS.MediaPlayer.Player _webcamPlayer;
+        private PVS.MediaPlayer.Player _audioPlayer;
 
         // Webcam
-        private WebcamDevice        _webcam;
-        private bool                _recording;
+        private WebcamDevice _webcam;
+        private bool _recording;
 
         // Webcam Formats
-        private WebcamFormat[]      _formatMenuItems;
-        private int                 _selectedFormat;            // menu index
+        private WebcamFormat[] _formatMenuItems;
+        private int _selectedFormat;            // menu index
 
         // Audio In
-        private AudioInputDevice[]  _audioInMenuItems;
-        private AudioInputDevice    _audioInDeviceSelected;
+        private AudioInputDevice[] _audioInMenuItems;
+        private AudioInputDevice _audioInDeviceSelected;
         // when audioplayer is stopped, the audio input menu is set to "None" in the MediaEnded eventhandler, don't do this with restart audioplayer
         // it's not caused by the player but by this sample code - and it's all right, but don't do it with a restart
-        private bool                _ignoreAudioInputMenu; // with restart of audioPlayer - don't reset menu in MediaEnded eventhandler
+        private bool _ignoreAudioInputMenu; // with restart of audioPlayer - don't reset menu in MediaEnded eventhandler
 
         // Audio Out
-        private AudioDevice[]       _audioOutMenuItems;
-        private AudioDevice         _audioOutDeviceSelected;
-        private bool                _volumeRedDial;
-        private bool                _dontSetVolumeDial;
+        private AudioDevice[] _audioOutMenuItems;
+        private AudioDevice _audioOutDeviceSelected;
+        private bool _volumeRedDial;
+        private bool _dontSetVolumeDial;
 
         // Display Clones
-        private List<CloneWindow>   _cloneWindows;
-        private int                 _cloneCount;
+        private List<CloneWindow> _cloneWindows;
+        private int _cloneCount;
 
         // Screen Copy
-        private string              _picturesFolder;
-        private bool                _copyMessageOn;
-        private Timer               _copyTimer;
+        private string _picturesFolder;
+        private bool _copyMessageOn;
+        private Timer _copyTimer;
 
         // Automatic Screen Copy
-        private Timer               _autoCopyTimer;
-        private int                 _autoCopyInterval;
+        private Timer _autoCopyTimer;
+        private int _autoCopyInterval;
 
         // Modeless Dialogs
-        private VideoColorDialog    _webcamColorDialog;
-        private WebcamDialog        _webcamPropertiesDialog;
+        private VideoColorDialog _webcamColorDialog;
+        private WebcamDialog _webcamPropertiesDialog;
         internal VideoOverlayDialog _videoOverlayDialog;
 
         // Display Overlays
-        private bool                _copyOverlayOn;
-        private WebcamCopyOverlay   _copyOverlay;
-        private bool                _zoomOverlayOn;
-        private ZoomSelectOverlay   _zoomOverlay;
-        private bool                _scribbleOverlayOn;
-        private ScribbleOverlay     _scribbleOverlay;
+        private bool _copyOverlayOn;
+        private WebcamCopyOverlay _copyOverlay;
+        private bool _zoomOverlayOn;
+        private ZoomSelectOverlay _zoomOverlay;
+        private bool _scribbleOverlayOn;
+        private ScribbleOverlay _scribbleOverlay;
 
         // Video Overlay
-        internal Bitmap             _videoOverlay;
-        internal string             _videoOverlayFileName;
-        internal ImagePlacement     _videoOverlayPlacement          = ImagePlacement.Stretch;
-        internal Color              _videoOverlayTransparency       = Color.Empty;
-        internal int                _videoOverlayMenuSelection      = 0; // transparency menu selection
-        internal float              _videoOverlayOpacity            = 1;
+        internal Bitmap _videoOverlay;
+        internal string _videoOverlayFileName;
+        internal ImagePlacement _videoOverlayPlacement = ImagePlacement.Stretch;
+        internal Color _videoOverlayTransparency = Color.Empty;
+        internal int _videoOverlayMenuSelection = 0; // transparency menu selection
+        internal float _videoOverlayOpacity = 1;
 
+        // Recorder
+        private Recorder _soundRecorder;
+
+        private string _pathFile;
+        private int _indexAudio = 0;
         #endregion
 
 
@@ -104,43 +110,43 @@ namespace PVSPlayerExample
             InitializeComponent();
             _baseForm = baseForm;
             _webcam = webcam;
-            
+
             ((ToolStripDropDownMenu)screenCopyMenuItem.DropDown).ShowImageMargin = false;
             ((ToolStripDropDownMenu)displayCloneMenuItem.DropDown).ShowImageMargin = false;
             ((ToolStripDropDownMenu)recorderMenuItem.DropDown).ShowImageMargin = false;
 
-            _webcamPlayer = new Player(webcamDisplay)
-			{
-				SleepDisabled = true,
-				PlayUnblock = true
-			};
-			_webcamPlayer.Display.DragEnabled   = true;
+            _webcamPlayer = new PVS.MediaPlayer.Player(webcamDisplay)
+            {
+                SleepDisabled = true,
+                PlayUnblock = true
+            };
+            _webcamPlayer.Display.DragEnabled = true;
             _webcamPlayer.CursorHide.Add(this);
 
             // custom display shape
-            GraphicsPath path   = new GraphicsPath();
-            Font font           = new Font("Webdings", 128);
+            GraphicsPath path = new GraphicsPath();
+            Font font = new Font("Webdings", 128);
             path.AddString("¸", font.FontFamily, 0, 128, new Point(0, 0), null);
             _webcamPlayer.Display.CustomShape = path;
             font.Dispose();
             path.Dispose();
 
-			_audioPlayer = new Player
-			{
-				PlayUnblock = true
-			};
-			//_audioPlayer.Network.LowLatency     = true;
+            _audioPlayer = new PVS.MediaPlayer.Player
+            {
+                PlayUnblock = true
+            };
+            //_audioPlayer.Network.LowLatency     = true;
 
             _cloneWindows = new List<CloneWindow>(8);
             _webcamPlayer.DisplayClones.ShowOverlay = false;
 
             _picturesFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures), webcam.Name);
 
-			_copyTimer = new Timer
-			{
-				Interval = COPY_TIMER_INTERVAL
-			};
-			_copyTimer.Tick     += CopyTimer_Tick;
+            _copyTimer = new Timer
+            {
+                Interval = COPY_TIMER_INTERVAL
+            };
+            _copyTimer.Tick += CopyTimer_Tick;
 
             _copyOverlay = new WebcamCopyOverlay();
 
@@ -150,7 +156,7 @@ namespace PVSPlayerExample
             Opacity = 0;
         }
 
-		private void Webcam_Window_Shown(object sender, System.EventArgs e)
+        private void Webcam_Window_Shown(object sender, System.EventArgs e)
         {
             if (_webcam == null)
             {
@@ -205,7 +211,7 @@ namespace PVSPlayerExample
         {
             switch (keyData)
             {
-                case Keys.Control | Keys.C: 
+                case Keys.Control | Keys.C:
                 case Keys.F3: // Screencopy to clipboard
                     copyToClipboardMenuItem.PerformClick();
                     break;
@@ -332,12 +338,12 @@ namespace PVSPlayerExample
 
                     if (_copyTimer != null) _copyTimer.Dispose();
 
-                    _webcam             = null;
-                    _formatMenuItems    = null;
+                    _webcam = null;
+                    _formatMenuItems = null;
 
-                    if (_videoOverlay   != null) _videoOverlay.Dispose();
+                    if (_videoOverlay != null) _videoOverlay.Dispose();
 
-                    if (components      != null) components.Dispose();
+                    if (components != null) components.Dispose();
                 }
             }
             base.Dispose(disposing);
@@ -348,9 +354,9 @@ namespace PVSPlayerExample
         #region Players Event Handlers
 
         // to detect webcam disconnect
-        private void WebcamPlayer_MediaEnded(object sender, EndedEventArgs e)
-        {            
-            if (e.StopReason == StopReason.Error) SetWebcamWindowError(_webcamPlayer.GetErrorString(e.ErrorCode));
+        private void WebcamPlayer_MediaEnded(object sender, PVS.MediaPlayer.EndedEventArgs e)
+        {
+            if (e.StopReason == PVS.MediaPlayer.StopReason.Error) SetWebcamWindowError(_webcamPlayer.GetErrorString(e.ErrorCode));
             else SetWebcamWindowError("Stopped");
         }
 
@@ -359,22 +365,22 @@ namespace PVSPlayerExample
             MainWindow.UnCheckMenuItems(displayModeMenuItem.DropDown, 0, 0);
             switch (_webcamPlayer.Display.Mode)
             {
-                case DisplayMode.ZoomCenter:
+                case PVS.MediaPlayer.DisplayMode.ZoomCenter:
                     zoomMenuItem.Checked = true;
                     displayModeMenuItem.Checked = false;
                     break;
 
-                case DisplayMode.CoverCenter:
+                case PVS.MediaPlayer.DisplayMode.CoverCenter:
                     coverMenuItem.Checked = true;
                     displayModeMenuItem.Checked = true;
                     break;
 
-                case DisplayMode.Stretch:
+                case PVS.MediaPlayer.DisplayMode.Stretch:
                     stretchMenuItem.Checked = true;
                     displayModeMenuItem.Checked = true;
                     break;
 
-                case DisplayMode.Center:
+                case PVS.MediaPlayer.DisplayMode.Center:
                     centerMenuItem.Checked = true;
                     displayModeMenuItem.Checked = true;
                     break;
@@ -393,7 +399,7 @@ namespace PVSPlayerExample
             _recording = true;
         }
 
-        private void AudioPlayer_MediaEnded(object sender, EndedEventArgs e)
+        private void AudioPlayer_MediaEnded(object sender, PVS.MediaPlayer.EndedEventArgs e)
         {
             if (!_ignoreAudioInputMenu)
             {
@@ -641,6 +647,7 @@ namespace PVSPlayerExample
                 {
                     if (_audioInDeviceSelected != null && _audioInMenuItems[i].Id == _audioInDeviceSelected.Id)
                     {
+                        _indexAudio = i;
                         ((ToolStripMenuItem)audioInputMenu.Items[i]).Checked = true;
                         _audioInDeviceSelected = _audioInMenuItems[i];
                         audioInputButton.Text = audioInputMenu.Items[i].Text; //  _audioInDeviceSelected.Name;
@@ -795,25 +802,25 @@ namespace PVSPlayerExample
         private void ZoomMenuItem_Click(object sender, EventArgs e)
         {
             // menu handled by eventhandler
-            _webcamPlayer.Display.Mode = DisplayMode.ZoomCenter;
+            _webcamPlayer.Display.Mode = PVS.MediaPlayer.DisplayMode.ZoomCenter;
         }
 
         private void CoverMenuItem_Click(object sender, EventArgs e)
         {
             // menu handled by eventhandler
-            _webcamPlayer.Display.Mode = DisplayMode.CoverCenter;
+            _webcamPlayer.Display.Mode = PVS.MediaPlayer.DisplayMode.CoverCenter;
         }
 
         private void StretchMenuItem_Click(object sender, EventArgs e)
         {
             // menu handled by eventhandler
-            _webcamPlayer.Display.Mode = DisplayMode.Stretch;
+            _webcamPlayer.Display.Mode = PVS.MediaPlayer.DisplayMode.Stretch;
         }
 
         private void CenterMenuItem_Click(object sender, EventArgs e)
         {
             // menu handled by eventhandler
-            _webcamPlayer.Display.Mode = DisplayMode.Center;
+            _webcamPlayer.Display.Mode = PVS.MediaPlayer.DisplayMode.Center;
         }
 
         #endregion
@@ -822,74 +829,74 @@ namespace PVSPlayerExample
 
         private void ArrowDownMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.ArrowDown, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.ArrowDown, (ToolStripMenuItem)sender);
         }
 
         private void ArrowLeftMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.ArrowLeft, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.ArrowLeft, (ToolStripMenuItem)sender);
         }
 
         private void ArrowRightMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.ArrowRight, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.ArrowRight, (ToolStripMenuItem)sender);
         }
 
         private void ArrowUpMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.ArrowUp, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.ArrowUp, (ToolStripMenuItem)sender);
         }
 
         private void CircleMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.Circle, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.Circle, (ToolStripMenuItem)sender);
         }
 
         private void CustomMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.Custom, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.Custom, (ToolStripMenuItem)sender);
         }
 
         private void FrameMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.Frame, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.Frame, (ToolStripMenuItem)sender);
         }
 
         private void HeartMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.Heart, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.Heart, (ToolStripMenuItem)sender);
         }
 
         private void OvalMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.Oval, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.Oval, (ToolStripMenuItem)sender);
         }
 
         private void RectangleMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.Rectangle, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.Rectangle, (ToolStripMenuItem)sender);
         }
 
         private void RoundedMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.Rounded, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.Rounded, (ToolStripMenuItem)sender);
         }
 
         private void StarMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.Star, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.Star, (ToolStripMenuItem)sender);
         }
 
         private void NormalShapeMenuItem_Click(object sender, EventArgs e)
         {
-            SetDisplayShape(DisplayShape.Normal, (ToolStripMenuItem)sender);
+            SetDisplayShape(PVS.MediaPlayer.DisplayShape.Normal, (ToolStripMenuItem)sender);
         }
 
-        private void SetDisplayShape(DisplayShape shape, ToolStripMenuItem menuItem)
+        private void SetDisplayShape(PVS.MediaPlayer.DisplayShape shape, ToolStripMenuItem menuItem)
         {
             if (_webcamPlayer.Display.Shape == shape)
             {
-                shape = DisplayShape.Normal;
+                shape = PVS.MediaPlayer.DisplayShape.Normal;
                 menuItem = normalShapeMenuItem;
             }
 
@@ -897,14 +904,14 @@ namespace PVSPlayerExample
             {
                 MainWindow.UnCheckMenuItems(displayShapeMenuItem.DropDown, 0, 0);
                 menuItem.Checked = true;
-                displayShapeMenuItem.Checked = shape != DisplayShape.Normal;
+                displayShapeMenuItem.Checked = shape != PVS.MediaPlayer.DisplayShape.Normal;
 
                 // see also "FullScreenMenuItem_Click" below
-                if (shape == DisplayShape.Normal)
+                if (shape == PVS.MediaPlayer.DisplayShape.Normal)
                 {
                     // restore window
                     panel1.Visible = true;
-                    _webcamPlayer.Display.Shape = DisplayShape.Normal;
+                    _webcamPlayer.Display.Shape = PVS.MediaPlayer.DisplayShape.Normal;
                     if (_shapeBorder && !_webcamPlayer.FullScreen)
                     {
                         FormBorderStyle = FormBorderStyle.Sizable;
@@ -938,11 +945,11 @@ namespace PVSPlayerExample
         private void AddDisplayCloneMenuItem_Click(object sender, EventArgs e)
         {
             string cloneTitle = "#" + (++_cloneCount).ToString("00") + ": " + Text;
-			CloneWindow clone = new CloneWindow(null, _webcamPlayer, cloneTitle)
-			{
-				Text = cloneTitle
-			};
-			_cloneWindows.Add(clone);
+            CloneWindow clone = new CloneWindow(null, _webcamPlayer, cloneTitle)
+            {
+                Text = cloneTitle
+            };
+            _cloneWindows.Add(clone);
             _webcamPlayer.DisplayClones.Add(clone);
             clone.Show();
         }
@@ -1092,8 +1099,8 @@ namespace PVSPlayerExample
             }
         }
 
-		private void WebcamColorDialog_FormClosed(object sender, FormClosedEventArgs e)
-		{
+        private void WebcamColorDialog_FormClosed(object sender, FormClosedEventArgs e)
+        {
             _webcamColorDialog = null;
         }
 
@@ -1133,7 +1140,7 @@ namespace PVSPlayerExample
                 {
                     _webcamPropertiesDialog = new WebcamDialog(_webcamPlayer);
                     MainWindow.CenterDialog(this, _webcamPropertiesDialog);
-					_webcamPropertiesDialog.FormClosed += WebcamPropertiesDialog_FormClosed;
+                    _webcamPropertiesDialog.FormClosed += WebcamPropertiesDialog_FormClosed;
                     _webcamPropertiesDialog.Show(this);
                 }
                 else
@@ -1144,16 +1151,16 @@ namespace PVSPlayerExample
             }
         }
 
-		private void WebcamPropertiesDialog_FormClosed(object sender, FormClosedEventArgs e)
-		{
+        private void WebcamPropertiesDialog_FormClosed(object sender, FormClosedEventArgs e)
+        {
             _webcamPropertiesDialog = null;
         }
 
-		#endregion
+        #endregion
 
-		#region Screen Copy
+        #region Screen Copy
 
-		private void CopyToClipboardMenuItem_Click(object sender, EventArgs e)
+        private void CopyToClipboardMenuItem_Click(object sender, EventArgs e)
         {
             if (_scribbleOverlayOn)
             {
@@ -1223,7 +1230,18 @@ namespace PVSPlayerExample
 
         private void StartRecordingMenuItem_Click(object sender, EventArgs e)
         {
-            if (!_recording) _webcamPlayer.Webcam.RecorderStart();
+            if (!_recording)
+            {
+                getFileName();
+                _webcamPlayer.Webcam.RecorderStart(_pathFile + ".mp4");
+                //Xu ly luu file audio
+                // Create recorder with eventhandlers:
+                _soundRecorder = new Recorder();
+                var index = 0;
+                _soundRecorder.InputDevice.Index = _indexAudio; // set system default input device (if any)
+                _soundRecorder.Record();
+                if (_soundRecorder.LastError) _soundRecorder.Stop();
+            }
         }
 
         private void StopRecordingMenuItem_Click(object sender, EventArgs e)
@@ -1239,6 +1257,8 @@ namespace PVSPlayerExample
                 _webcamPlayer.Webcam.RecorderStop();
                 recorderMenuItem.Checked = false;
                 _recording = false;
+                //Xu ly stop audio
+                _soundRecorder.StopAndSave(_pathFile + ".wav", false);
             }
         }
 
@@ -1478,9 +1498,16 @@ namespace PVSPlayerExample
             Close();
         }
 
-		#endregion
+        #endregion
 
-		#endregion
+        #endregion
 
-	}
+        private void getFileName()
+        {
+            string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "username");
+            Directory.CreateDirectory(folder);
+            _pathFile = Path.Combine(folder, string.Format("Record{0:yyyyMMddHHmmss}", DateTime.Now));
+            
+        }
+    }
 }

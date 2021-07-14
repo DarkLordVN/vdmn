@@ -1,0 +1,3233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PVS.AVPlayer</name>
+    </assembly>
+    <members>
+        <member name="T:PVS.AVPlayer.Player">
+            <summary>
+            Represents a media player that can be used to play media files using Microsoft Windows built-in Media Control Interface (MCI).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.CursorHide">
+            <summary>
+            Provides access to the cursor hide settings of the player (e.g. Player.CursorHide.Add).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.#ctor">
+            <summary>
+            Initializes a new instance of the PVS.AVPlayer.Player class (creates a new media player).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Initializes a new instance of the PVS.AVPlayer.Player class (creates a new media player).
+            </summary>
+            <param name="display">The form or control that is used to display video and overlays.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.#ctor(System.Windows.Forms.Control,System.Windows.Forms.Form)">
+            <summary>
+            Initializes a new instance of the PVS.AVPlayer.Player class (creates a new media player).
+            </summary>
+            <param name="display">The form or control that is used to display video and overlays.</param>
+            <param name="overlay">The form that is used as display overlay.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Dispose">
+            <summary>
+            Remove the player and clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Dispose(System.Boolean)">
+            <summary>
+            Remove the player and clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Finalize">
+            <summary>
+            Remove the player and clean up any resources being used.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Version">
+            <summary>
+            Gets the version number of the PVS.AVPlayer library.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.VersionString">
+            <summary>
+            Gets the version string of the PVS.AVPlayer library.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Play(System.String)">
+            <summary>
+            Plays media.
+            </summary>
+            <param name="fileName">The path and file name of the media to play.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Play(System.String,System.Boolean)">
+            <summary>
+            Plays media.
+            </summary>
+            <param name="fileName">The path and file name of the media to play.</param>
+            <param name="repeat">A value indicating whether to repeat playback when the media has finished playing.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Play(System.String,System.Windows.Forms.Control)">
+            <summary>
+            Plays media.
+            </summary>
+            <param name="fileName">The path and file name of the media to play.</param>
+            <param name="display">The form or control to use for displaying the video of the media.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Play(System.String,System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            Plays media.
+            </summary>
+            <param name="fileName">The path and file name of the media to play.</param>
+            <param name="display">The form or control to use for displaying the video of the media.</param>
+            <param name="repeat">A value indicating whether to repeat playback when the media has finished playing.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Play(System.String,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Plays media.
+            </summary>
+            <param name="fileName">The path and file name of the media to play.</param>
+            <param name="startPosition">The playback start position of the media.</param>
+            <param name="stopPosition">The playback stop position of the media (TimeSpan.Zero or 00:00:00 = natural end of the media).</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Play(System.String,System.TimeSpan,System.TimeSpan,System.Boolean)">
+            <summary>
+            Plays media.
+            </summary>
+            <param name="fileName">The path and file name of the media to play.</param>
+            <param name="startPosition">The playback start position of the media.</param>
+            <param name="stopPosition">The playback stop position of the media (TimeSpan.Zero or 00:00:00 = natural end of the media).</param>
+            <param name="repeat">A value indicating whether to repeat playback when the media has finished playing.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Play(System.String,System.Windows.Forms.Control,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Plays media.
+            </summary>
+            <param name="fileName">The path and file name of the media to play.</param>
+            <param name="display">The form or control to use for displaying the video of the media.</param>
+            <param name="startPosition">The playback start position of the media.</param>
+            <param name="stopPosition">The playback stop position of the media (TimeSpan.Zero or 00:00:00 = natural end of the media).</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Play(System.String,System.Windows.Forms.Control,System.TimeSpan,System.TimeSpan,System.Boolean)">
+            <summary>
+            Plays media.
+            </summary>
+            <param name="fileName">The path and file name of the media to play.</param>
+            <param name="display">The form or control to use for displaying the video of the media.</param>
+            <param name="startPosition">The playback start position of the media.</param>
+            <param name="stopPosition">The playback stop position of the media (TimeSpan.Zero or 00:00:00 = natural end of the media).</param>
+            <param name="repeat">A value indicating whether to repeat playback when the media has finished playing.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayResource(System.String,System.Byte[])">
+            <summary>
+            Plays an embedded media resource by saving the resource as a file in the system's temporary folder. The file is deleted afterwards.
+            </summary>
+            <param name="fileName">The file name for the temporary file of the specified embedded media resource to play.</param>
+            <param name="resource">The embedded media resource (e.g. Properties.Resources.MyMedia) to save as a file in the system's temporary folder.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayResource(System.String,System.Byte[],System.Boolean)">
+            <summary>
+            Plays an embedded media resource by saving the resource as a file in the system's temporary folder. The file is deleted afterwards.
+            </summary>
+            <param name="fileName">The file name for the temporary file of the specified embedded media resource to play.</param>
+            <param name="resource">The embedded media resource (e.g. Properties.Resources.MyMedia) to save as a file in the system's temporary folder.</param>
+            <param name="repeat">A value indicating whether to repeat playback when the media has finished playing.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayResource(System.String,System.Byte[],System.Windows.Forms.Control)">
+            <summary>
+            Plays an embedded media resource by saving the resource as a file in the system's temporary folder. The file is deleted afterwards.
+            </summary>
+            <param name="fileName">The file name for the temporary file of the specified embedded media resource to play.</param>
+            <param name="resource">The embedded media resource (e.g. Properties.Resources.MyMedia) to save as a file in the system's temporary folder.</param>
+            <param name="display">The form or control to use for displaying the video of the media.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayResource(System.String,System.Byte[],System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            Plays an embedded media resource by saving the resource as a file in the system's temporary folder. The file is deleted afterwards.
+            </summary>
+            <param name="fileName">The file name for the temporary file of the specified embedded media resource to play.</param>
+            <param name="resource">The embedded media resource (e.g. Properties.Resources.MyMedia) to save as a file in the system's temporary folder.</param>
+            <param name="display">The form or control to use for displaying the video of the media.</param>
+            <param name="repeat">A value indicating whether to repeat playback when the media has finished playing.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayResource(System.String,System.Byte[],System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Plays an embedded media resource by saving the resource as a file in the system's temporary folder. The file is deleted afterwards.
+            </summary>
+            <param name="fileName">The file name for the temporary file of the specified embedded media resource to play.</param>
+            <param name="resource">The embedded media resource (e.g. Properties.Resources.MyMedia) to save as a file in the system's temporary folder.</param>
+            <param name="startPosition">The playback start position of the media.</param>
+            <param name="stopPosition">The playback stop position of the media (TimeSpan.Zero or 00:00:00 = natural end of the media).</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayResource(System.String,System.Byte[],System.TimeSpan,System.TimeSpan,System.Boolean)">
+            <summary>
+            Plays an embedded media resource by saving the resource as a file in the system's temporary folder. The file is deleted afterwards.
+            </summary>
+            <param name="fileName">The file name for the temporary file of the specified embedded media resource to play.</param>
+            <param name="resource">The embedded media resource (e.g. Properties.Resources.MyMedia) to save as a file in the system's temporary folder.</param>
+            <param name="startPosition">The playback start position of the media.</param>
+            <param name="stopPosition">The playback stop position of the media (TimeSpan.Zero or 00:00:00 = natural end of the media).</param>
+            <param name="repeat">A value indicating whether to repeat playback when the media has finished playing.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayResource(System.String,System.Byte[],System.Windows.Forms.Control,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Plays an embedded media resource by saving the resource as a file in the system's temporary folder. The file is deleted afterwards.
+            </summary>
+            <param name="fileName">The file name for the temporary file of the specified embedded media resource to play.</param>
+            <param name="resource">The embedded media resource (e.g. Properties.Resources.MyMedia) to save as a file in the system's temporary folder.</param>
+            <param name="display">The form or control to use for displaying the video of the media.</param>
+            <param name="startPosition">The playback start position of the media.</param>
+            <param name="stopPosition">The playback stop position of the media (TimeSpan.Zero or 00:00:00 = natural end of the media).</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayResource(System.String,System.Byte[],System.Windows.Forms.Control,System.TimeSpan,System.TimeSpan,System.Boolean)">
+            <summary>
+            Plays an embedded media resource by saving the resource as a file in the system's temporary folder. The file is deleted afterwards.
+            </summary>
+            <param name="fileName">The file name for the temporary file of the specified embedded media resource to play.</param>
+            <param name="resource">The embedded media resource (e.g. Properties.Resources.MyMedia) to save as a file in the system's temporary folder.</param>
+            <param name="display">The form or control to use for displaying the video of the media.</param>
+            <param name="startPosition">The playback start position of the media.</param>
+            <param name="stopPosition">The playback stop position of the media (TimeSpan.Zero or 00:00:00 = natural end of the media).</param>
+            <param name="repeat">A value indicating whether to repeat playback when the media has finished playing.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Pause">
+            <summary>
+            Activates the pause mode of the player (pauses media playback).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Resume">
+            <summary>
+            Deactivates the pause mode of the player (resumes paused media).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayPrevious">
+            <summary>
+            Requests to play previous media (raises the Player.Events.MediaPreviousRequested event).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.PlayNext">
+            <summary>
+            Requests to play next media (raises the Player.Events.MediaNextRequested event).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Stop">
+            <summary>
+            Stops media playback.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.Reset">
+            <summary>
+            Stops media playback and resets the display mode, audio and start/end positions settings of the player to their default values.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Playing">
+            <summary>
+            Gets a value indicating whether media is playing (includes paused media).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Paused">
+            <summary>
+            Gets or sets a value indicating whether the pause mode of the player is activated.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Position">
+            <summary>
+            Provides access to the playback position settings of the player (e.g. Player.Position.FromStart).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Speed">
+            <summary>
+            Gets or sets a value indicating the speed at which media is played by the player (normal speed = 1000).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Repeat">
+            <summary>
+            Gets or sets a value indicating whether to repeat media playback when finished.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Video">
+            <summary>
+            Provides access to the video settings of the player (e.g. Player.Video.Present).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Audio">
+            <summary>
+            Provides access to the audio settings of the player (e.g. Player.Audio.Volume).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Mute">
+            <summary>
+            Gets or sets a value indicating whether the audio output of the player is muted (default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Display">
+            <summary>
+            Provides access to the display settings of the player (e.g. Player.Display.Window).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.FullScreen">
+            <summary>
+            Gets or sets a value indicating whether the fullscreen mode of the player is activated (default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.FullScreenMode">
+            <summary>
+            Gets or sets the fullscreen display mode of the player (default: FullScreenMode.Display).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Overlay">
+            <summary>
+            Provides access to the display overlay settings of the player (e.g. Player.Overlay.Window).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.ScreenCopy">
+            <summary>
+            Provides access to the screen copy settings of the player (e.g. Player.ScreenCopy.ToImage).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.HasAudio">
+            <summary>
+            Gets a value indicating whether the playing media contains audio.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.HasAudioPeakLevels">
+            <summary>
+            Gets a value indicating whether the player has audio output peak level information.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.HasVideo">
+            <summary>
+            Gets a value indicating whether the playing media contains video.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.HasOverlay">
+            <summary>
+            Gets a value indicating whether the player has a display overlay.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.HasDisplayClones">
+            <summary>
+            Gets a value indicating whether the player has one or more display clones.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.HasSubtitles">
+            <summary>
+            Gets a value indicating whether the playing media has active subtitles.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.HasSignals">
+            <summary>
+            Gets a value indicating whether the playing media has active media signals.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.HasTaskbarProgress">
+            <summary>
+            Gets a value indicating whether the player has one or more taskbar progress indicators.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.HasDisplayShape">
+            <summary>
+            Gets a value indicating whether the player has a custom shaped display window.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.LastError">
+            <summary>
+            Gets a value indicating whether an error has occurred with the last player instruction.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.LastErrorCode">
+            <summary>
+            Gets the code of the last error of the player that has occurred (0 = no error).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.LastErrorString">
+            <summary>
+            Gets a description of the last error of the player that has occurred.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Player.GetErrorString(System.Int32)">
+            <summary>
+            Returns a description of the specified error code.
+            </summary>
+            <param name="errorCode">The error code whose description needs to be obtained.</param>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Name">
+            <summary>
+            Gets or sets the name of the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Media">
+            <summary>
+            Provides access to the media settings of the player (e.g. Player.Media.GetName).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.TaskbarProgress">
+            <summary>
+            Provides access to the taskbar progress indicator settings of the player (e.g. Player.TaskbarProgress.Add).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.PointTo">
+            <summary>
+            Provides access to the point conversion methods of the player (e.g. Player.PointTo.Display).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.TimerInterval">
+            <summary>
+            Gets or sets the interval of the events timer of the player in milliseconds (default: 100 ms).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.MciDevice">
+            <summary>
+            Provides access to the MCI device associated with the playing media (e.g. Player.MciDevice.Command).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.SystemPanels">
+            <summary>
+            Provides access to the system audio and display control panels (e.g. Player.SystemPanels.ShowAudioMixer).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.SleepDisabled">
+            <summary>
+            Gets or sets a value indicating whether the System Energy Saving setting (sleep mode) is disabled. The original system setting is restored when all players that disabled (set to true) this setting, have re-enabled (set to false) this setting. 
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Events">
+            <summary>
+            Provides access to the events of the player (e.g. Player.Events.MediaEnded).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Sliders">
+            <summary>
+            Provides access to the sliders (trackbars) settings of the player (e.g. Player.Sliders.Position).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.DisplayClones">
+            <summary>
+            Provides access to the display clones settings of the player (e.g. Player.DisplayClones.Add).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Signals">
+            <summary>
+            Provides access to the media signals settings of the player (e.g. Player.Signals.Enabled).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Player.Subtitles">
+            <summary>
+            Provides access to the subtitles settings of the player (e.g. Player.Subtitles.Enabled).
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.InfoLabel">
+            <summary>
+            Represents a pop-up window that displays a short text. One instance of this class is sufficient to use infolabels throughout an application, but if desired, more can be created.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.InfoLabel.#ctor">
+            <summary>
+            Initializes a new instance of the PVS.AVPlayer.InfoLabel class.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.InfoLabel.Dispose">
+            <summary>
+            Remove the infolabel and clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.InfoLabel.Show(System.String,System.Windows.Forms.Control,System.Drawing.Point)">
+            <summary>
+            Shows the infolabel with the specified text and settings.
+            </summary>
+            <param name="text">A string containing the new infolabel text.</param>
+            <param name="control">The form or control to display the infolabel for.</param>
+            <param name="location">The location, in pixels, relative to the upper-left corner of the associated control, to display the infolabel.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.InfoLabel.Show(System.String,System.Windows.Forms.Control,System.Drawing.Point,System.Int32)">
+            <summary>
+            Shows the infolabel with the specified text and settings.
+            </summary>
+            <param name="text">A string containing the new infolabel text.</param>
+            <param name="control">The form or control to display the infolabel for.</param>
+            <param name="location">The location, in pixels, relative to the upper-left corner of the associated control, to display the infolabel.</param>
+            <param name="duration">The duration, in milliseconds, to display the infolabel.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.InfoLabel.Show(System.String,System.Windows.Forms.Control,System.Drawing.Point,System.Drawing.ContentAlignment)">
+            <summary>
+            Shows the infolabel with the specified text and settings.
+            </summary>
+            <param name="text">A string containing the new infolabel text.</param>
+            <param name="control">The form or control to display the infolabel for.</param>
+            <param name="location">The location, in pixels, relative to the upper-left corner of the associated control, to display the infolabel.</param>
+            <param name="alignment">The duration, in milliseconds, to display the infolabel.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.InfoLabel.Show(System.String,System.Windows.Forms.Control,System.Drawing.Point,System.Drawing.ContentAlignment,System.Int32)">
+            <summary>
+            Shows the infolabel with the specified text and settings.
+            </summary>
+            <param name="text">A string containing the new infolabel text.</param>
+            <param name="control">The form or control to display the infolabel for.</param>
+            <param name="location">The location, in pixels, relative to the upper-left corner of the associated control, to display the infolabel.</param>
+            <param name="alignment">The alignment of the infolabel relative to the specified location.</param>
+            <param name="duration">The duration, in milliseconds, to display the infolabel.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.InfoLabel.Hide(System.Boolean)">
+            <summary>
+            Hides the infolabel.
+            </summary>
+            <param name="fade">A value indicating whether a fade effect should be used to hide the infolabel.</param>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Active">
+            <summary>
+            Gets a value indicating whether the infolabel is active (visible).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Text">
+            <summary>
+            Gets or sets the text associated with the infoLabel.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.TextMargin">
+            <summary>
+            Gets or sets the margin between the text area and the border of each side in the infolabel (when set, use -1 to keep an existing value - default all: 0).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Size">
+            <summary>
+            Gets the current size of the (variable sized) infoLabel.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Location">
+            <summary>
+            Gets the true location (top-left screen coordinates) of the infoLabel (when visible).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.AutoSize">
+            <summary>
+            Gets or sets a value indicating whether the infolabel is automatically resized to display the entire text default: true).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.TextSize">
+            <summary>
+            Gets or sets the height and width of the text area of the infolabel. When set, the autosize property of the infolabel is set to false.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.TextAlign">
+            <summary>
+            Gets or sets the alignment of the text in the text area of the infolabel (default: MiddleCenter).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Image">
+            <summary>
+            Gets or sets the image that is displayed in the text area of the infolabel.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.ImageAlign">
+            <summary>
+            Gets or sets the alignment of the image that is displayed in the text area of the infolabel (default: MiddleCenter).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Font">
+            <summary>
+            Gets or sets the font of the text displayed in the infolabel (default: Label.DefaultFont).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.FontSize">
+            <summary>
+            Gets or sets the size of the font of the text displayed in the infolabel (default: Label.DefaultFont.Size).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.FontStyle">
+            <summary>
+            Gets or sets the style of the font of the text displayed in the infolabel (default: FontStyle.Regular).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.UseCompatibleTextRendering">
+            <summary>
+            Gets or sets a value that determines whether to use the Graphics class (GDI+) or the TextRenderer class (GDI) to render the text in the infolabel (default: false (GDI+)).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.ForeColor">
+            <summary>
+            Gets or sets the color of the text displayed in the infolabel (default: SystemColors.InfoText).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.BackColor">
+            <summary>
+            Gets or sets the background color of the infolabel (see also BackBrush - default: SystemColors.Info).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.BackBrush">
+            <summary>
+            Gets or sets the brush that is used to fill the background of the infolabel (see also BackColor).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.BorderColor">
+            <summary>
+            Gets or sets the color of the border of the infolabel (see also BorderBrush - default: SystemColors.WindowFrame).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.BorderBrush">
+            <summary>
+            Gets or sets the brush that is used to fill the border of the infolabel (see also BorderColor).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.RoundedCorners">
+            <summary>
+            Gets or sets a value indicating whether the corners of the infolabel are rounded (default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.BorderThickness">
+            <summary>
+            Gets or sets the thickness of each side of the border of the infolabel (when set, use -1 to keep an existing value - default all: 1).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.BackImage">
+            <summary>
+            Gets or sets the background image displayed in the infolabel.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.BackImageLayout">
+            <summary>
+            Gets or sets the background image layout of the infolabel (default: Stretch).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Duration">
+            <summary>
+            Gets or sets the duration, in milliseconds, to display the infolabel, that is used when not specified in the show method - default value: 1000.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Align">
+            <summary>
+            Gets or sets the infolabel alignment that is used when not specified in the show method - default value: TopCenter.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.AlignOffset">
+            <summary>
+            Gets of sets the alignment location offset, in pixels, of the infolabel - default values: x = 0, y = 0.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.FadeOutSpeed">
+            <summary>
+            Gets or sets the speed of the fade out effect of the infolabel, values 1 (slow) to 100 (fast) - default value: 20.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Opacity">
+            <summary>
+            Gets or sets the opacity level of the infolabel, values 0.0 (full transparency) to 1.0 (no transparency) - default value: 1.0.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InfoLabel.Transparent">
+            <summary>
+            Gets or sets a value indicating whether the background of the infolabel is transparent - default value: false.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.DisplayMode">
+            <summary>
+            Specifies the size and location of the video on the display of the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.Normal">
+            <summary>
+            Size: original size.
+            Location: topleft of the display of the player.
+            Display resize: shrink: no, grow: no.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.Center">
+            <summary>
+            Size: original size.
+            Location: center of the display of the player.
+            Display resize: shrink: no, grow: no.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.Stretch">
+            <summary>
+            Size: same size as the display of the player.
+            Location: topleft of the display of the player.
+            Display resize: shrink: yes, grow: yes.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.Zoom">
+            <summary>
+            Size: the largest possible size within the display of the player while maintaining the aspect ratio.
+            Location: topleft of the display of the player.
+            Display resize: shrink: yes, grow: yes.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.ZoomCenter">
+            <summary>
+            Size: the largest possible size within the display of the player while maintaining the aspect ratio.
+            Location: center of the display of the player.
+            Display resize: shrink: yes, grow: yes.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.CoverCenter">
+            <summary>
+            Size: same size as the display of the player while maintaining the aspect ratio, but possibly with horizontal or vertical image cropping.
+            Location: center of the display of the player.
+            Display resize: shrink: yes, grow: yes.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.SizeToFit">
+            <summary>
+            Size: original size or the largest possible size within the display of the player while maintaining the aspect ratio.
+            Location: topleft of the display of the player.
+            Display resize: shrink: yes, grow: if smaller than original size.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.SizeToFitCenter">
+            <summary>
+            Size: original size or the largest possible size within the display of the player while maintaining the aspect ratio.
+            Location: center of the display of the player.
+            Display resize: shrink: yes, grow: if smaller than original size.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.Custom">
+            <summary>
+            Size, Location and Display resize: set from Player.Display.SetCustomMode callback method.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayMode.Manual">
+            <summary>
+            Size: set manually.
+            Location: set manually.
+            Display resize: shrink: no, grow: no.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.FullScreenMode">
+            <summary>
+            Specifies the fullscreen mode of the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.FullScreenMode.Display">
+            <summary>
+            The display of the player is shown fullscreen.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.FullScreenMode.Parent">
+            <summary>
+            The (parent) control that contains the display of the player is shown fullscreen.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.FullScreenMode.Form">
+            <summary>
+            The form that contains the display of the player is shown fullscreen.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.OverlayMode">
+            <summary>
+            Specifies the size mode of the display overlay of the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.OverlayMode.Display">
+            <summary>
+            The overlay has the same size and position as the display of the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.OverlayMode.Video">
+            <summary>
+            The overlay has the same size and position as the visible part of the video image on the display of the player.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.MediaLength">
+            <summary>
+            Specifies the part of the playing media whose length (duration) is to be obtained.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaLength.BeginToEnd">
+            <summary>
+            The total length (duration) of the playing media.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaLength.FromBegin">
+            <summary>
+            The length (duration) of the playing media from the natural beginning of the media to the current position.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaLength.FromStart">
+            <summary>
+            The length (duration) of the playing media from Player.Media.StartPosition to the current position.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaLength.ToEnd">
+            <summary>
+            The length (duration) of the playing media from the current position to the natural end of the media.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaLength.ToStop">
+            <summary>
+            The length (duration) of the playing media from the current position to Player.Media.StopPosition.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaLength.StartToStop">
+            <summary>
+            The length (duration) of the playing media from Player.Media.StartPosition to Player.Media.StopPosition.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.MediaName">
+            <summary>
+            Specifies the part of the file name of the playing media to be obtained. 
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaName.FileNameWithoutExtension">
+            <summary>
+            The file name without path and extension of the playing media.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaName.FileName">
+            <summary>
+            The file name and extension without path of the playing media.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaName.FullPath">
+            <summary>
+            The file name with path and extension of the playing media.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaName.Extension">
+            <summary>
+            The extension of the file name of the playing media.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaName.DirectoryName">
+            <summary>
+            The path (directory) of the file name of the playing media.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.MediaName.PathRoot">
+            <summary>
+            The root path (root directory) of the file name of the playing media.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.ScreenCopyMode">
+            <summary>
+            Specifies the area of the screen to copy.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ScreenCopyMode.Video">
+            <summary>
+            The (visible part of the) video on the display of the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ScreenCopyMode.Display">
+            <summary>
+            The display of the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ScreenCopyMode.Parent">
+            <summary>
+            The (parent) control that contains the display of the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ScreenCopyMode.Form">
+            <summary>
+            The display area of the form that contains the display of the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ScreenCopyMode.Screen">
+            <summary>
+            The (entire) screen that contains the display of the player.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.PositionSliderMode">
+            <summary>
+            Specifies the display mode of the positionslider controlled by the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.PositionSliderMode.Progress">
+            <summary>
+            The positionslider shows the playback position of the playing media from Player.Media.StartPosition to Player.Media.StopPosition.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.PositionSliderMode.Track">
+            <summary>
+            The positionslider shows the playback position from the natural beginning of the media to the natural end of the media.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.TaskbarProgressMode">
+            <summary>
+            Specifies the display mode of the taskbar progress indicator.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.TaskbarProgressMode.Progress">
+            <summary>
+            The taskbar progress indicator shows the playback position of the playing media from Player.Media.StartPosition to Player.Media.StopPosition.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.TaskbarProgressMode.Track">
+            <summary>
+            The taskbar progress indicator shows the playback position from the natural beginning of the media to the natural end of the media.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.ImageSource">
+            <summary>
+            Specifies where to retrieve an album art image.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ImageSource.None">
+            <summary>
+            No album art image is retrieved.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ImageSource.MediaOnly">
+            <summary>
+            The album art image is retrieved from the media file.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ImageSource.MediaOrFolder">
+            <summary>
+            The album art image is retrieved from the media file or, if not found, from the folder of the media file.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ImageSource.FolderOrMedia">
+            <summary>
+            The album art image is retrieved from the folder of the media file or, if not found, from the media file.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.ImageSource.FolderOnly">
+            <summary>
+            The album art image is retrieved from the folder of the media file.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.StopReason">
+            <summary>
+            Specifies the reason that media has stopped playing.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.StopReason.Finished">
+            <summary>
+            The media has reached its natural end or stop position.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.StopReason.AutoStop">
+            <summary>
+            The media is stopped by the player to play other media.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.StopReason.UserStop">
+            <summary>
+            The media is stopped by using the stop method of the player.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.DisplayShape">
+            <summary>
+            Specifies the shape of the display window of the player.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.ArrowDown">
+            <summary>
+            The display window of the player has the shape of an arrow pointing down.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.ArrowLeft">
+            <summary>
+            The display window of the player has the shape of an arrow pointing left.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.ArrowRight">
+            <summary>
+            The display window of the player has the shape of an arrow pointing right.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.ArrowUp">
+            <summary>
+            The display window of the player has the shape of an arrow pointing up.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Bars">
+            <summary>
+            The display window of the player has the shape of 5 vertical bars.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Beams">
+            <summary>
+            The display window of the player has the shape of 5 horizontal bars.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Cross">
+            <summary>
+            The display window of the player has the shape of a cross.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Custom">
+            <summary>
+            The display window of the player has a user-defined shape.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Diamond">
+            <summary>
+            The display window of the player has a diamond shape.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Heart">
+            <summary>
+            The display window of the player has a heart shape.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Hexagon">
+            <summary>
+            The display window of the player has a hexagonal shape.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Normal">
+            <summary>
+            The display window of the player has its normal shape.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Oval">
+            <summary>
+            The display window of the player has an oval shape.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Rounded">
+            <summary>
+            The display window of the player has a rounded rectangular shape.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Star">
+            <summary>
+            The display window of the player has the shape of a 8-pointed star.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Tiles">
+            <summary>
+            The display window of the player has the shape of 3 by 3 tiles.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.DisplayShape.Triangle">
+            <summary>
+            The display window of the player has a triangular shape.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.CursorChangedReason">
+            <summary>
+            Specifies the reason that the mouse cursor is hidden or shown.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CursorChangedReason.MouseIdle">
+            <summary>
+            The mouse cursor is hidden because it was inactive for a certain time.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CursorChangedReason.MouseMoved">
+            <summary>
+            The mouse cursor is shown because the mouse has been moved.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CursorChangedReason.MouseAction">
+            <summary>
+            The mouse cursor is shown because a mouse button was used.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CursorChangedReason.MenuOpened">
+            <summary>
+            The mouse cursor is shown because a menu has been opened.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CursorChangedReason.ModalDialog">
+            <summary>
+            The mouse cursor is shown because a modal dialog has been opened.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CursorChangedReason.UserCommand">
+            <summary>
+            The mouse cursor is hidden or shown because the Enabled, ShowCursor or HideCursor command was used.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.PositionEventArgs">
+            <summary>
+            Provides data for the Player.Events.MediaPositionChanged event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.PositionEventArgs.FromBegin">
+            <summary>
+            Gets the length (duration) of the playing media from the natural beginning of the media to the current playback position.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.PositionEventArgs.ToEnd">
+            <summary>
+            Gets the length (duration) of the playing media from the current playback position to the natural end of the media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.PositionEventArgs.FromStart">
+            <summary>
+            Gets the length (duration) of the playing media from Player.Media.StartPosition to the current playback position.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.PositionEventArgs.ToStop">
+            <summary>
+            Gets the length (duration) of the playing media from the current playback position to Player.Media.StopPosition.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.EndedEventArgs">
+            <summary>
+            Provides data for the Player.Events.MediaEnded event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.EndedEventArgs.StopReason">
+            <summary>
+            Specifies the reason that media has stopped playing.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.PeakLevelEventArgs">
+            <summary>
+            Provides data for the Player.Events.MediaPeakLevelChanged event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.PeakLevelEventArgs.ChannelCount">
+            <summary>
+            Gets the number of audio output channels and the number of peak values returned by the ChannelsValues property (usually 2 for stereo devices).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.PeakLevelEventArgs.MasterPeakValue">
+            <summary>
+            Gets the highest peak value of the audio output channels (ChannelsValues). Values are from 0.0 to 1.0 (inclusive) or -1 if media playback is paused, stopped or ended.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.PeakLevelEventArgs.ChannelsValues">
+            <summary>
+            Gets the peak values of the audio output channels: Levels[0] contains the value of the left audio output channel and Levels[1] of the right channel. More channels can be present with, for example, surround sound systems. Values are from 0.0 to 1.0 (inclusive) or -1 if media playback is paused, stopped or ended.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.SubtitleEventArgs">
+            <summary>
+            Provides data for the Player.Events.MediaSubtitleChanged event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.SubtitleEventArgs.Index">
+            <summary>
+            Gets the index of the current subtitle of the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.SubtitleEventArgs.Subtitle">
+            <summary>
+            Gets the text of the current subtitle (or string.Empty) of the player.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.SignalEventArgs">
+            <summary>
+            Provides data for the Player.Events.MediaSignal event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.SignalEventArgs.Index">
+            <summary>
+            Gets the index of the current media signal of the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.SignalEventArgs.Message">
+            <summary>
+            Gets the message of the current media signal (or string.Empty) of the player.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.CursorHideEventArgs">
+            <summary>
+            Provides data for the Player.Events.MediaCursorHideChanged event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.CursorHideEventArgs.Visible">
+            <summary>
+            Gets a value indicating whether the mouse cursor was hidden or shown.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.CursorHideEventArgs.Form">
+            <summary>
+            Gets the form that has hidden the mouse cursor or the active form (can be null/Nothing) when the mouse cursor was shown.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.CursorHideEventArgs.Reason">
+            <summary>
+            Specifies the reason that the mouse cursor is hidden or shown.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.MediaMouseEventArgs">
+            <summary>
+            Provides data for the Player.Mouse events.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MediaMouseEventArgs.Button">
+            <summary>
+            Gets which mouse button was pressed.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MediaMouseEventArgs.Clicks">
+            <summary>
+            Gets the number of times the mouse button was pressed and released.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MediaMouseEventArgs.Location">
+            <summary>
+            Gets the location (in screen coordinates) of the mouse during the generating mouse event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MediaMouseEventArgs.X">
+            <summary>
+            Gets the x-coordinate (in screen coordinates) of the mouse during the generating mouse event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MediaMouseEventArgs.Y">
+            <summary>
+            Gets the y-coordinate (in screen coordinates) of the mouse during the generating mouse event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MediaMouseEventArgs.Delta">
+            <summary>
+            Gets a signed count of the number of detents the mouse wheel has rotated. A detent is one notch of the mouse wheel.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.DisplayShapeCallback">
+            <summary>
+            References a method to be called when the shape of the display window of a player needs to be updated.
+            </summary>
+            <param name="player">The player whose display window shape needs to be updated.</param>
+            <param name="videoShape">A value indicating whether the shape should be related to the size of the video image (videoShape = true) or to the size of the display window (videoShape = false).</param>
+            <param name="shapeBounds">The size and location of the video image (videoShape = true) or the display window (videoShape = false) to be used for the shape.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.DisplayModeCallback">
+            <summary>
+            References a method to be called when the display of a player with a custom display mode needs to be updated.
+            </summary>
+            <param name="player">The player whose display needs to be updated.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.SliderValue">
+            <summary>
+            A static class that provides location information about values of a slider (trackbar).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.SliderValue.FromPoint(System.Windows.Forms.TrackBar,System.Drawing.Point)">
+            <summary>
+            Returns the slider value at the specified location on the specified slider (trackbar).
+            </summary>
+            <param name="slider">The slider whose value should be obtained.</param>
+            <param name="location">The relative x- and y-coordinates on the slider.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.SliderValue.FromPoint(System.Windows.Forms.TrackBar,System.Int32,System.Int32)">
+            <summary>
+            Returns the slider value at the specified location on the specified slider (trackbar).
+            </summary>
+            <param name="slider">The slider whose value should be obtained.</param>
+            <param name="x">The relative x-coordinate on the slider (for horizontal oriented sliders).</param>
+            <param name="y">The relative y-coordinate on the slider (for vertical oriented sliders).</param>
+        </member>
+        <member name="M:PVS.AVPlayer.SliderValue.ToPoint(System.Windows.Forms.TrackBar,System.Int32)">
+            <summary>
+            Returns the location of the specified value on the specified slider (trackbar).
+            </summary>
+            /// <param name="slider">The slider whose value location should be obtained.</param>
+            <param name="value">The value of the slider.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.Mci">
+            <summary>
+            Represents a class that provides direct access to (native Win32) MCI functions.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Mci.SendString(System.String,System.Text.StringBuilder,System.IntPtr)">
+            <summary>
+            Sends a command string to an MCI device. The device that the command is sent to is specified in the command string.
+            </summary>
+            <param name="command">String that specifies an MCI command string.</param>
+            <param name="resultText">A buffer that receives return information. If there's no return information, this parameter can be null.</param>
+            <param name="hwndCallback">Handle to a callback window if the "notify" flag was specified in the command string or null.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Mci.GetErrorString(System.Int32,System.Text.StringBuilder)">
+            <summary>
+            Retrieves a string that describes the specified MCI error code.
+            </summary>
+            <param name="errorCode">Error code returned by the MCI.SendString method.</param>
+            <param name="errorText">A buffer that receives a string describing the specified error.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.TagInfo">
+            <summary>
+            A class that is used to store MP3, WMA and ASF tag information taken from media files.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TagInfo.Artist">
+            <summary>
+            Gets the main artist(s)/performer(s)/band/orchestra of the audio in the file.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TagInfo.Title">
+            <summary>
+            Gets the actual title of the audio in the file.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TagInfo.Album">
+            <summary>
+            Gets the title of the album the audio in the file is taken from.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TagInfo.Track">
+            <summary>
+            Gets the order number of the audio file on its original recording (album), may also include the total number of tracks e.g. "3/12".
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TagInfo.TrackNumber">
+            <summary>
+            Gets the order number of the audio file on its original recording (album).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TagInfo.Year">
+            <summary>
+            Gets the year of the recording of the audio in the file.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TagInfo.Duration">
+            <summary>
+            Gets the duration (length) of the audio in the file.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TagInfo.Genre">
+            <summary>
+            Gets the genre of the audio in the file.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TagInfo.Image">
+            <summary>
+            Gets an image (album art) related to the audio in the file.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.TagInfo.Dispose">
+            <summary>
+            Remove the tag information and clean up any resources being used.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.HideObjectMembers">
+            <summary>
+            Internal class that is used to hide System.Object members in derived classes.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.HideObjectMembers.GetType">
+            <summary>
+            Gets the type of the current instance.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.HideObjectMembers.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular object.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.HideObjectMembers.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.HideObjectMembers.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current object.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.HideObjectEventArgs">
+            <summary>
+            Internal class that is used to hide System.Object members in the from EventArgs derived classes.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.HideObjectEventArgs.GetType">
+            <summary>
+            Gets the type of the current instance.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.HideObjectEventArgs.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular object.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.HideObjectEventArgs.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.HideObjectEventArgs.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current object.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.Audio">
+            <summary>
+            A class that is used to group together the Audio methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Audio.Present">
+            <summary>
+            Gets a value indicating whether the playing media contains audio.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Audio.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the audio output of the player is enabled (default: true).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Audio.Mute">
+            <summary>
+            Gets or sets a value indicating whether the audio output of the player is muted (default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Audio.Track">
+            <summary>
+            Gets or sets a value indicating the active audio track of the playing media. May not work for all types of media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Audio.TrackCount">
+            <summary>
+            Gets the number of audio tracks available in the playing media. May not work for all types of media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Audio.Volume">
+            <summary>
+            Gets or sets the audio volume of the player, value 0 (mute) to 1000 (max) (default: 1000).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Audio.Balance">
+            <summary>
+            Gets or sets the audio balance of the player, value 0 (left) to 1000 (right) (default: 500).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Audio.MasterVolume">
+            <summary>
+            Gets or sets the audio volume of the system's default audio output device, value 0 (mute) to 1000 (max) (Windows Vista or later only).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Audio.DeviceName">
+            <summary>
+            Gets the name of the system's default audio output device.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.Video">
+            <summary>
+            A class that is used to group together the Video methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Video.Present">
+            <summary>
+            Gets a value indicating whether the playing media contains video.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Video.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the display of video of the player is enabled (default: true).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Video.Track">
+            <summary>
+            Gets or sets a value indicating the active video track of the playing media. May not work for all types of media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Video.TrackCount">
+            <summary>
+            Gets the number of video tracks available in the playing media. May not work for all types of media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Video.Bounds">
+            <summary>
+            Gets or sets the size and location of the video image on the display of the player. When set, the Player.Display.Mode of the player is set to Displaymode.Manual.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Video.SourceSize">
+            <summary>
+            Gets the original size of the video image of the playing media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Video.FrameRate">
+            <summary>
+            Gets the nominal video frame rate of the playing media. The units are in frames per second multiplied by 1000.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Video.Zoom(System.Double)">
+            <summary>
+            Enlarges or reduces the size of the video image at the center location of the display of the player. The Player.Display.Mode of the player is set to Displaymode.Manual.
+            </summary>
+            <param name="factor">The factor by which the video image is to be zoomed.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Video.Zoom(System.Double,System.Drawing.Point)">
+            <summary>
+            Enlarges or reduces the size of the video image at the specified display location. The Player.Display.Mode of the player is set to Displaymode.Manual.
+            </summary>
+            <param name="factor">The factor by which the video image is to be zoomed.</param>
+            <param name="center">The center location of the zoom on the display of the player.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Video.Zoom(System.Double,System.Int32,System.Int32)">
+            <summary>
+            Enlarges or reduces the size of the video image at the specified display location. The Player.Display.Mode of the player is set to Displaymode.Manual.
+            </summary>
+            <param name="factor">The factor by which the video image is to be zoomed.</param>
+            <param name="xCenter">The horizontal (x) center location of the zoom on the display of the player.</param>
+            <param name="yCenter">The vertical (y) center location of the zoom on the display of the player.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Video.Zoom(System.Drawing.Rectangle)">
+            <summary>
+            Enlarges the specified part of the display of the player to the entire display of the player. The Player.Display.Mode of the player is set to Displaymode.Manual.
+            </summary>
+            <param name="area">The area of the display of the player to enlarge.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Video.Move(System.Int32,System.Int32)">
+            <summary>
+            Moves the location of the video image on the display of the player by the given amount of pixels. The Player.Display.Mode of the player is set to Displaymode.Manual.
+            </summary>
+            <param name="horizontal">The amount of pixels to move the video image in the horizontal (x) direction.</param>
+            <param name="vertical">The amount of pixels to move the video image in the vertical (y) direction.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Video.Stretch(System.Int32,System.Int32)">
+            <summary>
+            Enlarges or reduces the size of the video image by the given amount of pixels at the center of the video. The Player.Display.Mode of the player is set to Displaymode.Manual.
+            </summary>
+            <param name="horizontal">The amount of pixels to stretch the video image in the horizontal (x) direction.</param>
+            <param name="vertical">The amount of pixels to stretch the video image in the vertical (y) direction.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.Display">
+            <summary>
+            A class that is used to group together the Display methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.Window">
+            <summary>
+            Gets or sets the display window (form or control) of the player that is used to display video and overlays.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.WindowFix">
+            <summary>
+            Gets or sets a value indicating whether to prevent 'flashing' of the parent window (form) of the display of the player when the player stops playing media (default: true).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.Mode">
+            <summary>
+            Gets or sets the display mode (size and location) of the video image on the display of the player (default: ZoomCenter). See also: Player.Display.SetMode.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.Clones">
+            <summary>
+            Provides access to the display clones settings of the player (e.g. Player.Display.Clones.Add).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.Overlay">
+            <summary>
+            Provides access to the display overlay settings of the player (e.g. Player.Display.Overlay.Window).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.ResizeRedraw">
+            <summary>
+            Gets or sets a value indicating whether the parent window (form) of the display of the player is redrawn with display modes Normal, Center, CoverCenter, Custom and Manual when the display window of the player is resized (default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.RestoreBounds">
+            <summary>
+            Gets the size and location of the parent window (form) of the display window of the player in its normal window state (e.g. when the form is maximized or fullscreen).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.DragCursor">
+            <summary>
+            Gets or sets the cursor used when dragging the player's display window when the Player.Display.DragEnabled option is enabled (default: Cursors.SizeAll).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.DragEnabled">
+            <summary>
+            Gets or sets a value indicating whether the parent window (form) of the display of the player can be moved by dragging the player's display window (default: false).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Display.SetShape(PVS.AVPlayer.DisplayShapeCallback)">
+            <summary>
+            Sets a custom shape of the display window of the player. See also: Player.Display.Shape.
+            </summary>
+            <param name="callback">The method to be called when the shape of the display window needs to be updated. Use null or DisplayShape.Normal to set the normal shape of the display window.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Display.SetShape(PVS.AVPlayer.DisplayShapeCallback,System.Boolean,System.Boolean)">
+            <summary>
+            Sets a custom shape of the display window of the player. See also: Player.Display.Shape.
+            </summary>
+            <param name="callback">The method to be called when the shape of the display window needs to be updated. Use null or DisplayShape.Normal to set the normal shape of the display window.</param>
+            <param name="videoShape">A value indicating whether the shape is a video size related shape and the display window should be updated when the size of the video image changes. Use this option only with shapes related to the size of the video image, the shape of the display window is always updated when the size of the display window has changed.</param>
+            <param name="overlayShape">A value indicating whether display overlays should also take the shape of the display window (may cause unwanted effects with display clones and other uses).</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Display.SetShape(PVS.AVPlayer.DisplayShape)">
+            <summary>
+            Sets a custom shape of the display window of the player. See also: Player.Display.Shape.
+            </summary>
+            <param name="shape">A value indicating the preset shape of the display window of the player. If used with a form, set the border style of the form to none.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Display.SetShape(PVS.AVPlayer.DisplayShape,System.Boolean,System.Boolean)">
+            <summary>
+            Sets a custom shape of the display window of the player. See also: Player.Display.Shape.
+            </summary>
+            <param name="shape">A value indicating the preset shape of the display window of the player. If used with a form, set the border style of the form to none.</param>
+            <param name="videoShape">A value indicating whether the preset shape should be related to the size of the video image (value = true) or to the size of the display window (value = false).</param>
+            <param name="overlayShape">A value indicating whether display overlays should also take the shape of the display window (may cause unwanted effects with display clones and other uses).</param>
+        </member>
+        <member name="P:PVS.AVPlayer.Display.Shape">
+            <summary>
+            Gets or sets the shape of the display window of the player. When set, the shape is related to the video size with no overlay shape (default: DisplayShape.Normal). See also: Player.Display.SetShape.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Display.SetMode(PVS.AVPlayer.DisplayModeCallback,System.Boolean)">
+            <summary>
+            Sets a custom display mode (size and location) of the video image on the display of the player. See also: Player.Display.Mode.
+            </summary>
+            <param name="callback">The method to be called when the size and/or location of the video image may need to be updated.</param>
+            <param name="setMode">A value indicating whether this custom display mode should be activated immediately.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.CursorHide">
+            <summary>
+            A class that is used to group together the CursorHide methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.CursorHide.Add(System.Windows.Forms.Form)">
+            <summary>
+            Adds a form to the list of forms that automatically hide the mouse cursor during inactivity when media is playing.
+            </summary>
+            <param name="form">The form to add to the list.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.CursorHide.Remove(System.Windows.Forms.Form)">
+            <summary>
+            Removes a form from the list of forms that automatically hide the mouse cursor during inactivity.
+            </summary>
+            <param name="form">The form to remove from the list.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.CursorHide.RemoveAll">
+            <summary>
+            Removes all forms added by this player from the list of forms that automatically hide the mouse cursor during inactivity.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.CursorHide.Enabled">
+            <summary>
+            Gets or sets a value indicating whether auto-hiding of the mouse cursor is enabled. This option can be used to temporarily disable the hiding of the mouse cursor. This setting is used by all players in this assembly.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.CursorHide.Delay">
+            <summary>
+            Gets or sets the number of seconds to wait before the mouse cursor is hidden during inactivity. This setting is used by all players in this assembly (default: 3 seconds).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.CursorHide.CursorHidden">
+            <summary>
+            Gets or sets a value indicating whether the mouse cursor is automatically hidden.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.CursorHide.ShowCursor">
+            <summary>
+            Shows the mouse cursor if it was hidden by the player.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.CursorHide.HideCursor">
+            <summary>
+            Hides the mouse cursor if it is visible and the automatic hiding of the cursor by the player is active.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.Overlay">
+            <summary>
+            A class that is used to group together the Display Overlay methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Overlay.Window">
+            <summary>
+            Gets or sets the display overlay of the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Overlay.Mode">
+            <summary>
+            Gets or sets the display mode (size and location) of the display overlay of the player (default: OverlayMode.Video).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Overlay.Hold">
+            <summary>
+            Gets or sets a value indicating whether the display overlay of the player is always shown (default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Overlay.CanFocus">
+            <summary>
+            Gets or sets a value indicating whether the display overlay of the player can be activated for input and selection (default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Overlay.Delay">
+            <summary>
+            Gets or sets the number of milliseconds that the visibilty of the display overlay of the player is delayed when restoring the minimized display (form) of the player. Set to 0 to disable (default: 300 ms).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Overlay.Active">
+            <summary>
+            Gets a value indicating whether the display overlay of the player is active (but not necessarily visible (when the main window is minimized)).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Overlay.Present">
+            <summary>
+            Gets a value indicating whether the player has a display overlay (set, but not necessarily active).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Overlay.Visible">
+            <summary>
+            Gets a value indicating whether the display overlay of the player is active and visible.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Overlay.Clipping">
+            <summary>
+            Gets or sets a value indicating whether clipping of the display overlay of the player is enabled. The overlay is clipped when it protrudes outside the parent form of the display of the player. Tip: only enable if a part of the player's display can fall outside its parent form (default: false).
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.DisplayClones">
+            <summary>
+            A class that is used to group together the Display Clones methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.Add(System.Windows.Forms.Control)">
+            <summary>
+            Adds a display clone to the player.
+            </summary>
+            <param name="clone">The form or control to add as a display clone.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.Add(System.Windows.Forms.Control,PVS.AVPlayer.CloneFlip,PVS.AVPlayer.CloneLayout,PVS.AVPlayer.CloneQuality)">
+            <summary>
+            Adds a display clone to the player.
+            </summary>
+            <param name="clone">The form or control to add as a display clone.</param>
+            <param name="flip">The video flip to apply to the display clone (default FlipNone).</param>
+            <param name="layout">The video layout to apply to the display clone (default Zoom).</param>
+            <param name="quality">The video quality to apply to the display clone (default Auto).</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.AddRange(System.Windows.Forms.Control[])">
+            <summary>
+            Adds multiple display clones to the player.
+            </summary>
+            <param name="clones">The forms and/or controls to add as display clones.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.AddRange(System.Windows.Forms.Control[],PVS.AVPlayer.CloneFlip,PVS.AVPlayer.CloneLayout,PVS.AVPlayer.CloneQuality)">
+            <summary>
+            Adds multiple display clones to the player.
+            </summary>
+            <param name="clones">The forms and/or controls to add as display clones.</param>
+            <param name="flip">The video flip to apply to the display clones (default FlipNone).</param>
+            <param name="layout">The video layout to apply to the display clones (default Zoom).</param>
+            <param name="quality">The video quality to apply to the display clones (default Auto).</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.Remove(System.Windows.Forms.Control)">
+            <summary>
+            Removes a display clone from the player.
+            </summary>
+            <param name="clone">The display clone to remove from the player.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.RemoveRange(System.Windows.Forms.Control[])">
+            <summary>
+            Removes multiple display clones from the player.
+            </summary>
+            <param name="clones">The display clones to remove from the player.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.RemoveAll">
+            <summary>
+            Removes all display clones from the player.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.Clear">
+            <summary>
+            Removes all display clones from the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.DisplayClones.Present">
+            <summary>
+            Gets a value indicating whether the player has one or more display clones.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.DisplayClones.Active">
+            <summary>
+            Gets a value indicating whether the player has one or more active display clones.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.DisplayClones.Count">
+            <summary>
+            Gets the number of display clones of the player.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.Contains(System.Windows.Forms.Control)">
+            <summary>
+            Returns a value indicating whether the specified control is a display clone of the player.
+            </summary>
+            <param name="control">The display clone to search for.</param>
+        </member>
+        <member name="P:PVS.AVPlayer.DisplayClones.List">
+            <summary>
+            Gets a list (control array) of the display clones of the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.DisplayClones.FrameRate">
+            <summary>
+            Gets or sets a value indicating the number of video frames per second used for displaying the display clones of the player (default: 30 fps).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.DisplayClones.ShowOverlay">
+            <summary>
+            Gets or sets a value indicating whether the display clones of the player also show display overlays (default: true).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.SetLayout(System.Windows.Forms.Control,PVS.AVPlayer.CloneLayout)">
+            <summary>
+            Sets the video layout of the specified display clone (default: CloneLayout.Zoom).
+            </summary>
+            <param name="clone">The display clone whose video layout needs to be changed.</param>
+            <param name="layout">The video layout to apply to the display clone.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.SetLayout(PVS.AVPlayer.CloneLayout)">
+            <summary>
+            Sets the video layout of all active display clones of the player (default: CloneLayout.Zoom).
+            </summary>
+            <param name="layout">The video layout to apply to the display clones.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.GetLayout(System.Windows.Forms.Control)">
+            <summary>
+            Returns the video layout setting of the specified display clone.
+            </summary>
+            <param name="clone">The display clone whose video layout needs to be obtained.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.SetQuality(System.Windows.Forms.Control,PVS.AVPlayer.CloneQuality)">
+            <summary>
+            Sets the video quality of the specified display clone (default: CloneQuality.Auto).
+            </summary>
+            <param name="clone">The display clone whose video quality needs to be changed.</param>
+            <param name="quality">The video quality to apply to the display clone.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.SetQuality(PVS.AVPlayer.CloneQuality)">
+            <summary>
+            Sets the video quality of all active display clones of the player (default: CloneQuality.Auto).
+            </summary>
+            <param name="quality">The video quality to apply to the display clones.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.GetQuality(System.Windows.Forms.Control)">
+            <summary>
+            Returns the video quality setting of the specified display clone.
+            </summary>
+            <param name="clone">The display clone whose video quality needs to be obtained.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.SetFlip(System.Windows.Forms.Control,PVS.AVPlayer.CloneFlip)">
+            <summary>
+            Sets the video flip of the specified display clone (default: CloneFlip.None).
+            </summary>
+            <param name="clone">The display clone whose video flip needs to be changed.</param>
+            <param name="flip">The video flip to apply to the display clone.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.SetFlip(PVS.AVPlayer.CloneFlip)">
+            <summary>
+            Sets the video flip of all active display clones of the player (default: CloneFlip.None).
+            </summary>
+            <param name="flip">The video flip to apply to the display clones.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.GetFlip(System.Windows.Forms.Control)">
+            <summary>
+            Returns the video flip setting of the specified display clone.
+            </summary>
+            <param name="clone">The display clone whose video flip needs to be obtained.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.DisplayClones.GetVideoBounds(System.Windows.Forms.Control)">
+            <summary>
+            Returns the size and location of the video image of the specified display clone.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.MciDevice">
+            <summary>
+            A class that is used to group together the MCI Device methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MciDevice.Identifier">
+            <summary>
+            Gets the identifier (or alias) of the MCI device associated with the playing media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MciDevice.Type">
+            <summary>
+            Gets the type name of the MCI device associated with the playing media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MciDevice.Name">
+            <summary>
+            Gets a description (product name) of the MCI device associated with the playing media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MciDevice.WindowHandle">
+            <summary>
+            Gets the handle of the MCI video window associated with the playing media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MciDevice.Count">
+            <summary>
+            Gets the number of open MCI devices in this assembly.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.MciDevice.Command(System.String)">
+            <summary>
+            Sends a command to the MCI device associated with the playing media.
+            </summary>
+            <param name="command">String that specifies the MCI command.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.MciDevice.Command(System.String,System.String)">
+            <summary>
+            Sends a command to the MCI device associated with the playing media.
+            </summary>
+            <param name="command">String that specifies the MCI command.</param>
+            <param name="parameters">String that specifies the MCI command parameters.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.MciDevice.Request(System.String,System.String,System.String@)">
+            <summary>
+            Sends a request to the MCI device associated with the playing media.
+            </summary>
+            <param name="request">String that specifies the MCI request.</param>
+            <param name="parameters">String that specifies the MCI request parameters.</param>
+            <param name="result">A string that receives return information.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.MciDevice.DeleteTempFiles">
+            <summary>
+            Deletes all temporary MCI files in the temporary folder of the system.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.PointTo">
+            <summary>
+            A class that is used to group together the Point To conversion methods of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.PointTo.Display(System.Drawing.Point)">
+            <summary>
+            Computes the location of the specified screen point into coordinates of the display of the player.
+            </summary>
+            <param name="p">The screen coordinate Point to convert.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.PointTo.Overlay(System.Drawing.Point)">
+            <summary>
+            Computes the location of the specified screen point into coordinates of the display overlay of the player.
+            </summary>
+            <param name="p">The screen coordinate Point to convert.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.PointTo.Video(System.Drawing.Point)">
+            <summary>
+            Computes the location of the specified screen point into coordinates of the video image on the display of the player.
+            </summary>
+            <param name="p">The screen coordinate Point to convert.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.PointTo.SliderValue(System.Windows.Forms.TrackBar,System.Drawing.Point)">
+            <summary>
+            Returns the slider value at the specified location on the specified slider (trackbar).
+            </summary>
+            <param name="slider">The slider whose value should be obtained.</param>
+            <param name="location">The relative x- and y-coordinates on the slider.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.PointTo.SliderValue(System.Windows.Forms.TrackBar,System.Int32,System.Int32)">
+            <summary>
+            Returns the slider value at the specified location on the specified slider (trackbar).
+            </summary>
+            <param name="slider">The slider whose value should be obtained.</param>
+            <param name="x">The relative x-coordinate on the slider (for horizontal oriented sliders).</param>
+            <param name="y">The relative y-coordinate on the slider (for vertical oriented sliders).</param>
+        </member>
+        <member name="T:PVS.AVPlayer.ScreenCopy">
+            <summary>
+            A class that is used to group together the ScreenCopy methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.ScreenCopy.Mode">
+            <summary>
+            Gets or sets a value indicating the part of the screen to copy with the Player.ScreenCopy methods (default: ScreenCopyMode.Video).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.ScreenCopy.ToImage">
+            <summary>
+            Returns an image from the Player.ScreenCopy.Mode part of the screen.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.ScreenCopy.ToImage(PVS.AVPlayer.ScreenCopyMode)">
+            <summary>
+            Sets the Player.ScreenCopy.Mode to the specified value and returns an image from the specified part of the screen.
+            </summary>
+            <param name="mode">The value to set the Player.ScreenCopy.Mode to.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.ScreenCopy.ToClipboard">
+            <summary>
+            Copies an image from the Player.ScreenCopy.Mode part of the screen to the system's clipboard.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.ScreenCopy.ToClipboard(PVS.AVPlayer.ScreenCopyMode)">
+            <summary>
+            Sets the Player.ScreenCopy.Mode to the specified value and copies an image from the specified part of the screen to the system's clipboard.
+            </summary>
+            <param name="mode">The value to set the Player.ScreenCopy.Mode to.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.ScreenCopy.ToFile(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Saves an image from the Player.ScreenCopy.Mode part of the screen to the specified file.
+            </summary>
+            <param name="fileName">The name of the file to save.</param>
+            <param name="imageFormat">The file format of the image to save.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.ScreenCopy.ToFile(System.String,System.Drawing.Imaging.ImageFormat,PVS.AVPlayer.ScreenCopyMode)">
+            <summary>
+            Sets the Player.ScreenCopy.Mode to the specified value and saves an image from the specified part of the screen to the specified file.
+            </summary>
+            <param name="fileName">The name of the file to save.</param>
+            <param name="imageFormat">The file format of the image to save.</param>
+            <param name="mode">The value to set the Player.ScreenCopy.Mode to.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.Sliders">
+            <summary>
+            A class that is used to group together the Sliders methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.Position">
+            <summary>
+            Gets or sets the media playback position slider (trackbar) that is controlled by the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.PositionMode">
+            <summary>
+            Gets or sets the mode (track or progress) of the player's position slider (default: Track).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.PositionLiveUpdate">
+            <summary>
+            Gets or sets a value indicating whether the display of the player is updated immediately when the player's position slider is dragged (default: true).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.PositionSkipSignals">
+            <summary>
+            Gets or sets a value indicating whether media signals are turned off while searching with live updates using the player's position slider (default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.PositionMouseWheel">
+            <summary>
+            Gets or sets the number of milliseconds to be added or subtracted from the player's position slider value when the scroll box is moved by the mouse wheel (default: 0 (not enabled)).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.PositionMouseWheelShift">
+            <summary>
+            Gets or sets the number of milliseconds to be added or subtracted from the player's position slider value when the scroll box is moved by the mouse wheel while the Shift key is pressed or by the PageUp and PageDown keys of the keyboard (default: 5000).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.Shuttle">
+            <summary>
+            Gets or sets the shuttle slider (trackbar for Player.Position.Step method) that is controlled by the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.AudioVolume">
+            <summary>
+            Gets or sets the audio volume slider (trackbar) that is controlled by the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.AudioBalance">
+            <summary>
+            Gets or sets the audio balance slider (trackbar) that is controlled by the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Sliders.Speed">
+            <summary>
+            Gets or sets the playback speed slider (trackbar) that is controlled by the player.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Sliders.PointToValue(System.Windows.Forms.TrackBar,System.Drawing.Point)">
+            <summary>
+            Returns the slider value at the specified location on the specified slider (trackbar).
+            </summary>
+            <param name="slider">The slider whose value should be obtained.</param>
+            <param name="location">The relative x- and y-coordinates on the slider.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Sliders.PointToValue(System.Windows.Forms.TrackBar,System.Int32,System.Int32)">
+            <summary>
+            Returns the slider value at the specified location on the specified slider (trackbar).
+            </summary>
+            <param name="slider">The slider whose value should be obtained.</param>
+            <param name="x">The relative x-coordinate on the slider (for horizontal oriented sliders).</param>
+            <param name="y">The relative y-coordinate on the slider (for vertical oriented sliders).</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Sliders.ValueToPoint(System.Windows.Forms.TrackBar,System.Int32)">
+            <summary>
+            Returns the location of the specified value on the specified slider (trackbar).
+            </summary>
+            /// <param name="slider">The slider whose value location should be obtained.</param>
+            <param name="value">The value of the slider.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.TaskbarProgress">
+            <summary>
+            A class that is used to group together the Taskbar Progress methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.TaskbarProgress.Add(System.Windows.Forms.Form)">
+            <summary>
+            Adds a taskbar progress indicator to the player (Windows Vista or later only).
+            </summary>
+            <param name="form">The form whose taskbar item is added as a progress indicator. Multiple forms and duplicates are allowed.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.TaskbarProgress.Remove(System.Windows.Forms.Form)">
+            <summary>
+            Removes a taskbar progress indicator from the player.
+            </summary>
+            <param name="form">The form whose taskbar progress indicator is removed.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.TaskbarProgress.RemoveAll">
+            <summary>
+            Removes all taskbar progress indicators from the player.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.TaskbarProgress.Clear">
+            <summary>
+            Removes all taskbar progress indicators from the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TaskbarProgress.Count">
+            <summary>
+            Gets the number of taskbar progress indicators of the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TaskbarProgress.List">
+            <summary>
+            Gets a list (form array) of the forms that have a taskbar progress indicator of the player.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TaskbarProgress.Mode">
+            <summary>
+            Gets or sets the mode (track or progress) of the taskbar progress indicator (default: Progress).
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.SystemPanels">
+            <summary>
+            A class that is used to group together the System Panels methods of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.SystemPanels.ShowAudioMixer">
+            <summary>
+            Opens the System Audio Mixer Control Panel.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.SystemPanels.ShowAudioMixer(System.Windows.Forms.Form)">
+            <summary>
+            Opens the System Audio Mixer Control Panel.
+            </summary>
+            <param name="centerForm">The control panel is centered on top of the specified form.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.SystemPanels.ShowAudioDevices">
+            <summary>
+            Opens the System Sound Control Panel.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.SystemPanels.ShowAudioDevices(System.Windows.Forms.Form)">
+            <summary>
+            Opens the System Sound Control Panel.
+            </summary>
+            <param name="centerForm">The control panel is centered on top of the specified form.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.SystemPanels.ShowDisplaySettings">
+            <summary>
+            Opens the System Display Control Panel.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.SystemPanels.ShowDisplaySettings(System.Windows.Forms.Form)">
+            <summary>
+            Opens the System Display Control Panel.
+            </summary>
+            <param name="centerForm">The control panel is centered on top of the specified form.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.SystemPanels.ShowLevelDevices">
+            <summary>
+            Opens the System Sound Control Panel.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.SystemPanels.ShowLevelDevices(System.Windows.Forms.Form)">
+            <summary>
+            Opens the System Sound Control Panel.
+            </summary>
+            <param name="centerForm">The control panel is centered on top of the specified form.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.Subtitles">
+            <summary>
+            A class that is used to group together the Subtitles methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.Enabled">
+            <summary>
+            Gets a value indicating whether the subtitles of the player are activated (by using the Player.Events.MediaSubtitleChanged event - default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.Exists">
+            <summary>
+            Gets a value indicating whether the playing media (or the media specified with Player.Subtitles.Filename) has a subtitles (.srt) file.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.Present">
+            <summary>
+            Gets a value indicating whether the player has active subtitles.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.Count">
+            <summary>
+            Gets the number of items in the active subtitles of the player.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Subtitles.GetText">
+            <summary>
+            Returns the text of the current subtitle (usually obtained with the Player.Events.MediaSubtitleChanged event).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Subtitles.GetStartTime">
+            <summary>
+            Returns the start time (including Player.Subtitles.TimeShift) of the current subtitle.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Subtitles.GetEndTime">
+            <summary>
+            Returns the end time (including Player.Subtitles.TimeShift) of the current subtitle.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Subtitles.GetText(System.Int32)">
+            <summary>
+            Returns the text of the specified item in the active subtitles of the player.
+            </summary>
+            <param name="index">The index of the item in the active subtitles of the player.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Subtitles.GetStartTime(System.Int32)">
+            <summary>
+            Returns the start time (including Player.Subtitles.TimeShift) of the specified item in the active subtitles of the player.
+            </summary>
+            <param name="index">The index of the item in the active subtitles of the player.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Subtitles.GetEndTime(System.Int32)">
+            <summary>
+            Returns the end time (including Player.Subtitles.TimeShift) of the specified item in the active subtitles of the player.
+            </summary>
+            <param name="index">The index of the item in the active subtitles of the player.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Subtitles.GetFileName">
+            <summary>
+            Returns the path and file name of the active subtitles file.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.Encoding">
+            <summary>
+            Gets or sets the text encoding of subtitles (default: Encoding.Default).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.Directory">
+            <summary>
+            Gets or sets the initial directory to search for subtitles files (default: string.Empty (the directory of the playing media)).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.DirectoryDepth">
+            <summary>
+            Gets or sets a value indicating the number of nested directories to search for subtitles files (values 0 to 3, default: 0 (base directory only)).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.FileName">
+            <summary>
+            Gets or sets the file name of the subtitles file to search for (without directory and extension, default: string.Empty (the file name of the playing media)). Reset when media starts playing.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.TimeShift">
+            <summary>
+            Gets or sets a value indicating the number of milliseconds that the subtitles appear earlier (negative values) or later (positive values) than specified by the subtitles data. Reset when media ends playing.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.RemoveHTMLTags">
+            <summary>
+            Gets or sets a value indicating whether any HTML tags are removed from the subtitles (default: true).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Subtitles.AudioOnly">
+            <summary>
+            Gets or sets a value indicating whether audio only media can activate subtitles (default: false).
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.Signals">
+            <summary>
+            A class that is used to group together the Signals methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Signals.Enabled">
+            <summary>
+            Gets a value indicating whether media signals of the player are activated (by use of the Player.Events.MediaSignal event - default: false).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Signals.Exists">
+            <summary>
+            Gets a value indicating whether the playing media (or the media specified with Player.Signals.Filename) has a media signals (.msf) file.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Signals.Present">
+            <summary>
+            Gets a value indicating whether the player has active media signals.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Signals.Count">
+            <summary>
+            Gets the number of items in the pending (added with the Player.Signals.Add method for the next media to be played) or active media signals of the player.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Signals.Add(System.TimeSpan,System.TimeSpan,System.String)">
+            <summary>
+            Adds a new media signal for the next or current playing media to the player. If media signals are added for the next media to be played, no media signals file is used for that media. All media signals are removed from the player when media stops playing. Media signals are reported by Player.Events.MediaSignal events.
+            </summary>
+            <param name="startTime">The start time of the media signal to add.</param>
+            <param name="endTime">The end time of the media signal to add.</param>
+            <param name="message">The message of the media signal to add.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Signals.Clear">
+            <summary>
+            Removes all current media signals for the next or current playing media from the player.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PVS.AVPlayer.Signals.Encoding">
+            <summary>
+            Gets or sets the text encoding of the messages of media signals (default: Encoding.Default).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Signals.Directory">
+            <summary>
+            Gets or sets the initial directory to search for media signals files (default: string.Empty (the directory of the playing media)).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Signals.DirectoryDepth">
+            <summary>
+            Gets or sets a value indicating the number of nested directories to search for media signals files (values 0 to 3, default: 0 (base directory only)).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Signals.FileName">
+            <summary>
+            Gets or sets the file name of the media signals file to search for (without directory and extension, default: string.Empty (the file name of the playing media)). Reset when media starts playing.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Signals.TimeShift">
+            <summary>
+            Gets or sets a value indicating the number of milliseconds that the media signals appear earlier (negative values) or later (positive values) than specified by the media signals data. Reset when media ends playing.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.Position">
+            <summary>
+            A class that is used to group together the Position methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Position.FromBegin">
+            <summary>
+            Gets or sets the playback position of the playing media measured from the natural beginning of the media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Position.ToEnd">
+            <summary>
+            Gets or sets the playback position of the playing media measured from the natural end of the media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Position.FromStart">
+            <summary>
+            Gets or sets the playback position of the playing media measured from the Player.Media.StartPosition of the media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Position.ToStop">
+            <summary>
+            Gets or sets the playback position of the playing media measured from the Player.Media.StopPosition of the media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Position.Track">
+            <summary>
+            Gets or sets the playback position of the playing media relative to the natural beginning and end of the media. Values from 0 to 1. See also: Player.Position.Progress.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Position.Progress">
+            <summary>
+            Gets or sets the playback position of the playing media relative to the Player.Media.StartPosition and Player.Media.StopPosition of the media. Values from 0 to 1. See also: Player.Position.Track.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Position.Rewind">
+            <summary>
+            Rewinds the playback position of the playing media to the Player.Media.StartPosition of the media.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Position.Skip(System.Int32)">
+            <summary>
+            Changes the playback position of the playing media in any direction by the given amount of seconds.
+            </summary>
+            <param name="seconds">The amount of seconds to skip.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Position.Step(System.Int32)">
+            <summary>
+            Changes the playback position of the playing media in any direction by the given amount of (video) frames.
+            </summary>
+            <param name="frames">The amount of frames to step.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.Media">
+            <summary>
+            A class that is used to group together the Media methods and properties of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Media.Length">
+            <summary>
+            Returns the natural length (duration) of the playing media. See also Player.Media.Duration and .GetLength.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Media.Duration">
+            <summary>
+            Returns the length (duration) of the playing media from Player.Media.StartPosition to Player.Media.StopPosition. See also Player.Media.Length and .GetLength.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Media.GetLength(PVS.AVPlayer.MediaLength)">
+            <summary>
+            Returns the length (duration) of the specified part of the playing media. See also Player.Media.Duration and .Length.
+            </summary>
+            <param name="part">Specifies the part of the playing media to get the length (duration) of.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Media.GetName(PVS.AVPlayer.MediaName)">
+            <summary>
+            Returns (part of) the file name of the playing media.
+            </summary>
+            <param name="part">Specifies the part of the file name to return.</param>
+        </member>
+        <member name="P:PVS.AVPlayer.Media.StartPosition">
+            <summary>
+            Gets or sets the playback start (or repeat begin) position of the playing media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Media.StopPosition">
+            <summary>
+            Gets or sets the playback stop (or repeat end) position of the playing media.
+            TimeSpan.Zero or 00:00:00 = natural end of media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Media.StartPositionNext">
+            <summary>
+            Gets or sets the playback start (or repeat begin) position of the player for the next media to play.
+            When set and the next media starts playing, the value is copied to
+            the Player.Media.StartPosition setting of the player and then reset to 00:00:00.
+            Special use: values between 0 and 100 ms are interpreted as percentages of the length of the next media.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Media.StopPositionNext">
+            <summary>
+            Gets or sets the playback stop (or repeat end) position of the player for the next media to play.
+            When set and the next media starts playing, the value is copied to the Player.Media.StopPosition setting
+            of the player and then reset to 00:00:00. TimeSpan.Zero or 00:00:00 = natural end of media.
+            Special use: values between 0 and 100 ms are interpreted as percentages of the length of the next media.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Media.GetTagInfo">
+            <summary>
+            Returns mp3 or wma media tag information from the playing media (image retrieved from media or folder).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Media.GetTagInfo(PVS.AVPlayer.ImageSource)">
+            <summary>
+            Returns mp3 or wma media tag information from the playing media.
+            </summary>
+            <param name="imageSource">A value indicating whether and where an album art image is to be obtained.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Media.GetTagInfo(System.String,PVS.AVPlayer.ImageSource)">
+            <summary>
+            Returns mp3 or wma media tag information from the specified file.
+            </summary>
+            <param name="fileName">The path and name of the file whose tag information is to be obtained.</param>
+            <param name="imageSource">A value indicating whether and where an album art image is to be obtained.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PVS.AVPlayer.Media.ResourceToFile(System.Byte[],System.String)">
+            <summary>
+            Returns the path to a new file, created from the specified embedded resource and with the specified file name, in the system's temporary folder for use with the Player.Play methods.
+            </summary>
+            <param name="resource">The embedded resource (e.g. Properties.Resources.MyMedia) to save to a new file in the system's temporary folder.</param>
+            <param name="fileName">The file name (e.g. "MyMedia.mp4") to be used for the new file in the system's temporary folder.</param>
+        </member>
+        <member name="T:PVS.AVPlayer.Events">
+            <summary>
+            A class that is used to group together the Events of the PVS.AVPlayer.Player class.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaEnded">
+            <summary>
+            Occurs when media has finished playing.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaEndedNotice">
+            <summary>
+            Occurs when media has finished playing, just before the Player.Events.MediaEnded event occurs.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaNextRequested">
+            <summary>
+            Occurs when playback of next media is requested.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaPreviousRequested">
+            <summary>
+            Occurs when playback of previous media is requested.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaRepeatChanged">
+            <summary>
+            Occurs when the repeat setting of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaRepeating">
+            <summary>
+            Occurs when media has finished playing and is about to be repeated.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaRepeated">
+            <summary>
+            Occurs when media has finished playing and is repeated.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaOpened">
+            <summary>
+            Occurs when a media file is opened to be played.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaStarted">
+            <summary>
+            Occurs when media starts playing.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaPaused">
+            <summary>
+            Occurs when the pause mode of the player is activated (playing media is paused).
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaResumed">
+            <summary>
+            Occurs when the pause mode of the player is deactivated (paused media resumes playing).
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaPositionChanged">
+            <summary>
+            Occurs when the playback position of the playing media has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaStartStopPositionNextChanged">
+            <summary>
+            Occurs when the start- and/or endposition of the player for the next media to play has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaStartStopPositionChanged">
+            <summary>
+            Occurs when the start- and/or endposition of the playing media has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaDisplayChanged">
+            <summary>
+            Occurs when the display window of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaDisplayModeChanged">
+            <summary>
+            Occurs when the displaymode of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaDisplayShapeChanged">
+            <summary>
+            Occurs when the shape of the display window of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaFullScreenChanged">
+            <summary>
+            Occurs when the fullscreen setting of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaFullScreenModeChanged">
+            <summary>
+            Occurs when the fullscreen mode of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaAudioVolumeChanged">
+            <summary>
+            Occurs when the audio volume of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaAudioBalanceChanged">
+            <summary>
+            Occurs when the audio balance of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaAudioEnabledChanged">
+            <summary>
+            Occurs when the audio enabled setting of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaVideoEnabledChanged">
+            <summary>
+            Occurs when the video enabled setting of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaVideoBoundsChanged">
+            <summary>
+            Occurs when the videobounds of the video on the display window of the player have changed (by using VideoBounds, VideoZoom or VideoMove options).
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaSpeedChanged">
+            <summary>
+            Occurs when the playback speed setting of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaOverlayChanged">
+            <summary>
+            Occurs when the display overlay of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaOverlayModeChanged">
+            <summary>
+            Occurs when the display overlay mode setting of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaOverlayHoldChanged">
+            <summary>
+            Occurs when the display overlay hold setting of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaOverlayActiveChanged">
+            <summary>
+            Occurs when the active state of the display overlay of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaPeakLevelChanged">
+            <summary>
+            Occurs when the audio output peak level of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaDisplayClonesChanged">
+            <summary>
+            Occurs when the number of display clones of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaDisplayClonesStarted">
+            <summary>
+            Occurs when the display clones of the player are started (usually when media starts playing or Player.Overlay.Hold has changed).
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaDisplayClonesStopped">
+            <summary>
+            Occurs when the display clones of the player are stopped (usually when media stops playing or Player.Overlay.Hold has changed).
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaSubtitleChanged">
+            <summary>
+            Occurs when the current subtitle of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaSignal">
+            <summary>
+            Occurs when the current media signal of the player has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaVideoTrackChanged">
+            <summary>
+            Occurs when the active video track of the playing media has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaAudioTrackChanged">
+            <summary>
+            Occurs when the active audio track of the playing media has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaDragDisplayBegin">
+            <summary>
+            Occurs when a user begins a drag form operation by pressing the left mouse button on the display window of the player.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaDragDisplayMove">
+            <summary>
+            Occurs when a user drags a form by dragging the display window of the player.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaDragDisplayEnd">
+            <summary>
+            Occurs when a user finishes a drag form operation by releasing the left mouse button.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaMouseMove">
+            <summary>
+            Occurs when the mouse pointer is moved over the display window (or display overlay) of the player.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaMouseDown">
+            <summary>
+            Occurs when the mouse pointer is over the display window (or display overlay) of the player and a mouse button is pressed. 
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaMouseUp">
+            <summary>
+            Occurs when the mouse pointer is over the display window (or display overlay) of the player and a mouse button is released.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaMouseClick">
+            <summary>
+            Occurs when the display window (or display overlay) of the player is clicked.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaMouseDoubleClick">
+            <summary>
+            Occurs when the display window (or display overlay) of the player is double-clicked.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaMouseWheel">
+            <summary>
+            Occurs when the mouse pointer is over the display window (or display overlay) of the player and the mouse wheel is moved.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.Events.MediaCursorHideChanged">
+            <summary>
+            Occurs when the mouse cursor is automatically hidden or shown by the player.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.InputDevice">
+            <summary>
+            A class that is used to group together the Input Device methods and properties of the PVS.AVPlayer.Recorder class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InputDevice.Count">
+            <summary>
+            Gets the number of all enabled system audio input devices.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InputDevice.Index">
+            <summary>
+            Gets or sets the index of the system audio input device used by the recorder.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InputDevice.Name">
+            <summary>
+            Gets or sets the name of the system audio input device used by the recorder (a portion of the name can be used to set a device).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.InputDevice.GetDevices">
+            <summary>
+            Returns the names and indexes (= position in the returned zero-based array) of all enabled system audio input devices.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.MciRecDevice">
+            <summary>
+            A class that is used to group together the MCI methods and properties of the PVS.AVPlayer.Recorder class.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MciRecDevice.Id">
+            <summary>
+            Gets the ID of the MCI device associated with the current recording.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MciRecDevice.Type">
+            <summary>
+            Gets the type name of the MCI device associated with the current recording.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.MciRecDevice.Name">
+            <summary>
+            Gets a description (product name) of the MCI device associated with the current recording.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.MciRecDevice.Command(System.String)">
+            <summary>
+            Sends a command to the MCI device associated with the current recording.
+            </summary>
+            <param name="command">String that specifies the MCI command.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.MciRecDevice.Command(System.String,System.String)">
+            <summary>
+            Sends a command to the MCI device associated with the current recording.
+            </summary>
+            <param name="command">String that specifies the MCI command.</param>
+            <param name="parameters">String that specifies the MCI command parameters.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.MciRecDevice.Request(System.String,System.String,System.String@)">
+            <summary>
+            Sends a request to the MCI device associated with the current recording.
+            </summary>
+            <param name="request">String that specifies the MCI request.</param>
+            <param name="parameters">String that specifies the MCI request parameters.</param>
+            <param name="result">A string that receives return information.</param>
+        </member>
+        <member name="P:PVS.AVPlayer.MciRecDevice.Count">
+            <summary>
+            Gets the number of all open MCI devices in this assembly.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.RecEvents">
+            <summary>
+            A class that is used to group together the Events of the PVS.AVPlayer.Recorder class.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderStarted">
+            <summary>
+            Occurs when a recording has started.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderPaused">
+            <summary>
+            Occurs when the pause mode of the recorder is activated (recording is paused).
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderResumed">
+            <summary>
+            Occurs when the pause mode of the recorder is deactivated (recording has resumed).
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderStopped">
+            <summary>
+            Occurs when a recording has stopped by using the Stop function of the recorder.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderSaveRequest">
+            <summary>
+            Occurs when a recording has stopped and the recording can be saved to a file (length > 0).
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderPositionChanged">
+            <summary>
+            Occurs when the recording position of the recorder has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderInputLevelChanged">
+            <summary>
+            Occurs when the audio input level of the recorder has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderInputDeviceChanged">
+            <summary>
+            Occurs when the input device of the recorder has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderChannelsChanged">
+            <summary>
+            Occurs when the input channels setting of the recorder has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderBitsChanged">
+            <summary>
+            Occurs when the input bits per sample setting of the recorder has changed.
+            </summary>
+        </member>
+        <member name="E:PVS.AVPlayer.RecEvents.RecorderSampleRateChanged">
+            <summary>
+            Occurs when the input samples per second setting of the recorder has changed.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.TaskbarMarquee">
+            <summary>
+            A class that is used to group together the Taskbar Marquee methods and properties of the PVS.AVPlayer.Recorder class.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.TaskbarMarquee.Add(System.Windows.Forms.Form)">
+            <summary>
+            Adds a taskbar marquee indicator to the recorder (Windows Vista or later only).
+            </summary>
+            <param name="form">The form whose taskbar item is added as a recorder marquee indicator. Multiple forms and duplicates are allowed.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.TaskbarMarquee.Remove(System.Windows.Forms.Form)">
+            <summary>
+            Removes a taskbar marquee indicator from the recorder.
+            </summary>
+            <param name="form">The form whose taskbar recorder marquee indicator is removed.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.TaskbarMarquee.RemoveAll">
+            <summary>
+            Removes all taskbar marquee indicators from the recorder.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.TaskbarMarquee.Clear">
+            <summary>
+            Removes all taskbar marquee indicators from the recorder.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TaskbarMarquee.Count">
+            <summary>
+            Gets the number of taskbar marquee indicators of the recorder.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TaskbarMarquee.List">
+            <summary>
+            Gets the forms that have a taskbar marquee indicator of the recorder.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.TaskbarMarquee.Mode">
+            <summary>
+            Gets or sets a value indicating the appearance of the taskbar marquee indicators during recordings (default: FlashingRed).
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.Channels">
+            <summary>
+            Specifies the number of input channels for recording.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.Channels.Mono">
+            <summary>
+            The recorder uses one input channel (mono).
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.Channels.Stereo">
+            <summary>
+            The recorder uses two input channels (stereo).
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.Bits">
+            <summary>
+            Specifies the number of bits per sample for recording.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.Bits.Bits_08">
+            <summary>
+            The recorder uses 8 bits per sample.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.Bits.Bits_16">
+            <summary>
+            The recorder uses 16 bits per sample.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.Bits.Bits_24">
+            <summary>
+            The recorder uses 24 bits per sample.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.Bits.Bits_32">
+            <summary>
+            The recorder uses 32 bits per sample.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.SampleRate">
+            <summary>
+            Specifies the number of samples per second for recording.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_8000">
+            <summary>
+            The recorder uses 8000 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_11025">
+            <summary>
+            The recorder uses 11025 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_16000">
+            <summary>
+            The recorder uses 16000 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_22050">
+            <summary>
+            The recorder uses 22050 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_32000">
+            <summary>
+            The recorder uses 32000 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_44100">
+            <summary>
+            The recorder uses 44100 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_48000">
+            <summary>
+            The recorder uses 48000 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_64000">
+            <summary>
+            The recorder uses 64000 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_88200">
+            <summary>
+            The recorder uses 88200 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_96000">
+            <summary>
+            The recorder uses 96000 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_176400">
+            <summary>
+            The recorder uses 176400 samples per second.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.SampleRate.Samples_192000">
+            <summary>
+            The recorder uses 192000 samples per second.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.TaskbarMarqueeMode">
+            <summary>
+            Specifies the appearance of the taskbar marquee indicator during recordings.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.TaskbarMarqueeMode.PulsingGreen">
+            <summary>
+            A pulsing green indicator is displayed in the taskbar button.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.TaskbarMarqueeMode.SteadyRed">
+            <summary>
+            A non-flashing red indicator is displayed in the taskbar button.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.TaskbarMarqueeMode.FlashingRed">
+            <summary>
+            A flashing red indicator is displayed in the taskbar button.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.RecorderPositionEventArgs">
+            <summary>
+            Provides data for the Recorder.RecorderPositionChanged event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.RecorderPositionEventArgs.Position">
+            <summary>
+            Gets the current recording position.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.InputLevelEventArgs">
+            <summary>
+            Provides data for the Recorder.RecorderInputLevelChanged event.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InputLevelEventArgs.Channels">
+            <summary>
+            Gets the current number of input channels (mono or stereo).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InputLevelEventArgs.LeftLevel">
+            <summary>
+            Gets the current level of the left (or mono) audio input channel. Values from 0 to 32767.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.InputLevelEventArgs.RightLevel">
+            <summary>
+            Gets the current level of the right (stereo) audio input channel. Values from 0 to 32767.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.Recorder">
+            <summary>
+            Represents a recorder that can be used to record audio using Microsoft Windows built-in Media Control Interface (MCI).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.#ctor">
+            <summary>
+            Initializes a new instance of the PVS.AVPlayer.Recorder class (creates a new sound recorder).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.Dispose">
+            <summary>
+            Remove the recorder and clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.Dispose(System.Boolean)">
+            <summary>
+            Remove the recorder and clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.Finalize">
+            <summary>
+            Remove the recorder and clean up any resources being used.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.Version">
+            <summary>
+            Gets the version number of the PVS.AVPlayer library.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.VersionString">
+            <summary>
+            Gets the version string of the PVS.AVPlayer library.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.LastError">
+            <summary>
+            Gets a value indicating whether an error has occurred with the last recorder instruction.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.LastErrorCode">
+            <summary>
+            Gets the code of the last error of the recorder that has occurred (0 = no error).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.LastErrorString">
+            <summary>
+            Gets a description of the last error of the recorder that has occurred.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.GetErrorString(System.Int32)">
+            <summary>
+            Returns a description of the specified error code.
+            </summary>
+            <param name="errorCode">The error code whose description needs to be obtained.</param>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.Channels">
+            <summary>
+            Gets or sets the number of channels used for recording (default: Channels.Mono).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.Bits">
+            <summary>
+            Gets or sets the number of bits per sample used for recording (default: Bits.Bits8).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.SampleRate">
+            <summary>
+            Gets or sets the number of samples per second used for recording (default: SampleRate.Samples11025).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.Record">
+            <summary>
+            Starts a new recording.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.Recording">
+            <summary>
+            Gets a value indicating whether the recorder is recording (includes state paused).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.Pause">
+            <summary>
+            Activates the pause mode of the recorder (pauses recording).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.Paused">
+            <summary>
+            Gets or sets a value indicating whether the pause mode of the recorder is activated.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.Resume">
+            <summary>
+            Deactivates the pause mode of the recorder (resumes recording).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.Stop">
+            <summary>
+            Stops recording.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.StopAndSave(System.String,System.Boolean)">
+            <summary>
+            Stops recording and saves the recording to the specified waveform audio file (same as Recorder.SaveAndStop).
+            </summary>
+            <param name="fileName">The file to which to save the recording.</param>
+            <param name="addExtension">A value indicating whether to add the .wav extension to the specified filename if omitted.</param>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.TimerInterval">
+            <summary>
+            Gets or sets the interval of the RecorderPositionChanged and RecorderInputLevelChanged events timer of the recorder. The value is in milliseconds (default: 100 ms).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.Position">
+            <summary>
+            Gets the recording position of the current recording. The position is rounded down to full seconds during recording. Pause the recording to get the actual recording time.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.Duration">
+            <summary>
+            Gets the duration (length) of the current recording. The duration is rounded down to full seconds during recording. Pause the recording to get the actual recording duration.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.Length">
+            <summary>
+            Gets the length of the current recording in milliseconds. The length is rounded down to full seconds during recording. Pause the recording to get the actual recording length.
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.LengthBytes">
+            <summary>
+            Gets the length of the current recording in bytes. The byte length is rounded down to full seconds during recording. Pause the recording to get the actual byte length.
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.Remove(System.Int32,System.Int32)">
+            <summary>
+            Removes a portion of the current recording.
+            </summary>
+            <param name="beginPosition">Specifies the position at which removing begins in milliseconds.</param>
+            <param name="endPosition">Specifies the position at which removing ends in milliseconds. The value 0 (zero) indicates the end of the recording.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.Save(System.String,System.Boolean)">
+            <summary>
+            Saves the current recording to the specified waveform audio file.
+            </summary>
+            <param name="fileName">The file to which to save the recording.</param>
+            /// <param name="addExtension">A value indicating whether to add the .wav extension to the specified filename if omitted.</param>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.SaveAndStop(System.String,System.Boolean)">
+            <summary>
+            Stops recording and saves the recording to the specified waveform audio file (same as Recorder.StopAndSave).
+            </summary>
+            <param name="fileName">The file to which to save the recording.</param>
+            <param name="addExtension">A value indicating whether to add the .wav extension to the specified filename if omitted.</param>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.TaskbarMarquee">
+            <summary>
+            Provides access to the taskbar marquee indicator settings of the recorder (e.g. Recorder.TaskbarMarquee.Add).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.InputDevice">
+            <summary>
+            Provides access to the input device settings of the recorder (e.g. Recorder.InputDevice.Name).
+            </summary>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.MciDevice">
+            <summary>
+            Provides direct access to the mci device associated with the recording (e.g. Recorder.MciDevice.Command).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.ShowAudioInputPanel">
+            <summary>
+            Opens the System Sound Control Panel (Audio Input Devices).
+            </summary>
+        </member>
+        <member name="M:PVS.AVPlayer.Recorder.ShowAudioInputPanel(System.Windows.Forms.Form)">
+            <summary>
+            Opens the System Sound Control Panel (Audio Input Devices).
+            </summary>
+            <param name="centerForm">The control panel is centered on top of the specified form.</param>
+        </member>
+        <member name="P:PVS.AVPlayer.Recorder.Events">
+            <summary>
+            Provides access to the events of the recorder (e.g. Recorder.Events.RecorderStopped).
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.CloneFlip">
+            <summary>
+            Specifies the axis used to flip the video image of the display clone.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CloneFlip.FlipNone">
+            <summary>
+            Specifies no flipping.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CloneFlip.FlipX">
+            <summary>
+            Specifies a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CloneFlip.FlipY">
+            <summary>
+            Specifies a vertical flip.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CloneFlip.FlipXY">
+            <summary>
+            Specifies a horizontal and vertical flip.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.CloneLayout">
+            <summary>
+            Specifies the size and location of the video image of the display clone.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CloneLayout.Stretch">
+            <summary>
+            The video image is stretched across the display of the clone.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CloneLayout.Zoom">
+            <summary>
+            The video image is maximally enlarged within the display of the clone while maintaining the aspect ratio.
+            </summary>
+        </member>
+        <member name="T:PVS.AVPlayer.CloneQuality">
+            <summary>
+            Specifies the video quality of the display clone.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CloneQuality.Normal">
+            <summary>
+            Specifies normal quality video.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CloneQuality.High">
+            <summary>
+            Specifies high-quality video.
+            </summary>
+        </member>
+        <member name="F:PVS.AVPlayer.CloneQuality.Auto">
+            <summary>
+            Specifies automatic quality video: high-quality video if the video image of the display clone is smaller than the original video image, otherwise normal video quality.
+            </summary>
+        </member>
+    </members>
+</doc>

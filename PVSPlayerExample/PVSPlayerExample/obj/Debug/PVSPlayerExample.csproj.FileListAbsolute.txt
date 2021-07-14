@@ -81,3 +81,5 @@ C:\Project\VideoManagement\PVSPlayerExample\PVSPlayerExample\bin\Debug\PVS.Media
 C:\Project\VideoManagement\PVSPlayerExample\PVSPlayerExample\obj\Debug\PVSPlayerExample.csproj.CopyComplete
 C:\Project\VideoManagement\PVSPlayerExample\PVSPlayerExample\obj\Debug\PVSPlayerExample.exe
 C:\Project\VideoManagement\PVSPlayerExample\PVSPlayerExample\obj\Debug\PVSPlayerExample.pdb
+C:\Project\VideoManagement\PVSPlayerExample\PVSPlayerExample\bin\Debug\PVS.AVPlayer.dll
+C:\Project\VideoManagement\PVSPlayerExample\PVSPlayerExample\bin\Debug\PVS.AVPlayer.xml

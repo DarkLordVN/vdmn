@@ -9160,9 +9160,9 @@ namespace PVS.MediaPlayer
         // creates and starts the recorder
         internal HResult WSR_StartRecorder(string fileName, int width, int height, float frameRate)
         {
-            //bool hasAudio               = false;
-            //IMFMediaSource audioSource  = null;
-            //IMFMediaType audioType      = null;
+            bool hasAudio = false;
+            IMFMediaSource audioSource = null;
+            IMFMediaType audioType = null;
 
             bool hasVideo               = false;
             IMFMediaSource videoSource  = null;
@@ -9202,50 +9202,51 @@ namespace PVS.MediaPlayer
 
                         if (_lastError == NO_ERROR)
 						{
-							//if (!_webcamAggregated)
-							{
-								MFExtern.MFCreateAttributes(out attributes, 1);
+                            if (!_webcamAggregated)
+                            {
+                                hasAudio = true;
+                                MFExtern.MFCreateAttributes(out attributes, 1);
 								attributes.SetUINT32(MFAttributesClsid.MF_CAPTURE_ENGINE_USE_VIDEO_DEVICE_ONLY, 1);
 							}
-                            //else
-                            //{
-                            //	hasAudio = true;
+                            else
+                            {
+                                hasAudio = true;
 
-                            //	MFExtern.MFCreateAttributes(out sourceAttr, 2);
-                            //	sourceAttr.SetGUID(MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE, MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_GUID);
-                            //	sourceAttr.SetString(MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ENDPOINT_ID, _micDevice._id);
-                            //	_lastError = MFExtern.MFCreateDeviceSource(sourceAttr, out audioSource);
-                            //	if (_lastError == HResult.MF_E_ATTRIBUTENOTFOUND || _lastError == HResult.ERROR_PATH_NOT_FOUND) _lastError = HResult.MF_E_NO_AUDIO_RECORDING_DEVICE;
-                            //	Marshal.ReleaseComObject(sourceAttr);
+                                MFExtern.MFCreateAttributes(out sourceAttr, 2);
+                                sourceAttr.SetGUID(MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE, MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_GUID);
+                                sourceAttr.SetString(MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ENDPOINT_ID, _micDevice._id);
+                                _lastError = MFExtern.MFCreateDeviceSource(sourceAttr, out audioSource);
+                                if (_lastError == HResult.MF_E_ATTRIBUTENOTFOUND || _lastError == HResult.ERROR_PATH_NOT_FOUND) _lastError = HResult.MF_E_NO_AUDIO_RECORDING_DEVICE;
+                                Marshal.ReleaseComObject(sourceAttr);
 
-                            //	if (_lastError == HResult.MF_E_VIDEO_RECORDING_DEVICE_PREEMPTED) _lastError = NO_ERROR;
-                            //}
+                                if (_lastError == HResult.MF_E_VIDEO_RECORDING_DEVICE_PREEMPTED) _lastError = NO_ERROR;
+                            }
                         }
                     }
-                    //else // _micMode
-                    //{
-                    //	hasAudio = true;
+                    else // _micMode
+                    {
+                        hasAudio = true;
 
-                    //	// create audio source
-                    //	MFExtern.MFCreateAttributes(out attributes, 1);
-                    //	attributes.SetUINT32(MFAttributesClsid.MF_CAPTURE_ENGINE_USE_AUDIO_DEVICE_ONLY, 1);
+                        // create audio source
+                        MFExtern.MFCreateAttributes(out attributes, 1);
+                        attributes.SetUINT32(MFAttributesClsid.MF_CAPTURE_ENGINE_USE_AUDIO_DEVICE_ONLY, 1);
 
-                    //	MFExtern.MFCreateAttributes(out IMFAttributes sourceAttr, 2);
-                    //	sourceAttr.SetGUID(MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE, MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_GUID);
-                    //	sourceAttr.SetString(MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ENDPOINT_ID, _micDevice._id);
-                    //	_lastError = MFExtern.MFCreateDeviceSource(attributes, out audioSource);
-                    //	if (_lastError == HResult.MF_E_ATTRIBUTENOTFOUND || _lastError == HResult.ERROR_PATH_NOT_FOUND) _lastError = HResult.MF_E_NO_AUDIO_RECORDING_DEVICE;
-                    //	Marshal.ReleaseComObject(sourceAttr);
+                        MFExtern.MFCreateAttributes(out IMFAttributes sourceAttr, 2);
+                        sourceAttr.SetGUID(MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE, MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_GUID);
+                        sourceAttr.SetString(MFAttributesClsid.MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ENDPOINT_ID, _micDevice._id);
+                        _lastError = MFExtern.MFCreateDeviceSource(attributes, out audioSource);
+                        if (_lastError == HResult.MF_E_ATTRIBUTENOTFOUND || _lastError == HResult.ERROR_PATH_NOT_FOUND) _lastError = HResult.MF_E_NO_AUDIO_RECORDING_DEVICE;
+                        Marshal.ReleaseComObject(sourceAttr);
 
-                    //	if (_lastError == HResult.MF_E_VIDEO_RECORDING_DEVICE_PREEMPTED) _lastError = NO_ERROR;
-                    //}
+                        if (_lastError == HResult.MF_E_VIDEO_RECORDING_DEVICE_PREEMPTED) _lastError = NO_ERROR;
+                    }
 
                     if (_lastError == NO_ERROR)
                     {
                         wsr_CallBack = new WSR_WebcamCallBack(this);
 
                         mf_AwaitCallBack = true;
-                        _lastError = wsr_Recorder.Initialize(wsr_CallBack, attributes, null, videoSource); // null = audioSource
+                        _lastError = wsr_Recorder.Initialize(wsr_CallBack, attributes, audioSource, videoSource); // null = audioSource
                         WaitForEvent.WaitOne(TIMEOUT_30_SECONDS);
 
                         if (_lastError == NO_ERROR) _lastError = wsr_ErrorFromCallback;
@@ -9272,20 +9273,23 @@ namespace PVS.MediaPlayer
 
                                 if (_lastError == NO_ERROR)
                                 {
-									//add audio stream
+                                    //add audio stream
 
-									//if (hasAudio)
-									//{
-									//	AudioTrack[] tracks = AV_GetAudioTracks();
-									//	audioType = WSR_CreateAudioMediaType(tracks[0]._samplerate, tracks[0]._channelCount, 44100);
-									//	_lastError = ((IMFCaptureRecordSink)sink).AddStream(0, audioType, null, out int audioIndex);
-									//	if ((int)_lastError == -1072873821) _lastError = NO_ERROR;
-									//}
+                                    if (hasAudio)
+                                    {
+                                        AudioTrack[] tracks = AV_GetAudioTracks();
+                                        if(tracks != null && tracks.Length > 0)
+                                        {
+                                            audioType = WSR_CreateAudioMediaType(tracks[0]._samplerate, tracks[0]._channelCount, 44100);
+                                            _lastError = ((IMFCaptureRecordSink)sink).AddStream(0, audioType, null, out int audioIndex);
+                                            if ((int)_lastError == -1072873821) _lastError = NO_ERROR;
+                                        }
+                                    }
 
 #pragma warning restore IDE0059 // Unnecessary assignment of a value
 
-									//if (_lastError == NO_ERROR)
-									{
+                                    if (_lastError == NO_ERROR)
+                                    {
                                         //  TODO set extension for audio only
                                         if (wsr_VideoFormat == RecorderVideoFormat.WMV3) fileName = Path.ChangeExtension(fileName, ".wmv");
                                         else fileName = Path.ChangeExtension(fileName, ".mp4");
@@ -9394,20 +9398,20 @@ namespace PVS.MediaPlayer
         }
 
         // removed error checking
-        //private IMFMediaType WSR_CreateAudioMediaType(int samplesPerSecond, int numChannels, int bytesPerSecond)
-        //{
-        //	MFExtern.MFCreateMediaType(out IMFMediaType mediaType);
+        private IMFMediaType WSR_CreateAudioMediaType(int samplesPerSecond, int numChannels, int bytesPerSecond)
+        {
+            MFExtern.MFCreateMediaType(out IMFMediaType mediaType);
 
-        //	mediaType.SetGUID(MFAttributesClsid.MF_MT_MAJOR_TYPE, MFMediaType.Audio);
-        //	mediaType.SetGUID(MFAttributesClsid.MF_MT_SUBTYPE, MFMediaType.AAC);
-        //	mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_SAMPLES_PER_SECOND, samplesPerSecond);
-        //	mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_BITS_PER_SAMPLE, 16);
-        //	mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_NUM_CHANNELS, numChannels);
-        //	mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_AVG_BYTES_PER_SECOND, bytesPerSecond);
-        //	mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_BLOCK_ALIGNMENT, 1);
+            mediaType.SetGUID(MFAttributesClsid.MF_MT_MAJOR_TYPE, MFMediaType.Audio);
+            mediaType.SetGUID(MFAttributesClsid.MF_MT_SUBTYPE, MFMediaType.AAC);
+            mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_SAMPLES_PER_SECOND, samplesPerSecond);
+            mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_BITS_PER_SAMPLE, 16);
+            mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_NUM_CHANNELS, numChannels);
+            mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_AVG_BYTES_PER_SECOND, bytesPerSecond);
+            mediaType.SetUINT32(MFAttributesClsid.MF_MT_AUDIO_BLOCK_ALIGNMENT, 1);
 
-        //	return mediaType;
-        //}
+            return mediaType;
+        }
 
         #endregion
 

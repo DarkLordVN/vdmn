@@ -1,0 +1,12 @@
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\bin\Debug\PVSMediaPlayerHowTo.exe.config
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\bin\Debug\PVSMediaPlayerHowTo.exe
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\bin\Debug\PVSMediaPlayerHowTo.pdb
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\bin\Debug\PVS.MediaPlayer.dll
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\bin\Debug\PVS.MediaPlayer.xml
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\obj\Debug\PVSMediaPlayerHowTo.csprojResolveAssemblyReference.cache
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\obj\Debug\PVSMediaPlayerHowTo.Form1.resources
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\obj\Debug\PVSMediaPlayerHowTo.Overlay.resources
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\obj\Debug\PVSMediaPlayerHowTo.Properties.Resources.resources
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\obj\Debug\PVSMediaPlayerHowTo.csproj.GenerateResource.Cache
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\obj\Debug\PVSMediaPlayerHowTo.exe
+C:\Project\VideoManagement\How To (C#)\PVSMediaPlayerHowTo\obj\Debug\PVSMediaPlayerHowTo.pdb
