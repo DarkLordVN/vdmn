@@ -1,0 +1,8 @@
+C:\Project\VideoManagement\PVSPlayerExample\PVS.MediaPlayer\bin\Debug\PVS.MediaPlayer.exe.config
+C:\Project\VideoManagement\PVSPlayerExample\PVS.MediaPlayer\bin\Debug\PVS.MediaPlayer.exe
+C:\Project\VideoManagement\PVSPlayerExample\PVS.MediaPlayer\bin\Debug\PVS.MediaPlayer.pdb
+C:\Project\VideoManagement\PVSPlayerExample\PVS.MediaPlayer\obj\Debug\PVS.MediaPlayer.Properties.Resources.resources
+C:\Project\VideoManagement\PVSPlayerExample\PVS.MediaPlayer\obj\Debug\PVS.MediaPlayer.csproj.GenerateResource.cache
+C:\Project\VideoManagement\PVSPlayerExample\PVS.MediaPlayer\obj\Debug\PVS.MediaPlayer.csproj.CoreCompileInputs.cache
+C:\Project\VideoManagement\PVSPlayerExample\PVS.MediaPlayer\obj\Debug\PVS.MediaPlayer.exe
+C:\Project\VideoManagement\PVSPlayerExample\PVS.MediaPlayer\obj\Debug\PVS.MediaPlayer.pdb

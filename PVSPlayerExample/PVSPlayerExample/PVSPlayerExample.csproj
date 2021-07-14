@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PVSPlayerExample</RootNamespace>
     <AssemblyName>PVSPlayerExample</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -78,10 +79,6 @@
     <ApplicationIcon>Resources\Media Normal.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PVS.MediaPlayer, Version=1.4.0.40, Culture=neutral, PublicKeyToken=7f4c26d10e75ecfe, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\PVS.MediaPlayer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -457,6 +454,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Recorder Recording.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PVS.MediaPlayer\PVS.MediaPlayer.csproj">
+      <Project>{a5cb09c4-e484-4a60-a020-888a95eb2150}</Project>
+      <Name>PVS.MediaPlayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
