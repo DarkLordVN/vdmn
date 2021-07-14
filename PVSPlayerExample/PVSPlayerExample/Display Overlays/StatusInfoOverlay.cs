@@ -289,9 +289,14 @@ namespace PVSPlayerExample
                 audioEnabledLabel.Text = _basePlayer.Audio.Enabled ? "Yes" : "No";
 
                 volumeLabel.Text = (_basePlayer.Audio.Volume).ToString("0.00");
-                switch (_basePlayer.Audio.Volume)
+                int volume = (int)_basePlayer.Audio.Volume;
+                if(_basePlayer.Audio.Volume != 1.0f && _basePlayer.Audio.Volume != 0)
                 {
-                    case 1.0f:
+                    volume = 2;
+                }
+                switch (volume)
+                {
+                    case 1:
                         volumeLabel.Text += " (Maximum)";
                         break;
                     case 0:

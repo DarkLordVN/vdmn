@@ -161,7 +161,7 @@ namespace PVSPlayerExample
                         break;
 
                     case Keys.Oemplus:
-                        switch (_pen1.Width)
+                        switch ((int)_pen1.Width)
                         {
                             case 1:
                                 pixels2_MenuItem.PerformClick();
@@ -200,7 +200,7 @@ namespace PVSPlayerExample
                         break;
 
                     case Keys.OemMinus:
-                        switch (_pen1.Width)
+                        switch ((int)_pen1.Width)
                         {
                             case 2:
                                 pixel1_MenuItem.PerformClick();

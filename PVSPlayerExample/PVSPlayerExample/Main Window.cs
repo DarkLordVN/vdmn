@@ -3805,7 +3805,8 @@ namespace PVSPlayerExample
         private void StartTimeNextTextBox_Validated(object sender, EventArgs e)
         {
             startTimeNextTextBox.Text = CompleteTextBoxTime(startTimeNextTextBox.Text);
-            if (TimeSpan.TryParse(startTimeNextTextBox.Text, out TimeSpan startTimeNextSpan))
+            TimeSpan startTimeNextSpan;
+            if (TimeSpan.TryParse(startTimeNextTextBox.Text, out startTimeNextSpan))
             {
                 _startTimeNext = startTimeNextSpan;
                 MyPlayer_MediaStartStopTimeNextChanged();
@@ -3816,7 +3817,8 @@ namespace PVSPlayerExample
         private void StopTimeNextTextBox_Validated(object sender, EventArgs e)
         {
             stopTimeNextTextBox.Text = CompleteTextBoxTime(stopTimeNextTextBox.Text);
-            if (TimeSpan.TryParse(stopTimeNextTextBox.Text, out TimeSpan stopTimeNextSpan))
+            TimeSpan stopTimeNextSpan;
+            if (TimeSpan.TryParse(stopTimeNextTextBox.Text, out stopTimeNextSpan))
             {
                 _stopTimeNext = stopTimeNextSpan;
                 MyPlayer_MediaStartStopTimeNextChanged();
@@ -3827,7 +3829,8 @@ namespace PVSPlayerExample
         private void StartTimeTextBox_Validated(object sender, EventArgs e)
         {
             startTimeTextBox.Text = CompleteTextBoxTime(startTimeTextBox.Text);
-            if (TimeSpan.TryParse(startTimeTextBox.Text, out TimeSpan startTimeSpan))
+            TimeSpan startTimeSpan;
+            if (TimeSpan.TryParse(startTimeTextBox.Text, out startTimeSpan))
             {
                 myPlayer.Media.StartTime = startTimeSpan;
                 if (myPlayer.LastError)
@@ -3841,7 +3844,8 @@ namespace PVSPlayerExample
         private void StopTimeTextBox_Validated(object sender, EventArgs e)
         {
             stopTimeTextBox.Text = CompleteTextBoxTime(stopTimeTextBox.Text);
-            if (TimeSpan.TryParse(stopTimeTextBox.Text, out TimeSpan stopTimeSpan))
+            TimeSpan stopTimeSpan;
+            if (TimeSpan.TryParse(stopTimeTextBox.Text, out stopTimeSpan))
             {
                 myPlayer.Media.StopTime = stopTimeSpan;
                 if (myPlayer.LastError)
@@ -3860,7 +3864,8 @@ namespace PVSPlayerExample
 
         private void SpeedTextBox_Validated(object sender, EventArgs e)
         {
-            if (float.TryParse(speedTextBox.Text, out float speed))
+            float speed;
+            if (float.TryParse(speedTextBox.Text, out speed))
             {
                 if (myPlayer.Speed.Boost)
                 {
