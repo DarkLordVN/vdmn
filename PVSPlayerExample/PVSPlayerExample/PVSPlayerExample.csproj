@@ -163,6 +163,12 @@
     <Compile Include="Dialogs\DeviceVolumeDialog.Designer.cs">
       <DependentUpon>DeviceVolumeDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSQLite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSQLite.Designer.cs">
+      <DependentUpon>FormSQLite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -384,6 +390,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Display Overlays\MP3KaraokeOverlay.resx">
       <DependentUpon>MP3KaraokeOverlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSQLite.resx">
+      <DependentUpon>FormSQLite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main Window.resx">
       <DependentUpon>Main Window.cs</DependentUpon>

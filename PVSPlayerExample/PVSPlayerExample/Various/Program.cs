@@ -20,7 +20,7 @@ namespace PVSPlayerExample
                 MessageBox.Show("Microsoft Media Foundation\r\n\r\n" + Player.MFPresent_ResultString,
                     MainWindow.APPLICATION_NAME, MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-            else Application.Run(new MainWindow());
+            else Application.Run(new FormSQLite());
         }
     }
 }
