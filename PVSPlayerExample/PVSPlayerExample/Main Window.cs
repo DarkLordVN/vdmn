@@ -192,8 +192,6 @@ namespace PVSPlayerExample
         internal string[]           STREAMING_URLS              = { "http://", "https://", "tcp://", "udp://", "rtp://", "rtps://", "rtmp://", "rtsp://", "mms://" };
         private string              _playListExtensions         = ".m3u.m3u8.ppl";
 
-        // Add URL to Playlist
-        private AddUrlDialog        _addUrlDialog;
         internal bool               _urlAdded;
         internal int                _urlToPlay;
 
@@ -311,6 +309,7 @@ namespace PVSPlayerExample
 
             // Install custom fonts
             InstallCustomFonts();
+
 
             // Class used with (local disk) subtitle search
             SearchFile = new FileSearch();
@@ -1162,7 +1161,7 @@ namespace PVSPlayerExample
         // Yes, having editable items on a display overlay might not always be a good idea. :)
         private void MainWindow_Resize(object sender, EventArgs e)
         {
-            if (myPlayer.Has.DisplayClones)
+            if (myPlayer != null && myPlayer.Has.DisplayClones)
             {
                 if (WindowState == FormWindowState.Minimized)
                 {
@@ -1269,7 +1268,6 @@ namespace PVSPlayerExample
                     // Clear playlist
                     Playlist.Clear();
 
-                    if (_addUrlDialog != null)          { _addUrlDialog.Dispose(); _addUrlDialog = null; }
                     if (_videoColorDialog != null)      { _videoColorDialog.Dispose(); _videoColorDialog = null; }
                     if (_channelMixerDialog != null)    { _channelMixerDialog.Dispose(); _channelMixerDialog = null; }
                     if (_aspectRatioDialog != null)     { _aspectRatioDialog.Dispose(); _aspectRatioDialog = null; }
@@ -1522,7 +1520,7 @@ namespace PVSPlayerExample
                     volumeDial.SwitchImage(true);
                     balanceDial.SwitchImage(true);
                 }
-                volumeDialLabel.Text = "Mute";
+                volumeDialLabel.Text = "Tắt âm";
                 //volumeLight.LightOn = true;
             }
             else
@@ -1533,7 +1531,7 @@ namespace PVSPlayerExample
                     volumeDial.SwitchImage(false);
                     balanceDial.SwitchImage(false);
                 }
-                volumeDialLabel.Text = myPlayer.Audio.Volume == 1.0 ? "Max" : (myPlayer.Audio.Volume).ToString("0.00");
+                volumeDialLabel.Text = myPlayer.Audio.Volume == 1.0 ? "Tối đa" : (myPlayer.Audio.Volume).ToString("0.00");
                 //volumeLight.LightOn = false;
             }
 
@@ -1544,16 +1542,16 @@ namespace PVSPlayerExample
         private void MyPlayer_MediaAudioBalanceChanged(object sender, EventArgs e)
         {
             float balance = myPlayer.Audio.Balance;
-            if (balance == 0) balanceDialLabel.Text = "Center";
+            if (balance == 0) balanceDialLabel.Text = "Giữa";
             else if (balance < 0)
             {
-                if (balance == -1) balanceDialLabel.Text = "Full Left";
-                else balanceDialLabel.Text = (-balance).ToString("Left -0.0");
+                if (balance == -1) balanceDialLabel.Text = "Trái (max)";
+                else balanceDialLabel.Text = (-balance).ToString("Trái -0.0");
             }
             else
             {
-                if (balance == 1) balanceDialLabel.Text = "Full Right";
-                else balanceDialLabel.Text = (balance).ToString("Right 0.0");
+                if (balance == 1) balanceDialLabel.Text = "Phải (max)";
+                else balanceDialLabel.Text = (balance).ToString("Phải 0.0");
             }
 
             if (!_dontSetAudioDials) balanceDial.SetValue((int)((balance + 1) * 500)); // does not raise changed event
@@ -2403,40 +2401,12 @@ namespace PVSPlayerExample
         // Clicking on the webSiteLabel asks for opening a website
         private void WebSiteLabel_Click(object sender, EventArgs e)
         {
-            string theWebPage = @"http://www.codeproject.com";
 
-            WebSiteDialog webSiteDialog = new WebSiteDialog(this) { Selection = _goToArticle };
-            CenterDialog(this, webSiteDialog);
-            if (webSiteDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                _goToArticle = webSiteDialog.Selection;
-                webSiteDialog.Dispose();
-
-                if (_goToArticle == 1) theWebPage += @"/Articles/109714/PVS-MediaPlayer-Audio-and-Video-Player-Library";
-                else if (_goToArticle == 2) theWebPage += @"/Articles/1116698/PVS-AVPlayer-MCI-Sound-Recorder";
-                try
-                {
-                    Process.Start(theWebPage);
-                }
-                catch
-                {
-                    MessageBox.Show(
-                    caption: APPLICATION_NAME,
-                    icon: MessageBoxIcon.Exclamation,
-                    text: "Could not open the requested webpage. Please check your Browser.",
-                    buttons: MessageBoxButtons.OK,
-                    owner: this);
-                }
-            }
-            else
-            {
-                webSiteDialog.Dispose();
-            }
         }
 
         #endregion
 
-        
+
         // ******************************** Play Button / PlayMenu Drag and Drop / Pause Button / Stop Button
 
         #region Play Button / Play Menu
@@ -2531,7 +2501,6 @@ namespace PVSPlayerExample
             {
                 playMenu.Close();
                 if (displayMenu.Visible) displayMenu.Close();
-                ShowAddUrlDialog();
             }
             else
             {
@@ -3003,31 +2972,31 @@ namespace PVSPlayerExample
         private void SetDisplayModeMenu(DisplayMode displayMode, bool setMode)
         {
             string displayModeName = displayMode.ToString();
-            if (displayModeButton.Text != displayModeName)
-            {
-                if (setMode) myPlayer.Display.Mode = displayMode;
+            //if (displayModeButton.Text != displayModeName)
+            //{
+            //    if (setMode) myPlayer.Display.Mode = displayMode;
 
-                if (displayMode == DisplayMode.ZoomCenter)
-                {
-                    displayModeLight.LightOn = false;
-                }
-                else
-                {
-                    if (displayMode == DisplayMode.Manual) displayModeLight.ForeColor = Color.Red;
-                    else displayModeLight.ForeColor = Color.Lime; //  Color.Gold;
-                    displayModeLight.LightOn = true;
-                }
+            //    if (displayMode == DisplayMode.ZoomCenter)
+            //    {
+            //        displayModeLight.LightOn = false;
+            //    }
+            //    else
+            //    {
+            //        if (displayMode == DisplayMode.Manual) displayModeLight.ForeColor = Color.Red;
+            //        else displayModeLight.ForeColor = Color.Lime; //  Color.Gold;
+            //        displayModeLight.LightOn = true;
+            //    }
 
-                displayModeButton.Text = displayModeName;
-                int count = displayModeMenu.Items.Count - 3;
-                for (int i = 0; i < count; i++)
-                {
-                    //if (displayModeMenu.Items[i] != null && displayModeMenu.Items[i].GetType() == typeof(ToolStripMenuItem))
-                    {
-                        ((ToolStripMenuItem)displayModeMenu.Items[i]).Checked = displayModeMenu.Items[i].Text == displayModeName;
-                    }
-                }
-            }
+            //    displayModeButton.Text = displayModeName;
+            //    int count = displayModeMenu.Items.Count - 3;
+            //    for (int i = 0; i < count; i++)
+            //    {
+            //        //if (displayModeMenu.Items[i] != null && displayModeMenu.Items[i].GetType() == typeof(ToolStripMenuItem))
+            //        {
+            //            ((ToolStripMenuItem)displayModeMenu.Items[i]).Checked = displayModeMenu.Items[i].Text == displayModeName;
+            //        }
+            //    }
+            //}
         }
 
         #endregion
@@ -3458,199 +3427,9 @@ namespace PVSPlayerExample
 
             _overlayHold = false; // reset overlay hold by application
         }
-
-        // Message Overlay
-        private void MessageMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_messageOverlay == null) _messageOverlay = new MessageOverlay(this, myPlayer);
-            SetWindowDrag(true);
-            SetOverlay(sender, _messageOverlay, true, true);
-        }
-
-        // Scribble Overlay
-        private void ScribbleMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_scribbleOverlay == null) _scribbleOverlay = new ScribbleOverlay(this, myPlayer);
-            SetWindowDrag(false);
-            SetOverlay(sender, _scribbleOverlay, true, true);
-        }
-
-        // Tiles Overlay
-        private void TilesMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_tileOverlay == null) _tileOverlay = new TilesOverlay(this, myPlayer);
-            //SetWindowDrag(false); is handled by the overlay (2 states: tiles & puzzle)
-            SetOverlay(sender, _tileOverlay, true, true);
-        }
-
-        // Bouncing Overlay
-        private void BouncingMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_bouncingOverlay == null) _bouncingOverlay = new BouncingOverlay(this, myPlayer);
-            //SetWindowDrag(false); is handled by the overlay (2 states: bounce & pong)
-            SetOverlay(sender, _bouncingOverlay, true, true);
-        }
-
-        // PiP Overlay
-        private void PiPMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_pipOverlay == null) _pipOverlay = new PIPOverlay(this, myPlayer);
-            SetWindowDrag(true);
-            SetOverlay(sender, _pipOverlay, true, true);
-        }
-
-        // SubTitles Overlay
-        private void SubtitlesMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_subtitlesOverlay == null) _subtitlesOverlay = new SubtitlesOverlay(this, myPlayer);
-            SetWindowDrag(true);
-            SetOverlay(sender, _subtitlesOverlay, true, true);
-        }
-
-        // Zoom Select Overlay
-        private void ZoomSelectMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_zoomSelectOverlay == null) _zoomSelectOverlay = new ZoomSelectOverlay(this, myPlayer);
-            SetWindowDrag(false);
-            SetOverlay(sender, _zoomSelectOverlay, false, true);
-        }
-
-        // Video Wall Overlay
-        private void VideoWallMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_videoWallOverlay == null) _videoWallOverlay = new VideoWall(this, myPlayer);
-            SetWindowDrag(true);
-            SetOverlay(sender, _videoWallOverlay, true, true);
-        }
-
-        // MP3 Cover Overlay
-        private void MP3CoverMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_mp3CoverOverlay == null) _mp3CoverOverlay = new Mp3CoverOverlay(this, myPlayer);
-            SetWindowDrag(true);
-            SetOverlay(sender, _mp3CoverOverlay, false, true);
-        }
-
-        // MP3 Karaoke Overlay
-        private void MP3KaraokeMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_mp3KaraokeOverlay == null) _mp3KaraokeOverlay = new Mp3KaraokeOverlay(this, myPlayer);
-            SetWindowDrag(true);
-            SetOverlay(sender, _mp3KaraokeOverlay, false, true);
-        }
-
-        // Big Time Overlay
-        private void BigTimeMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_bigTimeOverlay == null) _bigTimeOverlay = new BigTimeOverlay(this, myPlayer, FontCollection);
-            SetWindowDrag(true);
-            SetOverlay(sender, _bigTimeOverlay, false, true);
-        }
-
-        // Status Info Overlay
-        private void StatusInfoMenuItem_Click(object sender, EventArgs e)
-        {
-            if (_statusInfoOverlay == null) _statusInfoOverlay = new StatusInfoOverlay(this, myPlayer);
-            SetWindowDrag(true);
-            SetOverlay(sender, _statusInfoOverlay, false, true);
-        }
-
-        // Overlay Off
-        private void OverlayOffMenuItem_Click(object sender, EventArgs e)
-        {
-            SetOverlay(sender, null, false, false);
-            if (_overlayMenuEnabled) OverlayMenuButton_Click(overlayMenuButton, EventArgs.Empty);
-            SetWindowDrag(true);
-        }
-
-        // General set overlay method called by overlaymenu eventhandlers
-        private void SetOverlay(object sender, Form theOverlay, bool canFocus, bool hold)
-        {
-            if (myPlayer.Overlay.Window == theOverlay)
-            {
-                if (theOverlay == null) return;
-                if (_overlayMenuEnabled) OverlayMenuButton_Click(overlayMenuButton, EventArgs.Empty);
-                sender = overlayOffMenuItem;
-                theOverlay = null;
-                canFocus = false;
-                hold = false;
-            }
-
-            // every overlay (in this application) has an IOverlay interface: HasMenu and a MenuEnabled property
-            if (theOverlay != null)
-            {
-                if (((IOverlay)theOverlay).HasMenu)
-                {
-                    ((IOverlay)theOverlay).MenuEnabled = _overlayMenuEnabled;
-                    myPlayer.Overlay.CanFocus = _overlayMenuEnabled;
-                }
-                else myPlayer.Overlay.CanFocus = canFocus;
-            }
-
-            // set / reset overlay hold by application
-            if (hold)
-            {
-                if (!myPlayer.Overlay.Hold)
-                {
-                    if (myPlayer.Playing) overlayHoldMenuItem.Checked = myPlayer.Overlay.Hold = true;
-                    _overlayHold = true;
-                }
-            }
-            else if (_overlayHold)
-            {
-                overlayHoldMenuItem.Checked = myPlayer.Overlay.Hold = _overlayHold = false;
-            }
-
-            myPlayer.Overlay.Window = theOverlay;
-
-            UnCheckMenuItems(displayOverlayMenu, 3, 0);
-            if (theOverlay == null)
-            {
-                overlayOffMenuItem.Checked = true;
-                displayOverlayButton.Text = overlayOffMenuItem.Text;
-                overlayLight.LightOn = false;
-                _userOverlay = false;
-            }
-            else
-            {
-                ((ToolStripMenuItem)sender).Checked = true;
-                displayOverlayButton.Text = ((ToolStripMenuItem)sender).Text.Substring(8); // Strip 'Example' from the name
-                overlayLight.LightOn = true;
-                _userOverlay = true;
-            }
-        }
-
-        #endregion
-
-        #region Display Overlay Menu Button
-
-        private void OverlayMenuButton_Click(object sender, EventArgs e)
-        {
-            _overlayMenuEnabled = !_overlayMenuEnabled;
-            // every overlay (in this application) has an IOverlay interface: HasMenu and a MenuEnabled property
-            if (myPlayer.Overlay.Window != null)
-            {
-                if (((IOverlay)myPlayer.Overlay.Window).HasMenu)
-                {
-                    ((IOverlay)myPlayer.Overlay.Window).MenuEnabled = _overlayMenuEnabled;
-                    myPlayer.Overlay.CanFocus = _overlayMenuEnabled;
-                }
-            }
-            overlayMenuLight.LightOn = _overlayMenuEnabled;
-            overlayMenuMenuItem.Text = _overlayMenuEnabled ? "Hide Overlay Menu" : "Show Overlay Menu";
-            //overlayMenuButton.Text = _overlayMenuEnabled ? "  Overlay Menu On" : "  Overlay Menu Off";
-        }
-
-        private void OverlayMenuMenuItem_Click(object sender, EventArgs e)
-        {
-            OverlayMenuButton_Click(overlayMenuButton, EventArgs.Empty);
-            //overlayMenuButton.PerformClick();
-        }
-
-        #endregion
-
-        
         // ******************************** Repeat / Start- and EndPosition
+        #endregion
+
 
         #region Repeat
 
@@ -4105,7 +3884,7 @@ namespace PVSPlayerExample
             if (count == 0)
             {
                 _audioDeviceSelected = null;
-                audioDeviceButton.Text = "[ No Devices ]";
+                audioDeviceButton.Text = "[ Không có thiết bị ]";
 
                 // no devices = no sound -> reset peakmeter
                 //_levelMeterLeft = _levelMeterRight = 0;
@@ -4135,7 +3914,7 @@ namespace PVSPlayerExample
                 {
                     _audioDeviceSelected = null;
                     ((ToolStripMenuItem)audioDeviceMenu.Items[START_AUDIO_DEVICE_ITEMS - 1]).Checked = true;
-                    audioDeviceButton.Text = "[ " + myPlayer.Audio.GetDefaultDevice().Name + " ]";
+                    audioDeviceButton.Text = "[ " + (myPlayer.Audio.GetDefaultDevice().Name.Equals("Speakers") ? "Thiết bị loa" : myPlayer.Audio.GetDefaultDevice().Name) + " ]";
                 }
                 else ((ToolStripMenuItem)audioDeviceMenu.Items[START_AUDIO_DEVICE_ITEMS - 1]).Checked = false;
             }
@@ -4368,150 +4147,6 @@ namespace PVSPlayerExample
         #endregion
 
 
-        // ******************************** Copy Picturebox
-
-        #region Copy Picturebox
-
-        private void SetCopyMenu()
-        {
-            if (pictureBox1.Image == null)
-            {
-                openCopyMenuItem.Enabled = false;
-                openWithCopyMenuItem.Enabled = false;
-                clearCopyMenuItem.Enabled = false;
-            }
-            else
-            {
-                openCopyMenuItem.Enabled = true;
-                openWithCopyMenuItem.Enabled = true;
-                clearCopyMenuItem.Enabled = true;
-            }
-        }
-
-        // left click on copymode label - open contextmenu (besides 'normal' right click)
-        private void CopyModeLabel_MouseClick(object sender, MouseEventArgs e)
-        {
-            copyModeMenu.Show(copyModeLabel.PointToScreen(e.Location));
-        }
-
-        // Picturebox clicked - Copy
-        private void PictureBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left) DoScreenCopy();
-        }
-
-        // playing with display clones - 1/2:
-        private void PictureBox1_MouseEnter(object sender, EventArgs e)
-        {
-            if (pictureBox1.Image == null && (myPlayer.Has.Video || myPlayer.Has.OverlayShown) && (myPlayer.Copy.Mode == CopyMode.Video || myPlayer.Copy.Mode == CopyMode.Display))
-            {
-                myPlayer.DisplayClones.Add(pictureBox1);
-                if (!myPlayer.LastError) _copyHasDisplayClone = true;
-            }
-        }
-
-        // playing with display clones - 2/2:
-        private void PictureBox1_MouseLeave(object sender, EventArgs e)
-        {
-            if (_copyHasDisplayClone)
-            {
-                _copyHasDisplayClone = false;
-                myPlayer.DisplayClones.Remove(pictureBox1);
-            }
-        }
-
-        private void DoScreenCopy()
-        {
-            //if (myPlayer.Video.Present || myPlayer.Overlay.Visible || myPlayer.Copy.Mode == CopyMode.Form || myPlayer.Copy.Mode == CopyMode.Screen)
-            {
-                if (pictureBox1.Image != null) pictureBox1.Image.Dispose();
-                else if (_copyHasDisplayClone)
-                {
-                    myPlayer.DisplayClones.Remove(pictureBox1);
-                    _copyHasDisplayClone = false;
-                }
-
-                pictureBox1.Image = myPlayer.Copy.ToImage();
-                if (pictureBox1.Image != null) Clipboard.SetImage(pictureBox1.Image);
-
-                SetCopyMenu();
-            }
-        }
-
-        // The copy contextmenu items click events:
-
-        // Copy
-        private void CopyMenuItem_Click(object sender, EventArgs e)
-        {
-            DoScreenCopy();
-        }
-
-        // Copy Mode
-        private void CopyModeMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            // Translate the text of the clicked item into a displaymode enum value
-            try
-            {
-                SetScreenCopyModeMenu((CopyMode)Enum.Parse(typeof(CopyMode), e.ClickedItem.Text), true);
-            }
-            catch { }
-        }
-
-        // Set Copy Mode
-        private void SetScreenCopyModeMenu(CopyMode copyMode, bool setMode)
-        {
-            string screenCopyModeName = copyMode.ToString();
-
-            if (setMode) myPlayer.Copy.Mode = copyMode;
-            copyModeLabel.Text = screenCopyModeName;
-            foreach (ToolStripMenuItem menuItem in copyModeMenu.Items)
-            {
-                menuItem.Checked = menuItem.Text == screenCopyModeName;
-            }
-        }
-
-        // Open
-        private void OpenCopyMenuItem_Click(object sender, EventArgs e)
-        {
-            if (pictureBox1.Image != null)
-            {
-                try
-                {
-                    pictureBox1.Image.Save(_copyFile, _copyFormat);
-                    Process.Start(_copyFile);
-                }
-                catch { }
-            }
-        }
-
-        // Open With
-        private void OpenWithMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                pictureBox1.Image.Save(_copyFile, _copyFormat);
-                Process.Start("rundll32.exe", "shell32.dll,OpenAs_RunDLL " + _copyFile);
-            }
-            catch { }
-        }
-
-        // Clear
-        private void ClearCopyMenuItem_Click(object sender, EventArgs e)
-        {
-            if (pictureBox1.Image != null)
-            {
-                pictureBox1.Image.Dispose();
-                pictureBox1.Image = null;
-                try { if (File.Exists(_copyFile)) File.Delete(_copyFile); }
-                catch { }
-
-                Clipboard.Clear();
-
-                SetCopyMenu();
-            }
-        }
-
-		#endregion
 
 
 		// ******************************** Sliders and Dials ContextMenus / High Speed Playback / PositionSlider
@@ -5635,31 +5270,6 @@ namespace PVSPlayerExample
             }
         }
 
-        // Show the add URL dialog
-        private void ShowAddUrlDialog()
-        {
-            _addUrlDialog = new AddUrlDialog(this, myPlayer) {Text = APPLICATION_NAME};
-            CenterDialog(this, _addUrlDialog);
-
-            _addUrlDialog.FormClosed += AddUrlDialog_FormClosed;
-
-            _urlToPlay = Playlist.Count;
-            _addUrlDialog.Show();
-
-            //int newToPlay = Playlist.Count;
-            //addUrlDialog.ShowDialog(this);
-            //if (addUrlDialog.UrlAdded)
-            //{
-            //    _tempPlaylist = false;
-            //    if (!Player1.Playing && Prefs.AutoPlayAdded)
-            //    {
-            //        _mediaToPlay = newToPlay;
-            //        PlayNextMedia();
-            //    }
-            //}
-            //addUrlDialog.Dispose();
-        }
-
         private void AddUrlDialog_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (_urlAdded)
@@ -5674,8 +5284,6 @@ namespace PVSPlayerExample
                     PlayNextMedia();
                 }
             }
-            _addUrlDialog.Dispose();
-            _addUrlDialog = null;
         }
 
         // Add filenames to the PlayList
@@ -5955,6 +5563,6 @@ namespace PVSPlayerExample
         }
 
 		#endregion
-
+        
 	}
 }

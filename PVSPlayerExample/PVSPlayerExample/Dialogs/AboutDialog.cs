@@ -36,8 +36,7 @@ namespace PVSPlayerExample
             _closeTimer.Tick        += NoButton_Click;
 
             Icon                    = Properties.Resources.Media_Normal;
-            Text                    = Player.VersionString;
-            toolTipCheckBox.Checked = MainWindow.Prefs.ShowTooltips;
+            //Text                    = Player.VersionString;
             MainWindow.UrlClicked   = false;
 
             KeyPreview              = true;
@@ -152,7 +151,6 @@ namespace PVSPlayerExample
 
         private void ToolTipCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            MainWindow.Prefs.ShowTooltips = toolTipCheckBox.Checked;
             if (_closeTimer.Enabled)
             {
                 _closeTimer.Stop(); _closeTimer.Start();

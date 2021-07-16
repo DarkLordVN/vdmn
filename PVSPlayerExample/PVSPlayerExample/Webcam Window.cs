@@ -1233,11 +1233,10 @@ namespace PVSPlayerExample
             if (!_recording)
             {
                 getFileName();
-                _webcamPlayer.Webcam.RecorderStart(_pathFile + ".mp4");
+                _webcamPlayer.Webcam.RecorderStart(_pathFile + "_video.mp4");
                 //Xu ly luu file audio
                 // Create recorder with eventhandlers:
                 _soundRecorder = new Recorder();
-                var index = 0;
                 _soundRecorder.InputDevice.Index = _indexAudio; // set system default input device (if any)
                 _soundRecorder.Record();
                 if (_soundRecorder.LastError) _soundRecorder.Stop();
@@ -1258,7 +1257,17 @@ namespace PVSPlayerExample
                 recorderMenuItem.Checked = false;
                 _recording = false;
                 //Xu ly stop audio
-                _soundRecorder.StopAndSave(_pathFile + ".wav", false);
+                _soundRecorder.StopAndSave(_pathFile + "_audio.wav", false);
+                //Chay merge
+                string strCmdText;
+                strCmdText = "/C ffmpeg -i " + _pathFile + "_video.mp4 -i " + _pathFile + "_audio.wav -c:v copy -c:a aac " + _pathFile + ".mp4";
+                System.Diagnostics.Process process = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                startInfo.FileName = "cmd.exe";
+                startInfo.Arguments = strCmdText;
+                process.StartInfo = startInfo;
+                process.Start();
             }
         }
 
@@ -1504,7 +1513,7 @@ namespace PVSPlayerExample
 
         private void getFileName()
         {
-            string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "username");
+            string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "VideoManagement");
             Directory.CreateDirectory(folder);
             _pathFile = Path.Combine(folder, string.Format("Record{0:yyyyMMddHHmmss}", DateTime.Now));
             

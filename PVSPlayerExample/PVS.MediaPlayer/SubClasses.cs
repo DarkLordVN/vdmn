@@ -1815,7 +1815,6 @@ namespace PVS.MediaPlayer
             {
                 _base._lastError = HResult.MF_E_NO_AUDIO_PLAYBACK_DEVICE;
             }
-
             return audioDevice;
         }
 
