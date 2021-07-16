@@ -129,8 +129,8 @@ namespace PVSPlayerExample
         private bool                _dontSetAudioDials;         // used with audio dials events (don't change the dials (again) with dial ValueChanged event)
         private bool                _volumeRedDial;
         private bool                _videoMoveMode;             // switch between video stretch and video move with same buttons
-        private string              _videoMoveText              = "  Video Move ↨";
-        private string              _videoStretchText           = "  Video Stretch ↨";
+        private string              _videoMoveText              = "  Di chuyển ↨";
+        private string              _videoStretchText           = "  Kéo giãn ↨";
         private Color               _pauseColor                 = Color.Lime; // play and pause buttons and play light
         private bool                _highSpeedMode;             // don't show that pause is enabled
         private bool                _ultraSpeedMode;
@@ -1385,13 +1385,13 @@ namespace PVSPlayerExample
                 else
                 {
                     startTimeNextTextBox.ForeColor = Color.Green;
-                    stopTimeNextTextBox.ForeColor = Color.Firebrick;
+                    stopTimeNextTextBox.ForeColor = Color.White;
                 }
             }
             else
             {
-                startTimeNextTextBox.ForeColor = Color.Firebrick;
-                stopTimeNextTextBox.ForeColor = _stopTimeNext.TotalMilliseconds == 0 ? Color.Green : Color.Firebrick;
+                startTimeNextTextBox.ForeColor = Color.White;
+                stopTimeNextTextBox.ForeColor = _stopTimeNext.TotalMilliseconds == 0 ? Color.Green : Color.White;
             }
 
             stopTimeNextTextBox.ResumeLayout();

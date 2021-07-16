@@ -30,57 +30,58 @@ namespace PVSPlayerExample
         /* ... under construction ... */
 
         // Buttons, DropDownButtons
-        static internal Color BorderColor = Color.FromArgb(64, 64, 64); // 100
+        static internal Color BorderColor = Color.FromArgb(45, 45, 200); // 100
         //static internal Pen FocusPen = new Pen(Color.DarkGoldenrod);
         //static internal Pen FocusPen = new Pen(Color.FromArgb(169, 163, 136));
-        static internal Pen FocusPen = new Pen(Color.FromArgb(179, 173, 146));
+        static internal Pen FocusPen = new Pen(Color.FromArgb(150, 200, 245));
 
-        static internal Color NormalColor1A = Color.Gray;
-        static internal Color NormalColor1B = Color.FromArgb(32, 32, 32);
-        static internal Color NormalColor2A = Color.Black;
-        static internal Color NormalColor2B = Color.FromArgb(48, 48, 48);
+        static internal Color NormalColor1A = Color.GhostWhite;
+        static internal Color NormalColor1B = Color.FromArgb(35, 35, 215);
+        static internal Color NormalColor2A = Color.Navy;
+        static internal Color NormalColor2B = Color.FromArgb(100, 100, 230);
 
-        static internal Color HotColor1A = Color.FromArgb(148, 148, 148);
-        static internal Color HotColor1B = Color.FromArgb(32, 32, 32);
-        static internal Color HotColor2A = Color.Black;
+        static internal Color HotColor1A = Color.FromArgb(160, 160, 255);
+        static internal Color HotColor1B = Color.FromArgb(35, 35, 215);
+        static internal Color HotColor2A = Color.Navy;
         static internal Color HotColor2B = Color.FromArgb(60, 60, 60); //60
 
-        static internal Color PressedColor1A = Color.FromArgb(180, 180, 180); // 164
-        static internal Color PressedColor1B = Color.FromArgb(40, 40, 40); // 48
-        static internal Color PressedColor2A = Color.Black; // 18
-        static internal Color PressedColor2B = Color.FromArgb(72, 72, 72); // 72
+        static internal Color PressedColor1A = Color.FromArgb(200, 220, 255); // 164
+        static internal Color PressedColor1B = Color.FromArgb(25, 25, 100); // 48
+        static internal Color PressedColor2A = Color.Navy; // 18
+        static internal Color PressedColor2B = Color.FromArgb(0, 60, 175); // 72
 
         // Sliders Thumb
-        static internal Pen ThumbBorderPen = new Pen(Color.FromArgb(80, 80, 80));
+        static internal Pen ThumbBorderPen = new Pen(Color.FromArgb(25, 25, 100));
 
-        static internal Color NormalThumbColor1 = Color.FromArgb(132, 132, 132);
-        static internal Color NormalThumbColor2 = Color.Black;
+        static internal Color NormalThumbColor1 = Color.FromArgb(20, 110, 240);
+        static internal Color NormalThumbColor2 = Color.Blue;
 
-        static internal Color HotThumbColor1 = Color.FromArgb(148, 148, 148);
-        static internal Color HotThumbColor2 = Color.FromArgb(18, 18, 18);
+        static internal Color HotThumbColor1 = Color.FromArgb(160, 160, 255);
+        static internal Color HotThumbColor2 = Color.FromArgb(0, 20, 160);
 
-        static internal Color PressedThumbColor1 = Color.FromArgb(180, 180, 180); // 164
-        static internal Color PressedThumbColor2 = Color.FromArgb(18, 18, 18);
+        static internal Color PressedThumbColor1 = Color.FromArgb(200, 220, 255); // 164
+        static internal Color PressedThumbColor2 = Color.FromArgb(0, 20, 160);
 
         // Menus
-        static internal Color MenuBackgroundColor = Color.FromArgb(32, 32, 32);
-        static internal Color MenuMarginColor = Color.FromArgb(48, 48, 48);
-        //static internal Color MenuBorderColor = Color.DimGray;
-        static internal Color MenuBorderColor = Color.FromArgb(64, 64, 64);
+        static internal Color MenuBackgroundColor = Color.FromArgb(24, 24, 97);
+        static internal Color MenuMarginColor = Color.FromArgb(35, 35, 160);
+        //static internal Color MenuBorderColor = Color.FromArgb(160, 160, 220);
+        static internal Color MenuBorderColor = Color.FromArgb(168, 168, 255);
         //static internal Color MenuBorderColor = Color.FromArgb(56, 56, 56);
 
-        static internal Color MenuSeparatorDarkColor = Color.FromArgb(80, 80, 80);
-        static internal Color MenuSeparatorLightColor = Color.DimGray;
+        static internal Color MenuSeparatorDarkColor = Color.FromArgb(25, 25, 100);
+        static internal Color MenuSeparatorLightColor = Color.FromArgb(160, 160, 220);
 
-        static internal Color MenuHighlightColor = Color.FromArgb(64, 24, 24);
-        //static internal Color MenuHighlightColor2 = Color.FromArgb(18, 18, 18);
-        //static internal Color MenuHighlightColor = Color.FromArgb(48, 48, 48);
-        //static internal Color MenuHighlightBorderColor = Color.FromArgb(80, 80, 80);
-        static internal Color MenuHighlightBorderColor = Color.FromArgb(64, 64, 64);
+        static internal Color MenuHighlightColor = Color.FromArgb(40, 40, 160);
+        //static internal Color MenuHighlightColor2 = Color.FromArgb(0, 20, 160);
+        //static internal Color MenuHighlightColor = Color.FromArgb(100, 100, 230);
+        //static internal Color MenuHighlightBorderColor = Color.FromArgb(25, 25, 100);
+        static internal Color MenuHighlightBorderColor = Color.FromArgb(45, 45, 200);
 
         //static internal Color MenuTextEnabledColor = Color.FromArgb(169, 163, 136);
-        static internal Color MenuTextEnabledColor = Color.FromArgb(179, 173, 146);
-        static internal Color MenuTextDisabledColor = Color.DimGray;
+        //static internal Color MenuTextEnabledColor = Color.FromArgb(150, 200, 245);
+        static internal Color MenuTextEnabledColor = Color.White;
+        static internal Color MenuTextDisabledColor = Color.FromArgb(160, 160, 220);
     }
 
     #endregion
@@ -97,9 +98,9 @@ namespace PVSPlayerExample
 
         public HeadLabel()
         {
-            ForeColor = Color.Goldenrod;
+            ForeColor = Color.Navy;
             TextAlign = ContentAlignment.MiddleCenter;
-            _brush = new LinearGradientBrush(DisplayRectangle, Color.FromArgb(64, 64, 64), Color.Black, LinearGradientMode.Vertical);
+            _brush = new LinearGradientBrush(DisplayRectangle, Color.FromArgb(35, 35, 150), Color.FromArgb(70, 70, 200), LinearGradientMode.Vertical);
         }
 
         protected override Size DefaultSize
@@ -114,7 +115,7 @@ namespace PVSPlayerExample
             if (DisplayRectangle.Width < 1 || DisplayRectangle.Height < 1) return;
 
             if (_brush != null) _brush.Dispose();
-            _brush = new LinearGradientBrush(DisplayRectangle, Color.FromArgb(64, 64, 64), Color.Black, LinearGradientMode.Vertical);
+            _brush = new LinearGradientBrush(DisplayRectangle, Color.FromArgb(35, 35, 150), Color.FromArgb(70, 70, 200), LinearGradientMode.Vertical);
         }
 
         protected override void OnPaintBackground(PaintEventArgs pevent)
@@ -135,14 +136,14 @@ namespace PVSPlayerExample
 
         public CustomPanel()
         {
-            _brush = new LinearGradientBrush(DisplayRectangle, Color.FromArgb(64, 64, 64), Color.Black, LinearGradientMode.Vertical);
+            _brush = new LinearGradientBrush(DisplayRectangle, Color.FromArgb(35, 35, 150), Color.FromArgb(70, 70, 200), LinearGradientMode.Vertical);
         }
 
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
             if (_brush != null) _brush.Dispose();
-            _brush = new LinearGradientBrush(DisplayRectangle, Color.FromArgb(64, 64, 64), Color.Black, LinearGradientMode.Vertical);
+            _brush = new LinearGradientBrush(DisplayRectangle, Color.FromArgb(35, 35, 150), Color.FromArgb(70, 70, 200), LinearGradientMode.Vertical);
         }
 
         protected override void OnPaintBackground(PaintEventArgs pevent)
@@ -167,7 +168,7 @@ namespace PVSPlayerExample
         {
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint, true);
 
-            _borderPen = new Pen(Color.FromArgb(64, 64, 64), 1);
+            _borderPen = new Pen(Color.FromArgb(45, 45, 200), 1);
             SetBorderRect();
         }
 
@@ -277,9 +278,11 @@ namespace PVSPlayerExample
             base.Appearance = Appearance.Button;
             TextAlign = ContentAlignment.MiddleLeft;
 
-            //_enabledColor = new SolidBrush(Color.FromArgb(169, 163, 136)); // if changed back - remove dispose
+            ////_enabledColor = new SolidBrush(Color.FromArgb(169, 163, 136)); // if changed back - remove dispose
+            //_enabledColor = new SolidBrush(UIColors.MenuTextEnabledColor); // if changed back - remove dispose
+            //_disabledColor = new SolidBrush(Color.FromArgb(250, 250, 250));
             _enabledColor = new SolidBrush(UIColors.MenuTextEnabledColor); // if changed back - remove dispose
-            _disabledColor = new SolidBrush(Color.FromArgb(175, 175, 175));
+            _disabledColor = new SolidBrush(Color.FromArgb(250, 250, 250));
         }
 
         protected override void OnCheckedChanged(EventArgs e)
@@ -617,7 +620,7 @@ namespace PVSPlayerExample
         public LightPanel()
         {
             _foreColor = Color.Lime;
-            _backColor = Color.FromArgb(18, 18, 18); ;
+            _backColor = Color.FromArgb(0, 20, 160); ;
             base.BackColor  = _backColor;
         }
 
@@ -898,12 +901,12 @@ namespace PVSPlayerExample
             {
                 // This is only to get the pause/next/previous/stop symbols centered!
                 TextRenderer.DrawText(pevent.Graphics, Text, Font, new Point(5, 1),
-                    Enabled ? ForeColor : Color.DimGray, Color.Transparent);
+                    Enabled ? ForeColor : Color.White, Color.Transparent);
             }
             else
             {
                 TextRenderer.DrawText(pevent.Graphics, Text, Font, ClientRectangle,
-                    Enabled ? ForeColor : Color.DimGray, Color.Transparent, _textFlags);
+                    Enabled ? ForeColor : Color.White, Color.Transparent, _textFlags);
             }
           }
 
@@ -989,19 +992,19 @@ namespace PVSPlayerExample
         public CustomSlider()
         {
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.Opaque, true);
-            base.BackColor = Color.Black;
+            base.BackColor = Color.Navy;
             AutoSize = false;
 
             // background
             _eraseRegion = new Region(ClientRectangle);
-            _eraseBrush = new SolidBrush(Color.Black); // default backcolor
+            _eraseBrush = new SolidBrush(Color.Navy); // default backcolor
 
             // track
             _trackRect = new Rectangle(8, 8, Width - 16, 4);
             _tempRect = new Rectangle(8, 8, Width - 16, 4);
-            _track1Brush = new LinearGradientBrush(_trackRect, Color.DimGray, Color.Black, LinearGradientMode.Vertical);
+            _track1Brush = new LinearGradientBrush(_trackRect, Color.AliceBlue, Color.Navy, LinearGradientMode.Vertical);
             _track1Brush.SetBlendTriangularShape(0.5F);
-            _track2Brush = new LinearGradientBrush(_trackRect, Color.FromArgb(48, 48, 48), Color.Black, LinearGradientMode.Vertical);
+            _track2Brush = new LinearGradientBrush(_trackRect, Color.AliceBlue, Color.Navy, LinearGradientMode.Vertical);
             //track2Brush.SetBlendTriangularShape(0.5F);
 
             // thumb
@@ -1204,7 +1207,7 @@ namespace PVSPlayerExample
 
             // track
             _trackRect = new Rectangle(8, 19, Width - 17, 6);
-            _trackBrush = new LinearGradientBrush(_trackRect, Color.FromArgb(64, 64, 64), Color.Black, LinearGradientMode.Vertical);
+            _trackBrush = new LinearGradientBrush(_trackRect, Color.FromArgb(35, 35, 150), Color.FromArgb(70, 70, 200), LinearGradientMode.Vertical);
             _trackBrush.SetBlendTriangularShape(0.5F);
 
             // ticks
@@ -1395,7 +1398,7 @@ namespace PVSPlayerExample
             _backgroundImage.SetResolution(96, 96);
             this.Size = _backgroundImage.Size;
 
-            _needlePen = new Pen(Color.FromArgb(64, 64, 64), 1.6F);
+            _needlePen = new Pen(Color.FromArgb(45, 45, 200), 1.6F);
             _smallImageRect = new Rectangle(45, 30, 237, 110);
             _ledLightRect = new Rectangle(264, 57, 16, 16);
         }
@@ -1979,7 +1982,7 @@ namespace PVSPlayerExample
         public VideoPanel()
         {
             SetStyle(ControlStyles.Opaque | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint, true);
-            brush = new SolidBrush(Color.FromArgb(18, 18, 18));
+            brush = new SolidBrush(Color.FromArgb(0, 20, 160));
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -2020,7 +2023,7 @@ namespace PVSPlayerExample
 
             //highlightBrush = new SolidBrush(UIColors.MenuHighlightColor);
             //highlightBrush = new LinearGradientBrush(new Rectangle(0, 0, 200, 22), Color.DimGray, UIColors.MenuHighlightColor, LinearGradientMode.Vertical);
-            _highlightBrush = new LinearGradientBrush(new Rectangle(0, 0, 200, 22), Color.DimGray, Color.Black, LinearGradientMode.Vertical);
+            _highlightBrush = new LinearGradientBrush(new Rectangle(0, 0, 200, 22), Color.DimGray, Color.Navy, LinearGradientMode.Vertical);
             _highlightBrush.SetBlendTriangularShape(0.5F);
 
             _highlightBorderPen = new Pen(UIColors.MenuHighlightBorderColor);

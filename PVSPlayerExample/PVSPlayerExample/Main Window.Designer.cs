@@ -349,7 +349,7 @@ namespace PVSPlayerExample
             // 
             this.leftFramePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.leftFramePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.leftFramePanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.leftFramePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.leftFramePanel.Controls.Add(this.speedPanel);
             this.leftFramePanel.Controls.Add(this.repeatPanel);
@@ -359,21 +359,21 @@ namespace PVSPlayerExample
             this.leftFramePanel.Location = new System.Drawing.Point(9, 10);
             this.leftFramePanel.Margin = new System.Windows.Forms.Padding(4);
             this.leftFramePanel.Name = "leftFramePanel";
-            this.leftFramePanel.Size = new System.Drawing.Size(206, 621);
+            this.leftFramePanel.Size = new System.Drawing.Size(206, 611);
             this.leftFramePanel.TabIndex = 0;
             // 
             // speedPanel
             // 
             this.speedPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.speedPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.speedPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.speedPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.speedPanel.Controls.Add(this.speedSlider);
             this.speedPanel.Controls.Add(this.speedLabelPanel);
             this.speedPanel.Location = new System.Drawing.Point(8, 421);
             this.speedPanel.Margin = new System.Windows.Forms.Padding(4);
             this.speedPanel.Name = "speedPanel";
-            this.speedPanel.Size = new System.Drawing.Size(187, 98);
+            this.speedPanel.Size = new System.Drawing.Size(187, 88);
             this.speedPanel.TabIndex = 4;
             // 
             // sliderMenu
@@ -428,16 +428,16 @@ namespace PVSPlayerExample
             // 
             // repeatPanel
             // 
-            this.repeatPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.repeatPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.repeatPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.repeatPanel.Controls.Add(this.repeatLight);
             this.repeatPanel.Controls.Add(this.repeatButton);
             this.repeatPanel.Controls.Add(this.nextFromLabel);
             this.repeatPanel.Controls.Add(this.stopTimeTextBox);
-            this.repeatPanel.Controls.Add(this.startTimeTextBox);
             this.repeatPanel.Controls.Add(this.currentFromLabel);
             this.repeatPanel.Controls.Add(this.stopTimeNextTextBox);
             this.repeatPanel.Controls.Add(this.startTimeNextTextBox);
+            this.repeatPanel.Controls.Add(this.startTimeTextBox);
             this.repeatPanel.Location = new System.Drawing.Point(8, 250);
             this.repeatPanel.Margin = new System.Windows.Forms.Padding(4);
             this.repeatPanel.Name = "repeatPanel";
@@ -531,11 +531,11 @@ namespace PVSPlayerExample
             // 
             // stopTimeTextBox
             // 
-            this.stopTimeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.stopTimeTextBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.stopTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stopTimeTextBox.Enabled = false;
             this.stopTimeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopTimeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.stopTimeTextBox.ForeColor = System.Drawing.Color.White;
             this.stopTimeTextBox.Location = new System.Drawing.Point(92, 124);
             this.stopTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.stopTimeTextBox.Mask = "00:00:00";
@@ -550,11 +550,11 @@ namespace PVSPlayerExample
             // 
             // startTimeTextBox
             // 
-            this.startTimeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.startTimeTextBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.startTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.startTimeTextBox.Enabled = false;
             this.startTimeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startTimeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.startTimeTextBox.ForeColor = System.Drawing.Color.White;
             this.startTimeTextBox.Location = new System.Drawing.Point(12, 124);
             this.startTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.startTimeTextBox.Mask = "00:00:00";
@@ -569,11 +569,11 @@ namespace PVSPlayerExample
             // 
             // stopTimeNextTextBox
             // 
-            this.stopTimeNextTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.stopTimeNextTextBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.stopTimeNextTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stopTimeNextTextBox.Culture = new System.Globalization.CultureInfo("");
             this.stopTimeNextTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopTimeNextTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.stopTimeNextTextBox.ForeColor = System.Drawing.Color.White;
             this.stopTimeNextTextBox.Location = new System.Drawing.Point(92, 68);
             this.stopTimeNextTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.stopTimeNextTextBox.Mask = "00:00:00";
@@ -589,10 +589,10 @@ namespace PVSPlayerExample
             // startTimeNextTextBox
             // 
             this.startTimeNextTextBox.AsciiOnly = true;
-            this.startTimeNextTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.startTimeNextTextBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.startTimeNextTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.startTimeNextTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startTimeNextTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.startTimeNextTextBox.ForeColor = System.Drawing.Color.White;
             this.startTimeNextTextBox.Location = new System.Drawing.Point(12, 68);
             this.startTimeNextTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.startTimeNextTextBox.Mask = "00:00:00";
@@ -607,7 +607,7 @@ namespace PVSPlayerExample
             // 
             // displayModePanel
             // 
-            this.displayModePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.displayModePanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.displayModePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.displayModePanel.Controls.Add(this.displayLight);
             this.displayModePanel.Controls.Add(this.videoTracksLabel);
@@ -622,7 +622,7 @@ namespace PVSPlayerExample
             // 
             // videoTracksLabel
             // 
-            this.videoTracksLabel.BackColor = System.Drawing.Color.Transparent;
+            this.videoTracksLabel.BackColor = System.Drawing.Color.Navy;
             this.videoTracksLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.videoTracksLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.videoTracksLabel.ForeColor = System.Drawing.Color.Lime;
@@ -634,6 +634,7 @@ namespace PVSPlayerExample
             this.videoTracksLabel.Text = "1";
             this.videoTracksLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.toolTip1.SetToolTip(this.videoTracksLabel, "Player.Video.TrackCount - the number of video tracks in the playing media.");
+            this.videoTracksLabel.Visible = false;
             this.videoTracksLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.VideoTracksLabel_MouseClick);
             // 
             // fullScreenModeMenu
@@ -719,7 +720,7 @@ namespace PVSPlayerExample
             // 
             // playPanel
             // 
-            this.playPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.playPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.playPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.playPanel.Controls.Add(this.stopButton);
             this.playPanel.Controls.Add(this.nextButton);
@@ -1107,11 +1108,12 @@ namespace PVSPlayerExample
             this.displayPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.displayPanel.BackColor = System.Drawing.Color.White;
             this.displayPanel.ContextMenuStrip = this.displayMenu;
             this.displayPanel.Location = new System.Drawing.Point(0, 0);
             this.displayPanel.Margin = new System.Windows.Forms.Padding(4);
             this.displayPanel.Name = "displayPanel";
-            this.displayPanel.Size = new System.Drawing.Size(853, 583);
+            this.displayPanel.Size = new System.Drawing.Size(853, 573);
             this.displayPanel.TabIndex = 1;
             this.toolTip1.SetToolTip(this.displayPanel, "Player.Display.Window - the control that is used to display video and overlays.");
             // 
@@ -1911,10 +1913,10 @@ namespace PVSPlayerExample
             // 
             // balanceDialLabel
             // 
-            this.balanceDialLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.balanceDialLabel.BackColor = System.Drawing.Color.Navy;
             this.balanceDialLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.balanceDialLabel.ContextMenuStrip = this.sliderMenu;
-            this.balanceDialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.balanceDialLabel.ForeColor = System.Drawing.Color.White;
             this.balanceDialLabel.Location = new System.Drawing.Point(93, 145);
             this.balanceDialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.balanceDialLabel.Name = "balanceDialLabel";
@@ -1926,10 +1928,10 @@ namespace PVSPlayerExample
             // 
             // volumeDialLabel
             // 
-            this.volumeDialLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.volumeDialLabel.BackColor = System.Drawing.Color.Navy;
             this.volumeDialLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.volumeDialLabel.ContextMenuStrip = this.sliderMenu;
-            this.volumeDialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.volumeDialLabel.ForeColor = System.Drawing.Color.White;
             this.volumeDialLabel.Location = new System.Drawing.Point(12, 145);
             this.volumeDialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.volumeDialLabel.Name = "volumeDialLabel";
@@ -2297,14 +2299,14 @@ namespace PVSPlayerExample
             this.displayParentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.displayParentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.displayParentPanel.BackColor = System.Drawing.SystemColors.HotTrack;
             this.displayParentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.displayParentPanel.Controls.Add(this.displayPanel);
             this.displayParentPanel.Controls.Add(this.positionSliderPanel);
             this.displayParentPanel.Location = new System.Drawing.Point(221, 10);
             this.displayParentPanel.Margin = new System.Windows.Forms.Padding(4);
             this.displayParentPanel.Name = "displayParentPanel";
-            this.displayParentPanel.Size = new System.Drawing.Size(855, 621);
+            this.displayParentPanel.Size = new System.Drawing.Size(855, 611);
             this.displayParentPanel.TabIndex = 1;
             // 
             // rightFramePanel
@@ -2319,26 +2321,26 @@ namespace PVSPlayerExample
             this.rightFramePanel.Location = new System.Drawing.Point(1083, 10);
             this.rightFramePanel.Margin = new System.Windows.Forms.Padding(4);
             this.rightFramePanel.Name = "rightFramePanel";
-            this.rightFramePanel.Size = new System.Drawing.Size(206, 621);
+            this.rightFramePanel.Size = new System.Drawing.Size(206, 611);
             this.rightFramePanel.TabIndex = 2;
             // 
             // shuttlePanel
             // 
             this.shuttlePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.shuttlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.shuttlePanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.shuttlePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.shuttlePanel.Controls.Add(this.shuttleSlider);
             this.shuttlePanel.Controls.Add(this.shuttleLabel);
             this.shuttlePanel.Location = new System.Drawing.Point(8, 375);
             this.shuttlePanel.Margin = new System.Windows.Forms.Padding(4);
             this.shuttlePanel.Name = "shuttlePanel";
-            this.shuttlePanel.Size = new System.Drawing.Size(187, 98);
+            this.shuttlePanel.Size = new System.Drawing.Size(187, 88);
             this.shuttlePanel.TabIndex = 3;
             // 
             // zoomPanel
             // 
-            this.zoomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.zoomPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.zoomPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.zoomPanel.Controls.Add(this.stretchRightButton);
             this.zoomPanel.Controls.Add(this.stretchLeftButton);
@@ -2377,7 +2379,7 @@ namespace PVSPlayerExample
             // 
             // balanceDialTitle
             // 
-            this.balanceDialTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.balanceDialTitle.ForeColor = System.Drawing.Color.Black;
             this.balanceDialTitle.Location = new System.Drawing.Point(97, 52);
             this.balanceDialTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.balanceDialTitle.Name = "balanceDialTitle";
@@ -2388,7 +2390,7 @@ namespace PVSPlayerExample
             // 
             // volumeDialTitle
             // 
-            this.volumeDialTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.volumeDialTitle.ForeColor = System.Drawing.Color.Black;
             this.volumeDialTitle.Location = new System.Drawing.Point(15, 52);
             this.volumeDialTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.volumeDialTitle.Name = "volumeDialTitle";
@@ -2511,6 +2513,7 @@ namespace PVSPlayerExample
             // shuttleSlider
             // 
             this.shuttleSlider.AutoSize = false;
+            this.shuttleSlider.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.shuttleSlider.Location = new System.Drawing.Point(3, 38);
             this.shuttleSlider.Margin = new System.Windows.Forms.Padding(4);
             this.shuttleSlider.Name = "shuttleSlider";
@@ -2523,7 +2526,7 @@ namespace PVSPlayerExample
             // 
             // shuttleLabel
             // 
-            this.shuttleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.shuttleLabel.ForeColor = System.Drawing.Color.White;
             this.shuttleLabel.Location = new System.Drawing.Point(12, 11);
             this.shuttleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.shuttleLabel.Name = "shuttleLabel";
@@ -2536,7 +2539,7 @@ namespace PVSPlayerExample
             // 
             this.stretchRightButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.stretchRightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchRightButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.stretchRightButton.ForeColor = System.Drawing.Color.White;
             this.stretchRightButton.Location = new System.Drawing.Point(135, 91);
             this.stretchRightButton.Margin = new System.Windows.Forms.Padding(4);
             this.stretchRightButton.Name = "stretchRightButton";
@@ -2553,7 +2556,7 @@ namespace PVSPlayerExample
             // 
             this.stretchLeftButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.stretchLeftButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchLeftButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.stretchLeftButton.ForeColor = System.Drawing.Color.White;
             this.stretchLeftButton.Location = new System.Drawing.Point(93, 91);
             this.stretchLeftButton.Margin = new System.Windows.Forms.Padding(4);
             this.stretchLeftButton.Name = "stretchLeftButton";
@@ -2570,7 +2573,7 @@ namespace PVSPlayerExample
             // 
             this.stretchDownButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.stretchDownButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchDownButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.stretchDownButton.ForeColor = System.Drawing.Color.White;
             this.stretchDownButton.Location = new System.Drawing.Point(53, 91);
             this.stretchDownButton.Margin = new System.Windows.Forms.Padding(4);
             this.stretchDownButton.Name = "stretchDownButton";
@@ -2587,7 +2590,7 @@ namespace PVSPlayerExample
             // 
             this.stretchUpButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.stretchUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchUpButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.stretchUpButton.ForeColor = System.Drawing.Color.White;
             this.stretchUpButton.Location = new System.Drawing.Point(12, 91);
             this.stretchUpButton.Margin = new System.Windows.Forms.Padding(4);
             this.stretchUpButton.Name = "stretchUpButton";
@@ -2605,7 +2608,7 @@ namespace PVSPlayerExample
             this.zoomOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.zoomOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.zoomOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.zoomOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.zoomOutButton.ForeColor = System.Drawing.Color.White;
             this.zoomOutButton.Location = new System.Drawing.Point(93, 36);
             this.zoomOutButton.Margin = new System.Windows.Forms.Padding(4);
             this.zoomOutButton.Name = "zoomOutButton";
@@ -2622,7 +2625,7 @@ namespace PVSPlayerExample
             this.zoomInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.zoomInButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.zoomInButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.zoomInButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.zoomInButton.ForeColor = System.Drawing.Color.White;
             this.zoomInButton.Location = new System.Drawing.Point(12, 36);
             this.zoomInButton.Margin = new System.Windows.Forms.Padding(4);
             this.zoomInButton.Name = "zoomInButton";
@@ -2637,7 +2640,7 @@ namespace PVSPlayerExample
             // stretchLabel
             // 
             this.stretchLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.stretchLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.stretchLabel.ForeColor = System.Drawing.Color.White;
             this.stretchLabel.Location = new System.Drawing.Point(12, 68);
             this.stretchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stretchLabel.Name = "stretchLabel";
@@ -2651,7 +2654,7 @@ namespace PVSPlayerExample
             // zoomLabel
             // 
             this.zoomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zoomLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.zoomLabel.ForeColor = System.Drawing.Color.White;
             this.zoomLabel.Location = new System.Drawing.Point(12, 12);
             this.zoomLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.zoomLabel.Name = "zoomLabel";
@@ -2690,7 +2693,7 @@ namespace PVSPlayerExample
             this.audioDeviceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.audioDeviceButton.DropDown = this.audioDeviceMenu;
             this.audioDeviceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.audioDeviceButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.audioDeviceButton.ForeColor = System.Drawing.Color.White;
             this.audioDeviceButton.Location = new System.Drawing.Point(12, 180);
             this.audioDeviceButton.Margin = new System.Windows.Forms.Padding(4);
             this.audioDeviceButton.Name = "audioDeviceButton";
@@ -2736,6 +2739,7 @@ namespace PVSPlayerExample
             // 
             // volumeLabelPanel
             // 
+            this.volumeLabelPanel.BackColor = System.Drawing.Color.Navy;
             this.volumeLabelPanel.Controls.Add(this.audioLight);
             this.volumeLabelPanel.Controls.Add(this.audioTracksLabel);
             this.volumeLabelPanel.Controls.Add(this.audioVolumeLabelText);
@@ -2780,7 +2784,7 @@ namespace PVSPlayerExample
             this.audioVolumeLabelText.AutoSize = true;
             this.audioVolumeLabelText.BackColor = System.Drawing.Color.Transparent;
             this.audioVolumeLabelText.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.audioVolumeLabelText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.audioVolumeLabelText.ForeColor = System.Drawing.Color.White;
             this.audioVolumeLabelText.Location = new System.Drawing.Point(60, 5);
             this.audioVolumeLabelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.audioVolumeLabelText.Name = "audioVolumeLabelText";
@@ -2792,15 +2796,16 @@ namespace PVSPlayerExample
             // 
             // positionSliderPanel
             // 
+            this.positionSliderPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.positionSliderPanel.ContextMenuStrip = this.positionSliderMenu;
             this.positionSliderPanel.Controls.Add(this.positionSlider);
             this.positionSliderPanel.Controls.Add(this.positionLabel2);
             this.positionSliderPanel.Controls.Add(this.positionLabel1);
             this.positionSliderPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.positionSliderPanel.Location = new System.Drawing.Point(0, 591);
+            this.positionSliderPanel.Location = new System.Drawing.Point(0, 579);
             this.positionSliderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.positionSliderPanel.Name = "positionSliderPanel";
-            this.positionSliderPanel.Size = new System.Drawing.Size(853, 28);
+            this.positionSliderPanel.Size = new System.Drawing.Size(853, 30);
             this.positionSliderPanel.TabIndex = 0;
             // 
             // positionSlider
@@ -2808,7 +2813,7 @@ namespace PVSPlayerExample
             this.positionSlider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.positionSlider.AutoSize = false;
-            this.positionSlider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.positionSlider.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.positionSlider.ContextMenuStrip = this.positionSliderMenu;
             this.positionSlider.Enabled = false;
             this.positionSlider.Location = new System.Drawing.Point(108, 2);
@@ -2822,10 +2827,10 @@ namespace PVSPlayerExample
             // positionLabel2
             // 
             this.positionLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.positionLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.positionLabel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.positionLabel2.ContextMenuStrip = this.positionSliderMenu;
             this.positionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.positionLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.positionLabel2.ForeColor = System.Drawing.Color.Black;
             this.positionLabel2.Location = new System.Drawing.Point(743, 1);
             this.positionLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.positionLabel2.Name = "positionLabel2";
@@ -2838,10 +2843,10 @@ namespace PVSPlayerExample
             // 
             // positionLabel1
             // 
-            this.positionLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.positionLabel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.positionLabel1.ContextMenuStrip = this.positionSliderMenu;
             this.positionLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.positionLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.positionLabel1.ForeColor = System.Drawing.Color.Black;
             this.positionLabel1.Location = new System.Drawing.Point(4, 1);
             this.positionLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.positionLabel1.Name = "positionLabel1";
@@ -2878,9 +2883,9 @@ namespace PVSPlayerExample
             // 
             // speedTextBox
             // 
-            this.speedTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.speedTextBox.BackColor = System.Drawing.Color.Navy;
             this.speedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.speedTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.speedTextBox.ForeColor = System.Drawing.Color.White;
             this.speedTextBox.Location = new System.Drawing.Point(123, 5);
             this.speedTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.speedTextBox.Mask = "0.00";
@@ -2894,7 +2899,7 @@ namespace PVSPlayerExample
             // 
             // speedLight
             // 
-            this.speedLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.speedLight.BackColor = System.Drawing.Color.White;
             this.speedLight.Location = new System.Drawing.Point(9, 10);
             this.speedLight.Margin = new System.Windows.Forms.Padding(4);
             this.speedLight.Name = "speedLight";
@@ -2908,7 +2913,7 @@ namespace PVSPlayerExample
             this.speedLabelText.AutoSize = true;
             this.speedLabelText.BackColor = System.Drawing.Color.Transparent;
             this.speedLabelText.ContextMenuStrip = this.sliderMenu;
-            this.speedLabelText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.speedLabelText.ForeColor = System.Drawing.Color.White;
             this.speedLabelText.Location = new System.Drawing.Point(55, 5);
             this.speedLabelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.speedLabelText.Name = "speedLabelText";
@@ -2918,7 +2923,7 @@ namespace PVSPlayerExample
             // 
             // repeatLight
             // 
-            this.repeatLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.repeatLight.BackColor = System.Drawing.Color.White;
             this.repeatLight.Location = new System.Drawing.Point(21, 21);
             this.repeatLight.Margin = new System.Windows.Forms.Padding(4);
             this.repeatLight.Name = "repeatLight";
@@ -2932,7 +2937,7 @@ namespace PVSPlayerExample
             this.repeatButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.repeatButton.DropDown = this.repeatMenu;
             this.repeatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repeatButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.repeatButton.ForeColor = System.Drawing.Color.White;
             this.repeatButton.Location = new System.Drawing.Point(12, 11);
             this.repeatButton.Margin = new System.Windows.Forms.Padding(4);
             this.repeatButton.Name = "repeatButton";
@@ -2946,7 +2951,7 @@ namespace PVSPlayerExample
             // 
             // nextFromLabel
             // 
-            this.nextFromLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.nextFromLabel.ForeColor = System.Drawing.Color.White;
             this.nextFromLabel.Location = new System.Drawing.Point(12, 43);
             this.nextFromLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nextFromLabel.Name = "nextFromLabel";
@@ -2957,7 +2962,7 @@ namespace PVSPlayerExample
             // 
             // currentFromLabel
             // 
-            this.currentFromLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.currentFromLabel.ForeColor = System.Drawing.Color.White;
             this.currentFromLabel.Location = new System.Drawing.Point(12, 100);
             this.currentFromLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currentFromLabel.Name = "currentFromLabel";
@@ -2979,7 +2984,7 @@ namespace PVSPlayerExample
             // 
             // fullScreenLight
             // 
-            this.fullScreenLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.fullScreenLight.BackColor = System.Drawing.Color.White;
             this.fullScreenLight.Location = new System.Drawing.Point(21, 55);
             this.fullScreenLight.Margin = new System.Windows.Forms.Padding(4);
             this.fullScreenLight.Name = "fullScreenLight";
@@ -2993,7 +2998,7 @@ namespace PVSPlayerExample
             this.fullScreenModeButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.fullScreenModeButton.DropDown = this.fullScreenModeMenu;
             this.fullScreenModeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullScreenModeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.fullScreenModeButton.ForeColor = System.Drawing.Color.White;
             this.fullScreenModeButton.Location = new System.Drawing.Point(12, 45);
             this.fullScreenModeButton.Margin = new System.Windows.Forms.Padding(4);
             this.fullScreenModeButton.Name = "fullScreenModeButton";
@@ -3008,7 +3013,7 @@ namespace PVSPlayerExample
             // displayModeLabel
             // 
             this.displayModeLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.displayModeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.displayModeLabel.ForeColor = System.Drawing.Color.White;
             this.displayModeLabel.Location = new System.Drawing.Point(13, 11);
             this.displayModeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.displayModeLabel.Name = "displayModeLabel";
@@ -3024,7 +3029,7 @@ namespace PVSPlayerExample
             // 
             this.stopButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.stopButton.Font = new System.Drawing.Font("Webdings", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stopButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.stopButton.ForeColor = System.Drawing.Color.White;
             this.stopButton.Location = new System.Drawing.Point(135, 39);
             this.stopButton.Margin = new System.Windows.Forms.Padding(4);
             this.stopButton.Name = "stopButton";
@@ -3040,7 +3045,7 @@ namespace PVSPlayerExample
             // 
             this.nextButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.nextButton.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.nextButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.nextButton.ForeColor = System.Drawing.Color.White;
             this.nextButton.Location = new System.Drawing.Point(93, 39);
             this.nextButton.Margin = new System.Windows.Forms.Padding(4);
             this.nextButton.Name = "nextButton";
@@ -3056,7 +3061,7 @@ namespace PVSPlayerExample
             // 
             this.previousButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.previousButton.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.previousButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.previousButton.ForeColor = System.Drawing.Color.White;
             this.previousButton.Location = new System.Drawing.Point(53, 39);
             this.previousButton.Margin = new System.Windows.Forms.Padding(4);
             this.previousButton.Name = "previousButton";
@@ -3072,7 +3077,7 @@ namespace PVSPlayerExample
             // 
             this.pauseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pauseButton.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.pauseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.pauseButton.ForeColor = System.Drawing.Color.White;
             this.pauseButton.Location = new System.Drawing.Point(12, 39);
             this.pauseButton.Margin = new System.Windows.Forms.Padding(4);
             this.pauseButton.Name = "pauseButton";
@@ -3085,7 +3090,7 @@ namespace PVSPlayerExample
             // 
             // playButtonLight
             // 
-            this.playButtonLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.playButtonLight.BackColor = System.Drawing.Color.White;
             this.playButtonLight.Location = new System.Drawing.Point(23, 21);
             this.playButtonLight.Margin = new System.Windows.Forms.Padding(4);
             this.playButtonLight.Name = "playButtonLight";
@@ -3099,7 +3104,7 @@ namespace PVSPlayerExample
             this.playButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.playButton.DropDown = this.playMenu;
             this.playButton.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.playButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.playButton.ForeColor = System.Drawing.Color.White;
             this.playButton.Location = new System.Drawing.Point(12, 11);
             this.playButton.Margin = new System.Windows.Forms.Padding(4);
             this.playButton.Name = "playButton";
@@ -3127,7 +3132,7 @@ namespace PVSPlayerExample
             this.webSiteLabel.AutoSize = true;
             this.webSiteLabel.BackColor = System.Drawing.Color.Transparent;
             this.webSiteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.webSiteLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.webSiteLabel.ForeColor = System.Drawing.Color.White;
             this.webSiteLabel.Location = new System.Drawing.Point(19, 32);
             this.webSiteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.webSiteLabel.Name = "webSiteLabel";
@@ -3142,7 +3147,7 @@ namespace PVSPlayerExample
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
             this.nameLabel.Cursor = System.Windows.Forms.Cursors.Help;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
             this.nameLabel.Location = new System.Drawing.Point(17, 10);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
@@ -3157,7 +3162,7 @@ namespace PVSPlayerExample
             this.clockLabel.BackColor = System.Drawing.Color.Transparent;
             this.clockLabel.Cursor = System.Windows.Forms.Cursors.Help;
             this.clockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clockLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.clockLabel.ForeColor = System.Drawing.Color.White;
             this.clockLabel.Location = new System.Drawing.Point(9, 10);
             this.clockLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.clockLabel.Name = "clockLabel";
@@ -3173,7 +3178,7 @@ namespace PVSPlayerExample
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1299, 639);
+            this.ClientSize = new System.Drawing.Size(1299, 629);
             this.Controls.Add(this.rightFramePanel);
             this.Controls.Add(this.displayParentPanel);
             this.Controls.Add(this.leftFramePanel);
