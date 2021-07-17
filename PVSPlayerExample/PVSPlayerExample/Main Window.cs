@@ -486,7 +486,6 @@ namespace PVSPlayerExample
             // Now replaced by dails not controlled directly by the player:
             volumeDial.ValueChanged += VolumeDial_ValueChanged;
             balanceDial.ValueChanged += BalanceDial_ValueChanged;
-            myPlayer.Sliders.Shuttle = shuttleSlider;
 
             // this is set AFTER the init of the player sliders, because they have a scroll event handler
             // that will set a value - if infolabels come first, they will display the wrong value
@@ -1074,8 +1073,6 @@ namespace PVSPlayerExample
             if (e.KeyChar == 13)
             {
                 e.Handled = true;
-                if (sender == startTimeNextTextBox || sender == startTimeTextBox) ProcessTabKey(true);
-                else ProcessTabKey(false);
             }
         }
 
@@ -1145,11 +1142,8 @@ namespace PVSPlayerExample
             if (ModifierKeys != Keys.Shift)
             {
                 // Get the position slider's x-coordinate of the current position (= thumb location)
-                Point location = SliderValue.ToPoint(shuttleSlider, shuttleSlider.Value);
-                location.Y = 9; // move closer to thumb, with horizontal sliders ValueToPoint y = 0
 
                 // Show the infolabel
-                _sliderLabel.Show(" Shuttle " + (shuttleSlider.Value).ToString("+#;-#;0") + " ", shuttleSlider, location);
             }
         }
 
@@ -1369,70 +1363,13 @@ namespace PVSPlayerExample
         // No longer a player event - now called directly.
         private void MyPlayer_MediaStartStopTimeNextChanged()
         {
-            startTimeNextTextBox.SuspendLayout();
-            stopTimeNextTextBox.SuspendLayout();
-
-            startTimeNextTextBox.Text = _startTimeNext.ToString().Substring(0, 8);
-            stopTimeNextTextBox.Text = _stopTimeNext.ToString().Substring(0, 8);
-
-            if (_startTimeNext.TotalMilliseconds == 0)
-            {
-                if (_stopTimeNext.TotalMilliseconds == 0)
-                {
-                    startTimeNextTextBox.ForeColor = UIColors.MenuTextEnabledColor;
-                    stopTimeNextTextBox.ForeColor = UIColors.MenuTextEnabledColor;
-                }
-                else
-                {
-                    startTimeNextTextBox.ForeColor = Color.Green;
-                    stopTimeNextTextBox.ForeColor = Color.White;
-                }
-            }
-            else
-            {
-                startTimeNextTextBox.ForeColor = Color.White;
-                stopTimeNextTextBox.ForeColor = _stopTimeNext.TotalMilliseconds == 0 ? Color.Green : Color.White;
-            }
-
-            stopTimeNextTextBox.ResumeLayout();
-            startTimeNextTextBox.ResumeLayout();
+            
         }
 
 		// The playing media's start/endposition has changed.
 		private void MyPlayer_MediaStartStopTimeChanged(object sender, EventArgs e)
 		{
-			startTimeTextBox.SuspendLayout();
-			stopTimeTextBox.SuspendLayout();
-
-			startTimeTextBox.Text = myPlayer.Media.StartTime.ToString().Substring(0, 8);
-			stopTimeTextBox.Text = myPlayer.Media.StopTime.ToString().Substring(0, 8);
-
-			if (myPlayer.Media.StartTime.TotalMilliseconds == 0)
-			{
-				if (myPlayer.Media.StopTime.TotalMilliseconds == 0 || myPlayer.Media.StopTime == myPlayer.Media.GetDuration(MediaPart.BeginToEnd))
-				{
-					startTimeTextBox.ForeColor = UIColors.MenuTextEnabledColor;
-					stopTimeTextBox.ForeColor = UIColors.MenuTextEnabledColor;
-				}
-				else
-				{
-					startTimeTextBox.ForeColor = Color.Green;
-					stopTimeTextBox.ForeColor = Color.Firebrick;
-				}
-			}
-			else
-			{
-				startTimeTextBox.ForeColor = Color.Firebrick;
-				if (myPlayer.Media.StopTime.TotalMilliseconds == 0 || myPlayer.Media.StopTime == myPlayer.Media.GetDuration(MediaPart.BeginToEnd)) stopTimeTextBox.ForeColor = Color.Green;
-				else stopTimeTextBox.ForeColor = Color.Firebrick;
-
-				//startTimeTextBox.BackColor = Color.FromArgb(64, 0, 0);
-				//if (Player1.Media.StopTime.TotalMilliseconds == 0 || Player1.Media.StopTime == Player1.Media.GetLength(MediaLength.BeginToEnd)) stopTimeTextBox.BackColor = Color.FromArgb(0, 52, 0);
-				//else stopTimeTextBox.ForeColor = Color.FromArgb(80, 0, 0);
-			}
-
-			stopTimeTextBox.ResumeLayout();
-			startTimeTextBox.ResumeLayout();
+			
 		}
 
 		// The playback position of a mediafile has changed - update position info labels
@@ -1720,8 +1657,6 @@ namespace PVSPlayerExample
                 _stopTimeNext = TimeSpan.Zero;
                 MyPlayer_MediaStartStopTimeNextChanged();
 
-                startTimeTextBox.Enabled = true;
-                stopTimeTextBox.Enabled = true;
             }
 
             // Set window title
@@ -2107,8 +2042,6 @@ namespace PVSPlayerExample
 
                 goToStartMenuItem.Enabled = false;
 
-                startTimeTextBox.Enabled = false;
-                stopTimeTextBox.Enabled = false;
 
                 SetZoomPanelStatus(false);
 
@@ -3571,70 +3504,6 @@ namespace PVSPlayerExample
 
         #endregion
 
-        #region Start- and EndPosition
-
-        private static string CompleteTextBoxTime(string timeText)
-        {
-            if (timeText.Contains(" ")) timeText = timeText.Replace(' ', '0');
-            if (timeText.Length < 8) timeText = timeText.PadRight(8, '0');
-            return timeText;
-        }
-
-        // Input start time next OK (for next media to play)
-        private void StartTimeNextTextBox_Validated(object sender, EventArgs e)
-        {
-            startTimeNextTextBox.Text = CompleteTextBoxTime(startTimeNextTextBox.Text);
-            TimeSpan startTimeNextSpan;
-            if (TimeSpan.TryParse(startTimeNextTextBox.Text, out startTimeNextSpan))
-            {
-                _startTimeNext = startTimeNextSpan;
-                MyPlayer_MediaStartStopTimeNextChanged();
-            }
-        }
-
-        // Input end time next OK (for next media to play)
-        private void StopTimeNextTextBox_Validated(object sender, EventArgs e)
-        {
-            stopTimeNextTextBox.Text = CompleteTextBoxTime(stopTimeNextTextBox.Text);
-            TimeSpan stopTimeNextSpan;
-            if (TimeSpan.TryParse(stopTimeNextTextBox.Text, out stopTimeNextSpan))
-            {
-                _stopTimeNext = stopTimeNextSpan;
-                MyPlayer_MediaStartStopTimeNextChanged();
-            }
-        }
-
-        // Input start time OK (for playing media)
-        private void StartTimeTextBox_Validated(object sender, EventArgs e)
-        {
-            startTimeTextBox.Text = CompleteTextBoxTime(startTimeTextBox.Text);
-            TimeSpan startTimeSpan;
-            if (TimeSpan.TryParse(startTimeTextBox.Text, out startTimeSpan))
-            {
-                myPlayer.Media.StartTime = startTimeSpan;
-                if (myPlayer.LastError)
-                {
-                    startTimeTextBox.Text = myPlayer.Media.StartTime.ToString().Substring(0, 8);
-                }
-            }
-        }
-
-        // Input end time OK (for playing media)
-        private void StopTimeTextBox_Validated(object sender, EventArgs e)
-        {
-            stopTimeTextBox.Text = CompleteTextBoxTime(stopTimeTextBox.Text);
-            TimeSpan stopTimeSpan;
-            if (TimeSpan.TryParse(stopTimeTextBox.Text, out stopTimeSpan))
-            {
-                myPlayer.Media.StopTime = stopTimeSpan;
-                if (myPlayer.LastError)
-                {
-                    stopTimeTextBox.Text = myPlayer.Media.StopTime.ToString().Substring(0, 8);
-                }
-            }
-        }
-
-        #endregion
 
         
         // ******************************** Speed TextBox
@@ -3914,7 +3783,10 @@ namespace PVSPlayerExample
                 {
                     _audioDeviceSelected = null;
                     ((ToolStripMenuItem)audioDeviceMenu.Items[START_AUDIO_DEVICE_ITEMS - 1]).Checked = true;
-                    audioDeviceButton.Text = "[ " + (myPlayer.Audio.GetDefaultDevice().Name.Equals("Speakers") ? "Thiết bị loa" : myPlayer.Audio.GetDefaultDevice().Name) + " ]";
+                    if(myPlayer.Audio.GetDefaultDevice() != null)
+                    {
+                        audioDeviceButton.Text = "[ " + (myPlayer.Audio.GetDefaultDevice().Name.Equals("Speakers") ? "Thiết bị loa" : myPlayer.Audio.GetDefaultDevice().Name) + " ]";
+                    }
                 }
                 else ((ToolStripMenuItem)audioDeviceMenu.Items[START_AUDIO_DEVICE_ITEMS - 1]).Checked = false;
             }
@@ -4520,14 +4392,12 @@ namespace PVSPlayerExample
                         // the infolabels are used with:
                         positionSlider.Scroll   += PositionSlider_Scroll;
                         speedSlider.Scroll      += SpeedSlider_Scroll;
-                        shuttleSlider.Scroll    += ShuttleSlider_Scroll;
                     }
                 }
                 else
                 {
                     positionSlider.Scroll -= PositionSlider_Scroll;
                     speedSlider.Scroll -= SpeedSlider_Scroll;
-                    shuttleSlider.Scroll -= ShuttleSlider_Scroll;
 
                     _positionLabel.Dispose();
                     _positionLabel = null;

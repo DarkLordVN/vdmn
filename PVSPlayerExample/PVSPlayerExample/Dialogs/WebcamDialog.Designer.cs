@@ -137,6 +137,7 @@
             // 
             this.brightnessLabel.AutoSize = true;
             this.brightnessLabel.ContextMenuStrip = this.propertyMenu;
+            this.brightnessLabel.ForeColor = System.Drawing.Color.Black;
             this.brightnessLabel.Location = new System.Drawing.Point(53, 66);
             this.brightnessLabel.Name = "brightnessLabel";
             this.brightnessLabel.Size = new System.Drawing.Size(64, 18);
@@ -173,6 +174,7 @@
             // 
             // brightnessValue
             // 
+            this.brightnessValue.ForeColor = System.Drawing.Color.Black;
             this.brightnessValue.Location = new System.Drawing.Point(316, 66);
             this.brightnessValue.Name = "brightnessValue";
             this.brightnessValue.Size = new System.Drawing.Size(41, 18);
@@ -182,6 +184,7 @@
             // 
             // contrastValue
             // 
+            this.contrastValue.ForeColor = System.Drawing.Color.Black;
             this.contrastValue.Location = new System.Drawing.Point(316, 99);
             this.contrastValue.Name = "contrastValue";
             this.contrastValue.Size = new System.Drawing.Size(41, 18);
@@ -203,6 +206,7 @@
             // 
             this.contrastLabel.AutoSize = true;
             this.contrastLabel.ContextMenuStrip = this.propertyMenu;
+            this.contrastLabel.ForeColor = System.Drawing.Color.Black;
             this.contrastLabel.Location = new System.Drawing.Point(31, 99);
             this.contrastLabel.Name = "contrastLabel";
             this.contrastLabel.Size = new System.Drawing.Size(86, 18);
@@ -212,6 +216,7 @@
             // 
             // hueValue
             // 
+            this.hueValue.ForeColor = System.Drawing.Color.Black;
             this.hueValue.Location = new System.Drawing.Point(316, 132);
             this.hueValue.Name = "hueValue";
             this.hueValue.Size = new System.Drawing.Size(41, 18);
@@ -233,6 +238,7 @@
             // 
             this.hueLabel.AutoSize = true;
             this.hueLabel.ContextMenuStrip = this.propertyMenu;
+            this.hueLabel.ForeColor = System.Drawing.Color.Black;
             this.hueLabel.Location = new System.Drawing.Point(52, 132);
             this.hueLabel.Name = "hueLabel";
             this.hueLabel.Size = new System.Drawing.Size(65, 18);
@@ -242,6 +248,7 @@
             // 
             // saturationValue
             // 
+            this.saturationValue.ForeColor = System.Drawing.Color.Black;
             this.saturationValue.Location = new System.Drawing.Point(316, 165);
             this.saturationValue.Name = "saturationValue";
             this.saturationValue.Size = new System.Drawing.Size(41, 18);
@@ -263,6 +270,7 @@
             // 
             this.saturationLabel.AutoSize = true;
             this.saturationLabel.ContextMenuStrip = this.propertyMenu;
+            this.saturationLabel.ForeColor = System.Drawing.Color.Black;
             this.saturationLabel.Location = new System.Drawing.Point(20, 165);
             this.saturationLabel.Name = "saturationLabel";
             this.saturationLabel.Size = new System.Drawing.Size(97, 18);
@@ -272,6 +280,7 @@
             // 
             // sharpnessValue
             // 
+            this.sharpnessValue.ForeColor = System.Drawing.Color.Black;
             this.sharpnessValue.Location = new System.Drawing.Point(316, 198);
             this.sharpnessValue.Name = "sharpnessValue";
             this.sharpnessValue.Size = new System.Drawing.Size(41, 18);
@@ -293,6 +302,7 @@
             // 
             this.sharpnessLabel.AutoSize = true;
             this.sharpnessLabel.ContextMenuStrip = this.propertyMenu;
+            this.sharpnessLabel.ForeColor = System.Drawing.Color.Black;
             this.sharpnessLabel.Location = new System.Drawing.Point(65, 198);
             this.sharpnessLabel.Name = "sharpnessLabel";
             this.sharpnessLabel.Size = new System.Drawing.Size(52, 18);
@@ -302,6 +312,7 @@
             // 
             // gammaValue
             // 
+            this.gammaValue.ForeColor = System.Drawing.Color.Black;
             this.gammaValue.Location = new System.Drawing.Point(316, 231);
             this.gammaValue.Name = "gammaValue";
             this.gammaValue.Size = new System.Drawing.Size(41, 18);
@@ -323,6 +334,7 @@
             // 
             this.gammaLabel.AutoSize = true;
             this.gammaLabel.ContextMenuStrip = this.propertyMenu;
+            this.gammaLabel.ForeColor = System.Drawing.Color.Black;
             this.gammaLabel.Location = new System.Drawing.Point(8, 231);
             this.gammaLabel.Name = "gammaLabel";
             this.gammaLabel.Size = new System.Drawing.Size(109, 18);
@@ -332,6 +344,7 @@
             // 
             // whiteBalanceValue
             // 
+            this.whiteBalanceValue.ForeColor = System.Drawing.Color.Black;
             this.whiteBalanceValue.Location = new System.Drawing.Point(315, 264);
             this.whiteBalanceValue.Name = "whiteBalanceValue";
             this.whiteBalanceValue.Size = new System.Drawing.Size(43, 18);
@@ -353,6 +366,7 @@
             // 
             this.whiteBalanceLabel.AutoSize = true;
             this.whiteBalanceLabel.ContextMenuStrip = this.propertyMenu;
+            this.whiteBalanceLabel.ForeColor = System.Drawing.Color.Black;
             this.whiteBalanceLabel.Location = new System.Drawing.Point(9, 264);
             this.whiteBalanceLabel.Name = "whiteBalanceLabel";
             this.whiteBalanceLabel.Size = new System.Drawing.Size(108, 18);
@@ -362,6 +376,7 @@
             // 
             // gainValue
             // 
+            this.gainValue.ForeColor = System.Drawing.Color.Black;
             this.gainValue.Location = new System.Drawing.Point(316, 297);
             this.gainValue.Name = "gainValue";
             this.gainValue.Size = new System.Drawing.Size(41, 18);
@@ -383,6 +398,7 @@
             // 
             this.gainLabel.AutoSize = true;
             this.gainLabel.ContextMenuStrip = this.propertyMenu;
+            this.gainLabel.ForeColor = System.Drawing.Color.Black;
             this.gainLabel.Location = new System.Drawing.Point(39, 297);
             this.gainLabel.Name = "gainLabel";
             this.gainLabel.Size = new System.Drawing.Size(78, 18);
@@ -392,6 +408,7 @@
             // 
             // rollValue
             // 
+            this.rollValue.ForeColor = System.Drawing.Color.Black;
             this.rollValue.Location = new System.Drawing.Point(702, 297);
             this.rollValue.Name = "rollValue";
             this.rollValue.Size = new System.Drawing.Size(41, 18);
@@ -413,6 +430,7 @@
             // 
             this.rollLabel.AutoSize = true;
             this.rollLabel.ContextMenuStrip = this.propertyMenu;
+            this.rollLabel.ForeColor = System.Drawing.Color.Black;
             this.rollLabel.Location = new System.Drawing.Point(422, 297);
             this.rollLabel.Name = "rollLabel";
             this.rollLabel.Size = new System.Drawing.Size(80, 18);
@@ -422,6 +440,7 @@
             // 
             // tiltValue
             // 
+            this.tiltValue.ForeColor = System.Drawing.Color.Black;
             this.tiltValue.Location = new System.Drawing.Point(702, 264);
             this.tiltValue.Name = "tiltValue";
             this.tiltValue.Size = new System.Drawing.Size(41, 18);
@@ -443,6 +462,7 @@
             // 
             this.tiltLabel.AutoSize = true;
             this.tiltLabel.ContextMenuStrip = this.propertyMenu;
+            this.tiltLabel.ForeColor = System.Drawing.Color.Black;
             this.tiltLabel.Location = new System.Drawing.Point(440, 264);
             this.tiltLabel.Name = "tiltLabel";
             this.tiltLabel.Size = new System.Drawing.Size(62, 18);
@@ -452,6 +472,7 @@
             // 
             // panValue
             // 
+            this.panValue.ForeColor = System.Drawing.Color.Black;
             this.panValue.Location = new System.Drawing.Point(702, 231);
             this.panValue.Name = "panValue";
             this.panValue.Size = new System.Drawing.Size(41, 18);
@@ -473,6 +494,7 @@
             // 
             this.panLabel.AutoSize = true;
             this.panLabel.ContextMenuStrip = this.propertyMenu;
+            this.panLabel.ForeColor = System.Drawing.Color.Black;
             this.panLabel.Location = new System.Drawing.Point(397, 231);
             this.panLabel.Name = "panLabel";
             this.panLabel.Size = new System.Drawing.Size(105, 18);
@@ -482,6 +504,7 @@
             // 
             // irisValue
             // 
+            this.irisValue.ForeColor = System.Drawing.Color.Black;
             this.irisValue.Location = new System.Drawing.Point(702, 165);
             this.irisValue.Name = "irisValue";
             this.irisValue.Size = new System.Drawing.Size(41, 18);
@@ -503,6 +526,7 @@
             // 
             this.irisLabel.AutoSize = true;
             this.irisLabel.ContextMenuStrip = this.propertyMenu;
+            this.irisLabel.ForeColor = System.Drawing.Color.Black;
             this.irisLabel.Location = new System.Drawing.Point(439, 165);
             this.irisLabel.Name = "irisLabel";
             this.irisLabel.Size = new System.Drawing.Size(63, 18);
@@ -512,6 +536,7 @@
             // 
             // exposureValue
             // 
+            this.exposureValue.ForeColor = System.Drawing.Color.Black;
             this.exposureValue.Location = new System.Drawing.Point(702, 132);
             this.exposureValue.Name = "exposureValue";
             this.exposureValue.Size = new System.Drawing.Size(41, 18);
@@ -533,6 +558,7 @@
             // 
             this.exposureLabel.AutoSize = true;
             this.exposureLabel.ContextMenuStrip = this.propertyMenu;
+            this.exposureLabel.ForeColor = System.Drawing.Color.Black;
             this.exposureLabel.Location = new System.Drawing.Point(428, 132);
             this.exposureLabel.Name = "exposureLabel";
             this.exposureLabel.Size = new System.Drawing.Size(74, 18);
@@ -542,6 +568,7 @@
             // 
             // focusValue
             // 
+            this.focusValue.ForeColor = System.Drawing.Color.Black;
             this.focusValue.Location = new System.Drawing.Point(702, 99);
             this.focusValue.Name = "focusValue";
             this.focusValue.Size = new System.Drawing.Size(41, 18);
@@ -563,6 +590,7 @@
             // 
             this.focusLabel.AutoSize = true;
             this.focusLabel.ContextMenuStrip = this.propertyMenu;
+            this.focusLabel.ForeColor = System.Drawing.Color.Black;
             this.focusLabel.Location = new System.Drawing.Point(430, 99);
             this.focusLabel.Name = "focusLabel";
             this.focusLabel.Size = new System.Drawing.Size(72, 18);
@@ -572,6 +600,7 @@
             // 
             // zoomValue
             // 
+            this.zoomValue.ForeColor = System.Drawing.Color.Black;
             this.zoomValue.Location = new System.Drawing.Point(702, 66);
             this.zoomValue.Name = "zoomValue";
             this.zoomValue.Size = new System.Drawing.Size(41, 18);
@@ -593,6 +622,7 @@
             // 
             this.zoomLabel.AutoSize = true;
             this.zoomLabel.ContextMenuStrip = this.propertyMenu;
+            this.zoomLabel.ForeColor = System.Drawing.Color.Black;
             this.zoomLabel.Location = new System.Drawing.Point(424, 66);
             this.zoomLabel.Name = "zoomLabel";
             this.zoomLabel.Size = new System.Drawing.Size(78, 18);
@@ -704,6 +734,7 @@
             // 
             this.hz50Box.AutoSize = true;
             this.hz50Box.ContextMenuStrip = this.propertyMenu;
+            this.hz50Box.ForeColor = System.Drawing.Color.Black;
             this.hz50Box.Location = new System.Drawing.Point(662, 359);
             this.hz50Box.Name = "hz50Box";
             this.hz50Box.Size = new System.Drawing.Size(46, 22);
@@ -717,6 +748,7 @@
             // 
             this.hz60Box.AutoSize = true;
             this.hz60Box.ContextMenuStrip = this.propertyMenu;
+            this.hz60Box.ForeColor = System.Drawing.Color.Black;
             this.hz60Box.Location = new System.Drawing.Point(705, 359);
             this.hz60Box.Name = "hz60Box";
             this.hz60Box.Size = new System.Drawing.Size(69, 22);
@@ -730,7 +762,7 @@
             // 
             this.bottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bottomPanel.Controls.Add(this.autoMessageLabel);
             this.bottomPanel.Controls.Add(this.OKButton);
             this.bottomPanel.Controls.Add(this.resetButton);
@@ -744,7 +776,7 @@
             // autoMessageLabel
             // 
             this.autoMessageLabel.AutoSize = true;
-            this.autoMessageLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.autoMessageLabel.ForeColor = System.Drawing.Color.Black;
             this.autoMessageLabel.Location = new System.Drawing.Point(313, 16);
             this.autoMessageLabel.Name = "autoMessageLabel";
             this.autoMessageLabel.Size = new System.Drawing.Size(259, 18);
@@ -756,6 +788,7 @@
             this.OKButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.OKButton.FocusBorder = true;
             this.OKButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OKButton.ForeColor = System.Drawing.Color.White;
             this.OKButton.Location = new System.Drawing.Point(705, 14);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(84, 23);
@@ -770,6 +803,7 @@
             this.resetButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.resetButton.FocusBorder = true;
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetButton.ForeColor = System.Drawing.Color.White;
             this.resetButton.Location = new System.Drawing.Point(613, 14);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(84, 23);
@@ -790,6 +824,7 @@
             // 
             this.flashLabel.AutoSize = true;
             this.flashLabel.ContextMenuStrip = this.propertyMenu;
+            this.flashLabel.ForeColor = System.Drawing.Color.Black;
             this.flashLabel.Location = new System.Drawing.Point(140, 338);
             this.flashLabel.Name = "flashLabel";
             this.flashLabel.Size = new System.Drawing.Size(70, 18);
@@ -802,6 +837,7 @@
             // 
             this.backlightLabel.AutoSize = true;
             this.backlightLabel.ContextMenuStrip = this.propertyMenu;
+            this.backlightLabel.ForeColor = System.Drawing.Color.Black;
             this.backlightLabel.Location = new System.Drawing.Point(140, 360);
             this.backlightLabel.Name = "backlightLabel";
             this.backlightLabel.Size = new System.Drawing.Size(120, 18);
@@ -814,6 +850,7 @@
             // 
             this.colorEnableLabel.AutoSize = true;
             this.colorEnableLabel.ContextMenuStrip = this.propertyMenu;
+            this.colorEnableLabel.ForeColor = System.Drawing.Color.Black;
             this.colorEnableLabel.Location = new System.Drawing.Point(526, 338);
             this.colorEnableLabel.Name = "colorEnableLabel";
             this.colorEnableLabel.Size = new System.Drawing.Size(133, 18);
@@ -826,6 +863,7 @@
             // 
             this.powerLineLabel.AutoSize = true;
             this.powerLineLabel.ContextMenuStrip = this.propertyMenu;
+            this.powerLineLabel.ForeColor = System.Drawing.Color.Black;
             this.powerLineLabel.Location = new System.Drawing.Point(526, 359);
             this.powerLineLabel.Name = "powerLineLabel";
             this.powerLineLabel.Size = new System.Drawing.Size(104, 18);
@@ -1069,7 +1107,7 @@
             this.AcceptButton = this.OKButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(804, 459);
             this.Controls.Add(this.autoBacklightBox);
             this.Controls.Add(this.autoFlashBox);

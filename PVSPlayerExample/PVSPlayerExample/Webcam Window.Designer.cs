@@ -67,10 +67,8 @@
             this.opacity75MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opacity100MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullScreenMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.zoomModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scribbleModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.screenCopyMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToClipboardMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToFileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,10 +130,10 @@
             this.webcamDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.webcamDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.webcamDisplay.BackColor = System.Drawing.Color.White;
             this.webcamDisplay.ContextMenuStrip = this.displayMenu;
             this.webcamDisplay.Location = new System.Drawing.Point(0, 0);
-            this.webcamDisplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.webcamDisplay.Margin = new System.Windows.Forms.Padding(4);
             this.webcamDisplay.Name = "webcamDisplay";
             this.webcamDisplay.Size = new System.Drawing.Size(853, 591);
             this.webcamDisplay.TabIndex = 0;
@@ -153,10 +151,8 @@
             this.toolStripSeparator4,
             this.opacityMenuItem,
             this.fullScreenMenuItem,
-            this.toolStripSeparator6,
             this.zoomModeMenuItem,
-            this.scribbleModeMenuItem,
-            this.toolStripSeparator10,
+            this.toolStripSeparator6,
             this.screenCopyMenuItem,
             this.recorderMenuItem,
             this.toolStripSeparator2,
@@ -167,7 +163,7 @@
             this.toolStripSeparator3,
             this.closeMenuItem});
             this.displayMenu.Name = "displayMenu";
-            this.displayMenu.Size = new System.Drawing.Size(208, 406);
+            this.displayMenu.Size = new System.Drawing.Size(227, 376);
             this.displayMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Closed);
             this.displayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
             // 
@@ -180,45 +176,45 @@
             this.centerMenuItem,
             this.manualMenuItem});
             this.displayModeMenuItem.Name = "displayModeMenuItem";
-            this.displayModeMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.displayModeMenuItem.Text = "Display Mode";
+            this.displayModeMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.displayModeMenuItem.Text = "Chế độ hiển thị";
             // 
             // zoomMenuItem
             // 
             this.zoomMenuItem.Checked = true;
             this.zoomMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.zoomMenuItem.Name = "zoomMenuItem";
-            this.zoomMenuItem.Size = new System.Drawing.Size(141, 26);
-            this.zoomMenuItem.Text = "Zoom";
+            this.zoomMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.zoomMenuItem.Text = "Thu phóng";
             this.zoomMenuItem.Click += new System.EventHandler(this.ZoomMenuItem_Click);
             // 
             // coverMenuItem
             // 
             this.coverMenuItem.Name = "coverMenuItem";
-            this.coverMenuItem.Size = new System.Drawing.Size(141, 26);
-            this.coverMenuItem.Text = "Cover";
+            this.coverMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.coverMenuItem.Text = "Khung";
             this.coverMenuItem.Click += new System.EventHandler(this.CoverMenuItem_Click);
             // 
             // stretchMenuItem
             // 
             this.stretchMenuItem.Name = "stretchMenuItem";
-            this.stretchMenuItem.Size = new System.Drawing.Size(141, 26);
-            this.stretchMenuItem.Text = "Stretch";
+            this.stretchMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.stretchMenuItem.Text = "Kéo dãn";
             this.stretchMenuItem.Click += new System.EventHandler(this.StretchMenuItem_Click);
             // 
             // centerMenuItem
             // 
             this.centerMenuItem.Name = "centerMenuItem";
-            this.centerMenuItem.Size = new System.Drawing.Size(141, 26);
-            this.centerMenuItem.Text = "Center";
+            this.centerMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.centerMenuItem.Text = "Trung tâm";
             this.centerMenuItem.Click += new System.EventHandler(this.CenterMenuItem_Click);
             // 
             // manualMenuItem
             // 
             this.manualMenuItem.Enabled = false;
             this.manualMenuItem.Name = "manualMenuItem";
-            this.manualMenuItem.Size = new System.Drawing.Size(141, 26);
-            this.manualMenuItem.Text = "Manual";
+            this.manualMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.manualMenuItem.Text = "Thủ công";
             // 
             // displayShapeMenuItem
             // 
@@ -238,8 +234,9 @@
             this.toolStripSeparator5,
             this.normalShapeMenuItem});
             this.displayShapeMenuItem.Name = "displayShapeMenuItem";
-            this.displayShapeMenuItem.Size = new System.Drawing.Size(207, 24);
+            this.displayShapeMenuItem.Size = new System.Drawing.Size(226, 24);
             this.displayShapeMenuItem.Text = "Display Shape";
+            this.displayShapeMenuItem.Visible = false;
             // 
             // arrowDownMenuItem
             // 
@@ -346,52 +343,52 @@
             this.toolStripSeparator9,
             this.removeAllClonesMenuItem});
             this.displayCloneMenuItem.Name = "displayCloneMenuItem";
-            this.displayCloneMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.displayCloneMenuItem.Text = "Display Clones";
+            this.displayCloneMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.displayCloneMenuItem.Text = "Hiển thị bản sao";
             // 
             // addDisplayCloneMenuItem
             // 
             this.addDisplayCloneMenuItem.Name = "addDisplayCloneMenuItem";
             this.addDisplayCloneMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.addDisplayCloneMenuItem.Size = new System.Drawing.Size(268, 26);
-            this.addDisplayCloneMenuItem.Text = "Add Display Clone";
+            this.addDisplayCloneMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.addDisplayCloneMenuItem.Text = "Thêm bản sao";
             this.addDisplayCloneMenuItem.Click += new System.EventHandler(this.AddDisplayCloneMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(265, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(235, 6);
             // 
             // removeAllClonesMenuItem
             // 
             this.removeAllClonesMenuItem.Name = "removeAllClonesMenuItem";
-            this.removeAllClonesMenuItem.Size = new System.Drawing.Size(268, 26);
-            this.removeAllClonesMenuItem.Text = "Remove All Clones";
+            this.removeAllClonesMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.removeAllClonesMenuItem.Text = "Xóa tất cả bản sao";
             this.removeAllClonesMenuItem.Click += new System.EventHandler(this.RemoveAllClonesMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(223, 6);
             // 
             // videoColorMenuItem
             // 
             this.videoColorMenuItem.Name = "videoColorMenuItem";
-            this.videoColorMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.videoColorMenuItem.Text = "Video Color";
+            this.videoColorMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.videoColorMenuItem.Text = "Màu sắc video";
             this.videoColorMenuItem.Click += new System.EventHandler(this.VideoColorMenuItem_Click);
             // 
             // videoOverlayMenuItem
             // 
             this.videoOverlayMenuItem.Name = "videoOverlayMenuItem";
-            this.videoOverlayMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.videoOverlayMenuItem.Text = "Video Overlay";
+            this.videoOverlayMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.videoOverlayMenuItem.Text = "Lớp phủ video";
             this.videoOverlayMenuItem.Click += new System.EventHandler(this.VideoOverlayMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(223, 6);
             // 
             // opacityMenuItem
             // 
@@ -401,8 +398,8 @@
             this.opacity75MenuItem,
             this.opacity100MenuItem});
             this.opacityMenuItem.Name = "opacityMenuItem";
-            this.opacityMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.opacityMenuItem.Text = "Opacity";
+            this.opacityMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.opacityMenuItem.Text = "Độ đậm nhạt";
             // 
             // opacity25MenuItem
             // 
@@ -437,33 +434,21 @@
             // fullScreenMenuItem
             // 
             this.fullScreenMenuItem.Name = "fullScreenMenuItem";
-            this.fullScreenMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.fullScreenMenuItem.Text = "Full Screen";
+            this.fullScreenMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.fullScreenMenuItem.Text = "Toàn màn hình";
             this.fullScreenMenuItem.Click += new System.EventHandler(this.FullScreenMenuItem_Click);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(204, 6);
             // 
             // zoomModeMenuItem
             // 
             this.zoomModeMenuItem.Name = "zoomModeMenuItem";
-            this.zoomModeMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.zoomModeMenuItem.Text = "Zoom Mode";
+            this.zoomModeMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.zoomModeMenuItem.Text = "Chế độ thu phóng";
             this.zoomModeMenuItem.Click += new System.EventHandler(this.ZoomModeMenuItem_Click);
             // 
-            // scribbleModeMenuItem
+            // toolStripSeparator6
             // 
-            this.scribbleModeMenuItem.Name = "scribbleModeMenuItem";
-            this.scribbleModeMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.scribbleModeMenuItem.Text = "Scribble Mode";
-            this.scribbleModeMenuItem.Click += new System.EventHandler(this.ScribbleModeMenuItem_Click);
-            // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(223, 6);
             // 
             // screenCopyMenuItem
             // 
@@ -473,29 +458,29 @@
             this.toolStripSeparator8,
             this.autoToFileMenuItem});
             this.screenCopyMenuItem.Name = "screenCopyMenuItem";
-            this.screenCopyMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.screenCopyMenuItem.Text = "Copy";
+            this.screenCopyMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.screenCopyMenuItem.Text = "Sao chép";
             // 
             // copyToClipboardMenuItem
             // 
             this.copyToClipboardMenuItem.Name = "copyToClipboardMenuItem";
             this.copyToClipboardMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.copyToClipboardMenuItem.Size = new System.Drawing.Size(270, 26);
-            this.copyToClipboardMenuItem.Text = "To Clipboard";
+            this.copyToClipboardMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.copyToClipboardMenuItem.Text = "Nhớ tạm (Clipboard)";
             this.copyToClipboardMenuItem.Click += new System.EventHandler(this.CopyToClipboardMenuItem_Click);
             // 
             // copyToFileMenuItem
             // 
             this.copyToFileMenuItem.Name = "copyToFileMenuItem";
             this.copyToFileMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.copyToFileMenuItem.Size = new System.Drawing.Size(270, 26);
-            this.copyToFileMenuItem.Text = "To File (Pictures Folder)";
+            this.copyToFileMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.copyToFileMenuItem.Text = "Lưu vào tệp";
             this.copyToFileMenuItem.Click += new System.EventHandler(this.CopyToFileMenuItem_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(251, 6);
             // 
             // autoToFileMenuItem
             // 
@@ -518,125 +503,125 @@
             this.toolStripSeparator7,
             this.autoOffMenuItem});
             this.autoToFileMenuItem.Name = "autoToFileMenuItem";
-            this.autoToFileMenuItem.Size = new System.Drawing.Size(270, 26);
-            this.autoToFileMenuItem.Text = "Auto Copy To File Interval";
+            this.autoToFileMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.autoToFileMenuItem.Text = "Tự động lưu vào tệp sau";
             // 
             // auto01SecMenuItem
             // 
             this.auto01SecMenuItem.Name = "auto01SecMenuItem";
-            this.auto01SecMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto01SecMenuItem.Text = "  1 second";
+            this.auto01SecMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto01SecMenuItem.Text = "  1 giây";
             this.auto01SecMenuItem.Click += new System.EventHandler(this.Auto01SecMenuItem_Click);
             // 
             // auto02SecMenuItem
             // 
             this.auto02SecMenuItem.Name = "auto02SecMenuItem";
-            this.auto02SecMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto02SecMenuItem.Text = "  2 seconds";
+            this.auto02SecMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto02SecMenuItem.Text = "  2 giây";
             this.auto02SecMenuItem.Click += new System.EventHandler(this.Auto02SecMenuItem_Click);
             // 
             // auto03SecMenuItem
             // 
             this.auto03SecMenuItem.Name = "auto03SecMenuItem";
-            this.auto03SecMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto03SecMenuItem.Text = "  3 seconds";
+            this.auto03SecMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto03SecMenuItem.Text = "  3 giây";
             this.auto03SecMenuItem.Click += new System.EventHandler(this.Auto03SecMenuItem_Click);
             // 
             // auto05SecMenuItem
             // 
             this.auto05SecMenuItem.Name = "auto05SecMenuItem";
-            this.auto05SecMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto05SecMenuItem.Text = "  5 seconds";
+            this.auto05SecMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto05SecMenuItem.Text = "  5 giây";
             this.auto05SecMenuItem.Click += new System.EventHandler(this.Auto05SecMenuItem_Click);
             // 
             // auto10SecMenuItem
             // 
             this.auto10SecMenuItem.Name = "auto10SecMenuItem";
-            this.auto10SecMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto10SecMenuItem.Text = "10 seconds";
+            this.auto10SecMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto10SecMenuItem.Text = "10 giây";
             this.auto10SecMenuItem.Click += new System.EventHandler(this.Auto10SecMenuItem_Click);
             // 
             // auto15SecMenuItem
             // 
             this.auto15SecMenuItem.Name = "auto15SecMenuItem";
-            this.auto15SecMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto15SecMenuItem.Text = "15 seconds";
+            this.auto15SecMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto15SecMenuItem.Text = "15 giây";
             this.auto15SecMenuItem.Click += new System.EventHandler(this.Auto15SecMenuItem_Click);
             // 
             // auto30SecMenuItem
             // 
             this.auto30SecMenuItem.Name = "auto30SecMenuItem";
-            this.auto30SecMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto30SecMenuItem.Text = "30 seconds";
+            this.auto30SecMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto30SecMenuItem.Text = "30 giây";
             this.auto30SecMenuItem.Click += new System.EventHandler(this.Auto30SecMenuItem_Click);
             // 
             // auto01MinMenuItem
             // 
             this.auto01MinMenuItem.Name = "auto01MinMenuItem";
-            this.auto01MinMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto01MinMenuItem.Text = "  1 minute";
+            this.auto01MinMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto01MinMenuItem.Text = "  1 phút";
             this.auto01MinMenuItem.Click += new System.EventHandler(this.Auto01MinMenuItem_Click);
             // 
             // auto02MinMenuItem
             // 
             this.auto02MinMenuItem.Name = "auto02MinMenuItem";
-            this.auto02MinMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto02MinMenuItem.Text = "  2 minutes";
+            this.auto02MinMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto02MinMenuItem.Text = "  2 phút";
             this.auto02MinMenuItem.Click += new System.EventHandler(this.Auto02MinMenuItem_Click);
             // 
             // auto03MinMenuItem
             // 
             this.auto03MinMenuItem.Name = "auto03MinMenuItem";
-            this.auto03MinMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto03MinMenuItem.Text = "  3 minutes";
+            this.auto03MinMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto03MinMenuItem.Text = "  3 phút";
             this.auto03MinMenuItem.Click += new System.EventHandler(this.Auto03MinMenuItem_Click);
             // 
             // auto05MinMenuItem
             // 
             this.auto05MinMenuItem.Name = "auto05MinMenuItem";
-            this.auto05MinMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto05MinMenuItem.Text = "  5 minutes";
+            this.auto05MinMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto05MinMenuItem.Text = "  5 phút";
             this.auto05MinMenuItem.Click += new System.EventHandler(this.Auto05MinMenuItem_Click);
             // 
             // auto10MinMenuItem
             // 
             this.auto10MinMenuItem.Name = "auto10MinMenuItem";
-            this.auto10MinMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto10MinMenuItem.Text = "10 minutes";
+            this.auto10MinMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto10MinMenuItem.Text = "10 phút";
             this.auto10MinMenuItem.Click += new System.EventHandler(this.Auto10MinMenuItem_Click);
             // 
             // auto15MinMenuItem
             // 
             this.auto15MinMenuItem.Name = "auto15MinMenuItem";
-            this.auto15MinMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto15MinMenuItem.Text = "15 minutes";
+            this.auto15MinMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto15MinMenuItem.Text = "15 phút";
             this.auto15MinMenuItem.Click += new System.EventHandler(this.Auto15MinMenuItem_Click);
             // 
             // auto30MinMenuItem
             // 
             this.auto30MinMenuItem.Name = "auto30MinMenuItem";
-            this.auto30MinMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto30MinMenuItem.Text = "30 minutes";
+            this.auto30MinMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto30MinMenuItem.Text = "30 phút";
             this.auto30MinMenuItem.Click += new System.EventHandler(this.Auto30MinMenuItem_Click);
             // 
             // auto01HourMenuItem
             // 
             this.auto01HourMenuItem.Name = "auto01HourMenuItem";
-            this.auto01HourMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.auto01HourMenuItem.Text = "  1 hour";
+            this.auto01HourMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.auto01HourMenuItem.Text = "  1 tiếng";
             this.auto01HourMenuItem.Click += new System.EventHandler(this.Auto01HourMenuItem_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(162, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(143, 6);
             // 
             // autoOffMenuItem
             // 
             this.autoOffMenuItem.Checked = true;
             this.autoOffMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.autoOffMenuItem.Name = "autoOffMenuItem";
-            this.autoOffMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.autoOffMenuItem.Size = new System.Drawing.Size(146, 26);
             this.autoOffMenuItem.Text = "Off";
             this.autoOffMenuItem.Click += new System.EventHandler(this.AutoOffMenuItem_Click);
             // 
@@ -646,71 +631,71 @@
             this.startRecordingMenuItem,
             this.stopRecordingMenuItem});
             this.recorderMenuItem.Name = "recorderMenuItem";
-            this.recorderMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.recorderMenuItem.Text = "Recorder";
+            this.recorderMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.recorderMenuItem.Text = "Ghi hình";
             // 
             // startRecordingMenuItem
             // 
             this.startRecordingMenuItem.Name = "startRecordingMenuItem";
-            this.startRecordingMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.startRecordingMenuItem.Text = "Start Recording";
+            this.startRecordingMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.startRecordingMenuItem.Text = "Bắt đầu ghi";
             this.startRecordingMenuItem.Click += new System.EventHandler(this.StartRecordingMenuItem_Click);
             // 
             // stopRecordingMenuItem
             // 
             this.stopRecordingMenuItem.Name = "stopRecordingMenuItem";
-            this.stopRecordingMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.stopRecordingMenuItem.Text = "Stop Recording";
+            this.stopRecordingMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.stopRecordingMenuItem.Text = "Dùng ghi";
             this.stopRecordingMenuItem.Click += new System.EventHandler(this.StopRecordingMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(223, 6);
             // 
             // propertiesMenuItem
             // 
             this.propertiesMenuItem.Name = "propertiesMenuItem";
-            this.propertiesMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.propertiesMenuItem.Text = "Webcam Properties";
+            this.propertiesMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.propertiesMenuItem.Text = "Tùy chỉnh webcam";
             this.propertiesMenuItem.Click += new System.EventHandler(this.PropertiesMenuItem_Click);
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(223, 6);
             // 
             // showInTaskbarMenuItem
             // 
             this.showInTaskbarMenuItem.Name = "showInTaskbarMenuItem";
-            this.showInTaskbarMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.showInTaskbarMenuItem.Text = "Show In Taskbar";
+            this.showInTaskbarMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.showInTaskbarMenuItem.Text = "Hiển thị thanh taskbar";
             this.showInTaskbarMenuItem.Click += new System.EventHandler(this.ShowInTaskbarMenuItem_Click);
             // 
             // alwaysOnTopMenuItem
             // 
             this.alwaysOnTopMenuItem.Name = "alwaysOnTopMenuItem";
-            this.alwaysOnTopMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.alwaysOnTopMenuItem.Text = "Always On Top";
+            this.alwaysOnTopMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.alwaysOnTopMenuItem.Text = "Luôn trên cửa sổ chính";
             this.alwaysOnTopMenuItem.Click += new System.EventHandler(this.AlwaysOnTopMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(223, 6);
             // 
             // closeMenuItem
             // 
             this.closeMenuItem.Name = "closeMenuItem";
-            this.closeMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.closeMenuItem.Text = "Close";
+            this.closeMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.closeMenuItem.Text = "Đóng";
             this.closeMenuItem.Click += new System.EventHandler(this.CloseMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.Controls.Add(this.volumeDial);
             this.panel1.Controls.Add(this.audioOutputLabel);
             this.panel1.Controls.Add(this.audioOutputButton);
@@ -719,7 +704,7 @@
             this.panel1.Controls.Add(this.webcamFormatLabel);
             this.panel1.Controls.Add(this.webcamFormatButton);
             this.panel1.Location = new System.Drawing.Point(0, 591);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(853, 71);
             this.panel1.TabIndex = 1;
@@ -730,7 +715,7 @@
             this.volumeDial.ContextMenuStrip = this.audioVolumeMenu;
             this.volumeDial.Image = ((System.Drawing.Bitmap)(resources.GetObject("volumeDial.Image")));
             this.volumeDial.Location = new System.Drawing.Point(777, 5);
-            this.volumeDial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.volumeDial.Margin = new System.Windows.Forms.Padding(4);
             this.volumeDial.MaximumSize = new System.Drawing.Size(55, 55);
             this.volumeDial.MinimumSize = new System.Drawing.Size(55, 55);
             this.volumeDial.Name = "volumeDial";
@@ -750,7 +735,7 @@
             this.maximumVolumeMenuItem});
             this.audioVolumeMenu.Name = "audioVolumeMenu";
             this.audioVolumeMenu.ShowImageMargin = false;
-            this.audioVolumeMenu.Size = new System.Drawing.Size(174, 124);
+            this.audioVolumeMenu.Size = new System.Drawing.Size(163, 124);
             this.audioVolumeMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Closed);
             this.audioVolumeMenu.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
             this.audioVolumeMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.AudioVolumeMenu_ItemClicked);
@@ -758,37 +743,37 @@
             // muteMenuItem
             // 
             this.muteMenuItem.Name = "muteMenuItem";
-            this.muteMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.muteMenuItem.Text = "Fade Out";
+            this.muteMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.muteMenuItem.Text = "Nhỏ dần";
             // 
             // lowVolumeMenuItem
             // 
             this.lowVolumeMenuItem.Name = "lowVolumeMenuItem";
-            this.lowVolumeMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.lowVolumeMenuItem.Text = "Low Volume";
+            this.lowVolumeMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.lowVolumeMenuItem.Text = "Âm lượng nhỏ";
             // 
             // averageVolumeMenuItem
             // 
             this.averageVolumeMenuItem.Name = "averageVolumeMenuItem";
-            this.averageVolumeMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.averageVolumeMenuItem.Text = "Medium Volume";
+            this.averageVolumeMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.averageVolumeMenuItem.Text = "Âm lượng vừa";
             // 
             // highVolumeMenuItem
             // 
             this.highVolumeMenuItem.Name = "highVolumeMenuItem";
-            this.highVolumeMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.highVolumeMenuItem.Text = "High Volume";
+            this.highVolumeMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.highVolumeMenuItem.Text = "Âm lượng cao";
             // 
             // maximumVolumeMenuItem
             // 
             this.maximumVolumeMenuItem.Name = "maximumVolumeMenuItem";
-            this.maximumVolumeMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.maximumVolumeMenuItem.Text = "Maximum Volume";
+            this.maximumVolumeMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.maximumVolumeMenuItem.Text = "Âm lượng tối đa";
             // 
             // audioOutputLabel
             // 
             this.audioOutputLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.audioOutputLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.audioOutputLabel.ForeColor = System.Drawing.Color.White;
             this.audioOutputLabel.Location = new System.Drawing.Point(523, 7);
             this.audioOutputLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.audioOutputLabel.Name = "audioOutputLabel";
@@ -803,9 +788,9 @@
             this.audioOutputButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.audioOutputButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.audioOutputButton.DropDown = this.audioOutputMenu;
-            this.audioOutputButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.audioOutputButton.ForeColor = System.Drawing.Color.White;
             this.audioOutputButton.Location = new System.Drawing.Point(523, 33);
-            this.audioOutputButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.audioOutputButton.Margin = new System.Windows.Forms.Padding(4);
             this.audioOutputButton.Name = "audioOutputButton";
             this.audioOutputButton.Size = new System.Drawing.Size(248, 31);
             this.audioOutputButton.TabIndex = 4;
@@ -818,7 +803,7 @@
             this.audioOutputMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.systemDefaultToolStripMenuItem});
             this.audioOutputMenu.Name = "audioOutputMenu";
-            this.audioOutputMenu.Size = new System.Drawing.Size(197, 28);
+            this.audioOutputMenu.Size = new System.Drawing.Size(221, 28);
             this.audioOutputMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Closed);
             this.audioOutputMenu.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
             this.audioOutputMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.AudioOutputMenu_ItemClicked);
@@ -826,14 +811,14 @@
             // systemDefaultToolStripMenuItem
             // 
             this.systemDefaultToolStripMenuItem.Name = "systemDefaultToolStripMenuItem";
-            this.systemDefaultToolStripMenuItem.Size = new System.Drawing.Size(196, 24);
-            this.systemDefaultToolStripMenuItem.Text = "[ System Default ]";
+            this.systemDefaultToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.systemDefaultToolStripMenuItem.Text = "[ Mặc định hệ thống ]";
             // 
             // audioInputLabel
             // 
             this.audioInputLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.audioInputLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.audioInputLabel.ForeColor = System.Drawing.Color.White;
             this.audioInputLabel.Location = new System.Drawing.Point(264, 7);
             this.audioInputLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.audioInputLabel.Name = "audioInputLabel";
@@ -849,9 +834,9 @@
             this.audioInputButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.audioInputButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.audioInputButton.DropDown = this.audioInputMenu;
-            this.audioInputButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.audioInputButton.ForeColor = System.Drawing.Color.White;
             this.audioInputButton.Location = new System.Drawing.Point(264, 33);
-            this.audioInputButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.audioInputButton.Margin = new System.Windows.Forms.Padding(4);
             this.audioInputButton.Name = "audioInputButton";
             this.audioInputButton.Size = new System.Drawing.Size(251, 31);
             this.audioInputButton.TabIndex = 2;
@@ -869,7 +854,7 @@
             // 
             // webcamFormatLabel
             // 
-            this.webcamFormatLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.webcamFormatLabel.ForeColor = System.Drawing.Color.White;
             this.webcamFormatLabel.Location = new System.Drawing.Point(8, 7);
             this.webcamFormatLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.webcamFormatLabel.Name = "webcamFormatLabel";
@@ -883,9 +868,9 @@
             this.webcamFormatButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.webcamFormatButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.webcamFormatButton.DropDown = this.formatMenu;
-            this.webcamFormatButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.webcamFormatButton.ForeColor = System.Drawing.Color.White;
             this.webcamFormatButton.Location = new System.Drawing.Point(8, 33);
-            this.webcamFormatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.webcamFormatButton.Margin = new System.Windows.Forms.Padding(4);
             this.webcamFormatButton.Name = "webcamFormatButton";
             this.webcamFormatButton.Size = new System.Drawing.Size(248, 31);
             this.webcamFormatButton.TabIndex = 0;
@@ -906,7 +891,7 @@
             this.ClientSize = new System.Drawing.Size(853, 662);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.webcamDisplay);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(869, 285);
             this.Name = "Webcam_Window";
             this.TransparencyKey = System.Drawing.Color.Lime;
@@ -1000,8 +985,6 @@
         private System.Windows.Forms.ToolStripMenuItem zoomModeMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripMenuItem scribbleModeMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripMenuItem arrowDownMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arrowLeftMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arrowRightMenuItem;

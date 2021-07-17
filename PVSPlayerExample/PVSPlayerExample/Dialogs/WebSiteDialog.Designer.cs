@@ -39,14 +39,13 @@ namespace PVSPlayerExample
             this.OKButton = new PVSPlayerExample.CustomButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pvsPanel = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.bottomPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(40, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(363, 18);
@@ -56,7 +55,7 @@ namespace PVSPlayerExample
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.radioButton1.ForeColor = System.Drawing.Color.Black;
             this.radioButton1.Location = new System.Drawing.Point(118, 65);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(140, 22);
@@ -69,7 +68,7 @@ namespace PVSPlayerExample
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Checked = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.radioButton2.ForeColor = System.Drawing.Color.Black;
             this.radioButton2.Location = new System.Drawing.Point(118, 84);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(137, 22);
@@ -83,7 +82,7 @@ namespace PVSPlayerExample
             // 
             this.bottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bottomPanel.Controls.Add(this.cancelButton);
             this.bottomPanel.Controls.Add(this.OKButton);
             this.bottomPanel.Controls.Add(this.panel4);
@@ -99,7 +98,7 @@ namespace PVSPlayerExample
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.FocusBorder = true;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.cancelButton.ForeColor = System.Drawing.Color.White;
             this.cancelButton.Location = new System.Drawing.Point(306, 14);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(84, 23);
@@ -113,7 +112,7 @@ namespace PVSPlayerExample
             this.OKButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.OKButton.FocusBorder = true;
             this.OKButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OKButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.OKButton.ForeColor = System.Drawing.Color.White;
             this.OKButton.Location = new System.Drawing.Point(213, 14);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(84, 23);
@@ -137,27 +136,14 @@ namespace PVSPlayerExample
             this.pvsPanel.TabIndex = 0;
             this.pvsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PvsPanel_Paint);
             // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.ForeColor = System.Drawing.Color.SlateGray;
-            this.radioButton3.Location = new System.Drawing.Point(118, 103);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(251, 22);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.Text = "Go to the Sound Recorder article.";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
-            // 
             // WebSiteDialog
             // 
             this.AcceptButton = this.OKButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(404, 201);
-            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.bottomPanel);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -189,6 +175,5 @@ namespace PVSPlayerExample
         internal Panel panel4;
         private CustomButton cancelButton;
         private CustomButton OKButton;
-        private RadioButton radioButton3;
     }
 }

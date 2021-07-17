@@ -70,7 +70,7 @@
             // 
             // brightnessPanel
             // 
-            this.brightnessPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.brightnessPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.brightnessPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.brightnessPanel.ContextMenuStrip = this.colorDialogMenu;
             this.brightnessPanel.Controls.Add(this.brightnessLight);
@@ -78,7 +78,7 @@
             this.brightnessPanel.Controls.Add(this.brightnessLabel);
             this.brightnessPanel.Controls.Add(this.brightnessSlider);
             this.brightnessPanel.Location = new System.Drawing.Point(5, 5);
-            this.brightnessPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brightnessPanel.Margin = new System.Windows.Forms.Padding(4);
             this.brightnessPanel.Name = "brightnessPanel";
             this.brightnessPanel.Size = new System.Drawing.Size(363, 62);
             this.brightnessPanel.TabIndex = 0;
@@ -148,7 +148,7 @@
             // 
             this.brightnessLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.brightnessLight.Location = new System.Drawing.Point(12, 26);
-            this.brightnessLight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brightnessLight.Margin = new System.Windows.Forms.Padding(4);
             this.brightnessLight.Name = "brightnessLight";
             this.brightnessLight.Size = new System.Drawing.Size(3, 7);
             this.brightnessLight.TabIndex = 3;
@@ -157,6 +157,7 @@
             // 
             this.brightnessValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.brightnessValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brightnessValue.ForeColor = System.Drawing.Color.Black;
             this.brightnessValue.Location = new System.Drawing.Point(303, 6);
             this.brightnessValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.brightnessValue.Name = "brightnessValue";
@@ -168,6 +169,7 @@
             // brightnessLabel
             // 
             this.brightnessLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brightnessLabel.ForeColor = System.Drawing.Color.Black;
             this.brightnessLabel.Location = new System.Drawing.Point(21, 18);
             this.brightnessLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.brightnessLabel.Name = "brightnessLabel";
@@ -182,7 +184,7 @@
             this.brightnessSlider.AutoSize = false;
             this.brightnessSlider.LargeChange = 10;
             this.brightnessSlider.Location = new System.Drawing.Point(112, 5);
-            this.brightnessSlider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brightnessSlider.Margin = new System.Windows.Forms.Padding(4);
             this.brightnessSlider.Maximum = 100;
             this.brightnessSlider.Minimum = -100;
             this.brightnessSlider.Name = "brightnessSlider";
@@ -193,7 +195,7 @@
             // 
             // contrastPanel
             // 
-            this.contrastPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.contrastPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.contrastPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.contrastPanel.ContextMenuStrip = this.colorDialogMenu;
             this.contrastPanel.Controls.Add(this.contrastLight);
@@ -201,7 +203,7 @@
             this.contrastPanel.Controls.Add(this.contrastLabel);
             this.contrastPanel.Controls.Add(this.contrastSlider);
             this.contrastPanel.Location = new System.Drawing.Point(5, 71);
-            this.contrastPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contrastPanel.Margin = new System.Windows.Forms.Padding(4);
             this.contrastPanel.Name = "contrastPanel";
             this.contrastPanel.Size = new System.Drawing.Size(363, 62);
             this.contrastPanel.TabIndex = 1;
@@ -210,7 +212,7 @@
             // 
             this.contrastLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.contrastLight.Location = new System.Drawing.Point(12, 26);
-            this.contrastLight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contrastLight.Margin = new System.Windows.Forms.Padding(4);
             this.contrastLight.Name = "contrastLight";
             this.contrastLight.Size = new System.Drawing.Size(3, 7);
             this.contrastLight.TabIndex = 4;
@@ -219,6 +221,7 @@
             // 
             this.contrastValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.contrastValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contrastValue.ForeColor = System.Drawing.Color.Black;
             this.contrastValue.Location = new System.Drawing.Point(303, 6);
             this.contrastValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.contrastValue.Name = "contrastValue";
@@ -230,6 +233,7 @@
             // contrastLabel
             // 
             this.contrastLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contrastLabel.ForeColor = System.Drawing.Color.Black;
             this.contrastLabel.Location = new System.Drawing.Point(21, 18);
             this.contrastLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.contrastLabel.Name = "contrastLabel";
@@ -244,7 +248,7 @@
             this.contrastSlider.AutoSize = false;
             this.contrastSlider.LargeChange = 10;
             this.contrastSlider.Location = new System.Drawing.Point(112, 5);
-            this.contrastSlider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contrastSlider.Margin = new System.Windows.Forms.Padding(4);
             this.contrastSlider.Maximum = 100;
             this.contrastSlider.Minimum = -100;
             this.contrastSlider.Name = "contrastSlider";
@@ -255,7 +259,7 @@
             // 
             // huePanel
             // 
-            this.huePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.huePanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.huePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.huePanel.ContextMenuStrip = this.colorDialogMenu;
             this.huePanel.Controls.Add(this.hueLight);
@@ -263,7 +267,7 @@
             this.huePanel.Controls.Add(this.hueLabel);
             this.huePanel.Controls.Add(this.hueSlider);
             this.huePanel.Location = new System.Drawing.Point(373, 5);
-            this.huePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.huePanel.Margin = new System.Windows.Forms.Padding(4);
             this.huePanel.Name = "huePanel";
             this.huePanel.Size = new System.Drawing.Size(363, 62);
             this.huePanel.TabIndex = 2;
@@ -272,7 +276,7 @@
             // 
             this.hueLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.hueLight.Location = new System.Drawing.Point(12, 26);
-            this.hueLight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hueLight.Margin = new System.Windows.Forms.Padding(4);
             this.hueLight.Name = "hueLight";
             this.hueLight.Size = new System.Drawing.Size(3, 7);
             this.hueLight.TabIndex = 4;
@@ -281,6 +285,7 @@
             // 
             this.hueValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hueValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hueValue.ForeColor = System.Drawing.Color.Black;
             this.hueValue.Location = new System.Drawing.Point(303, 6);
             this.hueValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.hueValue.Name = "hueValue";
@@ -292,6 +297,7 @@
             // hueLabel
             // 
             this.hueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hueLabel.ForeColor = System.Drawing.Color.Black;
             this.hueLabel.Location = new System.Drawing.Point(21, 18);
             this.hueLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.hueLabel.Name = "hueLabel";
@@ -306,7 +312,7 @@
             this.hueSlider.AutoSize = false;
             this.hueSlider.LargeChange = 10;
             this.hueSlider.Location = new System.Drawing.Point(112, 5);
-            this.hueSlider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hueSlider.Margin = new System.Windows.Forms.Padding(4);
             this.hueSlider.Maximum = 100;
             this.hueSlider.Minimum = -100;
             this.hueSlider.Name = "hueSlider";
@@ -317,7 +323,7 @@
             // 
             // saturationPanel
             // 
-            this.saturationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.saturationPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.saturationPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.saturationPanel.ContextMenuStrip = this.colorDialogMenu;
             this.saturationPanel.Controls.Add(this.saturationLight);
@@ -325,7 +331,7 @@
             this.saturationPanel.Controls.Add(this.saturationLabel);
             this.saturationPanel.Controls.Add(this.saturationSlider);
             this.saturationPanel.Location = new System.Drawing.Point(373, 71);
-            this.saturationPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saturationPanel.Margin = new System.Windows.Forms.Padding(4);
             this.saturationPanel.Name = "saturationPanel";
             this.saturationPanel.Size = new System.Drawing.Size(363, 62);
             this.saturationPanel.TabIndex = 3;
@@ -334,7 +340,7 @@
             // 
             this.saturationLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.saturationLight.Location = new System.Drawing.Point(12, 26);
-            this.saturationLight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saturationLight.Margin = new System.Windows.Forms.Padding(4);
             this.saturationLight.Name = "saturationLight";
             this.saturationLight.Size = new System.Drawing.Size(3, 7);
             this.saturationLight.TabIndex = 4;
@@ -343,6 +349,7 @@
             // 
             this.saturationValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.saturationValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saturationValue.ForeColor = System.Drawing.Color.Black;
             this.saturationValue.Location = new System.Drawing.Point(303, 6);
             this.saturationValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saturationValue.Name = "saturationValue";
@@ -354,6 +361,7 @@
             // saturationLabel
             // 
             this.saturationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saturationLabel.ForeColor = System.Drawing.Color.Black;
             this.saturationLabel.Location = new System.Drawing.Point(21, 18);
             this.saturationLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saturationLabel.Name = "saturationLabel";
@@ -368,7 +376,7 @@
             this.saturationSlider.AutoSize = false;
             this.saturationSlider.LargeChange = 10;
             this.saturationSlider.Location = new System.Drawing.Point(112, 5);
-            this.saturationSlider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saturationSlider.Margin = new System.Windows.Forms.Padding(4);
             this.saturationSlider.Maximum = 100;
             this.saturationSlider.Minimum = -100;
             this.saturationSlider.Name = "saturationSlider";
@@ -381,7 +389,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(744, 140);
             this.Controls.Add(this.brightnessPanel);
             this.Controls.Add(this.contrastPanel);
@@ -389,7 +397,7 @@
             this.Controls.Add(this.saturationPanel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "VideoColorDialog";
             this.Opacity = 0.95D;

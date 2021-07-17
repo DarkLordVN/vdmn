@@ -47,7 +47,7 @@ namespace PVSPlayerExample
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(65, 32);
             this.label1.MaximumSize = new System.Drawing.Size(380, 1000);
             this.label1.Name = "label1";
@@ -59,7 +59,7 @@ namespace PVSPlayerExample
             // bottomPanel
             // 
             this.bottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bottomPanel.Controls.Add(this.pvsPanel);
             this.bottomPanel.Controls.Add(this.OKButton);
             this.bottomPanel.Controls.Add(this.checkBox2);
@@ -82,7 +82,7 @@ namespace PVSPlayerExample
             this.OKButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.OKButton.FocusBorder = true;
             this.OKButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OKButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.OKButton.ForeColor = System.Drawing.Color.White;
             this.OKButton.Location = new System.Drawing.Point(369, 14);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(84, 23);
@@ -96,7 +96,7 @@ namespace PVSPlayerExample
             this.checkBox2.AutoSize = true;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.checkBox2.ForeColor = System.Drawing.Color.Black;
             this.checkBox2.Location = new System.Drawing.Point(67, 4);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(193, 22);
@@ -109,7 +109,7 @@ namespace PVSPlayerExample
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
             this.checkBox1.Location = new System.Drawing.Point(67, 25);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(188, 22);
@@ -140,7 +140,7 @@ namespace PVSPlayerExample
             this.AcceptButton = this.OKButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(468, 135);
             this.ContextMenuStrip = this.copyMenu;
             this.Controls.Add(this.bottomPanel);

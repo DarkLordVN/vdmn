@@ -74,7 +74,7 @@
             this.headLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.headLabel.AutoSize = true;
             this.headLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.headLabel.ForeColor = System.Drawing.Color.Black;
             this.headLabel.Location = new System.Drawing.Point(467, 15);
             this.headLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.headLabel.Name = "headLabel";
@@ -85,7 +85,7 @@
             // infoLabel
             // 
             this.infoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.infoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.infoLabel.ForeColor = System.Drawing.Color.Black;
             this.infoLabel.Location = new System.Drawing.Point(468, 62);
             this.infoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.infoLabel.Name = "infoLabel";
@@ -97,13 +97,13 @@
             // widthBox
             // 
             this.widthBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.widthBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.widthBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.widthBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.widthBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.widthBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.widthBox.ForeColor = System.Drawing.Color.Black;
             this.errorProvider1.SetIconAlignment(this.widthBox, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.widthBox.Location = new System.Drawing.Point(593, 204);
-            this.widthBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.widthBox.Margin = new System.Windows.Forms.Padding(4);
             this.widthBox.MaxLength = 5;
             this.widthBox.Name = "widthBox";
             this.widthBox.Size = new System.Drawing.Size(74, 26);
@@ -117,12 +117,12 @@
             // heightBox
             // 
             this.heightBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.heightBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.heightBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.heightBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.heightBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.heightBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.heightBox.ForeColor = System.Drawing.Color.Black;
             this.heightBox.Location = new System.Drawing.Point(691, 204);
-            this.heightBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.heightBox.Margin = new System.Windows.Forms.Padding(4);
             this.heightBox.MaxLength = 5;
             this.heightBox.Name = "heightBox";
             this.heightBox.Size = new System.Drawing.Size(74, 26);
@@ -151,8 +151,9 @@
             this.presetButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.presetButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.presetButton.DropDown = this.presetRatesMenu;
+            this.presetButton.ForeColor = System.Drawing.Color.White;
             this.presetButton.Location = new System.Drawing.Point(785, 204);
-            this.presetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.presetButton.Margin = new System.Windows.Forms.Padding(4);
             this.presetButton.Name = "presetButton";
             this.presetButton.Size = new System.Drawing.Size(124, 27);
             this.presetButton.TabIndex = 12;
@@ -182,74 +183,75 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem2.Text = "1:1";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem3.Text = "5:4";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem4.Text = "4:3";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem5.Text = "16:10";
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem6.Text = "16:9";
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem7.Text = "1.85:1";
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem10.Text = "2:1";
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem8.Text = "2.35:1";
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem9.Text = "2.39:1";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // reversedMenuItem
             // 
             this.reversedMenuItem.Name = "reversedMenuItem";
-            this.reversedMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.reversedMenuItem.Size = new System.Drawing.Size(152, 24);
             this.reversedMenuItem.Text = "Đảo ngược";
             // 
             // restoreCheckBox
             // 
             this.restoreCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restoreCheckBox.AutoSize = true;
+            this.restoreCheckBox.ForeColor = System.Drawing.Color.Black;
             this.restoreCheckBox.Location = new System.Drawing.Point(472, 264);
-            this.restoreCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.restoreCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.restoreCheckBox.Name = "restoreCheckBox";
             this.restoreCheckBox.Size = new System.Drawing.Size(463, 21);
             this.restoreCheckBox.TabIndex = 13;
@@ -260,8 +262,9 @@
             // 
             this.dvdCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dvdCheckBox.AutoSize = true;
+            this.dvdCheckBox.ForeColor = System.Drawing.Color.Black;
             this.dvdCheckBox.Location = new System.Drawing.Point(455, 293);
-            this.dvdCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dvdCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.dvdCheckBox.Name = "dvdCheckBox";
             this.dvdCheckBox.Size = new System.Drawing.Size(487, 21);
             this.dvdCheckBox.TabIndex = 14;
@@ -278,7 +281,7 @@
             this.widthErrorPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.errorProvider1.SetIconAlignment(this.widthErrorPanel, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.widthErrorPanel.Location = new System.Drawing.Point(641, 185);
-            this.widthErrorPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.widthErrorPanel.Margin = new System.Windows.Forms.Padding(4);
             this.widthErrorPanel.Name = "widthErrorPanel";
             this.widthErrorPanel.Size = new System.Drawing.Size(23, 12);
             this.widthErrorPanel.TabIndex = 6;
@@ -288,7 +291,7 @@
             this.heightErrorPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.errorProvider1.SetIconAlignment(this.heightErrorPanel, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.heightErrorPanel.Location = new System.Drawing.Point(739, 185);
-            this.heightErrorPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.heightErrorPanel.Margin = new System.Windows.Forms.Padding(4);
             this.heightErrorPanel.Name = "heightErrorPanel";
             this.heightErrorPanel.Size = new System.Drawing.Size(23, 12);
             this.heightErrorPanel.TabIndex = 7;
@@ -297,13 +300,13 @@
             // 
             this.bottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bottomPanel.Controls.Add(this.updateButton);
             this.bottomPanel.Controls.Add(this.pvsPanel);
             this.bottomPanel.Controls.Add(this.cancelButton);
             this.bottomPanel.Controls.Add(this.okButton);
             this.bottomPanel.Location = new System.Drawing.Point(0, 331);
-            this.bottomPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomPanel.Margin = new System.Windows.Forms.Padding(4);
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(949, 62);
             this.bottomPanel.TabIndex = 15;
@@ -315,8 +318,9 @@
             this.updateButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.updateButton.Enabled = false;
             this.updateButton.FocusBorder = true;
+            this.updateButton.ForeColor = System.Drawing.Color.White;
             this.updateButton.Location = new System.Drawing.Point(333, 17);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(4);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(112, 28);
             this.updateButton.TabIndex = 1;
@@ -328,7 +332,7 @@
             // 
             this.pvsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pvsPanel.Location = new System.Drawing.Point(12, 11);
-            this.pvsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pvsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.pvsPanel.Name = "pvsPanel";
             this.pvsPanel.Size = new System.Drawing.Size(56, 41);
             this.pvsPanel.TabIndex = 0;
@@ -340,8 +344,9 @@
             this.cancelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.FocusBorder = true;
+            this.cancelButton.ForeColor = System.Drawing.Color.White;
             this.cancelButton.Location = new System.Drawing.Point(820, 17);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(112, 28);
             this.cancelButton.TabIndex = 3;
@@ -355,8 +360,9 @@
             this.okButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.FocusBorder = true;
+            this.okButton.ForeColor = System.Drawing.Color.White;
             this.okButton.Location = new System.Drawing.Point(696, 17);
-            this.okButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.okButton.Margin = new System.Windows.Forms.Padding(4);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(112, 28);
             this.okButton.TabIndex = 2;
@@ -369,8 +375,9 @@
             this.useRatioCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.useRatioCheckBox.AutoSize = true;
             this.useRatioCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.useRatioCheckBox.ForeColor = System.Drawing.Color.Black;
             this.useRatioCheckBox.Location = new System.Drawing.Point(518, 206);
-            this.useRatioCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.useRatioCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.useRatioCheckBox.Name = "useRatioCheckBox";
             this.useRatioCheckBox.Size = new System.Drawing.Size(63, 24);
             this.useRatioCheckBox.TabIndex = 8;
@@ -386,7 +393,7 @@
             this.displayPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.displayPanel.Controls.Add(this.videoPanel);
             this.displayPanel.Location = new System.Drawing.Point(19, 17);
-            this.displayPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.displayPanel.Margin = new System.Windows.Forms.Padding(4);
             this.displayPanel.Name = "displayPanel";
             this.displayPanel.Size = new System.Drawing.Size(426, 295);
             this.displayPanel.TabIndex = 0;
@@ -395,7 +402,7 @@
             // 
             this.videoPanel.ContextMenuStrip = this.presetRatesMenu;
             this.videoPanel.Location = new System.Drawing.Point(0, 0);
-            this.videoPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.videoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.videoPanel.Name = "videoPanel";
             this.videoPanel.Size = new System.Drawing.Size(427, 295);
             this.videoPanel.TabIndex = 0;
@@ -404,7 +411,7 @@
             // 
             this.nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.nameLabel.ForeColor = System.Drawing.Color.Black;
             this.nameLabel.Location = new System.Drawing.Point(468, 132);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
@@ -417,7 +424,7 @@
             // 
             this.sizeTitleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sizeTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sizeTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.sizeTitleLabel.ForeColor = System.Drawing.Color.Black;
             this.sizeTitleLabel.Location = new System.Drawing.Point(468, 153);
             this.sizeTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sizeTitleLabel.Name = "sizeTitleLabel";
@@ -429,7 +436,7 @@
             // 
             this.sizeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sizeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.sizeLabel.ForeColor = System.Drawing.Color.Black;
             this.sizeLabel.Location = new System.Drawing.Point(553, 153);
             this.sizeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sizeLabel.Name = "sizeLabel";
@@ -442,7 +449,7 @@
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(949, 393);
             this.Controls.Add(this.sizeLabel);
@@ -462,7 +469,7 @@
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.headLabel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(965, 430);
             this.Name = "AspectRatioDialog";

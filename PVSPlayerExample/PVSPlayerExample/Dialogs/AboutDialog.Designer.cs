@@ -46,20 +46,20 @@ namespace PVSPlayerExample
             // 
             // aboutLabel1
             // 
-            this.aboutLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.aboutLabel1.ForeColor = System.Drawing.Color.Black;
             this.aboutLabel1.Location = new System.Drawing.Point(85, 86);
             this.aboutLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aboutLabel1.Name = "aboutLabel1";
             this.aboutLabel1.Size = new System.Drawing.Size(552, 70);
             this.aboutLabel1.TabIndex = 0;
-            this.aboutLabel1.Text = "Đây là phần mềm bản quyền xxx";
+            this.aboutLabel1.Text = "Phần mềm thuộc sở hữu của KCTECH\r\nĐịa chỉ: xxx\r\n\r\n";
             this.aboutLabel1.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // aboutLabel2
             // 
             this.aboutLabel2.AutoSize = true;
             this.aboutLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.aboutLabel2.ForeColor = System.Drawing.Color.Black;
             this.aboutLabel2.Location = new System.Drawing.Point(85, 37);
             this.aboutLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aboutLabel2.Name = "aboutLabel2";
@@ -73,7 +73,7 @@ namespace PVSPlayerExample
             this.urlLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.urlLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.urlLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlLabel.ForeColor = System.Drawing.Color.SlateGray;
+            this.urlLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.urlLabel.Location = new System.Drawing.Point(140, 202);
             this.urlLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.urlLabel.Name = "urlLabel";
@@ -102,7 +102,7 @@ namespace PVSPlayerExample
             // 
             this.bottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bottomPanel.Controls.Add(this.panel3);
             this.bottomPanel.Controls.Add(this.pvsPanel);
             this.bottomPanel.Controls.Add(this.OKButton);
@@ -136,7 +136,7 @@ namespace PVSPlayerExample
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OKButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.OKButton.FocusBorder = true;
-            this.OKButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.OKButton.ForeColor = System.Drawing.Color.White;
             this.OKButton.Location = new System.Drawing.Point(536, 17);
             this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
@@ -163,7 +163,7 @@ namespace PVSPlayerExample
             this.AcceptButton = this.OKButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(668, 329);
             this.Controls.Add(this.logoPanel);
             this.Controls.Add(this.bottomPanel);

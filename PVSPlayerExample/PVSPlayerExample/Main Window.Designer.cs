@@ -27,7 +27,6 @@ namespace PVSPlayerExample
             this.sliderMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.repeatPanel = new System.Windows.Forms.Panel();
             this.repeatMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.repeatOneMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repeatChapterMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,10 +36,6 @@ namespace PVSPlayerExample
             this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
             this.repeatOffMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repeatMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopTimeTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.startTimeTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.stopTimeNextTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.startTimeNextTextBox = new System.Windows.Forms.MaskedTextBox();
             this.displayModePanel = new System.Windows.Forms.Panel();
             this.videoTracksLabel = new System.Windows.Forms.Label();
             this.fullScreenModeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -246,7 +241,6 @@ namespace PVSPlayerExample
             this.noChaptersToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.displayParentPanel = new System.Windows.Forms.Panel();
             this.rightFramePanel = new System.Windows.Forms.Panel();
-            this.shuttlePanel = new System.Windows.Forms.Panel();
             this.zoomPanel = new System.Windows.Forms.Panel();
             this.audioPanel = new System.Windows.Forms.Panel();
             this.balanceDialTitle = new System.Windows.Forms.Label();
@@ -266,8 +260,6 @@ namespace PVSPlayerExample
             this.video3DTopMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator43 = new System.Windows.Forms.ToolStripSeparator();
             this.video3DStereoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shuttleSlider = new PVSPlayerExample.CustomSlider2();
-            this.shuttleLabel = new PVSPlayerExample.HeadLabel();
             this.stretchRightButton = new PVSPlayerExample.CustomButton();
             this.stretchLeftButton = new PVSPlayerExample.CustomButton();
             this.stretchDownButton = new PVSPlayerExample.CustomButton();
@@ -296,8 +288,6 @@ namespace PVSPlayerExample
             this.speedLabelText = new System.Windows.Forms.Label();
             this.repeatLight = new PVSPlayerExample.LightPanel();
             this.repeatButton = new PVSPlayerExample.DropDownButton();
-            this.nextFromLabel = new PVSPlayerExample.HeadLabel();
-            this.currentFromLabel = new PVSPlayerExample.HeadLabel();
             this.displayLight = new PVSPlayerExample.LightPanel();
             this.fullScreenLight = new PVSPlayerExample.LightPanel();
             this.fullScreenModeButton = new PVSPlayerExample.DropDownButton();
@@ -315,7 +305,6 @@ namespace PVSPlayerExample
             this.leftFramePanel.SuspendLayout();
             this.speedPanel.SuspendLayout();
             this.sliderMenu.SuspendLayout();
-            this.repeatPanel.SuspendLayout();
             this.repeatMenu.SuspendLayout();
             this.displayModePanel.SuspendLayout();
             this.fullScreenModeMenu.SuspendLayout();
@@ -331,12 +320,10 @@ namespace PVSPlayerExample
             this.positionSliderMenu.SuspendLayout();
             this.displayParentPanel.SuspendLayout();
             this.rightFramePanel.SuspendLayout();
-            this.shuttlePanel.SuspendLayout();
             this.zoomPanel.SuspendLayout();
             this.audioPanel.SuspendLayout();
             this.playSubMenu.SuspendLayout();
             this.video3DMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.shuttleSlider)).BeginInit();
             this.volumeLabelPanel.SuspendLayout();
             this.positionSliderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.positionSlider)).BeginInit();
@@ -352,14 +339,13 @@ namespace PVSPlayerExample
             this.leftFramePanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.leftFramePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.leftFramePanel.Controls.Add(this.speedPanel);
-            this.leftFramePanel.Controls.Add(this.repeatPanel);
             this.leftFramePanel.Controls.Add(this.displayModePanel);
             this.leftFramePanel.Controls.Add(this.playPanel);
             this.leftFramePanel.Controls.Add(this.titlePanel);
             this.leftFramePanel.Location = new System.Drawing.Point(9, 10);
             this.leftFramePanel.Margin = new System.Windows.Forms.Padding(4);
             this.leftFramePanel.Name = "leftFramePanel";
-            this.leftFramePanel.Size = new System.Drawing.Size(206, 611);
+            this.leftFramePanel.Size = new System.Drawing.Size(206, 609);
             this.leftFramePanel.TabIndex = 0;
             // 
             // speedPanel
@@ -370,10 +356,10 @@ namespace PVSPlayerExample
             this.speedPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.speedPanel.Controls.Add(this.speedSlider);
             this.speedPanel.Controls.Add(this.speedLabelPanel);
-            this.speedPanel.Location = new System.Drawing.Point(8, 421);
+            this.speedPanel.Location = new System.Drawing.Point(8, 285);
             this.speedPanel.Margin = new System.Windows.Forms.Padding(4);
             this.speedPanel.Name = "speedPanel";
-            this.speedPanel.Size = new System.Drawing.Size(187, 88);
+            this.speedPanel.Size = new System.Drawing.Size(187, 86);
             this.speedPanel.TabIndex = 4;
             // 
             // sliderMenu
@@ -425,24 +411,6 @@ namespace PVSPlayerExample
             this.sliderMenuItem5.Size = new System.Drawing.Size(61, 24);
             this.sliderMenuItem5.Text = "5";
             this.sliderMenuItem5.Click += new System.EventHandler(this.SliderMenuItem5_Click);
-            // 
-            // repeatPanel
-            // 
-            this.repeatPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.repeatPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.repeatPanel.Controls.Add(this.repeatLight);
-            this.repeatPanel.Controls.Add(this.repeatButton);
-            this.repeatPanel.Controls.Add(this.nextFromLabel);
-            this.repeatPanel.Controls.Add(this.stopTimeTextBox);
-            this.repeatPanel.Controls.Add(this.currentFromLabel);
-            this.repeatPanel.Controls.Add(this.stopTimeNextTextBox);
-            this.repeatPanel.Controls.Add(this.startTimeNextTextBox);
-            this.repeatPanel.Controls.Add(this.startTimeTextBox);
-            this.repeatPanel.Location = new System.Drawing.Point(8, 250);
-            this.repeatPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.repeatPanel.Name = "repeatPanel";
-            this.repeatPanel.Size = new System.Drawing.Size(187, 163);
-            this.repeatPanel.TabIndex = 3;
             // 
             // repeatMenu
             // 
@@ -529,86 +497,12 @@ namespace PVSPlayerExample
             this.repeatMenuItem.Size = new System.Drawing.Size(203, 24);
             this.repeatMenuItem.Text = "Phát lặp";
             // 
-            // stopTimeTextBox
-            // 
-            this.stopTimeTextBox.BackColor = System.Drawing.SystemColors.Highlight;
-            this.stopTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stopTimeTextBox.Enabled = false;
-            this.stopTimeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopTimeTextBox.ForeColor = System.Drawing.Color.White;
-            this.stopTimeTextBox.Location = new System.Drawing.Point(92, 124);
-            this.stopTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.stopTimeTextBox.Mask = "00:00:00";
-            this.stopTimeTextBox.Name = "stopTimeTextBox";
-            this.stopTimeTextBox.Size = new System.Drawing.Size(81, 24);
-            this.stopTimeTextBox.TabIndex = 7;
-            this.stopTimeTextBox.Text = "000000";
-            this.stopTimeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip1.SetToolTip(this.stopTimeTextBox, "Player.Media.StopTime - the stop (repeat) time of the playing media.");
-            this.stopTimeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PositionTextBoxes_KeyPress);
-            this.stopTimeTextBox.Validated += new System.EventHandler(this.StopTimeTextBox_Validated);
-            // 
-            // startTimeTextBox
-            // 
-            this.startTimeTextBox.BackColor = System.Drawing.SystemColors.Highlight;
-            this.startTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.startTimeTextBox.Enabled = false;
-            this.startTimeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startTimeTextBox.ForeColor = System.Drawing.Color.White;
-            this.startTimeTextBox.Location = new System.Drawing.Point(12, 124);
-            this.startTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.startTimeTextBox.Mask = "00:00:00";
-            this.startTimeTextBox.Name = "startTimeTextBox";
-            this.startTimeTextBox.Size = new System.Drawing.Size(81, 24);
-            this.startTimeTextBox.TabIndex = 6;
-            this.startTimeTextBox.Text = "000000";
-            this.startTimeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip1.SetToolTip(this.startTimeTextBox, "Player.Media.StartTime - the start (repeat) time of the playing media.");
-            this.startTimeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PositionTextBoxes_KeyPress);
-            this.startTimeTextBox.Validated += new System.EventHandler(this.StartTimeTextBox_Validated);
-            // 
-            // stopTimeNextTextBox
-            // 
-            this.stopTimeNextTextBox.BackColor = System.Drawing.SystemColors.Highlight;
-            this.stopTimeNextTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stopTimeNextTextBox.Culture = new System.Globalization.CultureInfo("");
-            this.stopTimeNextTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopTimeNextTextBox.ForeColor = System.Drawing.Color.White;
-            this.stopTimeNextTextBox.Location = new System.Drawing.Point(92, 68);
-            this.stopTimeNextTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.stopTimeNextTextBox.Mask = "00:00:00";
-            this.stopTimeNextTextBox.Name = "stopTimeNextTextBox";
-            this.stopTimeNextTextBox.Size = new System.Drawing.Size(81, 24);
-            this.stopTimeNextTextBox.TabIndex = 4;
-            this.stopTimeNextTextBox.Text = "000000";
-            this.stopTimeNextTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip1.SetToolTip(this.stopTimeNextTextBox, "The stop (repeat) time for the next media to be played.");
-            this.stopTimeNextTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PositionTextBoxes_KeyPress);
-            this.stopTimeNextTextBox.Validated += new System.EventHandler(this.StopTimeNextTextBox_Validated);
-            // 
-            // startTimeNextTextBox
-            // 
-            this.startTimeNextTextBox.AsciiOnly = true;
-            this.startTimeNextTextBox.BackColor = System.Drawing.SystemColors.Highlight;
-            this.startTimeNextTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.startTimeNextTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startTimeNextTextBox.ForeColor = System.Drawing.Color.White;
-            this.startTimeNextTextBox.Location = new System.Drawing.Point(12, 68);
-            this.startTimeNextTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.startTimeNextTextBox.Mask = "00:00:00";
-            this.startTimeNextTextBox.Name = "startTimeNextTextBox";
-            this.startTimeNextTextBox.Size = new System.Drawing.Size(81, 24);
-            this.startTimeNextTextBox.TabIndex = 3;
-            this.startTimeNextTextBox.Text = "000000";
-            this.startTimeNextTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip1.SetToolTip(this.startTimeNextTextBox, "The start (repeat) time for the next media to be played.");
-            this.startTimeNextTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PositionTextBoxes_KeyPress);
-            this.startTimeNextTextBox.Validated += new System.EventHandler(this.StartTimeNextTextBox_Validated);
-            // 
             // displayModePanel
             // 
             this.displayModePanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.displayModePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.displayModePanel.Controls.Add(this.repeatLight);
+            this.displayModePanel.Controls.Add(this.repeatButton);
             this.displayModePanel.Controls.Add(this.displayLight);
             this.displayModePanel.Controls.Add(this.videoTracksLabel);
             this.displayModePanel.Controls.Add(this.fullScreenLight);
@@ -617,7 +511,7 @@ namespace PVSPlayerExample
             this.displayModePanel.Location = new System.Drawing.Point(8, 160);
             this.displayModePanel.Margin = new System.Windows.Forms.Padding(4);
             this.displayModePanel.Name = "displayModePanel";
-            this.displayModePanel.Size = new System.Drawing.Size(187, 82);
+            this.displayModePanel.Size = new System.Drawing.Size(187, 117);
             this.displayModePanel.TabIndex = 2;
             // 
             // videoTracksLabel
@@ -1113,7 +1007,7 @@ namespace PVSPlayerExample
             this.displayPanel.Location = new System.Drawing.Point(0, 0);
             this.displayPanel.Margin = new System.Windows.Forms.Padding(4);
             this.displayPanel.Name = "displayPanel";
-            this.displayPanel.Size = new System.Drawing.Size(853, 573);
+            this.displayPanel.Size = new System.Drawing.Size(704, 571);
             this.displayPanel.TabIndex = 1;
             this.toolTip1.SetToolTip(this.displayPanel, "Player.Display.Window - the control that is used to display video and overlays.");
             // 
@@ -2306,7 +2200,7 @@ namespace PVSPlayerExample
             this.displayParentPanel.Location = new System.Drawing.Point(221, 10);
             this.displayParentPanel.Margin = new System.Windows.Forms.Padding(4);
             this.displayParentPanel.Name = "displayParentPanel";
-            this.displayParentPanel.Size = new System.Drawing.Size(855, 611);
+            this.displayParentPanel.Size = new System.Drawing.Size(706, 609);
             this.displayParentPanel.TabIndex = 1;
             // 
             // rightFramePanel
@@ -2315,28 +2209,13 @@ namespace PVSPlayerExample
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rightFramePanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.rightFramePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rightFramePanel.Controls.Add(this.shuttlePanel);
-            this.rightFramePanel.Controls.Add(this.zoomPanel);
             this.rightFramePanel.Controls.Add(this.audioPanel);
-            this.rightFramePanel.Location = new System.Drawing.Point(1083, 10);
+            this.rightFramePanel.Controls.Add(this.zoomPanel);
+            this.rightFramePanel.Location = new System.Drawing.Point(932, 10);
             this.rightFramePanel.Margin = new System.Windows.Forms.Padding(4);
             this.rightFramePanel.Name = "rightFramePanel";
-            this.rightFramePanel.Size = new System.Drawing.Size(206, 611);
+            this.rightFramePanel.Size = new System.Drawing.Size(208, 609);
             this.rightFramePanel.TabIndex = 2;
-            // 
-            // shuttlePanel
-            // 
-            this.shuttlePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.shuttlePanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.shuttlePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.shuttlePanel.Controls.Add(this.shuttleSlider);
-            this.shuttlePanel.Controls.Add(this.shuttleLabel);
-            this.shuttlePanel.Location = new System.Drawing.Point(8, 375);
-            this.shuttlePanel.Margin = new System.Windows.Forms.Padding(4);
-            this.shuttlePanel.Name = "shuttlePanel";
-            this.shuttlePanel.Size = new System.Drawing.Size(187, 88);
-            this.shuttlePanel.TabIndex = 3;
             // 
             // zoomPanel
             // 
@@ -2371,7 +2250,7 @@ namespace PVSPlayerExample
             this.audioPanel.Controls.Add(this.balanceDialTitle);
             this.audioPanel.Controls.Add(this.volumeDialTitle);
             this.audioPanel.Controls.Add(this.volumeLabelPanel);
-            this.audioPanel.Location = new System.Drawing.Point(8, 7);
+            this.audioPanel.Location = new System.Drawing.Point(8, 6);
             this.audioPanel.Margin = new System.Windows.Forms.Padding(4);
             this.audioPanel.Name = "audioPanel";
             this.audioPanel.Size = new System.Drawing.Size(187, 220);
@@ -2509,31 +2388,6 @@ namespace PVSPlayerExample
             this.video3DStereoMenuItem.Size = new System.Drawing.Size(164, 26);
             this.video3DStereoMenuItem.Text = "Normal View";
             this.video3DStereoMenuItem.Click += new System.EventHandler(this.Video3DStereoMenuItem_Click);
-            // 
-            // shuttleSlider
-            // 
-            this.shuttleSlider.AutoSize = false;
-            this.shuttleSlider.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.shuttleSlider.Location = new System.Drawing.Point(3, 38);
-            this.shuttleSlider.Margin = new System.Windows.Forms.Padding(4);
-            this.shuttleSlider.Name = "shuttleSlider";
-            this.shuttleSlider.Size = new System.Drawing.Size(180, 55);
-            this.shuttleSlider.TabIndex = 1;
-            this.shuttleSlider.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.toolTip1.SetToolTip(this.shuttleSlider, "Player.Sliders.Shuttle - changes the media playback position by (video) frames.\r\n" +
-        "+SHIFT-key = slow down / +CONTROL-key = skip step-end playback recovery");
-            this.shuttleSlider.Value = 5;
-            // 
-            // shuttleLabel
-            // 
-            this.shuttleLabel.ForeColor = System.Drawing.Color.White;
-            this.shuttleLabel.Location = new System.Drawing.Point(12, 11);
-            this.shuttleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.shuttleLabel.Name = "shuttleLabel";
-            this.shuttleLabel.Size = new System.Drawing.Size(161, 26);
-            this.shuttleLabel.TabIndex = 0;
-            this.shuttleLabel.Text = "Ngẫu nhiên";
-            this.shuttleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // stretchRightButton
             // 
@@ -2802,10 +2656,10 @@ namespace PVSPlayerExample
             this.positionSliderPanel.Controls.Add(this.positionLabel2);
             this.positionSliderPanel.Controls.Add(this.positionLabel1);
             this.positionSliderPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.positionSliderPanel.Location = new System.Drawing.Point(0, 579);
+            this.positionSliderPanel.Location = new System.Drawing.Point(0, 577);
             this.positionSliderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.positionSliderPanel.Name = "positionSliderPanel";
-            this.positionSliderPanel.Size = new System.Drawing.Size(853, 30);
+            this.positionSliderPanel.Size = new System.Drawing.Size(704, 30);
             this.positionSliderPanel.TabIndex = 0;
             // 
             // positionSlider
@@ -2819,7 +2673,7 @@ namespace PVSPlayerExample
             this.positionSlider.Location = new System.Drawing.Point(108, 2);
             this.positionSlider.Margin = new System.Windows.Forms.Padding(4);
             this.positionSlider.Name = "positionSlider";
-            this.positionSlider.Size = new System.Drawing.Size(635, 32);
+            this.positionSlider.Size = new System.Drawing.Size(486, 32);
             this.positionSlider.TabIndex = 1;
             this.toolTip1.SetToolTip(this.positionSlider, "Player.Sliders.Position.TrackBar - shows and allows changing of the playback posi" +
         "tion of the playing media.");
@@ -2831,7 +2685,7 @@ namespace PVSPlayerExample
             this.positionLabel2.ContextMenuStrip = this.positionSliderMenu;
             this.positionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.positionLabel2.ForeColor = System.Drawing.Color.Black;
-            this.positionLabel2.Location = new System.Drawing.Point(743, 1);
+            this.positionLabel2.Location = new System.Drawing.Point(594, 1);
             this.positionLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.positionLabel2.Name = "positionLabel2";
             this.positionLabel2.Size = new System.Drawing.Size(108, 22);
@@ -2924,7 +2778,7 @@ namespace PVSPlayerExample
             // repeatLight
             // 
             this.repeatLight.BackColor = System.Drawing.Color.White;
-            this.repeatLight.Location = new System.Drawing.Point(21, 21);
+            this.repeatLight.Location = new System.Drawing.Point(21, 89);
             this.repeatLight.Margin = new System.Windows.Forms.Padding(4);
             this.repeatLight.Name = "repeatLight";
             this.repeatLight.Size = new System.Drawing.Size(3, 7);
@@ -2938,7 +2792,7 @@ namespace PVSPlayerExample
             this.repeatButton.DropDown = this.repeatMenu;
             this.repeatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repeatButton.ForeColor = System.Drawing.Color.White;
-            this.repeatButton.Location = new System.Drawing.Point(12, 11);
+            this.repeatButton.Location = new System.Drawing.Point(12, 79);
             this.repeatButton.Margin = new System.Windows.Forms.Padding(4);
             this.repeatButton.Name = "repeatButton";
             this.repeatButton.Size = new System.Drawing.Size(161, 26);
@@ -2948,28 +2802,6 @@ namespace PVSPlayerExample
             this.toolTip1.SetToolTip(this.repeatButton, "Player.Repeat - repeats media playback from \'StartTime\' to \'StopTime\'.\r\nPlayer.Re" +
         "peatChapter - repeats a playing chapter (from a chapters file).");
             this.repeatButton.UseVisualStyleBackColor = false;
-            // 
-            // nextFromLabel
-            // 
-            this.nextFromLabel.ForeColor = System.Drawing.Color.White;
-            this.nextFromLabel.Location = new System.Drawing.Point(12, 43);
-            this.nextFromLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.nextFromLabel.Name = "nextFromLabel";
-            this.nextFromLabel.Size = new System.Drawing.Size(161, 23);
-            this.nextFromLabel.TabIndex = 2;
-            this.nextFromLabel.Text = "Phát tiếp tục từ - đến";
-            this.nextFromLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // currentFromLabel
-            // 
-            this.currentFromLabel.ForeColor = System.Drawing.Color.White;
-            this.currentFromLabel.Location = new System.Drawing.Point(12, 100);
-            this.currentFromLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.currentFromLabel.Name = "currentFromLabel";
-            this.currentFromLabel.Size = new System.Drawing.Size(161, 23);
-            this.currentFromLabel.TabIndex = 5;
-            this.currentFromLabel.Text = "Phát hiện tại từ - đến";
-            this.currentFromLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // displayLight
             // 
@@ -3136,9 +2968,9 @@ namespace PVSPlayerExample
             this.webSiteLabel.Location = new System.Drawing.Point(19, 32);
             this.webSiteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.webSiteLabel.Name = "webSiteLabel";
-            this.webSiteLabel.Size = new System.Drawing.Size(86, 17);
+            this.webSiteLabel.Size = new System.Drawing.Size(114, 17);
             this.webSiteLabel.TabIndex = 1;
-            this.webSiteLabel.Text = "DKL website";
+            this.webSiteLabel.Text = "KCTECH website";
             this.toolTip1.SetToolTip(this.webSiteLabel, "Về chúng tôi ® website.");
             // 
             // nameLabel
@@ -3151,9 +2983,9 @@ namespace PVSPlayerExample
             this.nameLabel.Location = new System.Drawing.Point(17, 10);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(43, 20);
+            this.nameLabel.Size = new System.Drawing.Size(78, 20);
             this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "DKL";
+            this.nameLabel.Text = "KCTECH";
             this.toolTip1.SetToolTip(this.nameLabel, "About the PVS.MediaPlayer library.");
             this.nameLabel.Click += new System.EventHandler(this.NameLabel_Click);
             // 
@@ -3178,13 +3010,13 @@ namespace PVSPlayerExample
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1299, 629);
+            this.ClientSize = new System.Drawing.Size(1150, 627);
             this.Controls.Add(this.rightFramePanel);
             this.Controls.Add(this.displayParentPanel);
             this.Controls.Add(this.leftFramePanel);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(737, 676);
+            this.MinimumSize = new System.Drawing.Size(737, 600);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -3195,8 +3027,6 @@ namespace PVSPlayerExample
             this.leftFramePanel.ResumeLayout(false);
             this.speedPanel.ResumeLayout(false);
             this.sliderMenu.ResumeLayout(false);
-            this.repeatPanel.ResumeLayout(false);
-            this.repeatPanel.PerformLayout();
             this.repeatMenu.ResumeLayout(false);
             this.displayModePanel.ResumeLayout(false);
             this.fullScreenModeMenu.ResumeLayout(false);
@@ -3212,12 +3042,10 @@ namespace PVSPlayerExample
             this.positionSliderMenu.ResumeLayout(false);
             this.displayParentPanel.ResumeLayout(false);
             this.rightFramePanel.ResumeLayout(false);
-            this.shuttlePanel.ResumeLayout(false);
             this.zoomPanel.ResumeLayout(false);
             this.audioPanel.ResumeLayout(false);
             this.playSubMenu.ResumeLayout(false);
             this.video3DMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.shuttleSlider)).EndInit();
             this.volumeLabelPanel.ResumeLayout(false);
             this.volumeLabelPanel.PerformLayout();
             this.positionSliderPanel.ResumeLayout(false);
@@ -3245,13 +3073,6 @@ namespace PVSPlayerExample
         private HeadLabel displayModeLabel;
         private LightPanel fullScreenLight;
         private DropDownButton fullScreenModeButton;
-        private Panel repeatPanel;
-        private MaskedTextBox stopTimeNextTextBox;
-        private MaskedTextBox startTimeNextTextBox;
-        private HeadLabel nextFromLabel;
-        private MaskedTextBox stopTimeTextBox;
-        private MaskedTextBox startTimeTextBox;
-        private HeadLabel currentFromLabel;
         private Panel speedPanel;
         private CustomPanel speedLabelPanel;
         private Label speedLabelText;
@@ -3264,8 +3085,6 @@ namespace PVSPlayerExample
         private Label audioVolumeLabelText;
         private Panel zoomPanel;
         private HeadLabel zoomLabel;
-        private Panel shuttlePanel;
-        private HeadLabel shuttleLabel;
         private ToolStripMenuItem playListMenuItem;
         private ToolStripMenuItem addMediaFilesMenuItem;
         private ToolStripSeparator menuSeparator1;
@@ -3353,7 +3172,6 @@ namespace PVSPlayerExample
         private ToolStripMenuItem bigTimeMenuItem;
         private SliderPanel positionSliderPanel;
         private CustomSlider2 speedSlider;
-        private CustomSlider2 shuttleSlider;
         private CustomButton zoomInButton;
         private CustomButton zoomOutButton;
         private CustomButton stretchRightButton;

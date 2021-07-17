@@ -412,12 +412,6 @@
       <DependentUpon>Webcam Window.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="ffmpeg\LICENSE" />
-    <None Include="ffmpeg\presets\libvpx-1080p.ffpreset" />
-    <None Include="ffmpeg\presets\libvpx-1080p50_60.ffpreset" />
-    <None Include="ffmpeg\presets\libvpx-360p.ffpreset" />
-    <None Include="ffmpeg\presets\libvpx-720p.ffpreset" />
-    <None Include="ffmpeg\presets\libvpx-720p50_60.ffpreset" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -491,45 +485,6 @@
     <Content Include="ffmpeg.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ffmpeg\bin\ffmpeg.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ffmpeg\bin\ffplay.exe" />
-    <Content Include="ffmpeg\bin\ffprobe.exe" />
-    <Content Include="ffmpeg\doc\bootstrap.min.css" />
-    <Content Include="ffmpeg\doc\default.css" />
-    <Content Include="ffmpeg\doc\developer.html" />
-    <Content Include="ffmpeg\doc\faq.html" />
-    <Content Include="ffmpeg\doc\fate.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-all.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-bitstream-filters.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-codecs.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-devices.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-filters.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-formats.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-protocols.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-resampler.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-scaler.html" />
-    <Content Include="ffmpeg\doc\ffmpeg-utils.html" />
-    <Content Include="ffmpeg\doc\ffmpeg.html" />
-    <Content Include="ffmpeg\doc\ffplay-all.html" />
-    <Content Include="ffmpeg\doc\ffplay.html" />
-    <Content Include="ffmpeg\doc\ffprobe-all.html" />
-    <Content Include="ffmpeg\doc\ffprobe.html" />
-    <Content Include="ffmpeg\doc\general.html" />
-    <Content Include="ffmpeg\doc\git-howto.html" />
-    <Content Include="ffmpeg\doc\libavcodec.html" />
-    <Content Include="ffmpeg\doc\libavdevice.html" />
-    <Content Include="ffmpeg\doc\libavfilter.html" />
-    <Content Include="ffmpeg\doc\libavformat.html" />
-    <Content Include="ffmpeg\doc\libavutil.html" />
-    <Content Include="ffmpeg\doc\libswresample.html" />
-    <Content Include="ffmpeg\doc\libswscale.html" />
-    <Content Include="ffmpeg\doc\mailing-list-faq.html" />
-    <Content Include="ffmpeg\doc\nut.html" />
-    <Content Include="ffmpeg\doc\platform.html" />
-    <Content Include="ffmpeg\doc\style.min.css" />
-    <Content Include="ffmpeg\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />

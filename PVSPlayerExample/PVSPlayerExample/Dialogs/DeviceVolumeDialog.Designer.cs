@@ -57,6 +57,7 @@ namespace PVSPlayerExample
             this.deviceNameLabel.AutoEllipsis = true;
             this.deviceNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deviceNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deviceNameLabel.ForeColor = System.Drawing.Color.Black;
             this.deviceNameLabel.Location = new System.Drawing.Point(12, 26);
             this.deviceNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.deviceNameLabel.Name = "deviceNameLabel";
@@ -70,7 +71,7 @@ namespace PVSPlayerExample
             // 
             this.volumeDial.Image = ((System.Drawing.Bitmap)(resources.GetObject("volumeDial.Image")));
             this.volumeDial.Location = new System.Drawing.Point(25, 64);
-            this.volumeDial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.volumeDial.Margin = new System.Windows.Forms.Padding(4);
             this.volumeDial.MaximumSize = new System.Drawing.Size(55, 55);
             this.volumeDial.MinimumSize = new System.Drawing.Size(55, 55);
             this.volumeDial.Name = "volumeDial";
@@ -87,7 +88,7 @@ namespace PVSPlayerExample
             this.volumeSlider.AutoSize = false;
             this.volumeSlider.LargeChange = 10;
             this.volumeSlider.Location = new System.Drawing.Point(105, 71);
-            this.volumeSlider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.volumeSlider.Margin = new System.Windows.Forms.Padding(4);
             this.volumeSlider.Maximum = 100;
             this.volumeSlider.Name = "volumeSlider";
             this.volumeSlider.Size = new System.Drawing.Size(445, 55);
@@ -101,6 +102,7 @@ namespace PVSPlayerExample
             // volumeLabel
             // 
             this.volumeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.volumeLabel.ForeColor = System.Drawing.Color.Black;
             this.volumeLabel.Location = new System.Drawing.Point(547, 75);
             this.volumeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.volumeLabel.Name = "volumeLabel";
@@ -161,12 +163,12 @@ namespace PVSPlayerExample
             // 
             this.bottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bottomPanel.Controls.Add(this.muteButton);
             this.bottomPanel.Controls.Add(this.OKButton);
             this.bottomPanel.Controls.Add(this.pvsPanel);
             this.bottomPanel.Location = new System.Drawing.Point(1, 149);
-            this.bottomPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomPanel.Margin = new System.Windows.Forms.Padding(4);
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(640, 62);
             this.bottomPanel.TabIndex = 4;
@@ -177,8 +179,9 @@ namespace PVSPlayerExample
             this.muteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.muteButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.muteButton.FocusBorder = true;
+            this.muteButton.ForeColor = System.Drawing.Color.White;
             this.muteButton.Location = new System.Drawing.Point(388, 18);
-            this.muteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muteButton.Margin = new System.Windows.Forms.Padding(4);
             this.muteButton.Name = "muteButton";
             this.muteButton.Size = new System.Drawing.Size(112, 28);
             this.muteButton.TabIndex = 2;
@@ -190,8 +193,9 @@ namespace PVSPlayerExample
             // 
             this.OKButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.OKButton.FocusBorder = true;
+            this.OKButton.ForeColor = System.Drawing.Color.White;
             this.OKButton.Location = new System.Drawing.Point(512, 18);
-            this.OKButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(112, 28);
             this.OKButton.TabIndex = 1;
@@ -202,7 +206,7 @@ namespace PVSPlayerExample
             // pvsPanel
             // 
             this.pvsPanel.Location = new System.Drawing.Point(13, 12);
-            this.pvsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pvsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.pvsPanel.Name = "pvsPanel";
             this.pvsPanel.Size = new System.Drawing.Size(56, 41);
             this.pvsPanel.TabIndex = 0;
@@ -213,7 +217,7 @@ namespace PVSPlayerExample
             this.AcceptButton = this.OKButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(644, 213);
             this.ContextMenuStrip = this.volumeMenu;
             this.Controls.Add(this.bottomPanel);
@@ -223,7 +227,7 @@ namespace PVSPlayerExample
             this.Controls.Add(this.deviceNameLabel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DeviceVolumeDialog";

@@ -45,13 +45,13 @@ namespace PVSPlayerExample
             // 
             this.bottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bottomPanel.Controls.Add(this.saveButton);
             this.bottomPanel.Controls.Add(this.noSaveButton);
             this.bottomPanel.Controls.Add(this.cancelButton);
             this.bottomPanel.Controls.Add(this.pvsPanel);
             this.bottomPanel.Location = new System.Drawing.Point(1, 172);
-            this.bottomPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomPanel.Margin = new System.Windows.Forms.Padding(4);
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(547, 60);
             this.bottomPanel.TabIndex = 3;
@@ -60,9 +60,9 @@ namespace PVSPlayerExample
             // 
             this.saveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.saveButton.FocusBorder = true;
-            this.saveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.saveButton.ForeColor = System.Drawing.Color.White;
             this.saveButton.Location = new System.Drawing.Point(169, 17);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(112, 28);
             this.saveButton.TabIndex = 1;
@@ -74,9 +74,9 @@ namespace PVSPlayerExample
             // 
             this.noSaveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.noSaveButton.FocusBorder = true;
-            this.noSaveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.noSaveButton.ForeColor = System.Drawing.Color.White;
             this.noSaveButton.Location = new System.Drawing.Point(293, 17);
-            this.noSaveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.noSaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.noSaveButton.Name = "noSaveButton";
             this.noSaveButton.Size = new System.Drawing.Size(112, 28);
             this.noSaveButton.TabIndex = 2;
@@ -89,9 +89,9 @@ namespace PVSPlayerExample
             this.cancelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.FocusBorder = true;
-            this.cancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.cancelButton.ForeColor = System.Drawing.Color.White;
             this.cancelButton.Location = new System.Drawing.Point(417, 17);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(112, 28);
             this.cancelButton.TabIndex = 3;
@@ -101,8 +101,9 @@ namespace PVSPlayerExample
             // 
             // pvsPanel
             // 
+            this.pvsPanel.ForeColor = System.Drawing.Color.Black;
             this.pvsPanel.Location = new System.Drawing.Point(13, 11);
-            this.pvsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pvsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.pvsPanel.Name = "pvsPanel";
             this.pvsPanel.Size = new System.Drawing.Size(56, 41);
             this.pvsPanel.TabIndex = 0;
@@ -112,7 +113,7 @@ namespace PVSPlayerExample
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(84, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -123,7 +124,7 @@ namespace PVSPlayerExample
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(152, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -136,14 +137,14 @@ namespace PVSPlayerExample
             this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(549, 234);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bottomPanel);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PlaylistDialog";

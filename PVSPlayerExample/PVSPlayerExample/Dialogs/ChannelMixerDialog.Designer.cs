@@ -110,6 +110,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.channelLight1);
@@ -118,17 +119,17 @@
             this.panel1.Controls.Add(this.peakMeter1);
             this.panel1.Controls.Add(this.dial1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(82, 365);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(4, 298);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -139,9 +140,9 @@
             // 
             // channelLight1
             // 
-            this.channelLight1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.channelLight1.BackColor = System.Drawing.Color.White;
             this.channelLight1.Location = new System.Drawing.Point(12, 341);
-            this.channelLight1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelLight1.Margin = new System.Windows.Forms.Padding(4);
             this.channelLight1.Name = "channelLight1";
             this.channelLight1.Size = new System.Drawing.Size(3, 7);
             this.channelLight1.TabIndex = 3;
@@ -150,9 +151,9 @@
             // 
             this.channelButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.channelButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channelButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.channelButton1.ForeColor = System.Drawing.Color.White;
             this.channelButton1.Location = new System.Drawing.Point(4, 2);
-            this.channelButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelButton1.Margin = new System.Windows.Forms.Padding(4);
             this.channelButton1.Name = "channelButton1";
             this.channelButton1.Size = new System.Drawing.Size(72, 48);
             this.channelButton1.TabIndex = 1;
@@ -163,9 +164,9 @@
             // muteButton1
             // 
             this.muteButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.muteButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.muteButton1.ForeColor = System.Drawing.Color.White;
             this.muteButton1.Location = new System.Drawing.Point(4, 331);
-            this.muteButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muteButton1.Margin = new System.Windows.Forms.Padding(4);
             this.muteButton1.Name = "muteButton1";
             this.muteButton1.Size = new System.Drawing.Size(72, 28);
             this.muteButton1.TabIndex = 1;
@@ -175,9 +176,9 @@
             // 
             // peakMeter1
             // 
-            this.peakMeter1.BackColor = System.Drawing.Color.Black;
+            this.peakMeter1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.peakMeter1.Location = new System.Drawing.Point(28, 64);
-            this.peakMeter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.peakMeter1.Margin = new System.Windows.Forms.Padding(4);
             this.peakMeter1.Name = "peakMeter1";
             this.peakMeter1.Size = new System.Drawing.Size(23, 158);
             this.peakMeter1.TabIndex = 2;
@@ -188,7 +189,7 @@
             this.dial1.ContextMenuStrip = this.volumeMenu;
             this.dial1.Image = ((System.Drawing.Bitmap)(resources.GetObject("dial1.Image")));
             this.dial1.Location = new System.Drawing.Point(4, 230);
-            this.dial1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dial1.Margin = new System.Windows.Forms.Padding(4);
             this.dial1.MaximumSize = new System.Drawing.Size(55, 55);
             this.dial1.MinimumSize = new System.Drawing.Size(55, 55);
             this.dial1.Name = "dial1";
@@ -247,6 +248,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.channelLight2);
@@ -255,17 +257,17 @@
             this.panel2.Controls.Add(this.peakMeter2);
             this.panel2.Controls.Add(this.dial2);
             this.panel2.Location = new System.Drawing.Point(81, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(82, 365);
             this.panel2.TabIndex = 1;
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(4, 298);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -276,9 +278,9 @@
             // 
             // channelLight2
             // 
-            this.channelLight2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.channelLight2.BackColor = System.Drawing.Color.White;
             this.channelLight2.Location = new System.Drawing.Point(12, 341);
-            this.channelLight2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelLight2.Margin = new System.Windows.Forms.Padding(4);
             this.channelLight2.Name = "channelLight2";
             this.channelLight2.Size = new System.Drawing.Size(3, 7);
             this.channelLight2.TabIndex = 3;
@@ -287,9 +289,9 @@
             // 
             this.channelButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.channelButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channelButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.channelButton2.ForeColor = System.Drawing.Color.White;
             this.channelButton2.Location = new System.Drawing.Point(4, 2);
-            this.channelButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelButton2.Margin = new System.Windows.Forms.Padding(4);
             this.channelButton2.Name = "channelButton2";
             this.channelButton2.Size = new System.Drawing.Size(72, 48);
             this.channelButton2.TabIndex = 1;
@@ -300,9 +302,9 @@
             // muteButton2
             // 
             this.muteButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.muteButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.muteButton2.ForeColor = System.Drawing.Color.White;
             this.muteButton2.Location = new System.Drawing.Point(4, 331);
-            this.muteButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muteButton2.Margin = new System.Windows.Forms.Padding(4);
             this.muteButton2.Name = "muteButton2";
             this.muteButton2.Size = new System.Drawing.Size(72, 28);
             this.muteButton2.TabIndex = 1;
@@ -312,9 +314,9 @@
             // 
             // peakMeter2
             // 
-            this.peakMeter2.BackColor = System.Drawing.Color.Black;
+            this.peakMeter2.BackColor = System.Drawing.SystemColors.HotTrack;
             this.peakMeter2.Location = new System.Drawing.Point(28, 64);
-            this.peakMeter2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.peakMeter2.Margin = new System.Windows.Forms.Padding(4);
             this.peakMeter2.Name = "peakMeter2";
             this.peakMeter2.Size = new System.Drawing.Size(23, 158);
             this.peakMeter2.TabIndex = 2;
@@ -325,7 +327,7 @@
             this.dial2.ContextMenuStrip = this.volumeMenu;
             this.dial2.Image = ((System.Drawing.Bitmap)(resources.GetObject("dial2.Image")));
             this.dial2.Location = new System.Drawing.Point(4, 230);
-            this.dial2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dial2.Margin = new System.Windows.Forms.Padding(4);
             this.dial2.MaximumSize = new System.Drawing.Size(55, 55);
             this.dial2.MinimumSize = new System.Drawing.Size(55, 55);
             this.dial2.Name = "dial2";
@@ -336,6 +338,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.channelLight3);
@@ -344,17 +347,17 @@
             this.panel3.Controls.Add(this.peakMeterl3);
             this.panel3.Controls.Add(this.dial3);
             this.panel3.Location = new System.Drawing.Point(163, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(82, 365);
             this.panel3.TabIndex = 2;
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(4, 298);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -365,9 +368,9 @@
             // 
             // channelLight3
             // 
-            this.channelLight3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.channelLight3.BackColor = System.Drawing.Color.White;
             this.channelLight3.Location = new System.Drawing.Point(12, 341);
-            this.channelLight3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelLight3.Margin = new System.Windows.Forms.Padding(4);
             this.channelLight3.Name = "channelLight3";
             this.channelLight3.Size = new System.Drawing.Size(3, 7);
             this.channelLight3.TabIndex = 3;
@@ -376,9 +379,9 @@
             // 
             this.channelButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.channelButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channelButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.channelButton3.ForeColor = System.Drawing.Color.White;
             this.channelButton3.Location = new System.Drawing.Point(4, 2);
-            this.channelButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelButton3.Margin = new System.Windows.Forms.Padding(4);
             this.channelButton3.Name = "channelButton3";
             this.channelButton3.Size = new System.Drawing.Size(72, 48);
             this.channelButton3.TabIndex = 1;
@@ -389,9 +392,9 @@
             // muteButton3
             // 
             this.muteButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.muteButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.muteButton3.ForeColor = System.Drawing.Color.White;
             this.muteButton3.Location = new System.Drawing.Point(4, 331);
-            this.muteButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muteButton3.Margin = new System.Windows.Forms.Padding(4);
             this.muteButton3.Name = "muteButton3";
             this.muteButton3.Size = new System.Drawing.Size(72, 28);
             this.muteButton3.TabIndex = 1;
@@ -401,9 +404,9 @@
             // 
             // peakMeterl3
             // 
-            this.peakMeterl3.BackColor = System.Drawing.Color.Black;
+            this.peakMeterl3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.peakMeterl3.Location = new System.Drawing.Point(28, 64);
-            this.peakMeterl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.peakMeterl3.Margin = new System.Windows.Forms.Padding(4);
             this.peakMeterl3.Name = "peakMeterl3";
             this.peakMeterl3.Size = new System.Drawing.Size(23, 158);
             this.peakMeterl3.TabIndex = 2;
@@ -414,7 +417,7 @@
             this.dial3.ContextMenuStrip = this.volumeMenu;
             this.dial3.Image = ((System.Drawing.Bitmap)(resources.GetObject("dial3.Image")));
             this.dial3.Location = new System.Drawing.Point(4, 230);
-            this.dial3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dial3.Margin = new System.Windows.Forms.Padding(4);
             this.dial3.MaximumSize = new System.Drawing.Size(55, 55);
             this.dial3.MinimumSize = new System.Drawing.Size(55, 55);
             this.dial3.Name = "dial3";
@@ -425,6 +428,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.channelLight4);
@@ -433,17 +437,17 @@
             this.panel4.Controls.Add(this.peakMeter4);
             this.panel4.Controls.Add(this.dial4);
             this.panel4.Location = new System.Drawing.Point(244, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(82, 365);
             this.panel4.TabIndex = 3;
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label4.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(4, 298);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -454,9 +458,9 @@
             // 
             // channelLight4
             // 
-            this.channelLight4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.channelLight4.BackColor = System.Drawing.Color.White;
             this.channelLight4.Location = new System.Drawing.Point(12, 341);
-            this.channelLight4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelLight4.Margin = new System.Windows.Forms.Padding(4);
             this.channelLight4.Name = "channelLight4";
             this.channelLight4.Size = new System.Drawing.Size(3, 7);
             this.channelLight4.TabIndex = 3;
@@ -465,9 +469,9 @@
             // 
             this.channelButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.channelButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channelButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.channelButton4.ForeColor = System.Drawing.Color.White;
             this.channelButton4.Location = new System.Drawing.Point(4, 2);
-            this.channelButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelButton4.Margin = new System.Windows.Forms.Padding(4);
             this.channelButton4.Name = "channelButton4";
             this.channelButton4.Size = new System.Drawing.Size(72, 48);
             this.channelButton4.TabIndex = 1;
@@ -478,9 +482,9 @@
             // muteButton4
             // 
             this.muteButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.muteButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.muteButton4.ForeColor = System.Drawing.Color.White;
             this.muteButton4.Location = new System.Drawing.Point(4, 331);
-            this.muteButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muteButton4.Margin = new System.Windows.Forms.Padding(4);
             this.muteButton4.Name = "muteButton4";
             this.muteButton4.Size = new System.Drawing.Size(72, 28);
             this.muteButton4.TabIndex = 1;
@@ -490,9 +494,9 @@
             // 
             // peakMeter4
             // 
-            this.peakMeter4.BackColor = System.Drawing.Color.Black;
+            this.peakMeter4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.peakMeter4.Location = new System.Drawing.Point(28, 64);
-            this.peakMeter4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.peakMeter4.Margin = new System.Windows.Forms.Padding(4);
             this.peakMeter4.Name = "peakMeter4";
             this.peakMeter4.Size = new System.Drawing.Size(23, 158);
             this.peakMeter4.TabIndex = 2;
@@ -503,7 +507,7 @@
             this.dial4.ContextMenuStrip = this.volumeMenu;
             this.dial4.Image = ((System.Drawing.Bitmap)(resources.GetObject("dial4.Image")));
             this.dial4.Location = new System.Drawing.Point(4, 230);
-            this.dial4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dial4.Margin = new System.Windows.Forms.Padding(4);
             this.dial4.MaximumSize = new System.Drawing.Size(55, 55);
             this.dial4.MinimumSize = new System.Drawing.Size(55, 55);
             this.dial4.Name = "dial4";
@@ -514,6 +518,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.channelLight5);
@@ -522,17 +527,17 @@
             this.panel5.Controls.Add(this.peakMeter5);
             this.panel5.Controls.Add(this.dial5);
             this.panel5.Location = new System.Drawing.Point(325, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(82, 365);
             this.panel5.TabIndex = 4;
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label5.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(4, 298);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -543,9 +548,9 @@
             // 
             // channelLight5
             // 
-            this.channelLight5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.channelLight5.BackColor = System.Drawing.Color.White;
             this.channelLight5.Location = new System.Drawing.Point(12, 341);
-            this.channelLight5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelLight5.Margin = new System.Windows.Forms.Padding(4);
             this.channelLight5.Name = "channelLight5";
             this.channelLight5.Size = new System.Drawing.Size(3, 7);
             this.channelLight5.TabIndex = 3;
@@ -554,9 +559,9 @@
             // 
             this.channelButton5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.channelButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channelButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.channelButton5.ForeColor = System.Drawing.Color.White;
             this.channelButton5.Location = new System.Drawing.Point(4, 2);
-            this.channelButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelButton5.Margin = new System.Windows.Forms.Padding(4);
             this.channelButton5.Name = "channelButton5";
             this.channelButton5.Size = new System.Drawing.Size(72, 48);
             this.channelButton5.TabIndex = 1;
@@ -567,9 +572,9 @@
             // muteButton5
             // 
             this.muteButton5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.muteButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.muteButton5.ForeColor = System.Drawing.Color.White;
             this.muteButton5.Location = new System.Drawing.Point(4, 331);
-            this.muteButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muteButton5.Margin = new System.Windows.Forms.Padding(4);
             this.muteButton5.Name = "muteButton5";
             this.muteButton5.Size = new System.Drawing.Size(72, 28);
             this.muteButton5.TabIndex = 1;
@@ -579,9 +584,9 @@
             // 
             // peakMeter5
             // 
-            this.peakMeter5.BackColor = System.Drawing.Color.Black;
+            this.peakMeter5.BackColor = System.Drawing.SystemColors.HotTrack;
             this.peakMeter5.Location = new System.Drawing.Point(28, 64);
-            this.peakMeter5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.peakMeter5.Margin = new System.Windows.Forms.Padding(4);
             this.peakMeter5.Name = "peakMeter5";
             this.peakMeter5.Size = new System.Drawing.Size(23, 158);
             this.peakMeter5.TabIndex = 2;
@@ -592,7 +597,7 @@
             this.dial5.ContextMenuStrip = this.volumeMenu;
             this.dial5.Image = ((System.Drawing.Bitmap)(resources.GetObject("dial5.Image")));
             this.dial5.Location = new System.Drawing.Point(4, 230);
-            this.dial5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dial5.Margin = new System.Windows.Forms.Padding(4);
             this.dial5.MaximumSize = new System.Drawing.Size(55, 55);
             this.dial5.MinimumSize = new System.Drawing.Size(55, 55);
             this.dial5.Name = "dial5";
@@ -603,6 +608,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.channelLight6);
@@ -611,17 +617,17 @@
             this.panel6.Controls.Add(this.peakMeter6);
             this.panel6.Controls.Add(this.dial6);
             this.panel6.Location = new System.Drawing.Point(407, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(82, 365);
             this.panel6.TabIndex = 5;
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label6.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(4, 298);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -632,9 +638,9 @@
             // 
             // channelLight6
             // 
-            this.channelLight6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.channelLight6.BackColor = System.Drawing.Color.White;
             this.channelLight6.Location = new System.Drawing.Point(12, 341);
-            this.channelLight6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelLight6.Margin = new System.Windows.Forms.Padding(4);
             this.channelLight6.Name = "channelLight6";
             this.channelLight6.Size = new System.Drawing.Size(3, 7);
             this.channelLight6.TabIndex = 3;
@@ -643,9 +649,9 @@
             // 
             this.channelButton6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.channelButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channelButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.channelButton6.ForeColor = System.Drawing.Color.White;
             this.channelButton6.Location = new System.Drawing.Point(4, 2);
-            this.channelButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelButton6.Margin = new System.Windows.Forms.Padding(4);
             this.channelButton6.Name = "channelButton6";
             this.channelButton6.Size = new System.Drawing.Size(72, 48);
             this.channelButton6.TabIndex = 1;
@@ -656,9 +662,9 @@
             // muteButton6
             // 
             this.muteButton6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.muteButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.muteButton6.ForeColor = System.Drawing.Color.White;
             this.muteButton6.Location = new System.Drawing.Point(4, 331);
-            this.muteButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muteButton6.Margin = new System.Windows.Forms.Padding(4);
             this.muteButton6.Name = "muteButton6";
             this.muteButton6.Size = new System.Drawing.Size(72, 28);
             this.muteButton6.TabIndex = 1;
@@ -668,9 +674,9 @@
             // 
             // peakMeter6
             // 
-            this.peakMeter6.BackColor = System.Drawing.Color.Black;
+            this.peakMeter6.BackColor = System.Drawing.SystemColors.HotTrack;
             this.peakMeter6.Location = new System.Drawing.Point(28, 64);
-            this.peakMeter6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.peakMeter6.Margin = new System.Windows.Forms.Padding(4);
             this.peakMeter6.Name = "peakMeter6";
             this.peakMeter6.Size = new System.Drawing.Size(23, 158);
             this.peakMeter6.TabIndex = 2;
@@ -681,7 +687,7 @@
             this.dial6.ContextMenuStrip = this.volumeMenu;
             this.dial6.Image = ((System.Drawing.Bitmap)(resources.GetObject("dial6.Image")));
             this.dial6.Location = new System.Drawing.Point(4, 230);
-            this.dial6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dial6.Margin = new System.Windows.Forms.Padding(4);
             this.dial6.MaximumSize = new System.Drawing.Size(55, 55);
             this.dial6.MinimumSize = new System.Drawing.Size(55, 55);
             this.dial6.Name = "dial6";
@@ -692,6 +698,7 @@
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label7);
             this.panel7.Controls.Add(this.channelLight7);
@@ -700,17 +707,17 @@
             this.panel7.Controls.Add(this.peakMeter7);
             this.panel7.Controls.Add(this.dial7);
             this.panel7.Location = new System.Drawing.Point(488, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(82, 365);
             this.panel7.TabIndex = 6;
             // 
             // label7
             // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label7.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(4, 298);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -721,9 +728,9 @@
             // 
             // channelLight7
             // 
-            this.channelLight7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.channelLight7.BackColor = System.Drawing.Color.White;
             this.channelLight7.Location = new System.Drawing.Point(12, 341);
-            this.channelLight7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelLight7.Margin = new System.Windows.Forms.Padding(4);
             this.channelLight7.Name = "channelLight7";
             this.channelLight7.Size = new System.Drawing.Size(3, 7);
             this.channelLight7.TabIndex = 3;
@@ -732,9 +739,9 @@
             // 
             this.channelButton7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.channelButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channelButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.channelButton7.ForeColor = System.Drawing.Color.White;
             this.channelButton7.Location = new System.Drawing.Point(4, 2);
-            this.channelButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelButton7.Margin = new System.Windows.Forms.Padding(4);
             this.channelButton7.Name = "channelButton7";
             this.channelButton7.Size = new System.Drawing.Size(72, 48);
             this.channelButton7.TabIndex = 1;
@@ -745,9 +752,9 @@
             // muteButton7
             // 
             this.muteButton7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.muteButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.muteButton7.ForeColor = System.Drawing.Color.White;
             this.muteButton7.Location = new System.Drawing.Point(4, 331);
-            this.muteButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muteButton7.Margin = new System.Windows.Forms.Padding(4);
             this.muteButton7.Name = "muteButton7";
             this.muteButton7.Size = new System.Drawing.Size(72, 28);
             this.muteButton7.TabIndex = 1;
@@ -757,9 +764,9 @@
             // 
             // peakMeter7
             // 
-            this.peakMeter7.BackColor = System.Drawing.Color.Black;
+            this.peakMeter7.BackColor = System.Drawing.SystemColors.HotTrack;
             this.peakMeter7.Location = new System.Drawing.Point(28, 64);
-            this.peakMeter7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.peakMeter7.Margin = new System.Windows.Forms.Padding(4);
             this.peakMeter7.Name = "peakMeter7";
             this.peakMeter7.Size = new System.Drawing.Size(23, 158);
             this.peakMeter7.TabIndex = 2;
@@ -770,7 +777,7 @@
             this.dial7.ContextMenuStrip = this.volumeMenu;
             this.dial7.Image = ((System.Drawing.Bitmap)(resources.GetObject("dial7.Image")));
             this.dial7.Location = new System.Drawing.Point(4, 230);
-            this.dial7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dial7.Margin = new System.Windows.Forms.Padding(4);
             this.dial7.MaximumSize = new System.Drawing.Size(55, 55);
             this.dial7.MinimumSize = new System.Drawing.Size(55, 55);
             this.dial7.Name = "dial7";
@@ -781,6 +788,7 @@
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.channelLight8);
@@ -789,17 +797,17 @@
             this.panel8.Controls.Add(this.peakMeter8);
             this.panel8.Controls.Add(this.dial8);
             this.panel8.Location = new System.Drawing.Point(569, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(82, 365);
             this.panel8.TabIndex = 7;
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label8.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(4, 298);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -810,9 +818,9 @@
             // 
             // channelLight8
             // 
-            this.channelLight8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.channelLight8.BackColor = System.Drawing.Color.White;
             this.channelLight8.Location = new System.Drawing.Point(12, 341);
-            this.channelLight8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelLight8.Margin = new System.Windows.Forms.Padding(4);
             this.channelLight8.Name = "channelLight8";
             this.channelLight8.Size = new System.Drawing.Size(3, 7);
             this.channelLight8.TabIndex = 3;
@@ -821,9 +829,9 @@
             // 
             this.channelButton8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.channelButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channelButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.channelButton8.ForeColor = System.Drawing.Color.White;
             this.channelButton8.Location = new System.Drawing.Point(4, 2);
-            this.channelButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.channelButton8.Margin = new System.Windows.Forms.Padding(4);
             this.channelButton8.Name = "channelButton8";
             this.channelButton8.Size = new System.Drawing.Size(72, 48);
             this.channelButton8.TabIndex = 1;
@@ -834,9 +842,9 @@
             // muteButton8
             // 
             this.muteButton8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.muteButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.muteButton8.ForeColor = System.Drawing.Color.White;
             this.muteButton8.Location = new System.Drawing.Point(4, 331);
-            this.muteButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muteButton8.Margin = new System.Windows.Forms.Padding(4);
             this.muteButton8.Name = "muteButton8";
             this.muteButton8.Size = new System.Drawing.Size(72, 28);
             this.muteButton8.TabIndex = 1;
@@ -846,9 +854,9 @@
             // 
             // peakMeter8
             // 
-            this.peakMeter8.BackColor = System.Drawing.Color.Black;
+            this.peakMeter8.BackColor = System.Drawing.SystemColors.HotTrack;
             this.peakMeter8.Location = new System.Drawing.Point(28, 64);
-            this.peakMeter8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.peakMeter8.Margin = new System.Windows.Forms.Padding(4);
             this.peakMeter8.Name = "peakMeter8";
             this.peakMeter8.Size = new System.Drawing.Size(23, 158);
             this.peakMeter8.TabIndex = 2;
@@ -859,7 +867,7 @@
             this.dial8.ContextMenuStrip = this.volumeMenu;
             this.dial8.Image = ((System.Drawing.Bitmap)(resources.GetObject("dial8.Image")));
             this.dial8.Location = new System.Drawing.Point(4, 230);
-            this.dial8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dial8.Margin = new System.Windows.Forms.Padding(4);
             this.dial8.MaximumSize = new System.Drawing.Size(55, 55);
             this.dial8.MinimumSize = new System.Drawing.Size(55, 55);
             this.dial8.Name = "dial8";
@@ -870,13 +878,13 @@
             // 
             // bottomPanel
             // 
-            this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bottomPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bottomPanel.Controls.Add(this.pvsPanel);
             this.bottomPanel.Controls.Add(this.okButton);
             this.bottomPanel.Controls.Add(this.cancelButton);
             this.bottomPanel.Location = new System.Drawing.Point(0, 364);
-            this.bottomPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomPanel.Margin = new System.Windows.Forms.Padding(4);
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(651, 61);
             this.bottomPanel.TabIndex = 8;
@@ -884,7 +892,7 @@
             // pvsPanel
             // 
             this.pvsPanel.Location = new System.Drawing.Point(13, 10);
-            this.pvsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pvsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.pvsPanel.Name = "pvsPanel";
             this.pvsPanel.Size = new System.Drawing.Size(56, 41);
             this.pvsPanel.TabIndex = 2;
@@ -895,9 +903,9 @@
             this.okButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.FocusBorder = true;
-            this.okButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.okButton.ForeColor = System.Drawing.Color.White;
             this.okButton.Location = new System.Drawing.Point(397, 16);
-            this.okButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.okButton.Margin = new System.Windows.Forms.Padding(4);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(112, 28);
             this.okButton.TabIndex = 1;
@@ -910,9 +918,9 @@
             this.cancelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.FocusBorder = true;
-            this.cancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.cancelButton.ForeColor = System.Drawing.Color.White;
             this.cancelButton.Location = new System.Drawing.Point(521, 16);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(112, 28);
             this.cancelButton.TabIndex = 0;
@@ -938,14 +946,14 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ChannelMixerDialog";
             this.Opacity = 0.95D;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Tùy chỉnh âm thanh";
+            this.Text = "Bộ trộn kênh âm thanh";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AudioVolumesDialog_FormClosing);
             this.Shown += new System.EventHandler(this.ChannelMixerDialog_Shown);
             this.panel1.ResumeLayout(false);

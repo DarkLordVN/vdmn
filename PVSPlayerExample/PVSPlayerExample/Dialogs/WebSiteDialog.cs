@@ -148,13 +148,13 @@ namespace PVSPlayerExample
             {
                 int result = 0;
                 if (radioButton2.Checked) result = 1;
-                else if (radioButton3.Checked) result = 2;
+                //else if (radioButton3.Checked) result = 2;
                 return result;
             }
             set
             {
                 if (value == 0) radioButton1.Checked = true;
-                else if (value == 2) radioButton3.Checked = true;
+                //else if (value == 2) radioButton3.Checked = true;
                 else radioButton2.Checked = true;
             }
         }

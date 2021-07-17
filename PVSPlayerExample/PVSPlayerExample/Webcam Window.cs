@@ -287,7 +287,7 @@ namespace PVSPlayerExample
         // Yes, having editable items on a display overlay might not always be a good idea. :)
         private void WebcamWindow_Resize(object sender, EventArgs e)
         {
-            if (_webcamPlayer.Has.DisplayClones)
+            if (_webcamPlayer != null && _webcamPlayer.Has.DisplayClones)
             {
                 if (WindowState == FormWindowState.Minimized)
                 {
@@ -1288,7 +1288,6 @@ namespace PVSPlayerExample
                 _zoomOverlayOn = true;
                 _copyOverlayOn = false;
                 _scribbleOverlayOn = false;
-                scribbleModeMenuItem.Checked = false;
             }
             else
             {
@@ -1303,26 +1302,26 @@ namespace PVSPlayerExample
 
         private void ScribbleModeMenuItem_Click(object sender, EventArgs e)
         {
-            scribbleModeMenuItem.Checked = !scribbleModeMenuItem.Checked;
-            if (scribbleModeMenuItem.Checked)
-            {
-                RemoveCopyMessage();
-                if (_scribbleOverlay == null) _scribbleOverlay = new ScribbleOverlay(null, _webcamPlayer);
-                _webcamPlayer.Overlay.CanFocus = true;
-                _webcamPlayer.Overlay.Window = _scribbleOverlay;
-                _webcamPlayer.DisplayClones.ShowOverlay = true;
-                _scribbleOverlayOn = true;
-                _zoomOverlayOn = false;
-                zoomModeMenuItem.Checked = false;
-                _copyOverlayOn = false;
-            }
-            else
-            {
-                _webcamPlayer.Overlay.Remove();
-                _webcamPlayer.Overlay.CanFocus = false;
-                _scribbleOverlayOn = false;
-                _webcamPlayer.DisplayClones.ShowOverlay = false;
-            }
+            //scribbleModeMenuItem.Checked = !scribbleModeMenuItem.Checked;
+            //if (scribbleModeMenuItem.Checked)
+            //{
+            //    RemoveCopyMessage();
+            //    if (_scribbleOverlay == null) _scribbleOverlay = new ScribbleOverlay(null, _webcamPlayer);
+            //    _webcamPlayer.Overlay.CanFocus = true;
+            //    _webcamPlayer.Overlay.Window = _scribbleOverlay;
+            //    _webcamPlayer.DisplayClones.ShowOverlay = true;
+            //    _scribbleOverlayOn = true;
+            //    _zoomOverlayOn = false;
+            //    zoomModeMenuItem.Checked = false;
+            //    _copyOverlayOn = false;
+            //}
+            //else
+            //{
+            //    _webcamPlayer.Overlay.Remove();
+            //    _webcamPlayer.Overlay.CanFocus = false;
+            //    _scribbleOverlayOn = false;
+            //    _webcamPlayer.DisplayClones.ShowOverlay = false;
+            //}
         }
 
         #endregion

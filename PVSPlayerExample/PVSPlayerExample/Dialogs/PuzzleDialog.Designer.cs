@@ -50,9 +50,9 @@
             // 
             this.yesButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.yesButton.FocusBorder = true;
-            this.yesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.yesButton.ForeColor = System.Drawing.Color.White;
             this.yesButton.Location = new System.Drawing.Point(3, 2);
-            this.yesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yesButton.Margin = new System.Windows.Forms.Padding(4);
             this.yesButton.Name = "yesButton";
             this.yesButton.Size = new System.Drawing.Size(133, 26);
             this.yesButton.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.noButton);
             this.panel1.Controls.Add(this.yesButton);
             this.panel1.Location = new System.Drawing.Point(236, 166);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(277, 33);
             this.panel1.TabIndex = 2;
@@ -77,9 +77,9 @@
             this.noButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.noButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.noButton.FocusBorder = true;
-            this.noButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(146)))));
+            this.noButton.ForeColor = System.Drawing.Color.White;
             this.noButton.Location = new System.Drawing.Point(139, 2);
-            this.noButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.noButton.Margin = new System.Windows.Forms.Padding(4);
             this.noButton.Name = "noButton";
             this.noButton.Size = new System.Drawing.Size(133, 26);
             this.noButton.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.messageLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PuzzleDialog";
