@@ -1240,7 +1240,24 @@ namespace PVSPlayerExample
                 _soundRecorder.InputDevice.Index = _indexAudio; // set system default input device (if any)
                 _soundRecorder.Record();
                 if (_soundRecorder.LastError) _soundRecorder.Stop();
+                CheckCamera();
             }
+        }
+        int speed = 100;
+        void CheckCamera()
+        {
+            var index = 0;
+            new System.Threading.Thread(
+                () =>
+                {
+                    while (_recording)
+                    {
+                        index++;
+                        Console.WriteLine(index);
+                        System.Threading.Thread.Sleep(speed);
+                    }
+                }
+                ).Start();
         }
 
         private void StopRecordingMenuItem_Click(object sender, EventArgs e)
