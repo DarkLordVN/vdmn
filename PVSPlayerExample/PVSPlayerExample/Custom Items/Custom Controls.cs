@@ -29,6 +29,27 @@ namespace PVSPlayerExample
     {
         /* ... under construction ... */
 
+        //// Buttons, DropDownButtons
+        //static internal Color BorderColor = Color.FromArgb(45, 45, 200); // 100
+        ////static internal Pen FocusPen = new Pen(Color.DarkGoldenrod);
+        ////static internal Pen FocusPen = new Pen(Color.FromArgb(169, 163, 136));
+        //static internal Pen FocusPen = new Pen(Color.FromArgb(150, 200, 245));
+
+        //static internal Color NormalColor1A = Color.GhostWhite;
+        //static internal Color NormalColor1B = Color.FromArgb(35, 35, 215);
+        //static internal Color NormalColor2A = Color.Navy;
+        //static internal Color NormalColor2B = Color.FromArgb(100, 100, 230);
+
+        //static internal Color HotColor1A = Color.FromArgb(160, 160, 255);
+        //static internal Color HotColor1B = Color.FromArgb(35, 35, 215);
+        //static internal Color HotColor2A = Color.Navy;
+        //static internal Color HotColor2B = Color.FromArgb(60, 60, 60); //60
+
+        //static internal Color PressedColor1A = Color.FromArgb(200, 220, 255); // 164
+        //static internal Color PressedColor1B = Color.FromArgb(25, 25, 100); // 48
+        //static internal Color PressedColor2A = Color.Navy; // 18
+        //static internal Color PressedColor2B = Color.FromArgb(0, 60, 175); // 72
+
         // Buttons, DropDownButtons
         static internal Color BorderColor = Color.FromArgb(45, 45, 200); // 100
         //static internal Pen FocusPen = new Pen(Color.DarkGoldenrod);

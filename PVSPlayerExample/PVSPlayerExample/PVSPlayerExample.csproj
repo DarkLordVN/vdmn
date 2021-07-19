@@ -105,6 +105,7 @@
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.114.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
   </ItemGroup>
@@ -163,12 +164,36 @@
     <Compile Include="Dialogs\DeviceVolumeDialog.Designer.cs">
       <DependentUpon>DeviceVolumeDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSQLite.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSQLite.Designer.cs">
       <DependentUpon>FormSQLite.cs</DependentUpon>
     </Compile>
+    <Compile Include="Khac\Burn Media.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khac\Burn Media.Designer.cs">
+      <DependentUpon>Burn Media.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khac\Interop\BurnData.cs" />
+    <Compile Include="Khac\Interop\Imapi2Interop.cs" />
+    <Compile Include="Khac\KeKhai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khac\KeKhai.Designer.cs">
+      <DependentUpon>KeKhai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khac\MediaItem\DirectoryItem.cs" />
+    <Compile Include="Khac\MediaItem\FileItem.cs" />
+    <Compile Include="Khac\MediaItem\IMediaItem.cs" />
+    <Compile Include="Khac\MediaItem\Win32.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -303,6 +328,8 @@
     <Compile Include="Various\SliderPreview.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Various\SQLite.cs" />
+    <Compile Include="Various\ZipControl.cs" />
     <Compile Include="Webcam Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,8 +418,17 @@
     <EmbeddedResource Include="Display Overlays\MP3KaraokeOverlay.resx">
       <DependentUpon>MP3KaraokeOverlay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSQLite.resx">
       <DependentUpon>FormSQLite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khac\Burn Media.resx">
+      <DependentUpon>Burn Media.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khac\KeKhai.resx">
+      <DependentUpon>KeKhai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main Window.resx">
       <DependentUpon>Main Window.cs</DependentUpon>

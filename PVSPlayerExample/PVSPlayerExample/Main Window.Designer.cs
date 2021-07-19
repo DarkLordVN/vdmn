@@ -27,6 +27,7 @@ namespace PVSPlayerExample
             this.sliderMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayModePanel = new System.Windows.Forms.Panel();
             this.repeatMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.repeatOneMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repeatChapterMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,7 +37,6 @@ namespace PVSPlayerExample
             this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
             this.repeatOffMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repeatMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayModePanel = new System.Windows.Forms.Panel();
             this.videoTracksLabel = new System.Windows.Forms.Label();
             this.fullScreenModeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fullScreenFormMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -241,10 +241,10 @@ namespace PVSPlayerExample
             this.noChaptersToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.displayParentPanel = new System.Windows.Forms.Panel();
             this.rightFramePanel = new System.Windows.Forms.Panel();
-            this.zoomPanel = new System.Windows.Forms.Panel();
             this.audioPanel = new System.Windows.Forms.Panel();
             this.balanceDialTitle = new System.Windows.Forms.Label();
             this.volumeDialTitle = new System.Windows.Forms.Label();
+            this.zoomPanel = new System.Windows.Forms.Panel();
             this.playSubMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.playMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator28 = new System.Windows.Forms.ToolStripSeparator();
@@ -260,14 +260,6 @@ namespace PVSPlayerExample
             this.video3DTopMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator43 = new System.Windows.Forms.ToolStripSeparator();
             this.video3DStereoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stretchRightButton = new PVSPlayerExample.CustomButton();
-            this.stretchLeftButton = new PVSPlayerExample.CustomButton();
-            this.stretchDownButton = new PVSPlayerExample.CustomButton();
-            this.stretchUpButton = new PVSPlayerExample.CustomButton();
-            this.zoomOutButton = new PVSPlayerExample.CustomButton();
-            this.zoomInButton = new PVSPlayerExample.CustomButton();
-            this.stretchLabel = new PVSPlayerExample.HeadLabel();
-            this.zoomLabel = new PVSPlayerExample.HeadLabel();
             this.rightLevelMeterPanel = new PVSPlayerExample.BufferedPanel();
             this.leftLevelMeterPanel = new PVSPlayerExample.BufferedPanel();
             this.audioDeviceButton = new PVSPlayerExample.DropDownButton();
@@ -277,6 +269,14 @@ namespace PVSPlayerExample
             this.audioLight = new PVSPlayerExample.LightPanel();
             this.audioTracksLabel = new System.Windows.Forms.Label();
             this.audioVolumeLabelText = new System.Windows.Forms.Label();
+            this.stretchRightButton = new PVSPlayerExample.CustomButton();
+            this.stretchLeftButton = new PVSPlayerExample.CustomButton();
+            this.stretchDownButton = new PVSPlayerExample.CustomButton();
+            this.stretchUpButton = new PVSPlayerExample.CustomButton();
+            this.zoomOutButton = new PVSPlayerExample.CustomButton();
+            this.zoomInButton = new PVSPlayerExample.CustomButton();
+            this.stretchLabel = new PVSPlayerExample.HeadLabel();
+            this.zoomLabel = new PVSPlayerExample.HeadLabel();
             this.positionSliderPanel = new PVSPlayerExample.SliderPanel();
             this.positionSlider = new PVSPlayerExample.CustomSlider();
             this.positionLabel2 = new System.Windows.Forms.Label();
@@ -305,8 +305,8 @@ namespace PVSPlayerExample
             this.leftFramePanel.SuspendLayout();
             this.speedPanel.SuspendLayout();
             this.sliderMenu.SuspendLayout();
-            this.repeatMenu.SuspendLayout();
             this.displayModePanel.SuspendLayout();
+            this.repeatMenu.SuspendLayout();
             this.fullScreenModeMenu.SuspendLayout();
             this.playPanel.SuspendLayout();
             this.playMenu.SuspendLayout();
@@ -320,8 +320,8 @@ namespace PVSPlayerExample
             this.positionSliderMenu.SuspendLayout();
             this.displayParentPanel.SuspendLayout();
             this.rightFramePanel.SuspendLayout();
-            this.zoomPanel.SuspendLayout();
             this.audioPanel.SuspendLayout();
+            this.zoomPanel.SuspendLayout();
             this.playSubMenu.SuspendLayout();
             this.video3DMenu.SuspendLayout();
             this.volumeLabelPanel.SuspendLayout();
@@ -345,13 +345,11 @@ namespace PVSPlayerExample
             this.leftFramePanel.Location = new System.Drawing.Point(9, 10);
             this.leftFramePanel.Margin = new System.Windows.Forms.Padding(4);
             this.leftFramePanel.Name = "leftFramePanel";
-            this.leftFramePanel.Size = new System.Drawing.Size(206, 609);
+            this.leftFramePanel.Size = new System.Drawing.Size(206, 605);
             this.leftFramePanel.TabIndex = 0;
             // 
             // speedPanel
             // 
-            this.speedPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.speedPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.speedPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.speedPanel.Controls.Add(this.speedSlider);
@@ -359,7 +357,7 @@ namespace PVSPlayerExample
             this.speedPanel.Location = new System.Drawing.Point(8, 285);
             this.speedPanel.Margin = new System.Windows.Forms.Padding(4);
             this.speedPanel.Name = "speedPanel";
-            this.speedPanel.Size = new System.Drawing.Size(187, 86);
+            this.speedPanel.Size = new System.Drawing.Size(187, 90);
             this.speedPanel.TabIndex = 4;
             // 
             // sliderMenu
@@ -411,6 +409,23 @@ namespace PVSPlayerExample
             this.sliderMenuItem5.Size = new System.Drawing.Size(61, 24);
             this.sliderMenuItem5.Text = "5";
             this.sliderMenuItem5.Click += new System.EventHandler(this.SliderMenuItem5_Click);
+            // 
+            // displayModePanel
+            // 
+            this.displayModePanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.displayModePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.displayModePanel.Controls.Add(this.repeatLight);
+            this.displayModePanel.Controls.Add(this.repeatButton);
+            this.displayModePanel.Controls.Add(this.displayLight);
+            this.displayModePanel.Controls.Add(this.videoTracksLabel);
+            this.displayModePanel.Controls.Add(this.fullScreenLight);
+            this.displayModePanel.Controls.Add(this.fullScreenModeButton);
+            this.displayModePanel.Controls.Add(this.displayModeLabel);
+            this.displayModePanel.Location = new System.Drawing.Point(8, 160);
+            this.displayModePanel.Margin = new System.Windows.Forms.Padding(4);
+            this.displayModePanel.Name = "displayModePanel";
+            this.displayModePanel.Size = new System.Drawing.Size(187, 117);
+            this.displayModePanel.TabIndex = 2;
             // 
             // repeatMenu
             // 
@@ -496,23 +511,6 @@ namespace PVSPlayerExample
             this.repeatMenuItem.Name = "repeatMenuItem";
             this.repeatMenuItem.Size = new System.Drawing.Size(203, 24);
             this.repeatMenuItem.Text = "Phát lặp";
-            // 
-            // displayModePanel
-            // 
-            this.displayModePanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.displayModePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.displayModePanel.Controls.Add(this.repeatLight);
-            this.displayModePanel.Controls.Add(this.repeatButton);
-            this.displayModePanel.Controls.Add(this.displayLight);
-            this.displayModePanel.Controls.Add(this.videoTracksLabel);
-            this.displayModePanel.Controls.Add(this.fullScreenLight);
-            this.displayModePanel.Controls.Add(this.fullScreenModeButton);
-            this.displayModePanel.Controls.Add(this.displayModeLabel);
-            this.displayModePanel.Location = new System.Drawing.Point(8, 160);
-            this.displayModePanel.Margin = new System.Windows.Forms.Padding(4);
-            this.displayModePanel.Name = "displayModePanel";
-            this.displayModePanel.Size = new System.Drawing.Size(187, 117);
-            this.displayModePanel.TabIndex = 2;
             // 
             // videoTracksLabel
             // 
@@ -1007,7 +1005,7 @@ namespace PVSPlayerExample
             this.displayPanel.Location = new System.Drawing.Point(0, 0);
             this.displayPanel.Margin = new System.Windows.Forms.Padding(4);
             this.displayPanel.Name = "displayPanel";
-            this.displayPanel.Size = new System.Drawing.Size(704, 571);
+            this.displayPanel.Size = new System.Drawing.Size(706, 567);
             this.displayPanel.TabIndex = 1;
             this.toolTip1.SetToolTip(this.displayPanel, "Player.Display.Window - the control that is used to display video and overlays.");
             // 
@@ -2200,7 +2198,7 @@ namespace PVSPlayerExample
             this.displayParentPanel.Location = new System.Drawing.Point(221, 10);
             this.displayParentPanel.Margin = new System.Windows.Forms.Padding(4);
             this.displayParentPanel.Name = "displayParentPanel";
-            this.displayParentPanel.Size = new System.Drawing.Size(706, 609);
+            this.displayParentPanel.Size = new System.Drawing.Size(708, 605);
             this.displayParentPanel.TabIndex = 1;
             // 
             // rightFramePanel
@@ -2211,29 +2209,11 @@ namespace PVSPlayerExample
             this.rightFramePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rightFramePanel.Controls.Add(this.audioPanel);
             this.rightFramePanel.Controls.Add(this.zoomPanel);
-            this.rightFramePanel.Location = new System.Drawing.Point(932, 10);
+            this.rightFramePanel.Location = new System.Drawing.Point(934, 10);
             this.rightFramePanel.Margin = new System.Windows.Forms.Padding(4);
             this.rightFramePanel.Name = "rightFramePanel";
-            this.rightFramePanel.Size = new System.Drawing.Size(208, 609);
+            this.rightFramePanel.Size = new System.Drawing.Size(208, 605);
             this.rightFramePanel.TabIndex = 2;
-            // 
-            // zoomPanel
-            // 
-            this.zoomPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.zoomPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.zoomPanel.Controls.Add(this.stretchRightButton);
-            this.zoomPanel.Controls.Add(this.stretchLeftButton);
-            this.zoomPanel.Controls.Add(this.stretchDownButton);
-            this.zoomPanel.Controls.Add(this.stretchUpButton);
-            this.zoomPanel.Controls.Add(this.zoomOutButton);
-            this.zoomPanel.Controls.Add(this.zoomInButton);
-            this.zoomPanel.Controls.Add(this.stretchLabel);
-            this.zoomPanel.Controls.Add(this.zoomLabel);
-            this.zoomPanel.Location = new System.Drawing.Point(8, 234);
-            this.zoomPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.zoomPanel.Name = "zoomPanel";
-            this.zoomPanel.Size = new System.Drawing.Size(187, 130);
-            this.zoomPanel.TabIndex = 1;
             // 
             // audioPanel
             // 
@@ -2277,6 +2257,24 @@ namespace PVSPlayerExample
             this.volumeDialTitle.TabIndex = 4;
             this.volumeDialTitle.Text = "Âm lượng";
             this.volumeDialTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zoomPanel
+            // 
+            this.zoomPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.zoomPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.zoomPanel.Controls.Add(this.stretchRightButton);
+            this.zoomPanel.Controls.Add(this.stretchLeftButton);
+            this.zoomPanel.Controls.Add(this.stretchDownButton);
+            this.zoomPanel.Controls.Add(this.stretchUpButton);
+            this.zoomPanel.Controls.Add(this.zoomOutButton);
+            this.zoomPanel.Controls.Add(this.zoomInButton);
+            this.zoomPanel.Controls.Add(this.stretchLabel);
+            this.zoomPanel.Controls.Add(this.zoomLabel);
+            this.zoomPanel.Location = new System.Drawing.Point(8, 234);
+            this.zoomPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.zoomPanel.Name = "zoomPanel";
+            this.zoomPanel.Size = new System.Drawing.Size(187, 130);
+            this.zoomPanel.TabIndex = 1;
             // 
             // playSubMenu
             // 
@@ -2388,134 +2386,6 @@ namespace PVSPlayerExample
             this.video3DStereoMenuItem.Size = new System.Drawing.Size(164, 26);
             this.video3DStereoMenuItem.Text = "Normal View";
             this.video3DStereoMenuItem.Click += new System.EventHandler(this.Video3DStereoMenuItem_Click);
-            // 
-            // stretchRightButton
-            // 
-            this.stretchRightButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stretchRightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchRightButton.ForeColor = System.Drawing.Color.White;
-            this.stretchRightButton.Location = new System.Drawing.Point(135, 91);
-            this.stretchRightButton.Margin = new System.Windows.Forms.Padding(4);
-            this.stretchRightButton.Name = "stretchRightButton";
-            this.stretchRightButton.Size = new System.Drawing.Size(39, 25);
-            this.stretchRightButton.TabIndex = 12;
-            this.stretchRightButton.Text = "Æ";
-            this.toolTip1.SetToolTip(this.stretchRightButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
-        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
-        "");
-            this.stretchRightButton.UseVisualStyleBackColor = true;
-            this.stretchRightButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchRightButton_MouseDown);
-            // 
-            // stretchLeftButton
-            // 
-            this.stretchLeftButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stretchLeftButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchLeftButton.ForeColor = System.Drawing.Color.White;
-            this.stretchLeftButton.Location = new System.Drawing.Point(93, 91);
-            this.stretchLeftButton.Margin = new System.Windows.Forms.Padding(4);
-            this.stretchLeftButton.Name = "stretchLeftButton";
-            this.stretchLeftButton.Size = new System.Drawing.Size(39, 25);
-            this.stretchLeftButton.TabIndex = 11;
-            this.stretchLeftButton.Text = "Å";
-            this.toolTip1.SetToolTip(this.stretchLeftButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
-        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
-        "");
-            this.stretchLeftButton.UseVisualStyleBackColor = true;
-            this.stretchLeftButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchLeftButton_MouseDown);
-            // 
-            // stretchDownButton
-            // 
-            this.stretchDownButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stretchDownButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchDownButton.ForeColor = System.Drawing.Color.White;
-            this.stretchDownButton.Location = new System.Drawing.Point(53, 91);
-            this.stretchDownButton.Margin = new System.Windows.Forms.Padding(4);
-            this.stretchDownButton.Name = "stretchDownButton";
-            this.stretchDownButton.Size = new System.Drawing.Size(37, 25);
-            this.stretchDownButton.TabIndex = 10;
-            this.stretchDownButton.Text = "È";
-            this.toolTip1.SetToolTip(this.stretchDownButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
-        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
-        "");
-            this.stretchDownButton.UseVisualStyleBackColor = true;
-            this.stretchDownButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchDownButton_MouseDown);
-            // 
-            // stretchUpButton
-            // 
-            this.stretchUpButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stretchUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchUpButton.ForeColor = System.Drawing.Color.White;
-            this.stretchUpButton.Location = new System.Drawing.Point(12, 91);
-            this.stretchUpButton.Margin = new System.Windows.Forms.Padding(4);
-            this.stretchUpButton.Name = "stretchUpButton";
-            this.stretchUpButton.Size = new System.Drawing.Size(39, 25);
-            this.stretchUpButton.TabIndex = 9;
-            this.stretchUpButton.Text = "Ç";
-            this.toolTip1.SetToolTip(this.stretchUpButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
-        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
-        "");
-            this.stretchUpButton.UseVisualStyleBackColor = true;
-            this.stretchUpButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchUpButton_MouseDown);
-            // 
-            // zoomOutButton
-            // 
-            this.zoomOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.zoomOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.zoomOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.zoomOutButton.ForeColor = System.Drawing.Color.White;
-            this.zoomOutButton.Location = new System.Drawing.Point(93, 36);
-            this.zoomOutButton.Margin = new System.Windows.Forms.Padding(4);
-            this.zoomOutButton.Name = "zoomOutButton";
-            this.zoomOutButton.Size = new System.Drawing.Size(80, 25);
-            this.zoomOutButton.TabIndex = 2;
-            this.zoomOutButton.Text = "È";
-            this.toolTip1.SetToolTip(this.zoomOutButton, "Player.Video.Zoom - changes the size of the video image on the display of the pla" +
-        "yer.");
-            this.zoomOutButton.UseVisualStyleBackColor = true;
-            this.zoomOutButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ZoomOutButton_MouseDown);
-            // 
-            // zoomInButton
-            // 
-            this.zoomInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.zoomInButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.zoomInButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.zoomInButton.ForeColor = System.Drawing.Color.White;
-            this.zoomInButton.Location = new System.Drawing.Point(12, 36);
-            this.zoomInButton.Margin = new System.Windows.Forms.Padding(4);
-            this.zoomInButton.Name = "zoomInButton";
-            this.zoomInButton.Size = new System.Drawing.Size(79, 25);
-            this.zoomInButton.TabIndex = 1;
-            this.zoomInButton.Text = "Ç";
-            this.toolTip1.SetToolTip(this.zoomInButton, "Player.Video.Zoom - changes the size of the video image on the display of the pla" +
-        "yer.");
-            this.zoomInButton.UseVisualStyleBackColor = true;
-            this.zoomInButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ZoomInButton_MouseDown);
-            // 
-            // stretchLabel
-            // 
-            this.stretchLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.stretchLabel.ForeColor = System.Drawing.Color.White;
-            this.stretchLabel.Location = new System.Drawing.Point(12, 68);
-            this.stretchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.stretchLabel.Name = "stretchLabel";
-            this.stretchLabel.Size = new System.Drawing.Size(161, 23);
-            this.stretchLabel.TabIndex = 8;
-            this.stretchLabel.Text = "Kéo dãn ↨";
-            this.stretchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.stretchLabel, "Click to change between Video Move and Video Stretch mode.");
-            this.stretchLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.StretchLabel_MouseClick);
-            // 
-            // zoomLabel
-            // 
-            this.zoomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zoomLabel.ForeColor = System.Drawing.Color.White;
-            this.zoomLabel.Location = new System.Drawing.Point(12, 12);
-            this.zoomLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.zoomLabel.Name = "zoomLabel";
-            this.zoomLabel.Size = new System.Drawing.Size(161, 23);
-            this.zoomLabel.TabIndex = 0;
-            this.zoomLabel.Text = "Thu phóng video";
-            this.zoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rightLevelMeterPanel
             // 
@@ -2648,6 +2518,134 @@ namespace PVSPlayerExample
             this.toolTip1.SetToolTip(this.audioVolumeLabelText, "Player.Audio.Mute - disables the audio output of the player.");
             this.audioVolumeLabelText.Click += new System.EventHandler(this.VolumeLabelPanel_Click);
             // 
+            // stretchRightButton
+            // 
+            this.stretchRightButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stretchRightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.stretchRightButton.ForeColor = System.Drawing.Color.White;
+            this.stretchRightButton.Location = new System.Drawing.Point(135, 91);
+            this.stretchRightButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stretchRightButton.Name = "stretchRightButton";
+            this.stretchRightButton.Size = new System.Drawing.Size(39, 25);
+            this.stretchRightButton.TabIndex = 12;
+            this.stretchRightButton.Text = "Æ";
+            this.toolTip1.SetToolTip(this.stretchRightButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
+        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
+        "");
+            this.stretchRightButton.UseVisualStyleBackColor = true;
+            this.stretchRightButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchRightButton_MouseDown);
+            // 
+            // stretchLeftButton
+            // 
+            this.stretchLeftButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stretchLeftButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.stretchLeftButton.ForeColor = System.Drawing.Color.White;
+            this.stretchLeftButton.Location = new System.Drawing.Point(93, 91);
+            this.stretchLeftButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stretchLeftButton.Name = "stretchLeftButton";
+            this.stretchLeftButton.Size = new System.Drawing.Size(39, 25);
+            this.stretchLeftButton.TabIndex = 11;
+            this.stretchLeftButton.Text = "Å";
+            this.toolTip1.SetToolTip(this.stretchLeftButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
+        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
+        "");
+            this.stretchLeftButton.UseVisualStyleBackColor = true;
+            this.stretchLeftButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchLeftButton_MouseDown);
+            // 
+            // stretchDownButton
+            // 
+            this.stretchDownButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stretchDownButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.stretchDownButton.ForeColor = System.Drawing.Color.White;
+            this.stretchDownButton.Location = new System.Drawing.Point(53, 91);
+            this.stretchDownButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stretchDownButton.Name = "stretchDownButton";
+            this.stretchDownButton.Size = new System.Drawing.Size(37, 25);
+            this.stretchDownButton.TabIndex = 10;
+            this.stretchDownButton.Text = "È";
+            this.toolTip1.SetToolTip(this.stretchDownButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
+        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
+        "");
+            this.stretchDownButton.UseVisualStyleBackColor = true;
+            this.stretchDownButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchDownButton_MouseDown);
+            // 
+            // stretchUpButton
+            // 
+            this.stretchUpButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stretchUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.stretchUpButton.ForeColor = System.Drawing.Color.White;
+            this.stretchUpButton.Location = new System.Drawing.Point(12, 91);
+            this.stretchUpButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stretchUpButton.Name = "stretchUpButton";
+            this.stretchUpButton.Size = new System.Drawing.Size(39, 25);
+            this.stretchUpButton.TabIndex = 9;
+            this.stretchUpButton.Text = "Ç";
+            this.toolTip1.SetToolTip(this.stretchUpButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
+        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
+        "");
+            this.stretchUpButton.UseVisualStyleBackColor = true;
+            this.stretchUpButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchUpButton_MouseDown);
+            // 
+            // zoomOutButton
+            // 
+            this.zoomOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.zoomOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.zoomOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.zoomOutButton.ForeColor = System.Drawing.Color.White;
+            this.zoomOutButton.Location = new System.Drawing.Point(93, 36);
+            this.zoomOutButton.Margin = new System.Windows.Forms.Padding(4);
+            this.zoomOutButton.Name = "zoomOutButton";
+            this.zoomOutButton.Size = new System.Drawing.Size(80, 25);
+            this.zoomOutButton.TabIndex = 2;
+            this.zoomOutButton.Text = "È";
+            this.toolTip1.SetToolTip(this.zoomOutButton, "Player.Video.Zoom - changes the size of the video image on the display of the pla" +
+        "yer.");
+            this.zoomOutButton.UseVisualStyleBackColor = true;
+            this.zoomOutButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ZoomOutButton_MouseDown);
+            // 
+            // zoomInButton
+            // 
+            this.zoomInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.zoomInButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.zoomInButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.zoomInButton.ForeColor = System.Drawing.Color.White;
+            this.zoomInButton.Location = new System.Drawing.Point(12, 36);
+            this.zoomInButton.Margin = new System.Windows.Forms.Padding(4);
+            this.zoomInButton.Name = "zoomInButton";
+            this.zoomInButton.Size = new System.Drawing.Size(79, 25);
+            this.zoomInButton.TabIndex = 1;
+            this.zoomInButton.Text = "Ç";
+            this.toolTip1.SetToolTip(this.zoomInButton, "Player.Video.Zoom - changes the size of the video image on the display of the pla" +
+        "yer.");
+            this.zoomInButton.UseVisualStyleBackColor = true;
+            this.zoomInButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ZoomInButton_MouseDown);
+            // 
+            // stretchLabel
+            // 
+            this.stretchLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stretchLabel.ForeColor = System.Drawing.Color.White;
+            this.stretchLabel.Location = new System.Drawing.Point(12, 68);
+            this.stretchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.stretchLabel.Name = "stretchLabel";
+            this.stretchLabel.Size = new System.Drawing.Size(161, 23);
+            this.stretchLabel.TabIndex = 8;
+            this.stretchLabel.Text = "Kéo dãn ↨";
+            this.stretchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip1.SetToolTip(this.stretchLabel, "Click to change between Video Move and Video Stretch mode.");
+            this.stretchLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.StretchLabel_MouseClick);
+            // 
+            // zoomLabel
+            // 
+            this.zoomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zoomLabel.ForeColor = System.Drawing.Color.White;
+            this.zoomLabel.Location = new System.Drawing.Point(12, 12);
+            this.zoomLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.zoomLabel.Name = "zoomLabel";
+            this.zoomLabel.Size = new System.Drawing.Size(161, 23);
+            this.zoomLabel.TabIndex = 0;
+            this.zoomLabel.Text = "Thu phóng video";
+            this.zoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // positionSliderPanel
             // 
             this.positionSliderPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -2656,10 +2654,10 @@ namespace PVSPlayerExample
             this.positionSliderPanel.Controls.Add(this.positionLabel2);
             this.positionSliderPanel.Controls.Add(this.positionLabel1);
             this.positionSliderPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.positionSliderPanel.Location = new System.Drawing.Point(0, 577);
+            this.positionSliderPanel.Location = new System.Drawing.Point(0, 573);
             this.positionSliderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.positionSliderPanel.Name = "positionSliderPanel";
-            this.positionSliderPanel.Size = new System.Drawing.Size(704, 30);
+            this.positionSliderPanel.Size = new System.Drawing.Size(706, 30);
             this.positionSliderPanel.TabIndex = 0;
             // 
             // positionSlider
@@ -2673,7 +2671,7 @@ namespace PVSPlayerExample
             this.positionSlider.Location = new System.Drawing.Point(108, 2);
             this.positionSlider.Margin = new System.Windows.Forms.Padding(4);
             this.positionSlider.Name = "positionSlider";
-            this.positionSlider.Size = new System.Drawing.Size(486, 32);
+            this.positionSlider.Size = new System.Drawing.Size(488, 32);
             this.positionSlider.TabIndex = 1;
             this.toolTip1.SetToolTip(this.positionSlider, "Player.Sliders.Position.TrackBar - shows and allows changing of the playback posi" +
         "tion of the playing media.");
@@ -2685,7 +2683,7 @@ namespace PVSPlayerExample
             this.positionLabel2.ContextMenuStrip = this.positionSliderMenu;
             this.positionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.positionLabel2.ForeColor = System.Drawing.Color.Black;
-            this.positionLabel2.Location = new System.Drawing.Point(594, 1);
+            this.positionLabel2.Location = new System.Drawing.Point(596, 1);
             this.positionLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.positionLabel2.Name = "positionLabel2";
             this.positionLabel2.Size = new System.Drawing.Size(108, 22);
@@ -2718,7 +2716,7 @@ namespace PVSPlayerExample
             this.speedSlider.Location = new System.Drawing.Point(3, 39);
             this.speedSlider.Margin = new System.Windows.Forms.Padding(4);
             this.speedSlider.Name = "speedSlider";
-            this.speedSlider.Size = new System.Drawing.Size(180, 55);
+            this.speedSlider.Size = new System.Drawing.Size(180, 42);
             this.speedSlider.TabIndex = 1;
             this.speedSlider.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.toolTip1.SetToolTip(this.speedSlider, "Player.Sliders.Speed - sets the media playback speed of the player.");
@@ -3007,14 +3005,15 @@ namespace PVSPlayerExample
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1150, 627);
+            this.ClientSize = new System.Drawing.Size(1152, 623);
             this.Controls.Add(this.rightFramePanel);
             this.Controls.Add(this.displayParentPanel);
             this.Controls.Add(this.leftFramePanel);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(737, 600);
             this.Name = "MainWindow";
@@ -3027,8 +3026,8 @@ namespace PVSPlayerExample
             this.leftFramePanel.ResumeLayout(false);
             this.speedPanel.ResumeLayout(false);
             this.sliderMenu.ResumeLayout(false);
-            this.repeatMenu.ResumeLayout(false);
             this.displayModePanel.ResumeLayout(false);
+            this.repeatMenu.ResumeLayout(false);
             this.fullScreenModeMenu.ResumeLayout(false);
             this.playPanel.ResumeLayout(false);
             this.playMenu.ResumeLayout(false);
@@ -3042,8 +3041,8 @@ namespace PVSPlayerExample
             this.positionSliderMenu.ResumeLayout(false);
             this.displayParentPanel.ResumeLayout(false);
             this.rightFramePanel.ResumeLayout(false);
-            this.zoomPanel.ResumeLayout(false);
             this.audioPanel.ResumeLayout(false);
+            this.zoomPanel.ResumeLayout(false);
             this.playSubMenu.ResumeLayout(false);
             this.video3DMenu.ResumeLayout(false);
             this.volumeLabelPanel.ResumeLayout(false);

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
+using System.IO.Compression;
 using System.Text;
 using System.Windows.Forms;
 using PVS.AVPlayer;
@@ -100,6 +101,8 @@ namespace PVSPlayerExample
 
         private string _pathFile;
         private int _indexAudio = 0;
+        internal PVS.MediaPlayer.Player myPlayer;
+        internal Panel displayPanel;
         #endregion
 
 
@@ -619,7 +622,7 @@ namespace PVSPlayerExample
                 }
                 audioInputMenu.Items.Add("-");
                 audioInputMenu.Items[count++].Enabled = false;
-                audioInputMenu.Items.Add("None");
+                audioInputMenu.Items.Add("Không chọn");
             }
 
             audioInputMenu.ResumeLayout();
@@ -635,9 +638,9 @@ namespace PVSPlayerExample
             {
                 _audioInDeviceSelected = null;
                 audioInputMenu.Items.Clear();
-                audioInputMenu.Items.Add("None");
+                audioInputMenu.Items.Add("Không chọn");
                 audioInputMenu.Items[0].Enabled = false;
-                audioInputButton.Text = "None";
+                audioInputButton.Text = "Không chọn";
                 _audioPlayer.Stop();
             }
             else
@@ -659,7 +662,7 @@ namespace PVSPlayerExample
                 {
                     _audioInDeviceSelected = null;
                     ((ToolStripMenuItem)audioInputMenu.Items[count + 1]).Checked = true;
-                    audioInputButton.Text = "None";
+                    audioInputButton.Text = "Không chọn";
                     _audioPlayer.Stop();
                 }
                 else ((ToolStripMenuItem)audioInputMenu.Items[count + 1]).Checked = false;
@@ -733,7 +736,7 @@ namespace PVSPlayerExample
             if (count == 0)
             {
                 _audioOutDeviceSelected = null;
-                audioOutputButton.Text = "[ No Devices ]";
+                audioOutputButton.Text = "[ Không có thiết bị ]";
             }
             else
             {
@@ -1243,17 +1246,41 @@ namespace PVSPlayerExample
                 CheckCamera();
             }
         }
-        int speed = 100;
+        int speed = 1000;
         void CheckCamera()
         {
-            var index = 0;
+            //var index = 0;
             new System.Threading.Thread(
                 () =>
                 {
                     while (_recording)
                     {
-                        index++;
-                        Console.WriteLine(index);
+                        var checkExist = false;
+                        myPlayer = new PVS.MediaPlayer.Player(displayPanel);
+                        var camDevices = myPlayer.Webcam.GetDevices();
+                        if(camDevices != null && camDevices.Length > 0)
+                        {
+                            foreach(var device in camDevices)
+                            {
+                                if (device.Id.Equals(_webcam.Id) && device.Name.Equals(_webcam.Name))
+                                {
+                                    checkExist = true;
+                                }
+                            }
+                        }
+
+                        if (!checkExist)
+                        {
+                            ErrorDialog errorDialog = new ErrorDialog("Thông báo", "Không tìm thấy thiết bị! Vui lòng kiểm tra lại", false, true);
+                            errorDialog.checkBox1.Hide();
+                            errorDialog.checkBox2.Hide();
+                            errorDialog.ShowDialog();
+                            //errorDialog.Dispose();
+                        }
+                        //var check =  _webcamPlayer;
+                        //var check1 = _webcam;
+                        //index++;
+                        //Console.WriteLine(index);
                         System.Threading.Thread.Sleep(speed);
                     }
                 }

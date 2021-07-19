@@ -637,15 +637,15 @@
             // startRecordingMenuItem
             // 
             this.startRecordingMenuItem.Name = "startRecordingMenuItem";
-            this.startRecordingMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.startRecordingMenuItem.Text = "Bắt đầu ghi";
+            this.startRecordingMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.startRecordingMenuItem.Text = "Bắt đầu ghi hình";
             this.startRecordingMenuItem.Click += new System.EventHandler(this.StartRecordingMenuItem_Click);
             // 
             // stopRecordingMenuItem
             // 
             this.stopRecordingMenuItem.Name = "stopRecordingMenuItem";
-            this.stopRecordingMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.stopRecordingMenuItem.Text = "Dùng ghi";
+            this.stopRecordingMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.stopRecordingMenuItem.Text = "Dừng ghi hình";
             this.stopRecordingMenuItem.Click += new System.EventHandler(this.StopRecordingMenuItem_Click);
             // 
             // toolStripSeparator2
@@ -669,7 +669,7 @@
             // 
             this.showInTaskbarMenuItem.Name = "showInTaskbarMenuItem";
             this.showInTaskbarMenuItem.Size = new System.Drawing.Size(226, 24);
-            this.showInTaskbarMenuItem.Text = "Hiển thị thanh taskbar";
+            this.showInTaskbarMenuItem.Text = "Hiển thị thanh tác vụ";
             this.showInTaskbarMenuItem.Click += new System.EventHandler(this.ShowInTaskbarMenuItem_Click);
             // 
             // alwaysOnTopMenuItem
@@ -779,7 +779,7 @@
             this.audioOutputLabel.Name = "audioOutputLabel";
             this.audioOutputLabel.Size = new System.Drawing.Size(248, 26);
             this.audioOutputLabel.TabIndex = 5;
-            this.audioOutputLabel.Text = "Audio Output Device";
+            this.audioOutputLabel.Text = "Âm thanh đầu ra";
             this.audioOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // audioOutputButton
@@ -794,7 +794,7 @@
             this.audioOutputButton.Name = "audioOutputButton";
             this.audioOutputButton.Size = new System.Drawing.Size(248, 31);
             this.audioOutputButton.TabIndex = 4;
-            this.audioOutputButton.Text = "[ No Devices ]";
+            this.audioOutputButton.Text = "[ Không có thiết bị ]";
             this.audioOutputButton.UseVisualStyleBackColor = true;
             // 
             // audioOutputMenu
@@ -824,7 +824,7 @@
             this.audioInputLabel.Name = "audioInputLabel";
             this.audioInputLabel.Size = new System.Drawing.Size(251, 26);
             this.audioInputLabel.TabIndex = 3;
-            this.audioInputLabel.Text = "Audio Input Device";
+            this.audioInputLabel.Text = "Âm thanh đầu vào";
             this.audioInputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // audioInputButton
@@ -840,7 +840,7 @@
             this.audioInputButton.Name = "audioInputButton";
             this.audioInputButton.Size = new System.Drawing.Size(251, 31);
             this.audioInputButton.TabIndex = 2;
-            this.audioInputButton.Text = "None";
+            this.audioInputButton.Text = "Không chọn";
             this.audioInputButton.UseVisualStyleBackColor = true;
             // 
             // audioInputMenu
@@ -860,7 +860,7 @@
             this.webcamFormatLabel.Name = "webcamFormatLabel";
             this.webcamFormatLabel.Size = new System.Drawing.Size(248, 26);
             this.webcamFormatLabel.TabIndex = 1;
-            this.webcamFormatLabel.Text = "Webcam Format";
+            this.webcamFormatLabel.Text = "Định dạng camera";
             this.webcamFormatLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // webcamFormatButton
