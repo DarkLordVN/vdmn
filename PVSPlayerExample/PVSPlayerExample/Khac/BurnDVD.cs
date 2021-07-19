@@ -13,7 +13,7 @@ using IMAPI2.MediaItem;
 namespace PVSPlayerExample
 {
 
-    public partial class BurnMedia : Form
+    public partial class BurnDVD : Form
     {
         private const string ClientName = "BurnMedia";
 
@@ -28,7 +28,7 @@ namespace PVSPlayerExample
 
         private BurnData _burnData = new BurnData();
 
-        public BurnMedia()
+        public BurnDVD()
         {
             InitializeComponent();
         }
@@ -82,12 +82,15 @@ namespace PVSPlayerExample
             // Create the volume label based on the current date
             //
             DateTime now = DateTime.Now;
+            textBoxLabel.Text = now.Year + "_" + now.Month + "_" + now.Day;
 
             labelStatusText.Text = string.Empty;
+            labelFormatStatusText.Text = string.Empty;
 
             //
             // Select no verification, by default
             //
+            comboBoxVerification.SelectedIndex = 0;
 
             UpdateCapacity();
         }
@@ -124,6 +127,7 @@ namespace PVSPlayerExample
             var discRecorder =
                 (IDiscRecorder2)devicesComboBox.Items[devicesComboBox.SelectedIndex];
 
+            supportedMediaLabel.Text = string.Empty;
 
             //
             // Verify recorder is supported
@@ -152,9 +156,11 @@ namespace PVSPlayerExample
                     supportedMediaTypes.Append(profileName);
                 }
 
+                supportedMediaLabel.Text = supportedMediaTypes.ToString();
             }
             catch (COMException)
             {
+                supportedMediaLabel.Text = "Error getting supported types";
             }
             finally
             {
@@ -433,31 +439,31 @@ namespace PVSPlayerExample
             ////
             //// Calculate the size of the files
             ////
-            //Int64 totalMediaSize = 0;
+            Int64 totalMediaSize = 0;
             //foreach (IMediaItem mediaItem in listBoxFiles.Items)
             //{
             //    totalMediaSize += mediaItem.SizeOnDisc;
             //}
 
-            //if (totalMediaSize == 0)
-            //{
-            //    progressBarCapacity.Value = 0;
-            //    progressBarCapacity.ForeColor = SystemColors.Highlight;
-            //}
-            //else
-            //{
-            //    var percent = (int)((totalMediaSize * 100) / _totalDiscSize);
-            //    if (percent > 100)
-            //    {
-            //        progressBarCapacity.Value = 100;
-            //        progressBarCapacity.ForeColor = Color.Red;
-            //    }
-            //    else
-            //    {
-            //        progressBarCapacity.Value = percent;
-            //        progressBarCapacity.ForeColor = SystemColors.Highlight;
-            //    }
-            //}
+            if (totalMediaSize == 0)
+            {
+                progressBarCapacity.Value = 0;
+                progressBarCapacity.ForeColor = SystemColors.Highlight;
+            }
+            else
+            {
+                var percent = (int)((totalMediaSize * 100) / _totalDiscSize);
+                if (percent > 100)
+                {
+                    progressBarCapacity.Value = 100;
+                    progressBarCapacity.ForeColor = Color.Red;
+                }
+                else
+                {
+                    progressBarCapacity.Value = percent;
+                    progressBarCapacity.ForeColor = SystemColors.Highlight;
+                }
+            }
         }
 
         #endregion
@@ -485,6 +491,8 @@ namespace PVSPlayerExample
             else
             {
                 _isBurning = true;
+                _closeMedia = checkBoxCloseMedia.Checked;
+                _ejectMedia = checkBoxEject.Checked;
 
                 EnableBurnUI(false);
 
@@ -676,6 +684,11 @@ namespace PVSPlayerExample
             buttonDetectMedia.Enabled = enable;
 
             devicesComboBox.Enabled = enable;
+         
+            checkBoxEject.Enabled = enable;
+            checkBoxCloseMedia.Enabled = enable;
+            textBoxLabel.Enabled = enable;
+            comboBoxVerification.Enabled = enable;
         }
 
         /// <summary>
@@ -764,6 +777,7 @@ namespace PVSPlayerExample
                 fileSystemImage.ChooseImageDefaults(discRecorder);
                 fileSystemImage.FileSystemsToCreate =
                     FsiFileSystems.FsiFileSystemJoliet | FsiFileSystems.FsiFileSystemISO9660;
+                fileSystemImage.VolumeName = textBoxLabel.Text;
 
                 fileSystemImage.Update += fileSystemImage_Update;
 
@@ -781,9 +795,9 @@ namespace PVSPlayerExample
                 //
                 IFsiDirectoryItem rootItem = fileSystemImage.Root;
 
-                ////
-                //// Add Files and Directories to File System Image
-                ////
+                //
+                // Add Files and Directories to File System Image
+                //
                 //foreach (IMediaItem mediaItem in listBoxFiles.Items)
                 //{
                 //    //
@@ -875,6 +889,7 @@ namespace PVSPlayerExample
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 var fileItem = new FileItem(openFileDialog.FileName);
+                //listBoxFiles.Items.Add(fileItem);
 
                 UpdateCapacity();
                 EnableBurnButton();
@@ -891,6 +906,7 @@ namespace PVSPlayerExample
             if (folderBrowserDialog.ShowDialog(this) == DialogResult.OK)
             {
                 var directoryItem = new DirectoryItem(folderBrowserDialog.SelectedPath);
+                //listBoxFiles.Items.Add(directoryItem);
 
                 UpdateCapacity();
                 EnableBurnButton();
@@ -904,6 +920,18 @@ namespace PVSPlayerExample
         /// <param name="e"></param>
         private void buttonRemoveFiles_Click(object sender, EventArgs e)
         {
+            //var mediaItem = (IMediaItem)listBoxFiles.SelectedItem;
+            //if (mediaItem == null)
+            //    return;
+
+            //if (MessageBox.Show("Are you sure you want to remove \"" + mediaItem + "\"?",
+            //    "Remove item", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    listBoxFiles.Items.Remove(mediaItem);
+
+            //    EnableBurnButton();
+            //    UpdateCapacity();
+            //}
         }
 
         #endregion
@@ -917,6 +945,7 @@ namespace PVSPlayerExample
         /// <param name="e"></param>
         private void listBoxFiles_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //buttonRemoveFiles.Enabled = (listBoxFiles.SelectedIndex != -1);
         }
 
         /// <summary>
@@ -926,7 +955,11 @@ namespace PVSPlayerExample
         /// <param name="e"></param>
         private void listBoxFiles_DrawItem(object sender, DrawItemEventArgs e)
         {
-           
+            //var mediaItem = (IMediaItem)listBoxFiles.Items[e.Index];
+            //if (mediaItem == null)
+            //{
+            //    return;
+            //}
 
             e.DrawBackground();
 
@@ -935,7 +968,11 @@ namespace PVSPlayerExample
                 e.DrawFocusRectangle();
             }
 
-           
+            //if (mediaItem.FileIconImage != null)
+            //{
+            //    e.Graphics.DrawImage(mediaItem.FileIconImage, new Rectangle(4, e.Bounds.Y + 4, 16, 16));
+            //}
+
             var rectF = new RectangleF(e.Bounds.X + 24, e.Bounds.Y,
                 e.Bounds.Width - 24, e.Bounds.Height);
 
@@ -948,7 +985,8 @@ namespace PVSPlayerExample
                     Trimming = StringTrimming.EllipsisCharacter
                 };
 
-           
+            //e.Graphics.DrawString(mediaItem.ToString(), font, new SolidBrush(e.ForeColor),
+            //    rectF, stringFormat);
         }
         #endregion
 
@@ -980,6 +1018,9 @@ namespace PVSPlayerExample
         /// <param name="enable"></param>
         void EnableFormatUI(bool enable)
         {
+            buttonFormat.Enabled = enable;
+            checkBoxEjectFormat.Enabled = enable;
+            checkBoxQuickFormat.Enabled = enable;
         }
 
         /// <summary>
@@ -1008,6 +1049,7 @@ namespace PVSPlayerExample
                     {
                         Recorder = discRecorder,
                         ClientName = ClientName,
+                        FullErase = !checkBoxQuickFormat.Checked
                     };
 
                 //
@@ -1035,7 +1077,14 @@ namespace PVSPlayerExample
                 //
                 discFormatErase.Update -= discFormatErase_Update;
 
-              
+                //
+                // Eject the media 
+                //
+                if (checkBoxEjectFormat.Checked)
+                {
+                    discRecorder.EjectMedia();
+                }
+
             }
             catch (COMException exception)
             {
@@ -1079,10 +1128,16 @@ namespace PVSPlayerExample
 
         private void backgroundFormatWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
+            labelFormatStatusText.Text = string.Format("Formatting {0}%...", e.ProgressPercentage);
+            formatProgressBar.Value = e.ProgressPercentage;
         }
 
         private void backgroundFormatWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            labelFormatStatusText.Text = (int)e.Result == 0 ?
+                "Finished Formatting Disc!" : "Error Formatting Disc!";
+
+            formatProgressBar.Value = 0;
 
             _isFormatting = false;
             EnableFormatUI(true);
@@ -1112,11 +1167,8 @@ namespace PVSPlayerExample
         /// <param name="e"></param>
         private void comboBoxVerification_SelectedIndexChanged(object sender, EventArgs e)
         {
+            _verificationLevel = (IMAPI_BURN_VERIFICATION_LEVEL)comboBoxVerification.SelectedIndex;
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
     }
 }

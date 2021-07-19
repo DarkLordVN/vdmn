@@ -134,6 +134,7 @@ namespace PVSPlayerExample
             // OKButton
             // 
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OKButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.OKButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.OKButton.FocusBorder = true;
             this.OKButton.ForeColor = System.Drawing.Color.White;
@@ -143,7 +144,7 @@ namespace PVSPlayerExample
             this.OKButton.Size = new System.Drawing.Size(112, 28);
             this.OKButton.TabIndex = 7;
             this.OKButton.Text = "Đóng";
-            this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.UseVisualStyleBackColor = false;
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // logoPanel

@@ -170,6 +170,24 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Khac\BurnDVD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khac\BurnDVD.Designer.cs">
+      <DependentUpon>BurnDVD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khac\FrmDSVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khac\FrmDSVideo.Designer.cs">
+      <DependentUpon>FrmDSVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khac\FrmDSKeKhai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khac\FrmDSKeKhai.Designer.cs">
+      <DependentUpon>FrmDSKeKhai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSQLite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,13 +200,19 @@
     <Compile Include="Khac\Burn Media.Designer.cs">
       <DependentUpon>Burn Media.cs</DependentUpon>
     </Compile>
-    <Compile Include="Khac\Interop\BurnData.cs" />
-    <Compile Include="Khac\Interop\Imapi2Interop.cs" />
-    <Compile Include="Khac\KeKhai.cs">
+    <Compile Include="Khac\FrmThietLapVideo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Khac\KeKhai.Designer.cs">
-      <DependentUpon>KeKhai.cs</DependentUpon>
+    <Compile Include="Khac\FrmThietLapVideo.Designer.cs">
+      <DependentUpon>FrmThietLapVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khac\Interop\BurnData.cs" />
+    <Compile Include="Khac\Interop\Imapi2Interop.cs" />
+    <Compile Include="Khac\FrmKeKhai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khac\FrmKeKhai.Designer.cs">
+      <DependentUpon>FrmKeKhai.cs</DependentUpon>
     </Compile>
     <Compile Include="Khac\MediaItem\DirectoryItem.cs" />
     <Compile Include="Khac\MediaItem\FileItem.cs" />
@@ -421,14 +445,26 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Khac\BurnDVD.resx">
+      <DependentUpon>BurnDVD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khac\FrmDSVideo.resx">
+      <DependentUpon>FrmDSVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khac\FrmDSKeKhai.resx">
+      <DependentUpon>FrmDSKeKhai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSQLite.resx">
       <DependentUpon>FormSQLite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Khac\Burn Media.resx">
       <DependentUpon>Burn Media.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Khac\KeKhai.resx">
-      <DependentUpon>KeKhai.cs</DependentUpon>
+    <EmbeddedResource Include="Khac\FrmThietLapVideo.resx">
+      <DependentUpon>FrmThietLapVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khac\FrmKeKhai.resx">
+      <DependentUpon>FrmKeKhai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main Window.resx">
       <DependentUpon>Main Window.cs</DependentUpon>

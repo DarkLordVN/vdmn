@@ -45,9 +45,12 @@
             this.backgroundFormatWorker = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonBurn = new PVSPlayerExample.CustomButton();
+            this.btnHuy = new PVSPlayerExample.CustomButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // devicesComboBox
@@ -187,36 +190,61 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.buttonBurn);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.devicesComboBox);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 400);
+            this.panel1.Size = new System.Drawing.Size(357, 407);
             this.panel1.TabIndex = 12;
             // 
             // buttonBurn
             // 
+            this.buttonBurn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBurn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
             this.buttonBurn.ForeColor = System.Drawing.Color.White;
-            this.buttonBurn.Location = new System.Drawing.Point(222, 338);
+            this.buttonBurn.Location = new System.Drawing.Point(145, 14);
             this.buttonBurn.Name = "buttonBurn";
-            this.buttonBurn.Size = new System.Drawing.Size(117, 28);
+            this.buttonBurn.Size = new System.Drawing.Size(82, 28);
             this.buttonBurn.TabIndex = 12;
             this.buttonBurn.Text = "Ghi đĩa";
             this.buttonBurn.UseVisualStyleBackColor = true;
             this.buttonBurn.Click += new System.EventHandler(this.buttonBurn_Click);
             // 
+            // btnHuy
+            // 
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(233, 14);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(82, 28);
+            this.btnHuy.TabIndex = 13;
+            this.btnHuy.Text = "Hủy bỏ";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel2.Controls.Add(this.buttonBurn);
+            this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Location = new System.Drawing.Point(12, 338);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(327, 56);
+            this.panel2.TabIndex = 14;
+            // 
             // BurnMedia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 384);
+            this.ClientSize = new System.Drawing.Size(358, 408);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BurnMedia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ghi đĩa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -224,6 +252,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -246,6 +275,8 @@
         private System.Windows.Forms.Panel panel1;
         private CustomButton buttonBurn;
         private CustomButton buttonDetectMedia;
+        private CustomButton btnHuy;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

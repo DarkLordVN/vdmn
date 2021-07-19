@@ -23,15 +23,14 @@ namespace PVSPlayerExample
             //start app
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //if (!Player.MFPresent)
-            //{
-            //    MessageBox.Show("Microsoft Media Foundation\r\n\r\n" + Player.MFPresent_ResultString,
-            //        MainWindow.APPLICATION_NAME, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            //}
-            //else Application.Run(new FormMain());
+            if (!Player.MFPresent)
+            {
+                MessageBox.Show("Microsoft Media Foundation\r\n\r\n" + Player.MFPresent_ResultString,
+                    MainWindow.APPLICATION_NAME, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else Application.Run(new FormMain());
 
 
-            Application.Run(new FormMain());
         }
     }
 }

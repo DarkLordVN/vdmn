@@ -56,10 +56,14 @@ namespace PVSPlayerExample
         //static internal Pen FocusPen = new Pen(Color.FromArgb(169, 163, 136));
         static internal Pen FocusPen = new Pen(Color.FromArgb(150, 200, 245));
 
-        static internal Color NormalColor1A = Color.GhostWhite;
-        static internal Color NormalColor1B = Color.FromArgb(35, 35, 215);
-        static internal Color NormalColor2A = Color.Navy;
-        static internal Color NormalColor2B = Color.FromArgb(100, 100, 230);
+        //static internal Color NormalColor1A = Color.GhostWhite;
+        //static internal Color NormalColor1B = Color.FromArgb(35, 35, 215);
+        //static internal Color NormalColor2A = Color.Navy;
+        //static internal Color NormalColor2B = Color.FromArgb(100, 100, 230);
+        static internal Color NormalColor1A = Color.FromArgb(0, 107, 179);
+        static internal Color NormalColor1B = Color.FromArgb(0, 51, 153);
+        static internal Color NormalColor2A = Color.FromArgb(0, 43, 128);
+        static internal Color NormalColor2B = Color.FromArgb(0, 60, 179);
 
         static internal Color HotColor1A = Color.FromArgb(160, 160, 255);
         static internal Color HotColor1B = Color.FromArgb(35, 35, 215);

@@ -30,9 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.heThongMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.KeKhaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dsKeKhaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themMoiKeKhaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.videoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ListVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HeThongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlDisplayContainer = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
@@ -43,7 +44,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.heThongMenuItem,
-            this.aBCToolStripMenuItem,
+            this.KeKhaiToolStripMenuItem,
             this.videoToolStripMenuItem,
             this.HeThongToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -59,25 +60,36 @@
             this.heThongMenuItem.Text = "Ghi hình";
             this.heThongMenuItem.Click += new System.EventHandler(this.heThongMenuItem_Click);
             // 
-            // aBCToolStripMenuItem
+            // KeKhaiToolStripMenuItem
             // 
-            this.aBCToolStripMenuItem.Name = "aBCToolStripMenuItem";
-            this.aBCToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
-            this.aBCToolStripMenuItem.Text = "Kê khai hỏi cung";
+            this.KeKhaiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dsKeKhaiToolStripMenuItem,
+            this.themMoiKeKhaiToolStripMenuItem});
+            this.KeKhaiToolStripMenuItem.Name = "KeKhaiToolStripMenuItem";
+            this.KeKhaiToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
+            this.KeKhaiToolStripMenuItem.Text = "Kê khai hỏi cung";
+            this.KeKhaiToolStripMenuItem.Click += new System.EventHandler(this.KeKhaiToolStripMenuItem_Click);
+            // 
+            // dsKeKhaiToolStripMenuItem
+            // 
+            this.dsKeKhaiToolStripMenuItem.Name = "dsKeKhaiToolStripMenuItem";
+            this.dsKeKhaiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dsKeKhaiToolStripMenuItem.Text = "Danh sách kê khai";
+            this.dsKeKhaiToolStripMenuItem.Click += new System.EventHandler(this.dsKeKhaiToolStripMenuItem_Click);
+            // 
+            // themMoiKeKhaiToolStripMenuItem
+            // 
+            this.themMoiKeKhaiToolStripMenuItem.Name = "themMoiKeKhaiToolStripMenuItem";
+            this.themMoiKeKhaiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.themMoiKeKhaiToolStripMenuItem.Text = "Thêm mới kê khai";
+            this.themMoiKeKhaiToolStripMenuItem.Click += new System.EventHandler(this.themMoiKeKhaiToolStripMenuItem_Click);
             // 
             // videoToolStripMenuItem
             // 
-            this.videoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ListVideoToolStripMenuItem});
             this.videoToolStripMenuItem.Name = "videoToolStripMenuItem";
             this.videoToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.videoToolStripMenuItem.Text = "Quản lý Video";
-            // 
-            // ListVideoToolStripMenuItem
-            // 
-            this.ListVideoToolStripMenuItem.Name = "ListVideoToolStripMenuItem";
-            this.ListVideoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.ListVideoToolStripMenuItem.Text = "Danh sách video";
+            this.videoToolStripMenuItem.Click += new System.EventHandler(this.videoToolStripMenuItem_Click);
             // 
             // HeThongToolStripMenuItem
             // 
@@ -121,11 +133,12 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem heThongMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aBCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem KeKhaiToolStripMenuItem;
         private System.Windows.Forms.Panel pnlDisplayContainer;
         private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ListVideoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HeThongToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dsKeKhaiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themMoiKeKhaiToolStripMenuItem;
     }
 }
 

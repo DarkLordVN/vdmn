@@ -21,13 +21,20 @@ namespace PVSPlayerExample
             this.components = new System.ComponentModel.Container();
             this.leftFramePanel = new System.Windows.Forms.Panel();
             this.speedPanel = new System.Windows.Forms.Panel();
+            this.speedSlider = new PVSPlayerExample.CustomSlider2();
             this.sliderMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.sliderMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.speedLabelPanel = new PVSPlayerExample.CustomPanel();
+            this.speedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.speedLight = new PVSPlayerExample.LightPanel();
+            this.speedLabelText = new System.Windows.Forms.Label();
             this.displayModePanel = new System.Windows.Forms.Panel();
+            this.repeatLight = new PVSPlayerExample.LightPanel();
+            this.repeatButton = new PVSPlayerExample.DropDownButton();
             this.repeatMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.repeatOneMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repeatChapterMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,7 +44,10 @@ namespace PVSPlayerExample
             this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
             this.repeatOffMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repeatMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayLight = new PVSPlayerExample.LightPanel();
             this.videoTracksLabel = new System.Windows.Forms.Label();
+            this.fullScreenLight = new PVSPlayerExample.LightPanel();
+            this.fullScreenModeButton = new PVSPlayerExample.DropDownButton();
             this.fullScreenModeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fullScreenFormMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullScreenFormAllMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +58,14 @@ namespace PVSPlayerExample
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.fullScreenOffMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullScreenModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayModeLabel = new PVSPlayerExample.HeadLabel();
             this.playPanel = new System.Windows.Forms.Panel();
+            this.stopButton = new PVSPlayerExample.CustomButton();
+            this.nextButton = new PVSPlayerExample.CustomButton();
+            this.previousButton = new PVSPlayerExample.CustomButton();
+            this.pauseButton = new PVSPlayerExample.CustomButton();
+            this.playButtonLight = new PVSPlayerExample.LightPanel();
+            this.playButton = new PVSPlayerExample.DropDownButton();
             this.playMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.playListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newPlayListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +81,10 @@ namespace PVSPlayerExample
             this.addMediaURLMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.playDisplayMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.titlePanel = new PVSPlayerExample.CustomPanel();
+            this.webSiteLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.clockLabel = new System.Windows.Forms.Label();
             this.displayOverlayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.overlayModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.videoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -197,6 +218,23 @@ namespace PVSPlayerExample
             this.balanceDialLabel = new System.Windows.Forms.Label();
             this.volumeDialLabel = new System.Windows.Forms.Label();
             this.channelCountLabel = new System.Windows.Forms.Label();
+            this.rightLevelMeterPanel = new PVSPlayerExample.BufferedPanel();
+            this.leftLevelMeterPanel = new PVSPlayerExample.BufferedPanel();
+            this.audioDeviceButton = new PVSPlayerExample.DropDownButton();
+            this.balanceDial = new PVSPlayerExample.Dial();
+            this.volumeDial = new PVSPlayerExample.Dial();
+            this.volumeLabelPanel = new PVSPlayerExample.CustomPanel();
+            this.audioLight = new PVSPlayerExample.LightPanel();
+            this.audioTracksLabel = new System.Windows.Forms.Label();
+            this.audioVolumeLabelText = new System.Windows.Forms.Label();
+            this.stretchRightButton = new PVSPlayerExample.CustomButton();
+            this.stretchLeftButton = new PVSPlayerExample.CustomButton();
+            this.stretchDownButton = new PVSPlayerExample.CustomButton();
+            this.stretchUpButton = new PVSPlayerExample.CustomButton();
+            this.zoomOutButton = new PVSPlayerExample.CustomButton();
+            this.zoomInButton = new PVSPlayerExample.CustomButton();
+            this.stretchLabel = new PVSPlayerExample.HeadLabel();
+            this.positionSlider = new PVSPlayerExample.CustomSlider();
             this.positionSliderMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.sliderAlwaysVisibleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderShowsProgressMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -239,12 +277,16 @@ namespace PVSPlayerExample
             this.noChaptersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.chaptersFileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.noChaptersToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.positionLabel2 = new System.Windows.Forms.Label();
+            this.positionLabel1 = new System.Windows.Forms.Label();
             this.displayParentPanel = new System.Windows.Forms.Panel();
+            this.positionSliderPanel = new PVSPlayerExample.SliderPanel();
             this.rightFramePanel = new System.Windows.Forms.Panel();
             this.audioPanel = new System.Windows.Forms.Panel();
             this.balanceDialTitle = new System.Windows.Forms.Label();
             this.volumeDialTitle = new System.Windows.Forms.Label();
             this.zoomPanel = new System.Windows.Forms.Panel();
+            this.zoomLabel = new PVSPlayerExample.HeadLabel();
             this.playSubMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.playMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator28 = new System.Windows.Forms.ToolStripSeparator();
@@ -260,56 +302,17 @@ namespace PVSPlayerExample
             this.video3DTopMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator43 = new System.Windows.Forms.ToolStripSeparator();
             this.video3DStereoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rightLevelMeterPanel = new PVSPlayerExample.BufferedPanel();
-            this.leftLevelMeterPanel = new PVSPlayerExample.BufferedPanel();
-            this.audioDeviceButton = new PVSPlayerExample.DropDownButton();
-            this.balanceDial = new PVSPlayerExample.Dial();
-            this.volumeDial = new PVSPlayerExample.Dial();
-            this.volumeLabelPanel = new PVSPlayerExample.CustomPanel();
-            this.audioLight = new PVSPlayerExample.LightPanel();
-            this.audioTracksLabel = new System.Windows.Forms.Label();
-            this.audioVolumeLabelText = new System.Windows.Forms.Label();
-            this.stretchRightButton = new PVSPlayerExample.CustomButton();
-            this.stretchLeftButton = new PVSPlayerExample.CustomButton();
-            this.stretchDownButton = new PVSPlayerExample.CustomButton();
-            this.stretchUpButton = new PVSPlayerExample.CustomButton();
-            this.zoomOutButton = new PVSPlayerExample.CustomButton();
-            this.zoomInButton = new PVSPlayerExample.CustomButton();
-            this.stretchLabel = new PVSPlayerExample.HeadLabel();
-            this.zoomLabel = new PVSPlayerExample.HeadLabel();
-            this.positionSliderPanel = new PVSPlayerExample.SliderPanel();
-            this.positionSlider = new PVSPlayerExample.CustomSlider();
-            this.positionLabel2 = new System.Windows.Forms.Label();
-            this.positionLabel1 = new System.Windows.Forms.Label();
-            this.speedSlider = new PVSPlayerExample.CustomSlider2();
-            this.speedLabelPanel = new PVSPlayerExample.CustomPanel();
-            this.speedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.speedLight = new PVSPlayerExample.LightPanel();
-            this.speedLabelText = new System.Windows.Forms.Label();
-            this.repeatLight = new PVSPlayerExample.LightPanel();
-            this.repeatButton = new PVSPlayerExample.DropDownButton();
-            this.displayLight = new PVSPlayerExample.LightPanel();
-            this.fullScreenLight = new PVSPlayerExample.LightPanel();
-            this.fullScreenModeButton = new PVSPlayerExample.DropDownButton();
-            this.displayModeLabel = new PVSPlayerExample.HeadLabel();
-            this.stopButton = new PVSPlayerExample.CustomButton();
-            this.nextButton = new PVSPlayerExample.CustomButton();
-            this.previousButton = new PVSPlayerExample.CustomButton();
-            this.pauseButton = new PVSPlayerExample.CustomButton();
-            this.playButtonLight = new PVSPlayerExample.LightPanel();
-            this.playButton = new PVSPlayerExample.DropDownButton();
-            this.titlePanel = new PVSPlayerExample.CustomPanel();
-            this.webSiteLabel = new System.Windows.Forms.Label();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.clockLabel = new System.Windows.Forms.Label();
             this.leftFramePanel.SuspendLayout();
             this.speedPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.speedSlider)).BeginInit();
             this.sliderMenu.SuspendLayout();
+            this.speedLabelPanel.SuspendLayout();
             this.displayModePanel.SuspendLayout();
             this.repeatMenu.SuspendLayout();
             this.fullScreenModeMenu.SuspendLayout();
             this.playPanel.SuspendLayout();
             this.playMenu.SuspendLayout();
+            this.titlePanel.SuspendLayout();
             this.displayOverlayMenu.SuspendLayout();
             this.displayMenu.SuspendLayout();
             this.audioDeviceMenu.SuspendLayout();
@@ -317,19 +320,16 @@ namespace PVSPlayerExample
             this.videoTracks.SuspendLayout();
             this.screenCopyMenu.SuspendLayout();
             this.copyModeMenu.SuspendLayout();
+            this.volumeLabelPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.positionSlider)).BeginInit();
             this.positionSliderMenu.SuspendLayout();
             this.displayParentPanel.SuspendLayout();
+            this.positionSliderPanel.SuspendLayout();
             this.rightFramePanel.SuspendLayout();
             this.audioPanel.SuspendLayout();
             this.zoomPanel.SuspendLayout();
             this.playSubMenu.SuspendLayout();
             this.video3DMenu.SuspendLayout();
-            this.volumeLabelPanel.SuspendLayout();
-            this.positionSliderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.positionSlider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speedSlider)).BeginInit();
-            this.speedLabelPanel.SuspendLayout();
-            this.titlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftFramePanel
@@ -359,6 +359,19 @@ namespace PVSPlayerExample
             this.speedPanel.Name = "speedPanel";
             this.speedPanel.Size = new System.Drawing.Size(187, 90);
             this.speedPanel.TabIndex = 4;
+            // 
+            // speedSlider
+            // 
+            this.speedSlider.AutoSize = false;
+            this.speedSlider.ContextMenuStrip = this.sliderMenu;
+            this.speedSlider.Location = new System.Drawing.Point(3, 39);
+            this.speedSlider.Margin = new System.Windows.Forms.Padding(4);
+            this.speedSlider.Name = "speedSlider";
+            this.speedSlider.Size = new System.Drawing.Size(180, 42);
+            this.speedSlider.TabIndex = 1;
+            this.speedSlider.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.toolTip1.SetToolTip(this.speedSlider, "Player.Sliders.Speed - sets the media playback speed of the player.");
+            this.speedSlider.Value = 5;
             // 
             // sliderMenu
             // 
@@ -410,6 +423,57 @@ namespace PVSPlayerExample
             this.sliderMenuItem5.Text = "5";
             this.sliderMenuItem5.Click += new System.EventHandler(this.SliderMenuItem5_Click);
             // 
+            // speedLabelPanel
+            // 
+            this.speedLabelPanel.Controls.Add(this.speedTextBox);
+            this.speedLabelPanel.Controls.Add(this.speedLight);
+            this.speedLabelPanel.Controls.Add(this.speedLabelText);
+            this.speedLabelPanel.Location = new System.Drawing.Point(12, 11);
+            this.speedLabelPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.speedLabelPanel.Name = "speedLabelPanel";
+            this.speedLabelPanel.Size = new System.Drawing.Size(161, 27);
+            this.speedLabelPanel.TabIndex = 0;
+            // 
+            // speedTextBox
+            // 
+            this.speedTextBox.BackColor = System.Drawing.Color.Navy;
+            this.speedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.speedTextBox.ForeColor = System.Drawing.Color.White;
+            this.speedTextBox.Location = new System.Drawing.Point(123, 5);
+            this.speedTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.speedTextBox.Mask = "0.00";
+            this.speedTextBox.Name = "speedTextBox";
+            this.speedTextBox.Size = new System.Drawing.Size(31, 15);
+            this.speedTextBox.TabIndex = 2;
+            this.speedTextBox.Text = "100";
+            this.toolTip1.SetToolTip(this.speedTextBox, "Player.Speed.Rate - sets the media playback speed of the player.");
+            this.speedTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SpeedTextBox_KeyPress);
+            this.speedTextBox.Validated += new System.EventHandler(this.SpeedTextBox_Validated);
+            // 
+            // speedLight
+            // 
+            this.speedLight.BackColor = System.Drawing.Color.White;
+            this.speedLight.Location = new System.Drawing.Point(9, 10);
+            this.speedLight.Margin = new System.Windows.Forms.Padding(4);
+            this.speedLight.Name = "speedLight";
+            this.speedLight.Size = new System.Drawing.Size(3, 7);
+            this.speedLight.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.speedLight, "This indicator shows whether the playback speed is different from the normal play" +
+        "back speed.");
+            // 
+            // speedLabelText
+            // 
+            this.speedLabelText.AutoSize = true;
+            this.speedLabelText.BackColor = System.Drawing.Color.Transparent;
+            this.speedLabelText.ContextMenuStrip = this.sliderMenu;
+            this.speedLabelText.ForeColor = System.Drawing.Color.White;
+            this.speedLabelText.Location = new System.Drawing.Point(55, 5);
+            this.speedLabelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.speedLabelText.Name = "speedLabelText";
+            this.speedLabelText.Size = new System.Drawing.Size(52, 17);
+            this.speedLabelText.TabIndex = 1;
+            this.speedLabelText.Text = "Tốc độ";
+            // 
             // displayModePanel
             // 
             this.displayModePanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -426,6 +490,34 @@ namespace PVSPlayerExample
             this.displayModePanel.Name = "displayModePanel";
             this.displayModePanel.Size = new System.Drawing.Size(187, 117);
             this.displayModePanel.TabIndex = 2;
+            // 
+            // repeatLight
+            // 
+            this.repeatLight.BackColor = System.Drawing.Color.White;
+            this.repeatLight.Location = new System.Drawing.Point(21, 89);
+            this.repeatLight.Margin = new System.Windows.Forms.Padding(4);
+            this.repeatLight.Name = "repeatLight";
+            this.repeatLight.Size = new System.Drawing.Size(3, 7);
+            this.repeatLight.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.repeatLight, "This indicator shows whether a repeat option is active.");
+            // 
+            // repeatButton
+            // 
+            this.repeatButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.repeatButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.repeatButton.DropDown = this.repeatMenu;
+            this.repeatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repeatButton.ForeColor = System.Drawing.Color.White;
+            this.repeatButton.Location = new System.Drawing.Point(12, 79);
+            this.repeatButton.Margin = new System.Windows.Forms.Padding(4);
+            this.repeatButton.Name = "repeatButton";
+            this.repeatButton.Size = new System.Drawing.Size(161, 26);
+            this.repeatButton.TabIndex = 0;
+            this.repeatButton.Text = "Tắt lặp lại";
+            this.repeatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip1.SetToolTip(this.repeatButton, "Player.Repeat - repeats media playback from \'StartTime\' to \'StopTime\'.\r\nPlayer.Re" +
+        "peatChapter - repeats a playing chapter (from a chapters file).");
+            this.repeatButton.UseVisualStyleBackColor = false;
             // 
             // repeatMenu
             // 
@@ -512,6 +604,17 @@ namespace PVSPlayerExample
             this.repeatMenuItem.Size = new System.Drawing.Size(203, 24);
             this.repeatMenuItem.Text = "Phát lặp";
             // 
+            // displayLight
+            // 
+            this.displayLight.BackColor = System.Drawing.Color.Lime;
+            this.displayLight.LightOn = true;
+            this.displayLight.Location = new System.Drawing.Point(22, 21);
+            this.displayLight.Margin = new System.Windows.Forms.Padding(4);
+            this.displayLight.Name = "displayLight";
+            this.displayLight.Size = new System.Drawing.Size(3, 7);
+            this.displayLight.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.displayLight, "This indicator shows whether the player has a display.");
+            // 
             // videoTracksLabel
             // 
             this.videoTracksLabel.BackColor = System.Drawing.Color.Navy;
@@ -528,6 +631,34 @@ namespace PVSPlayerExample
             this.toolTip1.SetToolTip(this.videoTracksLabel, "Player.Video.TrackCount - the number of video tracks in the playing media.");
             this.videoTracksLabel.Visible = false;
             this.videoTracksLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.VideoTracksLabel_MouseClick);
+            // 
+            // fullScreenLight
+            // 
+            this.fullScreenLight.BackColor = System.Drawing.Color.White;
+            this.fullScreenLight.Location = new System.Drawing.Point(21, 55);
+            this.fullScreenLight.Margin = new System.Windows.Forms.Padding(4);
+            this.fullScreenLight.Name = "fullScreenLight";
+            this.fullScreenLight.Size = new System.Drawing.Size(3, 7);
+            this.fullScreenLight.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.fullScreenLight, "This indicator shows whether a fullscreen mode is selected.");
+            // 
+            // fullScreenModeButton
+            // 
+            this.fullScreenModeButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.fullScreenModeButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.fullScreenModeButton.DropDown = this.fullScreenModeMenu;
+            this.fullScreenModeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullScreenModeButton.ForeColor = System.Drawing.Color.White;
+            this.fullScreenModeButton.Location = new System.Drawing.Point(12, 45);
+            this.fullScreenModeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.fullScreenModeButton.Name = "fullScreenModeButton";
+            this.fullScreenModeButton.Size = new System.Drawing.Size(161, 26);
+            this.fullScreenModeButton.TabIndex = 3;
+            this.fullScreenModeButton.Text = "Tắt toàn màn hình";
+            this.fullScreenModeButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip1.SetToolTip(this.fullScreenModeButton, "Player.FullScreen - shows the player\'s display in full screen.\r\nPlayer.FullScreen" +
+        "Mode - sets the full screen display mode of the player.");
+            this.fullScreenModeButton.UseVisualStyleBackColor = true;
             // 
             // fullScreenModeMenu
             // 
@@ -610,6 +741,21 @@ namespace PVSPlayerExample
             this.fullScreenModeMenuItem.Size = new System.Drawing.Size(203, 24);
             this.fullScreenModeMenuItem.Text = "Toàn màn hình";
             // 
+            // displayModeLabel
+            // 
+            this.displayModeLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.displayModeLabel.ForeColor = System.Drawing.Color.White;
+            this.displayModeLabel.Location = new System.Drawing.Point(13, 11);
+            this.displayModeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.displayModeLabel.Name = "displayModeLabel";
+            this.displayModeLabel.Size = new System.Drawing.Size(161, 26);
+            this.displayModeLabel.TabIndex = 0;
+            this.displayModeLabel.Text = "Hiển thị";
+            this.displayModeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip1.SetToolTip(this.displayModeLabel, "Player.ControlPanels.ShowDisplaySettings - opens the system\'s Display Control Pan" +
+        "el.");
+            this.displayModeLabel.Click += new System.EventHandler(this.DisplayModeLabel_Click);
+            // 
             // playPanel
             // 
             this.playPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -625,6 +771,96 @@ namespace PVSPlayerExample
             this.playPanel.Name = "playPanel";
             this.playPanel.Size = new System.Drawing.Size(187, 77);
             this.playPanel.TabIndex = 1;
+            // 
+            // stopButton
+            // 
+            this.stopButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stopButton.Font = new System.Drawing.Font("Webdings", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.stopButton.ForeColor = System.Drawing.Color.White;
+            this.stopButton.Location = new System.Drawing.Point(135, 39);
+            this.stopButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(39, 25);
+            this.stopButton.TabIndex = 5;
+            this.stopButton.Text = "<";
+            this.stopButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.stopButton, "Player.Stop - stops playing media.");
+            this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Click += new System.EventHandler(this.StopButton_Click);
+            // 
+            // nextButton
+            // 
+            this.nextButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nextButton.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.nextButton.ForeColor = System.Drawing.Color.White;
+            this.nextButton.Location = new System.Drawing.Point(93, 39);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(4);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(39, 25);
+            this.nextButton.TabIndex = 4;
+            this.nextButton.Text = ":";
+            this.nextButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.nextButton, "Plays the next chapter or item in the playlist.");
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // previousButton
+            // 
+            this.previousButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.previousButton.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.previousButton.ForeColor = System.Drawing.Color.White;
+            this.previousButton.Location = new System.Drawing.Point(53, 39);
+            this.previousButton.Margin = new System.Windows.Forms.Padding(4);
+            this.previousButton.Name = "previousButton";
+            this.previousButton.Size = new System.Drawing.Size(37, 25);
+            this.previousButton.TabIndex = 3;
+            this.previousButton.Text = "9";
+            this.previousButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.previousButton, "Plays the previous chapter or item in the playlist.");
+            this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Click += new System.EventHandler(this.PreviousButton_Click);
+            // 
+            // pauseButton
+            // 
+            this.pauseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pauseButton.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.pauseButton.ForeColor = System.Drawing.Color.White;
+            this.pauseButton.Location = new System.Drawing.Point(12, 39);
+            this.pauseButton.Margin = new System.Windows.Forms.Padding(4);
+            this.pauseButton.Name = "pauseButton";
+            this.pauseButton.Size = new System.Drawing.Size(39, 25);
+            this.pauseButton.TabIndex = 2;
+            this.pauseButton.Text = ";";
+            this.pauseButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.pauseButton, "Player.Pause - pauses playing media.\r\nPlayer.Resume - resumes paused media.");
+            this.pauseButton.Click += new System.EventHandler(this.PauseButton_Click);
+            // 
+            // playButtonLight
+            // 
+            this.playButtonLight.BackColor = System.Drawing.Color.White;
+            this.playButtonLight.Location = new System.Drawing.Point(23, 21);
+            this.playButtonLight.Margin = new System.Windows.Forms.Padding(4);
+            this.playButtonLight.Name = "playButtonLight";
+            this.playButtonLight.Size = new System.Drawing.Size(3, 7);
+            this.playButtonLight.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.playButtonLight, "This indicator shows whether media is playing.");
+            // 
+            // playButton
+            // 
+            this.playButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.playButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.playButton.DropDown = this.playMenu;
+            this.playButton.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.playButton.ForeColor = System.Drawing.Color.White;
+            this.playButton.Location = new System.Drawing.Point(12, 11);
+            this.playButton.Margin = new System.Windows.Forms.Padding(4);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(161, 26);
+            this.playButton.TabIndex = 0;
+            this.playButton.Text = "4";
+            this.playButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.playButton, "Player.Play - starts playing media.");
+            this.playButton.UseVisualStyleBackColor = true;
             // 
             // playMenu
             // 
@@ -758,6 +994,64 @@ namespace PVSPlayerExample
             this.playDisplayMenuItem.Name = "playDisplayMenuItem";
             this.playDisplayMenuItem.Size = new System.Drawing.Size(203, 24);
             this.playDisplayMenuItem.Text = "Phát";
+            // 
+            // titlePanel
+            // 
+            this.titlePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.titlePanel.Controls.Add(this.webSiteLabel);
+            this.titlePanel.Controls.Add(this.nameLabel);
+            this.titlePanel.Controls.Add(this.clockLabel);
+            this.titlePanel.Location = new System.Drawing.Point(8, 7);
+            this.titlePanel.Margin = new System.Windows.Forms.Padding(4);
+            this.titlePanel.Name = "titlePanel";
+            this.titlePanel.Size = new System.Drawing.Size(187, 62);
+            this.titlePanel.TabIndex = 0;
+            // 
+            // webSiteLabel
+            // 
+            this.webSiteLabel.AutoSize = true;
+            this.webSiteLabel.BackColor = System.Drawing.Color.Transparent;
+            this.webSiteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.webSiteLabel.ForeColor = System.Drawing.Color.White;
+            this.webSiteLabel.Location = new System.Drawing.Point(19, 32);
+            this.webSiteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.webSiteLabel.Name = "webSiteLabel";
+            this.webSiteLabel.Size = new System.Drawing.Size(114, 17);
+            this.webSiteLabel.TabIndex = 1;
+            this.webSiteLabel.Text = "KCTECH website";
+            this.toolTip1.SetToolTip(this.webSiteLabel, "Về chúng tôi ® website.");
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nameLabel.Cursor = System.Windows.Forms.Cursors.Help;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(17, 10);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(78, 20);
+            this.nameLabel.TabIndex = 0;
+            this.nameLabel.Text = "KCTECH";
+            this.toolTip1.SetToolTip(this.nameLabel, "About the PVS.MediaPlayer library.");
+            this.nameLabel.Click += new System.EventHandler(this.NameLabel_Click);
+            // 
+            // clockLabel
+            // 
+            this.clockLabel.BackColor = System.Drawing.Color.Transparent;
+            this.clockLabel.Cursor = System.Windows.Forms.Cursors.Help;
+            this.clockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clockLabel.ForeColor = System.Drawing.Color.White;
+            this.clockLabel.Location = new System.Drawing.Point(9, 10);
+            this.clockLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.clockLabel.Name = "clockLabel";
+            this.clockLabel.Size = new System.Drawing.Size(171, 42);
+            this.clockLabel.TabIndex = 0;
+            this.clockLabel.Text = "00:00:00";
+            this.toolTip1.SetToolTip(this.clockLabel, "About the PVS.MediaPlayer library.");
+            this.clockLabel.Visible = false;
+            this.clockLabel.Click += new System.EventHandler(this.NameLabel_Click);
             // 
             // displayOverlayMenu
             // 
@@ -1849,6 +2143,269 @@ namespace PVSPlayerExample
             this.toolTip1.SetToolTip(this.channelCountLabel, "Player.Audio.ChannelCount - the number of channels in the active audio track.");
             this.channelCountLabel.Visible = false;
             // 
+            // rightLevelMeterPanel
+            // 
+            this.rightLevelMeterPanel.BackColor = System.Drawing.Color.Black;
+            this.rightLevelMeterPanel.Location = new System.Drawing.Point(95, 38);
+            this.rightLevelMeterPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.rightLevelMeterPanel.Name = "rightLevelMeterPanel";
+            this.rightLevelMeterPanel.Size = new System.Drawing.Size(79, 4);
+            this.rightLevelMeterPanel.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.rightLevelMeterPanel, "Player.Events.MediaPeakLevelChanged - shows audio output level values.");
+            this.rightLevelMeterPanel.Click += new System.EventHandler(this.LevelMeterPanels_Click);
+            this.rightLevelMeterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RightLevelMeterPanel_Paint);
+            // 
+            // leftLevelMeterPanel
+            // 
+            this.leftLevelMeterPanel.BackColor = System.Drawing.Color.Black;
+            this.leftLevelMeterPanel.Location = new System.Drawing.Point(12, 38);
+            this.leftLevelMeterPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.leftLevelMeterPanel.Name = "leftLevelMeterPanel";
+            this.leftLevelMeterPanel.Size = new System.Drawing.Size(79, 4);
+            this.leftLevelMeterPanel.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.leftLevelMeterPanel, "Player.Events.MediaPeakLevelChanged - shows audio output level values.");
+            this.leftLevelMeterPanel.Click += new System.EventHandler(this.LevelMeterPanels_Click);
+            this.leftLevelMeterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LeftLevelMeterPanel_Paint);
+            // 
+            // audioDeviceButton
+            // 
+            this.audioDeviceButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.audioDeviceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.audioDeviceButton.DropDown = this.audioDeviceMenu;
+            this.audioDeviceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.audioDeviceButton.ForeColor = System.Drawing.Color.White;
+            this.audioDeviceButton.Location = new System.Drawing.Point(12, 180);
+            this.audioDeviceButton.Margin = new System.Windows.Forms.Padding(4);
+            this.audioDeviceButton.Name = "audioDeviceButton";
+            this.audioDeviceButton.Size = new System.Drawing.Size(161, 26);
+            this.audioDeviceButton.TabIndex = 10;
+            this.audioDeviceButton.Text = "Thiết bị âm thanh";
+            this.audioDeviceButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip1.SetToolTip(this.audioDeviceButton, "Player.Audio.Device - sets the audio output device of the player.");
+            this.audioDeviceButton.UseMnemonic = false;
+            this.audioDeviceButton.UseVisualStyleBackColor = true;
+            // 
+            // balanceDial
+            // 
+            this.balanceDial.ContextMenuStrip = this.sliderMenu;
+            this.balanceDial.Image = global::PVSPlayerExample.Properties.Resources.Dial_Normal_2;
+            this.balanceDial.Location = new System.Drawing.Point(97, 74);
+            this.balanceDial.Margin = new System.Windows.Forms.Padding(4);
+            this.balanceDial.MaximumSize = new System.Drawing.Size(55, 55);
+            this.balanceDial.MinimumSize = new System.Drawing.Size(55, 55);
+            this.balanceDial.Name = "balanceDial";
+            this.balanceDial.Size = new System.Drawing.Size(55, 55);
+            this.balanceDial.TabIndex = 7;
+            this.balanceDial.Text = "dial2";
+            this.toolTip1.SetToolTip(this.balanceDial, "Player.Audio.Balance - sets the audio balance of the player.\r\nPlayer.Audio.Balanc" +
+        "eTo - gradually changes the audio balance.");
+            this.balanceDial.Value = 500;
+            // 
+            // volumeDial
+            // 
+            this.volumeDial.ContextMenuStrip = this.sliderMenu;
+            this.volumeDial.Image = global::PVSPlayerExample.Properties.Resources.Dial_Normal_2;
+            this.volumeDial.Location = new System.Drawing.Point(15, 74);
+            this.volumeDial.Margin = new System.Windows.Forms.Padding(4);
+            this.volumeDial.MaximumSize = new System.Drawing.Size(55, 55);
+            this.volumeDial.MinimumSize = new System.Drawing.Size(55, 55);
+            this.volumeDial.Name = "volumeDial";
+            this.volumeDial.Size = new System.Drawing.Size(55, 55);
+            this.volumeDial.TabIndex = 6;
+            this.volumeDial.Text = "dial1";
+            this.toolTip1.SetToolTip(this.volumeDial, "Player.Audio.Volume - sets the audio volume of the player.\r\nPlayer.Audio.VolumeTo" +
+        " - gradually changes the audio volume.");
+            this.volumeDial.Value = 1000;
+            // 
+            // volumeLabelPanel
+            // 
+            this.volumeLabelPanel.BackColor = System.Drawing.Color.Navy;
+            this.volumeLabelPanel.Controls.Add(this.audioLight);
+            this.volumeLabelPanel.Controls.Add(this.audioTracksLabel);
+            this.volumeLabelPanel.Controls.Add(this.audioVolumeLabelText);
+            this.volumeLabelPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.volumeLabelPanel.Location = new System.Drawing.Point(12, 12);
+            this.volumeLabelPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.volumeLabelPanel.Name = "volumeLabelPanel";
+            this.volumeLabelPanel.Size = new System.Drawing.Size(161, 27);
+            this.volumeLabelPanel.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.volumeLabelPanel, "Player.Audio.Mute - disables the audio output of the player.");
+            this.volumeLabelPanel.Click += new System.EventHandler(this.VolumeLabelPanel_Click);
+            // 
+            // audioLight
+            // 
+            this.audioLight.BackColor = System.Drawing.Color.Lime;
+            this.audioLight.LightOn = true;
+            this.audioLight.Location = new System.Drawing.Point(9, 9);
+            this.audioLight.Margin = new System.Windows.Forms.Padding(4);
+            this.audioLight.Name = "audioLight";
+            this.audioLight.Size = new System.Drawing.Size(3, 7);
+            this.audioLight.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.audioLight, "This indicator shows whether the player\'s audio is enabled.");
+            // 
+            // audioTracksLabel
+            // 
+            this.audioTracksLabel.BackColor = System.Drawing.Color.Transparent;
+            this.audioTracksLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.audioTracksLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.audioTracksLabel.ForeColor = System.Drawing.Color.Lime;
+            this.audioTracksLabel.Location = new System.Drawing.Point(133, 5);
+            this.audioTracksLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.audioTracksLabel.Name = "audioTracksLabel";
+            this.audioTracksLabel.Size = new System.Drawing.Size(21, 12);
+            this.audioTracksLabel.TabIndex = 9;
+            this.audioTracksLabel.Text = "1";
+            this.audioTracksLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip1.SetToolTip(this.audioTracksLabel, "Player.Audio.TrackCount - the number of audio tracks in the playing media.");
+            this.audioTracksLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioTracksLabel_MouseClick);
+            // 
+            // audioVolumeLabelText
+            // 
+            this.audioVolumeLabelText.AutoSize = true;
+            this.audioVolumeLabelText.BackColor = System.Drawing.Color.Transparent;
+            this.audioVolumeLabelText.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.audioVolumeLabelText.ForeColor = System.Drawing.Color.White;
+            this.audioVolumeLabelText.Location = new System.Drawing.Point(60, 5);
+            this.audioVolumeLabelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.audioVolumeLabelText.Name = "audioVolumeLabelText";
+            this.audioVolumeLabelText.Size = new System.Drawing.Size(68, 17);
+            this.audioVolumeLabelText.TabIndex = 1;
+            this.audioVolumeLabelText.Text = "Âm thanh";
+            this.toolTip1.SetToolTip(this.audioVolumeLabelText, "Player.Audio.Mute - disables the audio output of the player.");
+            this.audioVolumeLabelText.Click += new System.EventHandler(this.VolumeLabelPanel_Click);
+            // 
+            // stretchRightButton
+            // 
+            this.stretchRightButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stretchRightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.stretchRightButton.ForeColor = System.Drawing.Color.White;
+            this.stretchRightButton.Location = new System.Drawing.Point(135, 91);
+            this.stretchRightButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stretchRightButton.Name = "stretchRightButton";
+            this.stretchRightButton.Size = new System.Drawing.Size(39, 25);
+            this.stretchRightButton.TabIndex = 12;
+            this.stretchRightButton.Text = "Æ";
+            this.toolTip1.SetToolTip(this.stretchRightButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
+        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
+        "");
+            this.stretchRightButton.UseVisualStyleBackColor = true;
+            this.stretchRightButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchRightButton_MouseDown);
+            // 
+            // stretchLeftButton
+            // 
+            this.stretchLeftButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stretchLeftButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.stretchLeftButton.ForeColor = System.Drawing.Color.White;
+            this.stretchLeftButton.Location = new System.Drawing.Point(93, 91);
+            this.stretchLeftButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stretchLeftButton.Name = "stretchLeftButton";
+            this.stretchLeftButton.Size = new System.Drawing.Size(39, 25);
+            this.stretchLeftButton.TabIndex = 11;
+            this.stretchLeftButton.Text = "Å";
+            this.toolTip1.SetToolTip(this.stretchLeftButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
+        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
+        "");
+            this.stretchLeftButton.UseVisualStyleBackColor = true;
+            this.stretchLeftButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchLeftButton_MouseDown);
+            // 
+            // stretchDownButton
+            // 
+            this.stretchDownButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stretchDownButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.stretchDownButton.ForeColor = System.Drawing.Color.White;
+            this.stretchDownButton.Location = new System.Drawing.Point(53, 91);
+            this.stretchDownButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stretchDownButton.Name = "stretchDownButton";
+            this.stretchDownButton.Size = new System.Drawing.Size(37, 25);
+            this.stretchDownButton.TabIndex = 10;
+            this.stretchDownButton.Text = "È";
+            this.toolTip1.SetToolTip(this.stretchDownButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
+        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
+        "");
+            this.stretchDownButton.UseVisualStyleBackColor = true;
+            this.stretchDownButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchDownButton_MouseDown);
+            // 
+            // stretchUpButton
+            // 
+            this.stretchUpButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stretchUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.stretchUpButton.ForeColor = System.Drawing.Color.White;
+            this.stretchUpButton.Location = new System.Drawing.Point(12, 91);
+            this.stretchUpButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stretchUpButton.Name = "stretchUpButton";
+            this.stretchUpButton.Size = new System.Drawing.Size(39, 25);
+            this.stretchUpButton.TabIndex = 9;
+            this.stretchUpButton.Text = "Ç";
+            this.toolTip1.SetToolTip(this.stretchUpButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
+        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
+        "");
+            this.stretchUpButton.UseVisualStyleBackColor = true;
+            this.stretchUpButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchUpButton_MouseDown);
+            // 
+            // zoomOutButton
+            // 
+            this.zoomOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.zoomOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.zoomOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.zoomOutButton.ForeColor = System.Drawing.Color.White;
+            this.zoomOutButton.Location = new System.Drawing.Point(93, 36);
+            this.zoomOutButton.Margin = new System.Windows.Forms.Padding(4);
+            this.zoomOutButton.Name = "zoomOutButton";
+            this.zoomOutButton.Size = new System.Drawing.Size(80, 25);
+            this.zoomOutButton.TabIndex = 2;
+            this.zoomOutButton.Text = "È";
+            this.toolTip1.SetToolTip(this.zoomOutButton, "Player.Video.Zoom - changes the size of the video image on the display of the pla" +
+        "yer.");
+            this.zoomOutButton.UseVisualStyleBackColor = true;
+            this.zoomOutButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ZoomOutButton_MouseDown);
+            // 
+            // zoomInButton
+            // 
+            this.zoomInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.zoomInButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.zoomInButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.zoomInButton.ForeColor = System.Drawing.Color.White;
+            this.zoomInButton.Location = new System.Drawing.Point(12, 36);
+            this.zoomInButton.Margin = new System.Windows.Forms.Padding(4);
+            this.zoomInButton.Name = "zoomInButton";
+            this.zoomInButton.Size = new System.Drawing.Size(79, 25);
+            this.zoomInButton.TabIndex = 1;
+            this.zoomInButton.Text = "Ç";
+            this.toolTip1.SetToolTip(this.zoomInButton, "Player.Video.Zoom - changes the size of the video image on the display of the pla" +
+        "yer.");
+            this.zoomInButton.UseVisualStyleBackColor = true;
+            this.zoomInButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ZoomInButton_MouseDown);
+            // 
+            // stretchLabel
+            // 
+            this.stretchLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stretchLabel.ForeColor = System.Drawing.Color.White;
+            this.stretchLabel.Location = new System.Drawing.Point(12, 68);
+            this.stretchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.stretchLabel.Name = "stretchLabel";
+            this.stretchLabel.Size = new System.Drawing.Size(161, 23);
+            this.stretchLabel.TabIndex = 8;
+            this.stretchLabel.Text = "Kéo dãn ↨";
+            this.stretchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip1.SetToolTip(this.stretchLabel, "Click to change between Video Move and Video Stretch mode.");
+            this.stretchLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.StretchLabel_MouseClick);
+            // 
+            // positionSlider
+            // 
+            this.positionSlider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.positionSlider.AutoSize = false;
+            this.positionSlider.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.positionSlider.ContextMenuStrip = this.positionSliderMenu;
+            this.positionSlider.Enabled = false;
+            this.positionSlider.Location = new System.Drawing.Point(108, 2);
+            this.positionSlider.Margin = new System.Windows.Forms.Padding(4);
+            this.positionSlider.Name = "positionSlider";
+            this.positionSlider.Size = new System.Drawing.Size(488, 32);
+            this.positionSlider.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.positionSlider, "Player.Sliders.Position.TrackBar - shows and allows changing of the playback posi" +
+        "tion of the playing media.");
+            // 
             // positionSliderMenu
             // 
             this.positionSliderMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -2186,6 +2743,39 @@ namespace PVSPlayerExample
             this.noChaptersToolStripMenuItem2.Size = new System.Drawing.Size(174, 26);
             this.noChaptersToolStripMenuItem2.Text = "No Chapters";
             // 
+            // positionLabel2
+            // 
+            this.positionLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.positionLabel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.positionLabel2.ContextMenuStrip = this.positionSliderMenu;
+            this.positionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.positionLabel2.ForeColor = System.Drawing.Color.Black;
+            this.positionLabel2.Location = new System.Drawing.Point(596, 1);
+            this.positionLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.positionLabel2.Name = "positionLabel2";
+            this.positionLabel2.Size = new System.Drawing.Size(108, 22);
+            this.positionLabel2.TabIndex = 2;
+            this.positionLabel2.Text = "00:00:00";
+            this.toolTip1.SetToolTip(this.positionLabel2, "Player.Position.ToEnd - the duration of the playing media to the end of the media" +
+        ".\r\nPlayer.Position.ToStop - the duration of the playing media to the \'StopTime\' " +
+        "of the media.");
+            // 
+            // positionLabel1
+            // 
+            this.positionLabel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.positionLabel1.ContextMenuStrip = this.positionSliderMenu;
+            this.positionLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.positionLabel1.ForeColor = System.Drawing.Color.Black;
+            this.positionLabel1.Location = new System.Drawing.Point(4, 1);
+            this.positionLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.positionLabel1.Name = "positionLabel1";
+            this.positionLabel1.Size = new System.Drawing.Size(109, 22);
+            this.positionLabel1.TabIndex = 0;
+            this.positionLabel1.Text = "00:00:00";
+            this.toolTip1.SetToolTip(this.positionLabel1, "Player.Position.FromBegin - the duration of the playing media from the beginning " +
+        "of the media.\r\nPlayer.Position.FromStart - the duration of the playing media fro" +
+        "m the \'StartTime\' of the media.\r\n");
+            // 
             // displayParentPanel
             // 
             this.displayParentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2200,6 +2790,20 @@ namespace PVSPlayerExample
             this.displayParentPanel.Name = "displayParentPanel";
             this.displayParentPanel.Size = new System.Drawing.Size(708, 605);
             this.displayParentPanel.TabIndex = 1;
+            // 
+            // positionSliderPanel
+            // 
+            this.positionSliderPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.positionSliderPanel.ContextMenuStrip = this.positionSliderMenu;
+            this.positionSliderPanel.Controls.Add(this.positionSlider);
+            this.positionSliderPanel.Controls.Add(this.positionLabel2);
+            this.positionSliderPanel.Controls.Add(this.positionLabel1);
+            this.positionSliderPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.positionSliderPanel.Location = new System.Drawing.Point(0, 573);
+            this.positionSliderPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.positionSliderPanel.Name = "positionSliderPanel";
+            this.positionSliderPanel.Size = new System.Drawing.Size(706, 30);
+            this.positionSliderPanel.TabIndex = 0;
             // 
             // rightFramePanel
             // 
@@ -2275,6 +2879,18 @@ namespace PVSPlayerExample
             this.zoomPanel.Name = "zoomPanel";
             this.zoomPanel.Size = new System.Drawing.Size(187, 130);
             this.zoomPanel.TabIndex = 1;
+            // 
+            // zoomLabel
+            // 
+            this.zoomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zoomLabel.ForeColor = System.Drawing.Color.White;
+            this.zoomLabel.Location = new System.Drawing.Point(12, 12);
+            this.zoomLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.zoomLabel.Name = "zoomLabel";
+            this.zoomLabel.Size = new System.Drawing.Size(161, 23);
+            this.zoomLabel.TabIndex = 0;
+            this.zoomLabel.Text = "Thu phóng video";
+            this.zoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // playSubMenu
             // 
@@ -2387,622 +3003,6 @@ namespace PVSPlayerExample
             this.video3DStereoMenuItem.Text = "Normal View";
             this.video3DStereoMenuItem.Click += new System.EventHandler(this.Video3DStereoMenuItem_Click);
             // 
-            // rightLevelMeterPanel
-            // 
-            this.rightLevelMeterPanel.BackColor = System.Drawing.Color.Black;
-            this.rightLevelMeterPanel.Location = new System.Drawing.Point(95, 38);
-            this.rightLevelMeterPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.rightLevelMeterPanel.Name = "rightLevelMeterPanel";
-            this.rightLevelMeterPanel.Size = new System.Drawing.Size(79, 4);
-            this.rightLevelMeterPanel.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.rightLevelMeterPanel, "Player.Events.MediaPeakLevelChanged - shows audio output level values.");
-            this.rightLevelMeterPanel.Click += new System.EventHandler(this.LevelMeterPanels_Click);
-            this.rightLevelMeterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RightLevelMeterPanel_Paint);
-            // 
-            // leftLevelMeterPanel
-            // 
-            this.leftLevelMeterPanel.BackColor = System.Drawing.Color.Black;
-            this.leftLevelMeterPanel.Location = new System.Drawing.Point(12, 38);
-            this.leftLevelMeterPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.leftLevelMeterPanel.Name = "leftLevelMeterPanel";
-            this.leftLevelMeterPanel.Size = new System.Drawing.Size(79, 4);
-            this.leftLevelMeterPanel.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.leftLevelMeterPanel, "Player.Events.MediaPeakLevelChanged - shows audio output level values.");
-            this.leftLevelMeterPanel.Click += new System.EventHandler(this.LevelMeterPanels_Click);
-            this.leftLevelMeterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LeftLevelMeterPanel_Paint);
-            // 
-            // audioDeviceButton
-            // 
-            this.audioDeviceButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.audioDeviceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.audioDeviceButton.DropDown = this.audioDeviceMenu;
-            this.audioDeviceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.audioDeviceButton.ForeColor = System.Drawing.Color.White;
-            this.audioDeviceButton.Location = new System.Drawing.Point(12, 180);
-            this.audioDeviceButton.Margin = new System.Windows.Forms.Padding(4);
-            this.audioDeviceButton.Name = "audioDeviceButton";
-            this.audioDeviceButton.Size = new System.Drawing.Size(161, 26);
-            this.audioDeviceButton.TabIndex = 10;
-            this.audioDeviceButton.Text = "Thiết bị âm thanh";
-            this.audioDeviceButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.audioDeviceButton, "Player.Audio.Device - sets the audio output device of the player.");
-            this.audioDeviceButton.UseMnemonic = false;
-            this.audioDeviceButton.UseVisualStyleBackColor = true;
-            // 
-            // balanceDial
-            // 
-            this.balanceDial.ContextMenuStrip = this.sliderMenu;
-            this.balanceDial.Image = global::PVSPlayerExample.Properties.Resources.Dial_Normal_2;
-            this.balanceDial.Location = new System.Drawing.Point(97, 74);
-            this.balanceDial.Margin = new System.Windows.Forms.Padding(4);
-            this.balanceDial.MaximumSize = new System.Drawing.Size(55, 55);
-            this.balanceDial.MinimumSize = new System.Drawing.Size(55, 55);
-            this.balanceDial.Name = "balanceDial";
-            this.balanceDial.Size = new System.Drawing.Size(55, 55);
-            this.balanceDial.TabIndex = 7;
-            this.balanceDial.Text = "dial2";
-            this.toolTip1.SetToolTip(this.balanceDial, "Player.Audio.Balance - sets the audio balance of the player.\r\nPlayer.Audio.Balanc" +
-        "eTo - gradually changes the audio balance.");
-            this.balanceDial.Value = 500;
-            // 
-            // volumeDial
-            // 
-            this.volumeDial.ContextMenuStrip = this.sliderMenu;
-            this.volumeDial.Image = global::PVSPlayerExample.Properties.Resources.Dial_Normal_2;
-            this.volumeDial.Location = new System.Drawing.Point(15, 74);
-            this.volumeDial.Margin = new System.Windows.Forms.Padding(4);
-            this.volumeDial.MaximumSize = new System.Drawing.Size(55, 55);
-            this.volumeDial.MinimumSize = new System.Drawing.Size(55, 55);
-            this.volumeDial.Name = "volumeDial";
-            this.volumeDial.Size = new System.Drawing.Size(55, 55);
-            this.volumeDial.TabIndex = 6;
-            this.volumeDial.Text = "dial1";
-            this.toolTip1.SetToolTip(this.volumeDial, "Player.Audio.Volume - sets the audio volume of the player.\r\nPlayer.Audio.VolumeTo" +
-        " - gradually changes the audio volume.");
-            this.volumeDial.Value = 1000;
-            // 
-            // volumeLabelPanel
-            // 
-            this.volumeLabelPanel.BackColor = System.Drawing.Color.Navy;
-            this.volumeLabelPanel.Controls.Add(this.audioLight);
-            this.volumeLabelPanel.Controls.Add(this.audioTracksLabel);
-            this.volumeLabelPanel.Controls.Add(this.audioVolumeLabelText);
-            this.volumeLabelPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.volumeLabelPanel.Location = new System.Drawing.Point(12, 12);
-            this.volumeLabelPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.volumeLabelPanel.Name = "volumeLabelPanel";
-            this.volumeLabelPanel.Size = new System.Drawing.Size(161, 27);
-            this.volumeLabelPanel.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.volumeLabelPanel, "Player.Audio.Mute - disables the audio output of the player.");
-            this.volumeLabelPanel.Click += new System.EventHandler(this.VolumeLabelPanel_Click);
-            // 
-            // audioLight
-            // 
-            this.audioLight.BackColor = System.Drawing.Color.Lime;
-            this.audioLight.LightOn = true;
-            this.audioLight.Location = new System.Drawing.Point(9, 9);
-            this.audioLight.Margin = new System.Windows.Forms.Padding(4);
-            this.audioLight.Name = "audioLight";
-            this.audioLight.Size = new System.Drawing.Size(3, 7);
-            this.audioLight.TabIndex = 10;
-            this.toolTip1.SetToolTip(this.audioLight, "This indicator shows whether the player\'s audio is enabled.");
-            // 
-            // audioTracksLabel
-            // 
-            this.audioTracksLabel.BackColor = System.Drawing.Color.Transparent;
-            this.audioTracksLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.audioTracksLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.audioTracksLabel.ForeColor = System.Drawing.Color.Lime;
-            this.audioTracksLabel.Location = new System.Drawing.Point(133, 5);
-            this.audioTracksLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.audioTracksLabel.Name = "audioTracksLabel";
-            this.audioTracksLabel.Size = new System.Drawing.Size(21, 12);
-            this.audioTracksLabel.TabIndex = 9;
-            this.audioTracksLabel.Text = "1";
-            this.audioTracksLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.toolTip1.SetToolTip(this.audioTracksLabel, "Player.Audio.TrackCount - the number of audio tracks in the playing media.");
-            this.audioTracksLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AudioTracksLabel_MouseClick);
-            // 
-            // audioVolumeLabelText
-            // 
-            this.audioVolumeLabelText.AutoSize = true;
-            this.audioVolumeLabelText.BackColor = System.Drawing.Color.Transparent;
-            this.audioVolumeLabelText.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.audioVolumeLabelText.ForeColor = System.Drawing.Color.White;
-            this.audioVolumeLabelText.Location = new System.Drawing.Point(60, 5);
-            this.audioVolumeLabelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.audioVolumeLabelText.Name = "audioVolumeLabelText";
-            this.audioVolumeLabelText.Size = new System.Drawing.Size(68, 17);
-            this.audioVolumeLabelText.TabIndex = 1;
-            this.audioVolumeLabelText.Text = "Âm thanh";
-            this.toolTip1.SetToolTip(this.audioVolumeLabelText, "Player.Audio.Mute - disables the audio output of the player.");
-            this.audioVolumeLabelText.Click += new System.EventHandler(this.VolumeLabelPanel_Click);
-            // 
-            // stretchRightButton
-            // 
-            this.stretchRightButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stretchRightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchRightButton.ForeColor = System.Drawing.Color.White;
-            this.stretchRightButton.Location = new System.Drawing.Point(135, 91);
-            this.stretchRightButton.Margin = new System.Windows.Forms.Padding(4);
-            this.stretchRightButton.Name = "stretchRightButton";
-            this.stretchRightButton.Size = new System.Drawing.Size(39, 25);
-            this.stretchRightButton.TabIndex = 12;
-            this.stretchRightButton.Text = "Æ";
-            this.toolTip1.SetToolTip(this.stretchRightButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
-        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
-        "");
-            this.stretchRightButton.UseVisualStyleBackColor = true;
-            this.stretchRightButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchRightButton_MouseDown);
-            // 
-            // stretchLeftButton
-            // 
-            this.stretchLeftButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stretchLeftButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchLeftButton.ForeColor = System.Drawing.Color.White;
-            this.stretchLeftButton.Location = new System.Drawing.Point(93, 91);
-            this.stretchLeftButton.Margin = new System.Windows.Forms.Padding(4);
-            this.stretchLeftButton.Name = "stretchLeftButton";
-            this.stretchLeftButton.Size = new System.Drawing.Size(39, 25);
-            this.stretchLeftButton.TabIndex = 11;
-            this.stretchLeftButton.Text = "Å";
-            this.toolTip1.SetToolTip(this.stretchLeftButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
-        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
-        "");
-            this.stretchLeftButton.UseVisualStyleBackColor = true;
-            this.stretchLeftButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchLeftButton_MouseDown);
-            // 
-            // stretchDownButton
-            // 
-            this.stretchDownButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stretchDownButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchDownButton.ForeColor = System.Drawing.Color.White;
-            this.stretchDownButton.Location = new System.Drawing.Point(53, 91);
-            this.stretchDownButton.Margin = new System.Windows.Forms.Padding(4);
-            this.stretchDownButton.Name = "stretchDownButton";
-            this.stretchDownButton.Size = new System.Drawing.Size(37, 25);
-            this.stretchDownButton.TabIndex = 10;
-            this.stretchDownButton.Text = "È";
-            this.toolTip1.SetToolTip(this.stretchDownButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
-        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
-        "");
-            this.stretchDownButton.UseVisualStyleBackColor = true;
-            this.stretchDownButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchDownButton_MouseDown);
-            // 
-            // stretchUpButton
-            // 
-            this.stretchUpButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stretchUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stretchUpButton.ForeColor = System.Drawing.Color.White;
-            this.stretchUpButton.Location = new System.Drawing.Point(12, 91);
-            this.stretchUpButton.Margin = new System.Windows.Forms.Padding(4);
-            this.stretchUpButton.Name = "stretchUpButton";
-            this.stretchUpButton.Size = new System.Drawing.Size(39, 25);
-            this.stretchUpButton.TabIndex = 9;
-            this.stretchUpButton.Text = "Ç";
-            this.toolTip1.SetToolTip(this.stretchUpButton, "Player.Video.Stretch - changes the size of the video image on the display of the " +
-        "player.\r\nPlayer.Video.Move - moves the video image on the display of the player." +
-        "");
-            this.stretchUpButton.UseVisualStyleBackColor = true;
-            this.stretchUpButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StretchUpButton_MouseDown);
-            // 
-            // zoomOutButton
-            // 
-            this.zoomOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.zoomOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.zoomOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.zoomOutButton.ForeColor = System.Drawing.Color.White;
-            this.zoomOutButton.Location = new System.Drawing.Point(93, 36);
-            this.zoomOutButton.Margin = new System.Windows.Forms.Padding(4);
-            this.zoomOutButton.Name = "zoomOutButton";
-            this.zoomOutButton.Size = new System.Drawing.Size(80, 25);
-            this.zoomOutButton.TabIndex = 2;
-            this.zoomOutButton.Text = "È";
-            this.toolTip1.SetToolTip(this.zoomOutButton, "Player.Video.Zoom - changes the size of the video image on the display of the pla" +
-        "yer.");
-            this.zoomOutButton.UseVisualStyleBackColor = true;
-            this.zoomOutButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ZoomOutButton_MouseDown);
-            // 
-            // zoomInButton
-            // 
-            this.zoomInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.zoomInButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.zoomInButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.zoomInButton.ForeColor = System.Drawing.Color.White;
-            this.zoomInButton.Location = new System.Drawing.Point(12, 36);
-            this.zoomInButton.Margin = new System.Windows.Forms.Padding(4);
-            this.zoomInButton.Name = "zoomInButton";
-            this.zoomInButton.Size = new System.Drawing.Size(79, 25);
-            this.zoomInButton.TabIndex = 1;
-            this.zoomInButton.Text = "Ç";
-            this.toolTip1.SetToolTip(this.zoomInButton, "Player.Video.Zoom - changes the size of the video image on the display of the pla" +
-        "yer.");
-            this.zoomInButton.UseVisualStyleBackColor = true;
-            this.zoomInButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ZoomInButton_MouseDown);
-            // 
-            // stretchLabel
-            // 
-            this.stretchLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.stretchLabel.ForeColor = System.Drawing.Color.White;
-            this.stretchLabel.Location = new System.Drawing.Point(12, 68);
-            this.stretchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.stretchLabel.Name = "stretchLabel";
-            this.stretchLabel.Size = new System.Drawing.Size(161, 23);
-            this.stretchLabel.TabIndex = 8;
-            this.stretchLabel.Text = "Kéo dãn ↨";
-            this.stretchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.stretchLabel, "Click to change between Video Move and Video Stretch mode.");
-            this.stretchLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.StretchLabel_MouseClick);
-            // 
-            // zoomLabel
-            // 
-            this.zoomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zoomLabel.ForeColor = System.Drawing.Color.White;
-            this.zoomLabel.Location = new System.Drawing.Point(12, 12);
-            this.zoomLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.zoomLabel.Name = "zoomLabel";
-            this.zoomLabel.Size = new System.Drawing.Size(161, 23);
-            this.zoomLabel.TabIndex = 0;
-            this.zoomLabel.Text = "Thu phóng video";
-            this.zoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // positionSliderPanel
-            // 
-            this.positionSliderPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.positionSliderPanel.ContextMenuStrip = this.positionSliderMenu;
-            this.positionSliderPanel.Controls.Add(this.positionSlider);
-            this.positionSliderPanel.Controls.Add(this.positionLabel2);
-            this.positionSliderPanel.Controls.Add(this.positionLabel1);
-            this.positionSliderPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.positionSliderPanel.Location = new System.Drawing.Point(0, 573);
-            this.positionSliderPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.positionSliderPanel.Name = "positionSliderPanel";
-            this.positionSliderPanel.Size = new System.Drawing.Size(706, 30);
-            this.positionSliderPanel.TabIndex = 0;
-            // 
-            // positionSlider
-            // 
-            this.positionSlider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.positionSlider.AutoSize = false;
-            this.positionSlider.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.positionSlider.ContextMenuStrip = this.positionSliderMenu;
-            this.positionSlider.Enabled = false;
-            this.positionSlider.Location = new System.Drawing.Point(108, 2);
-            this.positionSlider.Margin = new System.Windows.Forms.Padding(4);
-            this.positionSlider.Name = "positionSlider";
-            this.positionSlider.Size = new System.Drawing.Size(488, 32);
-            this.positionSlider.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.positionSlider, "Player.Sliders.Position.TrackBar - shows and allows changing of the playback posi" +
-        "tion of the playing media.");
-            // 
-            // positionLabel2
-            // 
-            this.positionLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.positionLabel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.positionLabel2.ContextMenuStrip = this.positionSliderMenu;
-            this.positionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.positionLabel2.ForeColor = System.Drawing.Color.Black;
-            this.positionLabel2.Location = new System.Drawing.Point(596, 1);
-            this.positionLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.positionLabel2.Name = "positionLabel2";
-            this.positionLabel2.Size = new System.Drawing.Size(108, 22);
-            this.positionLabel2.TabIndex = 2;
-            this.positionLabel2.Text = "00:00:00";
-            this.toolTip1.SetToolTip(this.positionLabel2, "Player.Position.ToEnd - the duration of the playing media to the end of the media" +
-        ".\r\nPlayer.Position.ToStop - the duration of the playing media to the \'StopTime\' " +
-        "of the media.");
-            // 
-            // positionLabel1
-            // 
-            this.positionLabel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.positionLabel1.ContextMenuStrip = this.positionSliderMenu;
-            this.positionLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.positionLabel1.ForeColor = System.Drawing.Color.Black;
-            this.positionLabel1.Location = new System.Drawing.Point(4, 1);
-            this.positionLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.positionLabel1.Name = "positionLabel1";
-            this.positionLabel1.Size = new System.Drawing.Size(109, 22);
-            this.positionLabel1.TabIndex = 0;
-            this.positionLabel1.Text = "00:00:00";
-            this.toolTip1.SetToolTip(this.positionLabel1, "Player.Position.FromBegin - the duration of the playing media from the beginning " +
-        "of the media.\r\nPlayer.Position.FromStart - the duration of the playing media fro" +
-        "m the \'StartTime\' of the media.\r\n");
-            // 
-            // speedSlider
-            // 
-            this.speedSlider.AutoSize = false;
-            this.speedSlider.ContextMenuStrip = this.sliderMenu;
-            this.speedSlider.Location = new System.Drawing.Point(3, 39);
-            this.speedSlider.Margin = new System.Windows.Forms.Padding(4);
-            this.speedSlider.Name = "speedSlider";
-            this.speedSlider.Size = new System.Drawing.Size(180, 42);
-            this.speedSlider.TabIndex = 1;
-            this.speedSlider.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.toolTip1.SetToolTip(this.speedSlider, "Player.Sliders.Speed - sets the media playback speed of the player.");
-            this.speedSlider.Value = 5;
-            // 
-            // speedLabelPanel
-            // 
-            this.speedLabelPanel.Controls.Add(this.speedTextBox);
-            this.speedLabelPanel.Controls.Add(this.speedLight);
-            this.speedLabelPanel.Controls.Add(this.speedLabelText);
-            this.speedLabelPanel.Location = new System.Drawing.Point(12, 11);
-            this.speedLabelPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.speedLabelPanel.Name = "speedLabelPanel";
-            this.speedLabelPanel.Size = new System.Drawing.Size(161, 27);
-            this.speedLabelPanel.TabIndex = 0;
-            // 
-            // speedTextBox
-            // 
-            this.speedTextBox.BackColor = System.Drawing.Color.Navy;
-            this.speedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.speedTextBox.ForeColor = System.Drawing.Color.White;
-            this.speedTextBox.Location = new System.Drawing.Point(123, 5);
-            this.speedTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.speedTextBox.Mask = "0.00";
-            this.speedTextBox.Name = "speedTextBox";
-            this.speedTextBox.Size = new System.Drawing.Size(31, 15);
-            this.speedTextBox.TabIndex = 2;
-            this.speedTextBox.Text = "100";
-            this.toolTip1.SetToolTip(this.speedTextBox, "Player.Speed.Rate - sets the media playback speed of the player.");
-            this.speedTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SpeedTextBox_KeyPress);
-            this.speedTextBox.Validated += new System.EventHandler(this.SpeedTextBox_Validated);
-            // 
-            // speedLight
-            // 
-            this.speedLight.BackColor = System.Drawing.Color.White;
-            this.speedLight.Location = new System.Drawing.Point(9, 10);
-            this.speedLight.Margin = new System.Windows.Forms.Padding(4);
-            this.speedLight.Name = "speedLight";
-            this.speedLight.Size = new System.Drawing.Size(3, 7);
-            this.speedLight.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.speedLight, "This indicator shows whether the playback speed is different from the normal play" +
-        "back speed.");
-            // 
-            // speedLabelText
-            // 
-            this.speedLabelText.AutoSize = true;
-            this.speedLabelText.BackColor = System.Drawing.Color.Transparent;
-            this.speedLabelText.ContextMenuStrip = this.sliderMenu;
-            this.speedLabelText.ForeColor = System.Drawing.Color.White;
-            this.speedLabelText.Location = new System.Drawing.Point(55, 5);
-            this.speedLabelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.speedLabelText.Name = "speedLabelText";
-            this.speedLabelText.Size = new System.Drawing.Size(52, 17);
-            this.speedLabelText.TabIndex = 1;
-            this.speedLabelText.Text = "Tốc độ";
-            // 
-            // repeatLight
-            // 
-            this.repeatLight.BackColor = System.Drawing.Color.White;
-            this.repeatLight.Location = new System.Drawing.Point(21, 89);
-            this.repeatLight.Margin = new System.Windows.Forms.Padding(4);
-            this.repeatLight.Name = "repeatLight";
-            this.repeatLight.Size = new System.Drawing.Size(3, 7);
-            this.repeatLight.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.repeatLight, "This indicator shows whether a repeat option is active.");
-            // 
-            // repeatButton
-            // 
-            this.repeatButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.repeatButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.repeatButton.DropDown = this.repeatMenu;
-            this.repeatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repeatButton.ForeColor = System.Drawing.Color.White;
-            this.repeatButton.Location = new System.Drawing.Point(12, 79);
-            this.repeatButton.Margin = new System.Windows.Forms.Padding(4);
-            this.repeatButton.Name = "repeatButton";
-            this.repeatButton.Size = new System.Drawing.Size(161, 26);
-            this.repeatButton.TabIndex = 0;
-            this.repeatButton.Text = "Tắt lặp lại";
-            this.repeatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.repeatButton, "Player.Repeat - repeats media playback from \'StartTime\' to \'StopTime\'.\r\nPlayer.Re" +
-        "peatChapter - repeats a playing chapter (from a chapters file).");
-            this.repeatButton.UseVisualStyleBackColor = false;
-            // 
-            // displayLight
-            // 
-            this.displayLight.BackColor = System.Drawing.Color.Lime;
-            this.displayLight.LightOn = true;
-            this.displayLight.Location = new System.Drawing.Point(22, 21);
-            this.displayLight.Margin = new System.Windows.Forms.Padding(4);
-            this.displayLight.Name = "displayLight";
-            this.displayLight.Size = new System.Drawing.Size(3, 7);
-            this.displayLight.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.displayLight, "This indicator shows whether the player has a display.");
-            // 
-            // fullScreenLight
-            // 
-            this.fullScreenLight.BackColor = System.Drawing.Color.White;
-            this.fullScreenLight.Location = new System.Drawing.Point(21, 55);
-            this.fullScreenLight.Margin = new System.Windows.Forms.Padding(4);
-            this.fullScreenLight.Name = "fullScreenLight";
-            this.fullScreenLight.Size = new System.Drawing.Size(3, 7);
-            this.fullScreenLight.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.fullScreenLight, "This indicator shows whether a fullscreen mode is selected.");
-            // 
-            // fullScreenModeButton
-            // 
-            this.fullScreenModeButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.fullScreenModeButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.fullScreenModeButton.DropDown = this.fullScreenModeMenu;
-            this.fullScreenModeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullScreenModeButton.ForeColor = System.Drawing.Color.White;
-            this.fullScreenModeButton.Location = new System.Drawing.Point(12, 45);
-            this.fullScreenModeButton.Margin = new System.Windows.Forms.Padding(4);
-            this.fullScreenModeButton.Name = "fullScreenModeButton";
-            this.fullScreenModeButton.Size = new System.Drawing.Size(161, 26);
-            this.fullScreenModeButton.TabIndex = 3;
-            this.fullScreenModeButton.Text = "Tắt toàn màn hình";
-            this.fullScreenModeButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.fullScreenModeButton, "Player.FullScreen - shows the player\'s display in full screen.\r\nPlayer.FullScreen" +
-        "Mode - sets the full screen display mode of the player.");
-            this.fullScreenModeButton.UseVisualStyleBackColor = true;
-            // 
-            // displayModeLabel
-            // 
-            this.displayModeLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.displayModeLabel.ForeColor = System.Drawing.Color.White;
-            this.displayModeLabel.Location = new System.Drawing.Point(13, 11);
-            this.displayModeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.displayModeLabel.Name = "displayModeLabel";
-            this.displayModeLabel.Size = new System.Drawing.Size(161, 26);
-            this.displayModeLabel.TabIndex = 0;
-            this.displayModeLabel.Text = "Hiển thị";
-            this.displayModeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.displayModeLabel, "Player.ControlPanels.ShowDisplaySettings - opens the system\'s Display Control Pan" +
-        "el.");
-            this.displayModeLabel.Click += new System.EventHandler(this.DisplayModeLabel_Click);
-            // 
-            // stopButton
-            // 
-            this.stopButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stopButton.Font = new System.Drawing.Font("Webdings", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.stopButton.ForeColor = System.Drawing.Color.White;
-            this.stopButton.Location = new System.Drawing.Point(135, 39);
-            this.stopButton.Margin = new System.Windows.Forms.Padding(4);
-            this.stopButton.Name = "stopButton";
-            this.stopButton.Size = new System.Drawing.Size(39, 25);
-            this.stopButton.TabIndex = 5;
-            this.stopButton.Text = "<";
-            this.stopButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip1.SetToolTip(this.stopButton, "Player.Stop - stops playing media.");
-            this.stopButton.UseVisualStyleBackColor = true;
-            this.stopButton.Click += new System.EventHandler(this.StopButton_Click);
-            // 
-            // nextButton
-            // 
-            this.nextButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nextButton.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.nextButton.ForeColor = System.Drawing.Color.White;
-            this.nextButton.Location = new System.Drawing.Point(93, 39);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(4);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(39, 25);
-            this.nextButton.TabIndex = 4;
-            this.nextButton.Text = ":";
-            this.nextButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip1.SetToolTip(this.nextButton, "Plays the next chapter or item in the playlist.");
-            this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.NextButton_Click);
-            // 
-            // previousButton
-            // 
-            this.previousButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.previousButton.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.previousButton.ForeColor = System.Drawing.Color.White;
-            this.previousButton.Location = new System.Drawing.Point(53, 39);
-            this.previousButton.Margin = new System.Windows.Forms.Padding(4);
-            this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(37, 25);
-            this.previousButton.TabIndex = 3;
-            this.previousButton.Text = "9";
-            this.previousButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip1.SetToolTip(this.previousButton, "Plays the previous chapter or item in the playlist.");
-            this.previousButton.UseVisualStyleBackColor = true;
-            this.previousButton.Click += new System.EventHandler(this.PreviousButton_Click);
-            // 
-            // pauseButton
-            // 
-            this.pauseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pauseButton.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.pauseButton.ForeColor = System.Drawing.Color.White;
-            this.pauseButton.Location = new System.Drawing.Point(12, 39);
-            this.pauseButton.Margin = new System.Windows.Forms.Padding(4);
-            this.pauseButton.Name = "pauseButton";
-            this.pauseButton.Size = new System.Drawing.Size(39, 25);
-            this.pauseButton.TabIndex = 2;
-            this.pauseButton.Text = ";";
-            this.pauseButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip1.SetToolTip(this.pauseButton, "Player.Pause - pauses playing media.\r\nPlayer.Resume - resumes paused media.");
-            this.pauseButton.Click += new System.EventHandler(this.PauseButton_Click);
-            // 
-            // playButtonLight
-            // 
-            this.playButtonLight.BackColor = System.Drawing.Color.White;
-            this.playButtonLight.Location = new System.Drawing.Point(23, 21);
-            this.playButtonLight.Margin = new System.Windows.Forms.Padding(4);
-            this.playButtonLight.Name = "playButtonLight";
-            this.playButtonLight.Size = new System.Drawing.Size(3, 7);
-            this.playButtonLight.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.playButtonLight, "This indicator shows whether media is playing.");
-            // 
-            // playButton
-            // 
-            this.playButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.playButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.playButton.DropDown = this.playMenu;
-            this.playButton.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.playButton.ForeColor = System.Drawing.Color.White;
-            this.playButton.Location = new System.Drawing.Point(12, 11);
-            this.playButton.Margin = new System.Windows.Forms.Padding(4);
-            this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(161, 26);
-            this.playButton.TabIndex = 0;
-            this.playButton.Text = "4";
-            this.playButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip1.SetToolTip(this.playButton, "Player.Play - starts playing media.");
-            this.playButton.UseVisualStyleBackColor = true;
-            // 
-            // titlePanel
-            // 
-            this.titlePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.titlePanel.Controls.Add(this.webSiteLabel);
-            this.titlePanel.Controls.Add(this.nameLabel);
-            this.titlePanel.Controls.Add(this.clockLabel);
-            this.titlePanel.Location = new System.Drawing.Point(8, 7);
-            this.titlePanel.Margin = new System.Windows.Forms.Padding(4);
-            this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Size = new System.Drawing.Size(187, 62);
-            this.titlePanel.TabIndex = 0;
-            // 
-            // webSiteLabel
-            // 
-            this.webSiteLabel.AutoSize = true;
-            this.webSiteLabel.BackColor = System.Drawing.Color.Transparent;
-            this.webSiteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.webSiteLabel.ForeColor = System.Drawing.Color.White;
-            this.webSiteLabel.Location = new System.Drawing.Point(19, 32);
-            this.webSiteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.webSiteLabel.Name = "webSiteLabel";
-            this.webSiteLabel.Size = new System.Drawing.Size(114, 17);
-            this.webSiteLabel.TabIndex = 1;
-            this.webSiteLabel.Text = "KCTECH website";
-            this.toolTip1.SetToolTip(this.webSiteLabel, "Về chúng tôi ® website.");
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nameLabel.Cursor = System.Windows.Forms.Cursors.Help;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(17, 10);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(78, 20);
-            this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "KCTECH";
-            this.toolTip1.SetToolTip(this.nameLabel, "About the PVS.MediaPlayer library.");
-            this.nameLabel.Click += new System.EventHandler(this.NameLabel_Click);
-            // 
-            // clockLabel
-            // 
-            this.clockLabel.BackColor = System.Drawing.Color.Transparent;
-            this.clockLabel.Cursor = System.Windows.Forms.Cursors.Help;
-            this.clockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clockLabel.ForeColor = System.Drawing.Color.White;
-            this.clockLabel.Location = new System.Drawing.Point(9, 10);
-            this.clockLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.clockLabel.Name = "clockLabel";
-            this.clockLabel.Size = new System.Drawing.Size(171, 42);
-            this.clockLabel.TabIndex = 0;
-            this.clockLabel.Text = "00:00:00";
-            this.toolTip1.SetToolTip(this.clockLabel, "About the PVS.MediaPlayer library.");
-            this.clockLabel.Visible = false;
-            this.clockLabel.Click += new System.EventHandler(this.NameLabel_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -3013,7 +3013,6 @@ namespace PVSPlayerExample
             this.Controls.Add(this.displayParentPanel);
             this.Controls.Add(this.leftFramePanel);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(737, 600);
             this.Name = "MainWindow";
@@ -3025,12 +3024,17 @@ namespace PVSPlayerExample
             this.Resize += new System.EventHandler(this.MainWindow_Resize);
             this.leftFramePanel.ResumeLayout(false);
             this.speedPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.speedSlider)).EndInit();
             this.sliderMenu.ResumeLayout(false);
+            this.speedLabelPanel.ResumeLayout(false);
+            this.speedLabelPanel.PerformLayout();
             this.displayModePanel.ResumeLayout(false);
             this.repeatMenu.ResumeLayout(false);
             this.fullScreenModeMenu.ResumeLayout(false);
             this.playPanel.ResumeLayout(false);
             this.playMenu.ResumeLayout(false);
+            this.titlePanel.ResumeLayout(false);
+            this.titlePanel.PerformLayout();
             this.displayOverlayMenu.ResumeLayout(false);
             this.displayMenu.ResumeLayout(false);
             this.audioDeviceMenu.ResumeLayout(false);
@@ -3038,22 +3042,17 @@ namespace PVSPlayerExample
             this.videoTracks.ResumeLayout(false);
             this.screenCopyMenu.ResumeLayout(false);
             this.copyModeMenu.ResumeLayout(false);
+            this.volumeLabelPanel.ResumeLayout(false);
+            this.volumeLabelPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.positionSlider)).EndInit();
             this.positionSliderMenu.ResumeLayout(false);
             this.displayParentPanel.ResumeLayout(false);
+            this.positionSliderPanel.ResumeLayout(false);
             this.rightFramePanel.ResumeLayout(false);
             this.audioPanel.ResumeLayout(false);
             this.zoomPanel.ResumeLayout(false);
             this.playSubMenu.ResumeLayout(false);
             this.video3DMenu.ResumeLayout(false);
-            this.volumeLabelPanel.ResumeLayout(false);
-            this.volumeLabelPanel.PerformLayout();
-            this.positionSliderPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.positionSlider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speedSlider)).EndInit();
-            this.speedLabelPanel.ResumeLayout(false);
-            this.speedLabelPanel.PerformLayout();
-            this.titlePanel.ResumeLayout(false);
-            this.titlePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
