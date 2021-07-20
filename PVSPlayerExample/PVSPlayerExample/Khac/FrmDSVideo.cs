@@ -14,29 +14,6 @@ namespace PVSPlayerExample
 {
     public partial class FrmDSVideo : Form
     {
-        SQLiteConnection _con = new SQLiteConnection();
-        public void createConection()
-        {
-            string _strConnect = "Data Source=MyDatabase.sqlite;Version=3;";
-            _con.ConnectionString = _strConnect;
-            _con.Open();
-        }
-
-        public void closeConnection()
-        {
-            _con.Close();
-        }
-
-        public void createTable()
-        {
-            string sql = "CREATE TABLE IF NOT EXISTS tbl_students ([id] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, fullname nvarchar(50), birthday varchar(15), email varchar(30), address nvarchar(100), phone varchar(11))";
-            if (!File.Exists("KCTECH.sqlite"))
-                SQLiteConnection.CreateFile("KCTECH.sqlite");
-            createConection();
-            SQLiteCommand command = new SQLiteCommand(sql, _con);
-            command.ExecuteNonQuery();
-            closeConnection();
-        }
         public FrmDSVideo()
         {
             InitializeComponent();
@@ -49,7 +26,7 @@ namespace PVSPlayerExample
 
         public DataSet loadData()
         {
-            KeKhaiObj obj = new KeKhaiObj();
+            VideoObj obj = new VideoObj();
             return obj.LoadList();
         }
 
@@ -66,12 +43,6 @@ namespace PVSPlayerExample
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void btnAddKeKhai_Click(object sender, EventArgs e)
-        {
-            FrmKeKhai frm = new FrmKeKhai();
-            frm.ShowDialog();
         }
     }
 }

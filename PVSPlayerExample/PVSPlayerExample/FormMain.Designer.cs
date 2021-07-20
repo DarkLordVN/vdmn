@@ -30,6 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.heThongMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.webcamsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.noWebcamsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xemLaiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KeKhaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dsKeKhaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.themMoiKeKhaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,13 +55,38 @@
             this.menuStrip1.Size = new System.Drawing.Size(1202, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // heThongMenuItem
             // 
+            this.heThongMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.webcamsMenuItem,
+            this.xemLaiMenuItem});
             this.heThongMenuItem.Name = "heThongMenuItem";
             this.heThongMenuItem.Size = new System.Drawing.Size(77, 24);
             this.heThongMenuItem.Text = "Ghi hình";
-            this.heThongMenuItem.Click += new System.EventHandler(this.heThongMenuItem_Click);
+            // 
+            // webcamsMenuItem
+            // 
+            this.webcamsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.noWebcamsToolStripMenuItem});
+            this.webcamsMenuItem.Enabled = false;
+            this.webcamsMenuItem.Name = "webcamsMenuItem";
+            this.webcamsMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.webcamsMenuItem.Text = "Danh sách camera";
+            // 
+            // noWebcamsToolStripMenuItem
+            // 
+            this.noWebcamsToolStripMenuItem.Name = "noWebcamsToolStripMenuItem";
+            this.noWebcamsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.noWebcamsToolStripMenuItem.Text = "Chưa kết nối";
+            // 
+            // xemLaiMenuItem
+            // 
+            this.xemLaiMenuItem.Name = "xemLaiMenuItem";
+            this.xemLaiMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.xemLaiMenuItem.Text = "Xem lại";
+            this.xemLaiMenuItem.Click += new System.EventHandler(this.heThongMenuItem_Click);
             // 
             // KeKhaiToolStripMenuItem
             // 
@@ -73,14 +101,14 @@
             // dsKeKhaiToolStripMenuItem
             // 
             this.dsKeKhaiToolStripMenuItem.Name = "dsKeKhaiToolStripMenuItem";
-            this.dsKeKhaiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dsKeKhaiToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.dsKeKhaiToolStripMenuItem.Text = "Danh sách kê khai";
             this.dsKeKhaiToolStripMenuItem.Click += new System.EventHandler(this.dsKeKhaiToolStripMenuItem_Click);
             // 
             // themMoiKeKhaiToolStripMenuItem
             // 
             this.themMoiKeKhaiToolStripMenuItem.Name = "themMoiKeKhaiToolStripMenuItem";
-            this.themMoiKeKhaiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.themMoiKeKhaiToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.themMoiKeKhaiToolStripMenuItem.Text = "Thêm mới kê khai";
             this.themMoiKeKhaiToolStripMenuItem.Click += new System.EventHandler(this.themMoiKeKhaiToolStripMenuItem_Click);
             // 
@@ -122,6 +150,7 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PHẦN MỀM GHI HÌNH HỎI CUNG - DEMO VERSION-0.1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -139,6 +168,9 @@
         private System.Windows.Forms.ToolStripMenuItem HeThongToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dsKeKhaiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem themMoiKeKhaiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem webcamsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem noWebcamsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xemLaiMenuItem;
     }
 }
 

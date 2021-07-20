@@ -47,12 +47,12 @@ namespace PVSPlayerExample
 
 		#region Main
 
-		public VideoOverlayDialog(MainWindow baseForm, Webcam_Window webcamForm, Player basePlayer)
+		public VideoOverlayDialog(Webcam_Window webcamForm, Player basePlayer)
 		{
 			InitializeComponent();
 			Icon = Properties.Resources.Media_Normal;
 
-			_baseForm	= baseForm;
+			//_baseForm	= baseForm;
 			_webcamForm = webcamForm;
 			_isWebcam	= _webcamForm != null;
 			if (_isWebcam) Text = webcamForm.Text + " Image Overlay";

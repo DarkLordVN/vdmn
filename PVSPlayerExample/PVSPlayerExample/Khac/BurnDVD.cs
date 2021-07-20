@@ -49,6 +49,17 @@ namespace PVSPlayerExample
         /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if(_keKhaiId > 0)
+            {
+                KeKhaiObj obj = new KeKhaiObj();
+                obj.GetById(_keKhaiId);
+                if(obj != null && obj.KeKhaiId > 0)
+                {
+                    txtDiaDiem.Text = obj.DiaDiem;
+                    txtTenDoiTuong.Text = obj.TenDoiTuong;
+                    txtTenVuAn.Text = obj.TenVuAn;
+                }
+            }
             //
             // Determine the current recording devices
             //

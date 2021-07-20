@@ -96,7 +96,7 @@ namespace PVSPlayerExample
                     int.TryParse(idSelected.Value + "", out keKhaiId);
                     if(keKhaiId > 0)
                     {
-                        BurnDVD frm = new BurnDVD();
+                        BurnDVD frm = new BurnDVD(keKhaiId);
                         frm.ShowDialog();
                     }
                 }

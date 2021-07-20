@@ -14,16 +14,6 @@ namespace PVSPlayerExample
         {
             SQLite sqlLite = new SQLite();
             sqlLite.initTable();
-            VideoObj obj = new VideoObj();
-            obj.CameraName = "test 1";
-            obj.CameraId = "12333";
-            obj.Insert();
-            obj.CameraName = "test 2";
-            obj.CameraId = "123123";
-            obj.Insert();
-            obj.CameraName = "test 3";
-            obj.CameraId = "321321";
-            obj.Insert();
             //string sourcePath = @"C:\Users\lekha\OneDrive\Documents\VideoManagement";
             //string zipPath = @"C:\Users\lekha\OneDrive\Documents\VideoManagement\test4.zip";
             //string destinationPath = @"C:\Users\lekha\OneDrive\Documents\VideoManagement\unzip4";

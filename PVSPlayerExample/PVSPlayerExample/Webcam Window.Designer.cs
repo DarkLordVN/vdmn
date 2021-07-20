@@ -102,23 +102,26 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.closeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.volumeDial = new PVSPlayerExample.Dial();
             this.audioVolumeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.muteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lowVolumeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.averageVolumeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.highVolumeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maximumVolumeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.audioOutputLabel = new PVSPlayerExample.HeadLabel();
-            this.audioOutputButton = new PVSPlayerExample.DropDownButton();
             this.audioOutputMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.systemDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioInputMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.formatMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.volumeDial = new PVSPlayerExample.Dial();
+            this.audioOutputLabel = new PVSPlayerExample.HeadLabel();
+            this.audioOutputButton = new PVSPlayerExample.DropDownButton();
             this.audioInputLabel = new PVSPlayerExample.HeadLabel();
             this.audioInputButton = new PVSPlayerExample.DropDownButton();
-            this.audioInputMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.webcamFormatLabel = new PVSPlayerExample.HeadLabel();
             this.webcamFormatButton = new PVSPlayerExample.DropDownButton();
-            this.formatMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lblTrangThai = new System.Windows.Forms.Label();
+            this.btnRecord = new PVSPlayerExample.CustomButton();
+            this.btnStopRecord = new PVSPlayerExample.CustomButton();
             this.displayMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.audioVolumeMenu.SuspendLayout();
@@ -127,15 +130,15 @@
             // 
             // webcamDisplay
             // 
-            this.webcamDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.webcamDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.webcamDisplay.BackColor = System.Drawing.Color.White;
+            this.webcamDisplay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.webcamDisplay.ContextMenuStrip = this.displayMenu;
-            this.webcamDisplay.Location = new System.Drawing.Point(0, 0);
+            this.webcamDisplay.Location = new System.Drawing.Point(4, 4);
             this.webcamDisplay.Margin = new System.Windows.Forms.Padding(4);
             this.webcamDisplay.Name = "webcamDisplay";
-            this.webcamDisplay.Size = new System.Drawing.Size(853, 591);
+            this.webcamDisplay.Size = new System.Drawing.Size(845, 584);
             this.webcamDisplay.TabIndex = 0;
             // 
             // displayMenu
@@ -637,14 +640,14 @@
             // startRecordingMenuItem
             // 
             this.startRecordingMenuItem.Name = "startRecordingMenuItem";
-            this.startRecordingMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.startRecordingMenuItem.Size = new System.Drawing.Size(224, 26);
             this.startRecordingMenuItem.Text = "Bắt đầu ghi hình";
             this.startRecordingMenuItem.Click += new System.EventHandler(this.StartRecordingMenuItem_Click);
             // 
             // stopRecordingMenuItem
             // 
             this.stopRecordingMenuItem.Name = "stopRecordingMenuItem";
-            this.stopRecordingMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.stopRecordingMenuItem.Size = new System.Drawing.Size(224, 26);
             this.stopRecordingMenuItem.Text = "Dừng ghi hình";
             this.stopRecordingMenuItem.Click += new System.EventHandler(this.StopRecordingMenuItem_Click);
             // 
@@ -693,9 +696,11 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.btnRecord);
+            this.panel1.Controls.Add(this.lblTrangThai);
             this.panel1.Controls.Add(this.volumeDial);
             this.panel1.Controls.Add(this.audioOutputLabel);
             this.panel1.Controls.Add(this.audioOutputButton);
@@ -703,26 +708,12 @@
             this.panel1.Controls.Add(this.audioInputButton);
             this.panel1.Controls.Add(this.webcamFormatLabel);
             this.panel1.Controls.Add(this.webcamFormatButton);
+            this.panel1.Controls.Add(this.btnStopRecord);
             this.panel1.Location = new System.Drawing.Point(0, 591);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(853, 71);
+            this.panel1.Size = new System.Drawing.Size(853, 105);
             this.panel1.TabIndex = 1;
-            // 
-            // volumeDial
-            // 
-            this.volumeDial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.volumeDial.ContextMenuStrip = this.audioVolumeMenu;
-            this.volumeDial.Image = ((System.Drawing.Bitmap)(resources.GetObject("volumeDial.Image")));
-            this.volumeDial.Location = new System.Drawing.Point(777, 5);
-            this.volumeDial.Margin = new System.Windows.Forms.Padding(4);
-            this.volumeDial.MaximumSize = new System.Drawing.Size(55, 55);
-            this.volumeDial.MinimumSize = new System.Drawing.Size(55, 55);
-            this.volumeDial.Name = "volumeDial";
-            this.volumeDial.Size = new System.Drawing.Size(55, 55);
-            this.volumeDial.TabIndex = 6;
-            this.volumeDial.Text = "dial1";
-            this.volumeDial.Value = 0;
             // 
             // audioVolumeMenu
             // 
@@ -770,6 +761,55 @@
             this.maximumVolumeMenuItem.Size = new System.Drawing.Size(162, 24);
             this.maximumVolumeMenuItem.Text = "Âm lượng tối đa";
             // 
+            // audioOutputMenu
+            // 
+            this.audioOutputMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.audioOutputMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.systemDefaultToolStripMenuItem});
+            this.audioOutputMenu.Name = "audioOutputMenu";
+            this.audioOutputMenu.Size = new System.Drawing.Size(221, 28);
+            this.audioOutputMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Closed);
+            this.audioOutputMenu.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
+            this.audioOutputMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.AudioOutputMenu_ItemClicked);
+            // 
+            // systemDefaultToolStripMenuItem
+            // 
+            this.systemDefaultToolStripMenuItem.Name = "systemDefaultToolStripMenuItem";
+            this.systemDefaultToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.systemDefaultToolStripMenuItem.Text = "[ Mặc định hệ thống ]";
+            // 
+            // audioInputMenu
+            // 
+            this.audioInputMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.audioInputMenu.Name = "audioInputMenu";
+            this.audioInputMenu.Size = new System.Drawing.Size(61, 4);
+            this.audioInputMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Closed);
+            this.audioInputMenu.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
+            this.audioInputMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.AudioInputMenu_ItemClicked);
+            // 
+            // formatMenu
+            // 
+            this.formatMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.formatMenu.Name = "formatMenu";
+            this.formatMenu.Size = new System.Drawing.Size(61, 4);
+            this.formatMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Closed);
+            this.formatMenu.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
+            // 
+            // volumeDial
+            // 
+            this.volumeDial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.volumeDial.ContextMenuStrip = this.audioVolumeMenu;
+            this.volumeDial.Image = ((System.Drawing.Bitmap)(resources.GetObject("volumeDial.Image")));
+            this.volumeDial.Location = new System.Drawing.Point(777, 5);
+            this.volumeDial.Margin = new System.Windows.Forms.Padding(4);
+            this.volumeDial.MaximumSize = new System.Drawing.Size(55, 55);
+            this.volumeDial.MinimumSize = new System.Drawing.Size(55, 55);
+            this.volumeDial.Name = "volumeDial";
+            this.volumeDial.Size = new System.Drawing.Size(55, 55);
+            this.volumeDial.TabIndex = 6;
+            this.volumeDial.Text = "dial1";
+            this.volumeDial.Value = 0;
+            // 
             // audioOutputLabel
             // 
             this.audioOutputLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -796,23 +836,6 @@
             this.audioOutputButton.TabIndex = 4;
             this.audioOutputButton.Text = "[ Không có thiết bị ]";
             this.audioOutputButton.UseVisualStyleBackColor = true;
-            // 
-            // audioOutputMenu
-            // 
-            this.audioOutputMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.audioOutputMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.systemDefaultToolStripMenuItem});
-            this.audioOutputMenu.Name = "audioOutputMenu";
-            this.audioOutputMenu.Size = new System.Drawing.Size(221, 28);
-            this.audioOutputMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Closed);
-            this.audioOutputMenu.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
-            this.audioOutputMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.AudioOutputMenu_ItemClicked);
-            // 
-            // systemDefaultToolStripMenuItem
-            // 
-            this.systemDefaultToolStripMenuItem.Name = "systemDefaultToolStripMenuItem";
-            this.systemDefaultToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.systemDefaultToolStripMenuItem.Text = "[ Mặc định hệ thống ]";
             // 
             // audioInputLabel
             // 
@@ -843,15 +866,6 @@
             this.audioInputButton.Text = "Không chọn";
             this.audioInputButton.UseVisualStyleBackColor = true;
             // 
-            // audioInputMenu
-            // 
-            this.audioInputMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.audioInputMenu.Name = "audioInputMenu";
-            this.audioInputMenu.Size = new System.Drawing.Size(61, 4);
-            this.audioInputMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Closed);
-            this.audioInputMenu.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
-            this.audioInputMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.AudioInputMenu_ItemClicked);
-            // 
             // webcamFormatLabel
             // 
             this.webcamFormatLabel.ForeColor = System.Drawing.Color.White;
@@ -875,31 +889,58 @@
             this.webcamFormatButton.Size = new System.Drawing.Size(248, 31);
             this.webcamFormatButton.TabIndex = 0;
             // 
-            // formatMenu
+            // lblTrangThai
             // 
-            this.formatMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.formatMenu.Name = "formatMenu";
-            this.formatMenu.Size = new System.Drawing.Size(61, 4);
-            this.formatMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.Menu_Closed);
-            this.formatMenu.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
+            this.lblTrangThai.AutoSize = true;
+            this.lblTrangThai.Location = new System.Drawing.Point(101, 77);
+            this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.Size = new System.Drawing.Size(103, 17);
+            this.lblTrangThai.TabIndex = 7;
+            this.lblTrangThai.Text = "Không ghi hình";
+            // 
+            // btnRecord
+            // 
+            this.btnRecord.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.btnRecord.ForeColor = System.Drawing.Color.White;
+            this.btnRecord.Location = new System.Drawing.Point(8, 71);
+            this.btnRecord.Name = "btnRecord";
+            this.btnRecord.Size = new System.Drawing.Size(87, 28);
+            this.btnRecord.TabIndex = 8;
+            this.btnRecord.Text = "Ghi hình";
+            this.btnRecord.UseVisualStyleBackColor = true;
+            this.btnRecord.Click += new System.EventHandler(this.StartRecordingMenuItem_Click);
+            // 
+            // btnStopRecord
+            // 
+            this.btnStopRecord.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.btnStopRecord.ForeColor = System.Drawing.Color.Coral;
+            this.btnStopRecord.Location = new System.Drawing.Point(8, 71);
+            this.btnStopRecord.Name = "btnStopRecord";
+            this.btnStopRecord.Size = new System.Drawing.Size(87, 28);
+            this.btnStopRecord.TabIndex = 9;
+            this.btnStopRecord.Text = "Dừng ghi";
+            this.btnStopRecord.UseVisualStyleBackColor = true;
+            this.btnStopRecord.Visible = false;
+            this.btnStopRecord.Click += new System.EventHandler(this.StopRecordingMenuItem_Click);
             // 
             // Webcam_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lime;
-            this.ClientSize = new System.Drawing.Size(853, 662);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(853, 695);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.webcamDisplay);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(869, 285);
             this.Name = "Webcam_Window";
-            this.TransparencyKey = System.Drawing.Color.Lime;
+            this.TransparencyKey = System.Drawing.SystemColors.MenuHighlight;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Webcam_Window_FormClosing);
             this.Shown += new System.EventHandler(this.Webcam_Window_Shown);
             this.Resize += new System.EventHandler(this.WebcamWindow_Resize);
             this.displayMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.audioVolumeMenu.ResumeLayout(false);
             this.audioOutputMenu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -997,5 +1038,8 @@
 		private System.Windows.Forms.ToolStripMenuItem recorderMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem startRecordingMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem stopRecordingMenuItem;
-	}
+        private System.Windows.Forms.Label lblTrangThai;
+        private CustomButton btnRecord;
+        private CustomButton btnStopRecord;
+    }
 }

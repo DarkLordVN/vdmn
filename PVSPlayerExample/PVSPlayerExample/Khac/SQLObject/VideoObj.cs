@@ -50,13 +50,13 @@ namespace PVSPlayerExample
 
         public DataSet LoadList()
         {
-            var strQuery = "select * from videos";
+            var strQuery = "select * from videos ORDER BY video_id desc";
             var sql = new SQLite();
             return sql.SQLSelect(strQuery);
         }
         public DataSet LoadListNew()
         {
-            var strQuery = "select * from videos WHERE ke_khai_id IS NULL OR ke_khai_id = 0 OR ke_khai_id NOT IN (SELECT ke_khai_id FROM kekhai)";
+            var strQuery = "select * from videos WHERE ke_khai_id IS NULL OR ke_khai_id = 0 OR ke_khai_id NOT IN (SELECT ke_khai_id FROM kekhai) ORDER BY video_id desc";
             var sql = new SQLite();
             return sql.SQLSelect(strQuery);
         }

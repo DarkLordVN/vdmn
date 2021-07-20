@@ -29,8 +29,8 @@ namespace PVSPlayerExample
         private const int COPY_TIMER_INTERVAL = 1500; // milliseconds
 
 
-        // Main Window
-        MainWindow _baseForm;
+        //// Main Window
+        //MainWindow _baseForm;
 
         private double _oldOpacity;
         private Size _formSize;
@@ -100,7 +100,10 @@ namespace PVSPlayerExample
         private Recorder _soundRecorder;
 
         private string _pathFile;
+        private string _pathFolder;
+        private string _pathName;
         private int _indexAudio = 0;
+        private DateTime _startRecordTime;
         internal PVS.MediaPlayer.Player myPlayer;
         internal Panel displayPanel;
         #endregion
@@ -108,10 +111,9 @@ namespace PVSPlayerExample
 
         #region Main
 
-        public Webcam_Window(MainWindow baseForm, WebcamDevice webcam)
+        public Webcam_Window(WebcamDevice webcam)
         {
             InitializeComponent();
-            _baseForm = baseForm;
             _webcam = webcam;
 
             ((ToolStripDropDownMenu)screenCopyMenuItem.DropDown).ShowImageMargin = false;
@@ -159,6 +161,7 @@ namespace PVSPlayerExample
             Opacity = 0;
         }
 
+
         private void Webcam_Window_Shown(object sender, System.EventArgs e)
         {
             if (_webcam == null)
@@ -171,7 +174,7 @@ namespace PVSPlayerExample
                 Text = _webcam.Name;
 
                 volumeDial.ValueChanged += VolumeDial_ValueChanged;
-                volumeDial.Value = (int)(_audioPlayer.Audio.Volume * 1000);
+                volumeDial.Value = (int)(_audioPlayer.Audio.Volume * 100);
 
                 Application.DoEvents();
                 Opacity = _oldOpacity;
@@ -1115,7 +1118,7 @@ namespace PVSPlayerExample
         {
             if (_videoOverlayDialog == null)
             {
-                _videoOverlayDialog = new VideoOverlayDialog(_baseForm, this, _webcamPlayer);
+                _videoOverlayDialog = new VideoOverlayDialog(this, _webcamPlayer);
                 _videoOverlayDialog.FormClosed += VideoOverlayDialog_FormClosed;
                 MainWindow.CenterDialog(this, _videoOverlayDialog);
                 _videoOverlayDialog.Show(this);
@@ -1235,18 +1238,27 @@ namespace PVSPlayerExample
         {
             if (!_recording)
             {
+                _startRecordTime = DateTime.Now;
                 getFileName();
                 _webcamPlayer.Webcam.RecorderStart(_pathFile + "_video.mp4");
                 //Xu ly luu file audio
                 // Create recorder with eventhandlers:
-                _soundRecorder = new Recorder();
-                _soundRecorder.InputDevice.Index = _indexAudio; // set system default input device (if any)
-                _soundRecorder.Record();
-                if (_soundRecorder.LastError) _soundRecorder.Stop();
+                var audioStr = "(không âm thanh)";
+                if (_audioInDeviceSelected != null)
+                {
+                    _soundRecorder = new Recorder();
+                    _soundRecorder.InputDevice.Index = _indexAudio; // set system default input device (if any)
+                    _soundRecorder.Record();
+                    if (_soundRecorder.LastError) _soundRecorder.Stop();
+                    audioStr = "";
+                }
+                lblTrangThai.Text = "Đang ghi hình " + audioStr;
+                btnRecord.Visible = false;
+                btnStopRecord.Visible = true;
                 CheckCamera();
             }
         }
-        int speed = 1000;
+        int speed = 800;
         void CheckCamera()
         {
             //var index = 0;
@@ -1255,12 +1267,24 @@ namespace PVSPlayerExample
                 {
                     while (_recording)
                     {
+                        if (this.BackColor == Color.White)
+                        {
+                            this.BackColor = Color.Red;
+                            btnStopRecord.ForeColor = Color.Red;
+                            btnStopRecord.BackColor = Color.White;
+                        }
+                        else
+                        {
+                            this.BackColor = Color.White;
+                            btnStopRecord.ForeColor = Color.White;
+                            btnStopRecord.BackColor = Color.Red;
+                        }
                         var checkExist = false;
                         myPlayer = new PVS.MediaPlayer.Player(displayPanel);
                         var camDevices = myPlayer.Webcam.GetDevices();
-                        if(camDevices != null && camDevices.Length > 0)
+                        if (camDevices != null && camDevices.Length > 0)
                         {
-                            foreach(var device in camDevices)
+                            foreach (var device in camDevices)
                             {
                                 if (device.Id.Equals(_webcam.Id) && device.Name.Equals(_webcam.Name))
                                 {
@@ -1296,15 +1320,25 @@ namespace PVSPlayerExample
         {
             if (_recording)
             {
+                btnStopRecord.Visible = false;
+                btnRecord.Visible = true;
+                lblTrangThai.Text = "Không ghi hình";
+                this.BackColor = Color.White;
                 if (!screenCopyMenuItem.Checked) Icon = Properties.Resources.Media_Playing;
                 _webcamPlayer.Webcam.RecorderStop();
                 recorderMenuItem.Checked = false;
                 _recording = false;
                 //Xu ly stop audio
-                _soundRecorder.StopAndSave(_pathFile + "_audio.wav", false);
+                string strCmdAudio = "";
+                if (_audioInDeviceSelected != null)
+                {
+                    _soundRecorder.StopAndSave(_pathFile + "_audio.wav", false);
+                    strCmdAudio = "-i " + _pathFile + "_audio.wav";
+                }
+
                 //Chay merge
                 string strCmdText;
-                strCmdText = "/C ffmpeg -i " + _pathFile + "_video.mp4 -i " + _pathFile + "_audio.wav -c:v copy -c:a aac " + _pathFile + ".mp4";
+                strCmdText = "/C ffmpeg -i " + _pathFile + "_video.mp4 " + strCmdAudio + " -c:v copy -c:a aac " + _pathFile + ".mp4";
                 System.Diagnostics.Process process = new System.Diagnostics.Process();
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                 startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -1312,6 +1346,20 @@ namespace PVSPlayerExample
                 startInfo.Arguments = strCmdText;
                 process.StartInfo = startInfo;
                 process.Start();
+                //Them vao video
+                VideoObj obj = new VideoObj();
+                obj.FilePath = _pathFolder;
+                obj.FileName = _pathName;
+                obj.CameraId = _webcam.Id;
+                obj.CameraName = _webcam.Name;
+                if (_audioInDeviceSelected != null)
+                {
+                    obj.AudioName = _audioInDeviceSelected.Name;
+                    obj.AudioId = _audioInDeviceSelected.Id;
+                }
+                obj.ThoiGianGhiHinh = _startRecordTime.ToString("dd/MM/yyyy HH:mm:ss");
+                obj.TiLeKhungHinh = webcamFormatButton.Text;
+                obj.Insert();
             }
         }
 
@@ -1558,8 +1606,10 @@ namespace PVSPlayerExample
         {
             string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "VideoManagement");
             Directory.CreateDirectory(folder);
-            _pathFile = Path.Combine(folder, string.Format("Record{0:yyyyMMddHHmmss}", DateTime.Now));
-            
+            _pathFolder = folder;
+            _pathName = string.Format("Record{0:yyyyMMddHHmmss}", DateTime.Now);
+            _pathFile = Path.Combine(_pathFolder, _pathName);
+
         }
     }
 }

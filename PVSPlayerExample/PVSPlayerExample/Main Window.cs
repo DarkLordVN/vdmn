@@ -2727,7 +2727,7 @@ namespace PVSPlayerExample
             }
             else
             {
-                Webcam_Window webcamWindow = new Webcam_Window(this, webcam);
+                Webcam_Window webcamWindow = new Webcam_Window(webcam);
                 webcamWindow.Show();
             }
         }
@@ -4000,7 +4000,7 @@ namespace PVSPlayerExample
         {
             if (_videoOverlayDialog == null)
             {
-                _videoOverlayDialog = new VideoOverlayDialog(this, null, myPlayer);
+                _videoOverlayDialog = new VideoOverlayDialog(null, myPlayer);
                 _videoOverlayDialog.FormClosed += VideoOverlayDialog_FormClosed;
                 CenterDialog(this, _videoOverlayDialog);
                 _videoOverlayDialog.Show(this);
