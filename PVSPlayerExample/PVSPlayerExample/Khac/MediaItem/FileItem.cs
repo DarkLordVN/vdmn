@@ -25,7 +25,7 @@ namespace IMAPI2.MediaItem
         {
             if (!File.Exists(path))
             {
-                throw new FileNotFoundException("The file added to FileItem was not found!", path);
+                throw new FileNotFoundException("Không tìm thấy tệp tin được add!", path);
             }
 
             filePath = path;

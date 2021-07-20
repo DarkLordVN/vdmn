@@ -31,17 +31,18 @@ namespace PVSPlayerExample
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTenVuAn = new System.Windows.Forms.TextBox();
-            this.smoothLabel5 = new PVSPlayerExample.SmoothLabel();
             this.txtDiaDiem = new System.Windows.Forms.TextBox();
-            this.smoothLabel4 = new PVSPlayerExample.SmoothLabel();
             this.txtTenDoiTuong = new System.Windows.Forms.TextBox();
-            this.smoothLabel3 = new PVSPlayerExample.SmoothLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCancel = new PVSPlayerExample.CustomButton();
-            this.btnAdd = new PVSPlayerExample.CustomButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grvKeKhai = new System.Windows.Forms.DataGridView();
+            this.smoothLabel5 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel4 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel3 = new PVSPlayerExample.SmoothLabel();
+            this.btnCancel = new PVSPlayerExample.CustomButton();
+            this.btnAdd = new PVSPlayerExample.CustomButton();
+            this.chkCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.created_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.camera_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.audio_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,16 +88,6 @@ namespace PVSPlayerExample
             this.txtTenVuAn.Size = new System.Drawing.Size(312, 22);
             this.txtTenVuAn.TabIndex = 9;
             // 
-            // smoothLabel5
-            // 
-            this.smoothLabel5.AutoSize = true;
-            this.smoothLabel5.Location = new System.Drawing.Point(16, 27);
-            this.smoothLabel5.Name = "smoothLabel5";
-            this.smoothLabel5.Size = new System.Drawing.Size(128, 17);
-            this.smoothLabel5.TabIndex = 8;
-            this.smoothLabel5.Text = "Tên vụ án / vụ việc";
-            this.smoothLabel5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
             // txtDiaDiem
             // 
             this.txtDiaDiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -106,16 +97,6 @@ namespace PVSPlayerExample
             this.txtDiaDiem.Size = new System.Drawing.Size(312, 22);
             this.txtDiaDiem.TabIndex = 7;
             // 
-            // smoothLabel4
-            // 
-            this.smoothLabel4.AutoSize = true;
-            this.smoothLabel4.Location = new System.Drawing.Point(16, 147);
-            this.smoothLabel4.Name = "smoothLabel4";
-            this.smoothLabel4.Size = new System.Drawing.Size(108, 17);
-            this.smoothLabel4.TabIndex = 6;
-            this.smoothLabel4.Text = "Địa điểm xét hỏi";
-            this.smoothLabel4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
             // txtTenDoiTuong
             // 
             this.txtTenDoiTuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -124,16 +105,6 @@ namespace PVSPlayerExample
             this.txtTenDoiTuong.Name = "txtTenDoiTuong";
             this.txtTenDoiTuong.Size = new System.Drawing.Size(312, 22);
             this.txtTenDoiTuong.TabIndex = 5;
-            // 
-            // smoothLabel3
-            // 
-            this.smoothLabel3.AutoSize = true;
-            this.smoothLabel3.Location = new System.Drawing.Point(16, 87);
-            this.smoothLabel3.Name = "smoothLabel3";
-            this.smoothLabel3.Size = new System.Drawing.Size(96, 17);
-            this.smoothLabel3.TabIndex = 4;
-            this.smoothLabel3.Text = "Tên đối tượng";
-            this.smoothLabel3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // panel1
             // 
@@ -146,32 +117,6 @@ namespace PVSPlayerExample
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1050, 51);
             this.panel1.TabIndex = 2;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(969, 10);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 28);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Hủy bỏ";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(888, 10);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 28);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Xác nhận";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // splitContainer1
             // 
@@ -217,6 +162,7 @@ namespace PVSPlayerExample
             this.grvKeKhai.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.grvKeKhai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvKeKhai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.chkCheck,
             this.created_date,
             this.camera_name,
             this.audio_name,
@@ -227,10 +173,77 @@ namespace PVSPlayerExample
             this.grvKeKhai.Location = new System.Drawing.Point(0, 26);
             this.grvKeKhai.Margin = new System.Windows.Forms.Padding(4);
             this.grvKeKhai.Name = "grvKeKhai";
-            this.grvKeKhai.ReadOnly = true;
             this.grvKeKhai.RowHeadersWidth = 51;
+            this.grvKeKhai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvKeKhai.Size = new System.Drawing.Size(697, 402);
             this.grvKeKhai.TabIndex = 5;
+            this.grvKeKhai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvKeKhai_CellClick);
+            // 
+            // smoothLabel5
+            // 
+            this.smoothLabel5.AutoSize = true;
+            this.smoothLabel5.Location = new System.Drawing.Point(16, 27);
+            this.smoothLabel5.Name = "smoothLabel5";
+            this.smoothLabel5.Size = new System.Drawing.Size(128, 17);
+            this.smoothLabel5.TabIndex = 8;
+            this.smoothLabel5.Text = "Tên vụ án / vụ việc";
+            this.smoothLabel5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // smoothLabel4
+            // 
+            this.smoothLabel4.AutoSize = true;
+            this.smoothLabel4.Location = new System.Drawing.Point(16, 147);
+            this.smoothLabel4.Name = "smoothLabel4";
+            this.smoothLabel4.Size = new System.Drawing.Size(108, 17);
+            this.smoothLabel4.TabIndex = 6;
+            this.smoothLabel4.Text = "Địa điểm xét hỏi";
+            this.smoothLabel4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // smoothLabel3
+            // 
+            this.smoothLabel3.AutoSize = true;
+            this.smoothLabel3.Location = new System.Drawing.Point(16, 87);
+            this.smoothLabel3.Name = "smoothLabel3";
+            this.smoothLabel3.Size = new System.Drawing.Size(96, 17);
+            this.smoothLabel3.TabIndex = 4;
+            this.smoothLabel3.Text = "Tên đối tượng";
+            this.smoothLabel3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(969, 10);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 28);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Hủy bỏ";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(888, 10);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 28);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Xác nhận";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // chkCheck
+            // 
+            this.chkCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.chkCheck.FalseValue = "false";
+            this.chkCheck.HeaderText = "Chọn";
+            this.chkCheck.MinimumWidth = 50;
+            this.chkCheck.Name = "chkCheck";
+            this.chkCheck.TrueValue = "true";
+            this.chkCheck.Width = 50;
             // 
             // created_date
             // 
@@ -306,6 +319,7 @@ namespace PVSPlayerExample
             this.Name = "FrmThietLapVideo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Phân vùng video ghi đĩa";
+            this.Load += new System.EventHandler(this.FrmThietLapVideo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -333,6 +347,7 @@ namespace PVSPlayerExample
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView grvKeKhai;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chkCheck;
         private System.Windows.Forms.DataGridViewTextBoxColumn created_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn camera_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn audio_name;

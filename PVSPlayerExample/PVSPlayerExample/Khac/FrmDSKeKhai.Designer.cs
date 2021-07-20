@@ -31,14 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchKey = new System.Windows.Forms.TextBox();
             this.grvKeKhai = new System.Windows.Forms.DataGridView();
-            this.don_vi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten_dieu_tra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten_doi_tuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dia_diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten_vu_an = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giay_phep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.created_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghi_chu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.GroupBox();
             this.customButton1 = new PVSPlayerExample.CustomButton();
             this.btnThietLapVideo = new PVSPlayerExample.CustomButton();
@@ -48,6 +40,15 @@
             this.btnAddKeKhai = new PVSPlayerExample.CustomButton();
             this.btnCancel = new PVSPlayerExample.CustomButton();
             this.btnGhiDia1 = new PVSPlayerExample.CustomButton();
+            this.ke_khai_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.don_vi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_dieu_tra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_doi_tuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dia_diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_vu_an = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giay_phep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.created_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghi_chu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grvKeKhai)).BeginInit();
             this.btnTimKiem.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +84,7 @@
             this.grvKeKhai.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.grvKeKhai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvKeKhai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ke_khai_id,
             this.don_vi,
             this.ten_dieu_tra,
             this.ten_doi_tuong,
@@ -96,79 +98,9 @@
             this.grvKeKhai.Name = "grvKeKhai";
             this.grvKeKhai.ReadOnly = true;
             this.grvKeKhai.RowHeadersWidth = 51;
+            this.grvKeKhai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvKeKhai.Size = new System.Drawing.Size(829, 359);
             this.grvKeKhai.TabIndex = 4;
-            // 
-            // don_vi
-            // 
-            this.don_vi.DataPropertyName = "don_vi";
-            this.don_vi.HeaderText = "Đơn vị";
-            this.don_vi.MinimumWidth = 6;
-            this.don_vi.Name = "don_vi";
-            this.don_vi.ReadOnly = true;
-            this.don_vi.Width = 125;
-            // 
-            // ten_dieu_tra
-            // 
-            this.ten_dieu_tra.DataPropertyName = "ten_dieu_tra";
-            this.ten_dieu_tra.HeaderText = "Điều tra viên";
-            this.ten_dieu_tra.MinimumWidth = 6;
-            this.ten_dieu_tra.Name = "ten_dieu_tra";
-            this.ten_dieu_tra.ReadOnly = true;
-            this.ten_dieu_tra.Width = 125;
-            // 
-            // ten_doi_tuong
-            // 
-            this.ten_doi_tuong.DataPropertyName = "ten_doi_tuong";
-            this.ten_doi_tuong.HeaderText = "Tên đối tượng";
-            this.ten_doi_tuong.MinimumWidth = 6;
-            this.ten_doi_tuong.Name = "ten_doi_tuong";
-            this.ten_doi_tuong.ReadOnly = true;
-            this.ten_doi_tuong.Width = 125;
-            // 
-            // dia_diem
-            // 
-            this.dia_diem.DataPropertyName = "dia_diem";
-            this.dia_diem.HeaderText = "Địa điểm";
-            this.dia_diem.MinimumWidth = 6;
-            this.dia_diem.Name = "dia_diem";
-            this.dia_diem.ReadOnly = true;
-            this.dia_diem.Width = 125;
-            // 
-            // ten_vu_an
-            // 
-            this.ten_vu_an.DataPropertyName = "ten_vu_an";
-            this.ten_vu_an.HeaderText = "Tên vụ án / vụ việc";
-            this.ten_vu_an.MinimumWidth = 6;
-            this.ten_vu_an.Name = "ten_vu_an";
-            this.ten_vu_an.ReadOnly = true;
-            this.ten_vu_an.Width = 125;
-            // 
-            // giay_phep
-            // 
-            this.giay_phep.HeaderText = "Giấy phép";
-            this.giay_phep.MinimumWidth = 6;
-            this.giay_phep.Name = "giay_phep";
-            this.giay_phep.ReadOnly = true;
-            this.giay_phep.Width = 125;
-            // 
-            // created_date
-            // 
-            this.created_date.DataPropertyName = "created_date";
-            this.created_date.HeaderText = "Ngày tạo";
-            this.created_date.MinimumWidth = 6;
-            this.created_date.Name = "created_date";
-            this.created_date.ReadOnly = true;
-            this.created_date.Width = 125;
-            // 
-            // ghi_chu
-            // 
-            this.ghi_chu.DataPropertyName = "ghi_chu";
-            this.ghi_chu.HeaderText = "Ghi chú";
-            this.ghi_chu.MinimumWidth = 6;
-            this.ghi_chu.Name = "ghi_chu";
-            this.ghi_chu.ReadOnly = true;
-            this.ghi_chu.Width = 125;
             // 
             // btnTimKiem
             // 
@@ -283,6 +215,87 @@
             this.btnGhiDia1.UseVisualStyleBackColor = true;
             this.btnGhiDia1.Click += new System.EventHandler(this.btnGhiDia1_Click);
             // 
+            // ke_khai_id
+            // 
+            this.ke_khai_id.DataPropertyName = "ke_khai_id";
+            this.ke_khai_id.HeaderText = "ke_khai_id";
+            this.ke_khai_id.MinimumWidth = 6;
+            this.ke_khai_id.Name = "ke_khai_id";
+            this.ke_khai_id.ReadOnly = true;
+            this.ke_khai_id.Visible = false;
+            this.ke_khai_id.Width = 125;
+            // 
+            // don_vi
+            // 
+            this.don_vi.DataPropertyName = "don_vi";
+            this.don_vi.HeaderText = "Đơn vị";
+            this.don_vi.MinimumWidth = 6;
+            this.don_vi.Name = "don_vi";
+            this.don_vi.ReadOnly = true;
+            this.don_vi.Width = 125;
+            // 
+            // ten_dieu_tra
+            // 
+            this.ten_dieu_tra.DataPropertyName = "ten_dieu_tra";
+            this.ten_dieu_tra.HeaderText = "Điều tra viên";
+            this.ten_dieu_tra.MinimumWidth = 6;
+            this.ten_dieu_tra.Name = "ten_dieu_tra";
+            this.ten_dieu_tra.ReadOnly = true;
+            this.ten_dieu_tra.Width = 125;
+            // 
+            // ten_doi_tuong
+            // 
+            this.ten_doi_tuong.DataPropertyName = "ten_doi_tuong";
+            this.ten_doi_tuong.HeaderText = "Tên đối tượng";
+            this.ten_doi_tuong.MinimumWidth = 6;
+            this.ten_doi_tuong.Name = "ten_doi_tuong";
+            this.ten_doi_tuong.ReadOnly = true;
+            this.ten_doi_tuong.Width = 125;
+            // 
+            // dia_diem
+            // 
+            this.dia_diem.DataPropertyName = "dia_diem";
+            this.dia_diem.HeaderText = "Địa điểm";
+            this.dia_diem.MinimumWidth = 6;
+            this.dia_diem.Name = "dia_diem";
+            this.dia_diem.ReadOnly = true;
+            this.dia_diem.Width = 125;
+            // 
+            // ten_vu_an
+            // 
+            this.ten_vu_an.DataPropertyName = "ten_vu_an";
+            this.ten_vu_an.HeaderText = "Tên vụ án / vụ việc";
+            this.ten_vu_an.MinimumWidth = 6;
+            this.ten_vu_an.Name = "ten_vu_an";
+            this.ten_vu_an.ReadOnly = true;
+            this.ten_vu_an.Width = 125;
+            // 
+            // giay_phep
+            // 
+            this.giay_phep.HeaderText = "Giấy phép";
+            this.giay_phep.MinimumWidth = 6;
+            this.giay_phep.Name = "giay_phep";
+            this.giay_phep.ReadOnly = true;
+            this.giay_phep.Width = 125;
+            // 
+            // created_date
+            // 
+            this.created_date.DataPropertyName = "created_date";
+            this.created_date.HeaderText = "Ngày tạo";
+            this.created_date.MinimumWidth = 6;
+            this.created_date.Name = "created_date";
+            this.created_date.ReadOnly = true;
+            this.created_date.Width = 125;
+            // 
+            // ghi_chu
+            // 
+            this.ghi_chu.DataPropertyName = "ghi_chu";
+            this.ghi_chu.HeaderText = "Ghi chú";
+            this.ghi_chu.MinimumWidth = 6;
+            this.ghi_chu.Name = "ghi_chu";
+            this.ghi_chu.ReadOnly = true;
+            this.ghi_chu.Width = 125;
+            // 
             // FrmDSKeKhai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,6 +329,14 @@
         private System.Windows.Forms.GroupBox btnTimKiem;
         private CustomButton customButton1;
         private System.Windows.Forms.DataGridView grvKeKhai;
+        private CustomButton btnCancel;
+        private CustomButton btnAddKeKhai;
+        private CustomButton customButton4;
+        private CustomButton customButton5;
+        private CustomButton btnGhiDia2;
+        private CustomButton btnThietLapVideo;
+        private CustomButton btnGhiDia1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ke_khai_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn don_vi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ten_dieu_tra;
         private System.Windows.Forms.DataGridViewTextBoxColumn ten_doi_tuong;
@@ -324,13 +345,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn giay_phep;
         private System.Windows.Forms.DataGridViewTextBoxColumn created_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghi_chu;
-        private CustomButton btnCancel;
-        private CustomButton btnAddKeKhai;
-        private CustomButton customButton4;
-        private CustomButton customButton5;
-        private CustomButton btnGhiDia2;
-        private CustomButton btnThietLapVideo;
-        private CustomButton btnGhiDia1;
     }
 }
 

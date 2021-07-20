@@ -17,6 +17,27 @@ namespace PVSPlayerExample
             InitializeComponent();
         }
 
+        private void FrmThietLapVideo_Load(object sender, EventArgs e)
+        {
+            loadDataToGrid();
+        }
+        public DataSet loadData()
+        {
+            VideoObj obj = new VideoObj();
+            return obj.LoadListNew();
+        }
+
+        public void loadDataToGrid()
+        {
+            DataSet ds = loadData();
+            if (ds != null && ds.Tables.Count > 0)
+            {
+                grvKeKhai.AutoGenerateColumns = false;
+                grvKeKhai.DataSource = ds.Tables[0];
+            }
+        }
+
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
         }
@@ -29,6 +50,22 @@ namespace PVSPlayerExample
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void grvKeKhai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)grvKeKhai.Rows[e.RowIndex].Cells[0];
+                if (chk.Value == chk.TrueValue)
+                {
+                    chk.Value = chk.FalseValue;
+                }
+                else
+                {
+                    chk.Value = chk.TrueValue;
+                }
+            }
         }
     }
 }

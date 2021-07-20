@@ -25,6 +25,9 @@ namespace PVSPlayerExample
             IMAPI_BURN_VERIFICATION_LEVEL.IMAPI_BURN_VERIFICATION_NONE;
         private bool _closeMedia;
         private bool _ejectMedia;
+        private string _pathFile;
+        private string _pathFolder;
+        private int _keKhaiId;
 
         private BurnData _burnData = new BurnData();
 
@@ -32,7 +35,13 @@ namespace PVSPlayerExample
         {
             InitializeComponent();
         }
-
+        public BurnDVD(int keKhaiId = 0, string pathFolder = "", string pathFile = "")
+        {
+            InitializeComponent();
+            _keKhaiId = keKhaiId;
+            _pathFile = pathFile;
+            _pathFolder = pathFolder;
+        }
         /// <summary>
         /// Initialize the form
         /// </summary>
@@ -65,7 +74,7 @@ namespace PVSPlayerExample
             catch (COMException ex)
             {
                 MessageBox.Show(ex.Message,
-                    string.Format("Error:{0} - Please install IMAPI2", ex.ErrorCode),
+                    string.Format("Lỗi:{0}", ex.ErrorCode),
                     MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
@@ -87,10 +96,6 @@ namespace PVSPlayerExample
             labelStatusText.Text = string.Empty;
             labelFormatStatusText.Text = string.Empty;
 
-            //
-            // Select no verification, by default
-            //
-            comboBoxVerification.SelectedIndex = 0;
 
             UpdateCapacity();
         }
@@ -138,7 +143,7 @@ namespace PVSPlayerExample
                 discFormatData = new MsftDiscFormat2Data();
                 if (!discFormatData.IsRecorderSupported(discRecorder))
                 {
-                    MessageBox.Show("Recorder not supported", ClientName,
+                    MessageBox.Show("Tệp ghi âm không hỗ trợ", ClientName,
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -160,7 +165,7 @@ namespace PVSPlayerExample
             }
             catch (COMException)
             {
-                supportedMediaLabel.Text = "Error getting supported types";
+                supportedMediaLabel.Text = "Lỗi - Không hỗ trợ định dạng";
             }
             finally
             {
@@ -182,7 +187,7 @@ namespace PVSPlayerExample
             {
                 case IMAPI_MEDIA_PHYSICAL_TYPE.IMAPI_MEDIA_TYPE_UNKNOWN:
                 default:
-                    return "Unknown Media Type";
+                    return "Định dạng không xác định";
 
                 case IMAPI_MEDIA_PHYSICAL_TYPE.IMAPI_MEDIA_TYPE_CDROM:
                     return "CD-ROM";
@@ -364,7 +369,7 @@ namespace PVSPlayerExample
                 discFormatData = new MsftDiscFormat2Data();
                 if (!discFormatData.IsCurrentMediaSupported(discRecorder))
                 {
-                    labelMediaType.Text = "Media not supported!";
+                    labelMediaType.Text = "Tệp tin không được hỗ trợ!";
                     _totalDiscSize = 0;
                     return;
                 }
@@ -398,7 +403,7 @@ namespace PVSPlayerExample
             }
             catch (COMException exception)
             {
-                MessageBox.Show(this, exception.Message, "Detect Media Error",
+                MessageBox.Show(this, exception.Message, "Phát hiện đĩa lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -491,8 +496,6 @@ namespace PVSPlayerExample
             else
             {
                 _isBurning = true;
-                _closeMedia = checkBoxCloseMedia.Checked;
-                _ejectMedia = checkBoxEject.Checked;
 
                 EnableBurnUI(false);
 
@@ -574,7 +577,7 @@ namespace PVSPlayerExample
                 catch (COMException ex)
                 {
                     e.Result = ex.ErrorCode;
-                    MessageBox.Show(ex.Message, "IDiscFormat2Data.Write failed",
+                    MessageBox.Show(ex.Message, "IDiscFormat2Data.Write thất bại",
                         MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
                 finally
@@ -666,7 +669,7 @@ namespace PVSPlayerExample
         /// <param name="e"></param>
         private void backgroundBurnWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            labelStatusText.Text = (int)e.Result == 0 ? "Finished Burning Disc!" : "Error Burning Disc!";
+            labelStatusText.Text = (int)e.Result == 0 ? "Hoàn thành ghi đĩa!" : "Có lỗi xảy ra khi ghi!";
             statusProgressBar.Value = 0;
 
             _isBurning = false;
@@ -680,15 +683,12 @@ namespace PVSPlayerExample
         /// <param name="enable"></param>
         void EnableBurnUI(bool enable)
         {
-            buttonBurn.Text = enable ? "&Burn" : "&Cancel";
+            buttonBurn.Text = enable ? "Ghi đĩa" : "Hủy bỏ";
             buttonDetectMedia.Enabled = enable;
 
             devicesComboBox.Enabled = enable;
          
-            checkBoxEject.Enabled = enable;
-            checkBoxCloseMedia.Enabled = enable;
             textBoxLabel.Enabled = enable;
-            comboBoxVerification.Enabled = enable;
         }
 
         /// <summary>
@@ -710,19 +710,19 @@ namespace PVSPlayerExample
                 switch (burnData.currentAction)
                 {
                     case IMAPI_FORMAT2_DATA_WRITE_ACTION.IMAPI_FORMAT2_DATA_WRITE_ACTION_VALIDATING_MEDIA:
-                        labelStatusText.Text = "Validating current media...";
+                        labelStatusText.Text = "Kiểm tra thông tin đĩa...";
                         break;
 
                     case IMAPI_FORMAT2_DATA_WRITE_ACTION.IMAPI_FORMAT2_DATA_WRITE_ACTION_FORMATTING_MEDIA:
-                        labelStatusText.Text = "Formatting media...";
+                        labelStatusText.Text = "Định dạng lại tệp tin...";
                         break;
 
                     case IMAPI_FORMAT2_DATA_WRITE_ACTION.IMAPI_FORMAT2_DATA_WRITE_ACTION_INITIALIZING_HARDWARE:
-                        labelStatusText.Text = "Initializing hardware...";
+                        labelStatusText.Text = "Khởi tạo phần cứng...";
                         break;
 
                     case IMAPI_FORMAT2_DATA_WRITE_ACTION.IMAPI_FORMAT2_DATA_WRITE_ACTION_CALIBRATING_POWER:
-                        labelStatusText.Text = "Optimizing laser intensity...";
+                        labelStatusText.Text = "Tối ưu ghi đĩa...";
                         break;
 
                     case IMAPI_FORMAT2_DATA_WRITE_ACTION.IMAPI_FORMAT2_DATA_WRITE_ACTION_WRITING_DATA:
@@ -731,26 +731,26 @@ namespace PVSPlayerExample
                         if (writtenSectors > 0 && burnData.sectorCount > 0)
                         {
                             var percent = (int)((100 * writtenSectors) / burnData.sectorCount);
-                            labelStatusText.Text = string.Format("Progress: {0}%", percent);
+                            labelStatusText.Text = string.Format("Tiến độ: {0}%", percent);
                             statusProgressBar.Value = percent;
                         }
                         else
                         {
-                            labelStatusText.Text = "Progress 0%";
+                            labelStatusText.Text = "Tiến độ 0%";
                             statusProgressBar.Value = 0;
                         }
                         break;
 
                     case IMAPI_FORMAT2_DATA_WRITE_ACTION.IMAPI_FORMAT2_DATA_WRITE_ACTION_FINALIZATION:
-                        labelStatusText.Text = "Finalizing writing...";
+                        labelStatusText.Text = "Đang ghi dữ liệu...";
                         break;
 
                     case IMAPI_FORMAT2_DATA_WRITE_ACTION.IMAPI_FORMAT2_DATA_WRITE_ACTION_COMPLETED:
-                        labelStatusText.Text = "Completed!";
+                        labelStatusText.Text = "Đã hoàn thành!";
                         break;
 
                     case IMAPI_FORMAT2_DATA_WRITE_ACTION.IMAPI_FORMAT2_DATA_WRITE_ACTION_VERIFYING:
-                        labelStatusText.Text = "Verifying";
+                        labelStatusText.Text = "Đang kiểm tra";
                         break;
                 }
             }
@@ -829,7 +829,7 @@ namespace PVSPlayerExample
             }
             catch (COMException exception)
             {
-                MessageBox.Show(this, exception.Message, "Create File System Error", 
+                MessageBox.Show(this, exception.Message, "Tạo tệp tin hệ thống bị lỗi", 
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dataStream = null;
                 return false;
@@ -1167,8 +1167,11 @@ namespace PVSPlayerExample
         /// <param name="e"></param>
         private void comboBoxVerification_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _verificationLevel = (IMAPI_BURN_VERIFICATION_LEVEL)comboBoxVerification.SelectedIndex;
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

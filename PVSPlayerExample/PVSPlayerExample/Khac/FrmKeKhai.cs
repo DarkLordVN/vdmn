@@ -31,7 +31,7 @@ namespace PVSPlayerExample
                 var check = obj.Insert();
                 if (check)
                 {
-                    MessageBox.Show("Thêm mới", "Thêm mới thông tin kê khai thành công");
+                    MessageBox.Show("Thêm mới thông tin kê khai thành công", "Thêm mới", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -44,6 +44,11 @@ namespace PVSPlayerExample
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtDiaDiem.Text = txtDieuTraVien.Text = txtDonVi.Text = txtGhiChu.Text = txtTenDoiTuong.Text = txtTenVuAn.Text = "";   
         }
     }
 }

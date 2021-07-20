@@ -72,6 +72,10 @@ namespace PVSPlayerExample
         {
             FrmKeKhai frm = new FrmKeKhai();
             frm.ShowDialog();
+            if (frm.IsDisposed)
+            {
+                loadDataToGrid();
+            }
         }
 
         private void btnThietLapVideo_Click(object sender, EventArgs e)
@@ -82,13 +86,30 @@ namespace PVSPlayerExample
 
         private void btnGhiDia1_Click(object sender, EventArgs e)
         {
-            BurnMedia frm = new BurnMedia();
-            frm.ShowDialog();
+            var rowSelected = grvKeKhai.SelectedRows;
+            if(rowSelected != null && rowSelected.Count > 0)
+            {
+                var idSelected = rowSelected[0].Cells["ke_khai_id"];
+                if(idSelected != null && idSelected.Value != null)
+                {
+                    var keKhaiId = 0;
+                    int.TryParse(idSelected.Value + "", out keKhaiId);
+                    if(keKhaiId > 0)
+                    {
+                        BurnDVD frm = new BurnDVD();
+                        frm.ShowDialog();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn thông tin kê khai!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnGhiDia2_Click(object sender, EventArgs e)
         {
-            BurnDVD frm = new BurnDVD();
+            BurnMedia frm = new BurnMedia();
             frm.ShowDialog();
         }
     }
