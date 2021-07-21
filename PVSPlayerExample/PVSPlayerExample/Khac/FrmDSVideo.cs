@@ -10,13 +10,15 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     public partial class FrmDSVideo : Form
     {
-        public FrmDSVideo()
+        FormMain _mainForm;
+        public FrmDSVideo(FormMain mainForm)
         {
             InitializeComponent();
+            _mainForm = mainForm;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,6 +45,25 @@ namespace PVSPlayerExample
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void grvKeKhai_DoubleClick(object sender, EventArgs e)
+        {
+            var rowSelected = grvKeKhai.SelectedRows;
+            if (rowSelected != null && rowSelected.Count > 0)
+            {
+                var fullPath = "";
+                var filePath = rowSelected[0].Cells["file_path"];
+                var fileName = rowSelected[0].Cells["file_name"];
+                if (filePath != null && fileName != null && !string.IsNullOrEmpty(filePath.Value + "") && !string.IsNullOrEmpty(fileName.Value + ""))
+                {
+                    fullPath = filePath.Value + "\\" + fileName.Value + ".mp4";
+                }
+                _mainForm.showMainWindow(fullPath);
+                //_mainForm._pathVideo = fullPath;
+                //_mainForm.AddToPlaylist(fullPath)
+                this.Dispose();
+            }
         }
     }
 }

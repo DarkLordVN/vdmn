@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // Drag and Drop
     //

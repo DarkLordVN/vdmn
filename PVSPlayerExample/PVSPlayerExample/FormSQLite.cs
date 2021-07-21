@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     public partial class FormSQLite : Form
     {

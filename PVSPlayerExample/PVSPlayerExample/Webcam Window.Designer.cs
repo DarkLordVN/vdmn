@@ -1,4 +1,4 @@
-﻿namespace PVSPlayerExample
+﻿namespace MediaKCTech
 {
     partial class Webcam_Window
     {
@@ -112,16 +112,16 @@
             this.systemDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.audioInputMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.formatMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.volumeDial = new PVSPlayerExample.Dial();
-            this.audioOutputLabel = new PVSPlayerExample.HeadLabel();
-            this.audioOutputButton = new PVSPlayerExample.DropDownButton();
-            this.audioInputLabel = new PVSPlayerExample.HeadLabel();
-            this.audioInputButton = new PVSPlayerExample.DropDownButton();
-            this.webcamFormatLabel = new PVSPlayerExample.HeadLabel();
-            this.webcamFormatButton = new PVSPlayerExample.DropDownButton();
+            this.volumeDial = new MediaKCTech.Dial();
+            this.audioOutputLabel = new MediaKCTech.HeadLabel();
+            this.audioOutputButton = new MediaKCTech.DropDownButton();
+            this.audioInputLabel = new MediaKCTech.HeadLabel();
+            this.audioInputButton = new MediaKCTech.DropDownButton();
+            this.webcamFormatLabel = new MediaKCTech.HeadLabel();
+            this.webcamFormatButton = new MediaKCTech.DropDownButton();
             this.lblTrangThai = new System.Windows.Forms.Label();
-            this.btnRecord = new PVSPlayerExample.CustomButton();
-            this.btnStopRecord = new PVSPlayerExample.CustomButton();
+            this.btnRecord = new MediaKCTech.CustomButton();
+            this.btnStopRecord = new MediaKCTech.CustomButton();
             this.displayMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.audioVolumeMenu.SuspendLayout();

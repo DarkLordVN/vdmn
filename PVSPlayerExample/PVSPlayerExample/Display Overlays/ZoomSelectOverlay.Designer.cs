@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class ZoomSelectOverlay
     {
@@ -19,16 +19,16 @@ namespace PVSPlayerExample
         private void InitializeComponent()
         {
             this.zoomPanel = new System.Windows.Forms.Panel();
-            this.moveLight = new PVSPlayerExample.LightPanel();
-            this.zoomOutLight = new PVSPlayerExample.LightPanel();
-            this.zoomInLight = new PVSPlayerExample.LightPanel();
-            this.ratioLight = new PVSPlayerExample.LightPanel();
-            this.resetButton = new PVSPlayerExample.CustomButton();
-            this.undoButton = new PVSPlayerExample.CustomButton();
-            this.moveButton = new PVSPlayerExample.CustomButton();
-            this.zoomOutButton = new PVSPlayerExample.CustomButton();
-            this.zoomInButton = new PVSPlayerExample.CustomButton();
-            this.ratioButton = new PVSPlayerExample.CustomButton();
+            this.moveLight = new MediaKCTech.LightPanel();
+            this.zoomOutLight = new MediaKCTech.LightPanel();
+            this.zoomInLight = new MediaKCTech.LightPanel();
+            this.ratioLight = new MediaKCTech.LightPanel();
+            this.resetButton = new MediaKCTech.CustomButton();
+            this.undoButton = new MediaKCTech.CustomButton();
+            this.moveButton = new MediaKCTech.CustomButton();
+            this.zoomOutButton = new MediaKCTech.CustomButton();
+            this.zoomInButton = new MediaKCTech.CustomButton();
+            this.ratioButton = new MediaKCTech.CustomButton();
             this.zoomPanel.SuspendLayout();
             this.SuspendLayout();
             // 

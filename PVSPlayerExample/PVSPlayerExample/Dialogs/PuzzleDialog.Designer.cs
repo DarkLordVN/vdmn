@@ -1,4 +1,4 @@
-﻿namespace PVSPlayerExample
+﻿namespace MediaKCTech
 {
     partial class PuzzleDialog
     {
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.messageLabel = new System.Windows.Forms.Label();
-            this.yesButton = new PVSPlayerExample.CustomButton();
+            this.yesButton = new MediaKCTech.CustomButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.noButton = new PVSPlayerExample.CustomButton();
+            this.noButton = new MediaKCTech.CustomButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 

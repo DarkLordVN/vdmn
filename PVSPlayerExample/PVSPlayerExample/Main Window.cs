@@ -25,7 +25,7 @@ using System.Windows.Forms;
 
 [assembly: CLSCompliant(true)]
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     /* ******************************** About this application
 
@@ -278,6 +278,8 @@ namespace PVSPlayerExample
         // Disposing
         private bool                _disposed;
 
+        internal string _pathVideo;
+
         #endregion
 
 
@@ -293,7 +295,7 @@ namespace PVSPlayerExample
 
 
         // Application starting point (for us):
-        public MainWindow()
+        public MainWindow(string pathVideo = "")
         {
             // Check if Microsoft Media Foundation is installed - see file Program.cs
 
@@ -332,6 +334,11 @@ namespace PVSPlayerExample
 
             _oldOpacity = Opacity;
             Opacity = 0; // 'continues' at Form1_Shown()
+            _pathVideo = pathVideo;
+            if (!string.IsNullOrEmpty(pathVideo))
+            {
+                PlayMedia(pathVideo);
+            }
         }
 
         // Create the main Player
@@ -1682,7 +1689,12 @@ namespace PVSPlayerExample
             _errorCount = 0;
 
             // Set checkmark playlist
-            ((ToolStripMenuItem)playMenu.Items[_mediaToPlay + START_PLAYITEMS - 1]).Checked = true;
+            try {
+                ((ToolStripMenuItem)playMenu.Items[_mediaToPlay + START_PLAYITEMS - 1]).Checked = true;
+            }
+            catch 
+            {
+            }
 
             // set overlay hold by application
             if (_overlayHold)
@@ -2123,7 +2135,7 @@ namespace PVSPlayerExample
                     // TODO replace by ShowMediaEndedError() (above)
 
                     ErrorDialog errorDialog;
-                    errorDialog = new ErrorDialog(APPLICATION_NAME, "PLAY MEDIA:\r\n\r\n" + fileName + "\r\n\r\n" + myPlayer.LastErrorString + ".\r\n\r\nError code: 0x" + myPlayer.LastErrorCode.ToString("X"), false, true);
+                    errorDialog = new ErrorDialog(APPLICATION_NAME, "Chạy tệp:\r\n\r\n" + fileName + "\r\n\r\n" + myPlayer.LastErrorString + ".\r\n\r\nLỗi xảy ra: 0x" + myPlayer.LastErrorCode.ToString("X"), false, true);
                     CenterDialog(this, errorDialog);
 
                     errorDialog.PlayNext = Prefs.OnErrorPlayNext;
@@ -4996,7 +5008,7 @@ namespace PVSPlayerExample
                 ReBuildPlayListMenu();
                 Prefs.PlayListChanged = true;
             }
-            catch { }
+            catch(Exception ex) { }
         }
 
         // Save playlist (by user)

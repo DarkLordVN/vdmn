@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     internal class KeKhaiObj
     {
@@ -22,6 +22,11 @@ namespace PVSPlayerExample
         string _ghiChu;
         string _giayPhep;
         string _createdDate;
+        string _taiKhoanId;
+        string _secretKey;
+        string _lastBurn;
+        string _folderPath;
+        string _zipPath;
         public int KeKhaiId { get => _keKhaiId; set => _keKhaiId = value; }
         public string TenDieuTra { get => _tenDieuTra; set => _tenDieuTra = value; }
         public string DonVi { get => _donVi; set => _donVi = value; }
@@ -31,6 +36,11 @@ namespace PVSPlayerExample
         public string GhiChu { get => _ghiChu; set => _ghiChu = value; }
         public string GiayPhep { get => _giayPhep; set => _giayPhep = value; }
         public string CreatedDate { get => _createdDate; set => _createdDate = value; }
+        public string TaiKhoanId { get => _taiKhoanId; set => _taiKhoanId = value; }
+        public string SecretKey { get => _secretKey; set => _secretKey = value; }
+        public string LastBurn { get => _lastBurn; set => _lastBurn = value; }
+        public string FolderPath { get => _folderPath; set => _folderPath = value; }
+        public string ZipPath { get => _zipPath; set => _zipPath = value; }
 
         #endregion
 
@@ -38,17 +48,11 @@ namespace PVSPlayerExample
         {
         }
 
-        public KeKhaiObj(string tenDieuTra, string donVi, string tenDoiTuong, string diaDiem, string tenVuAn, string ghiChu, string giayPhep, string createdDate)
+        public KeKhaiObj(int keKhaiId)
         {
-            _tenDieuTra = tenDieuTra;
-            _donVi = donVi;
-            _tenDoiTuong = tenDoiTuong;
-            _diaDiem = diaDiem;
-            _tenVuAn = tenVuAn;
-            _ghiChu = ghiChu;
-            _giayPhep = giayPhep;
-            _createdDate = createdDate;
+            GetById(keKhaiId);
         }
+
         public DataSet LoadList()
         {
             DataSet ds = new DataSet();
@@ -89,7 +93,7 @@ namespace PVSPlayerExample
         public bool Insert()
         {
             var checkSuccess = false;
-            string strInsert = string.Format("INSERT INTO kekhai (ten_dieu_tra	,don_vi	,ten_doi_tuong	,dia_diem	,ten_vu_an	,ghi_chu	,giay_phep	,created_date) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", _tenDieuTra, _donVi, _tenDoiTuong, _diaDiem, _tenVuAn, _ghiChu, _giayPhep, DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+            string strInsert = string.Format("INSERT INTO kekhai (ten_dieu_tra	,don_vi	,ten_doi_tuong	,dia_diem	,ten_vu_an	,ghi_chu	,giay_phep	,created_date, tai_khoan_id, secret_key, last_burn, folder_path, zip_path) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", _tenDieuTra, _donVi, _tenDoiTuong, _diaDiem, _tenVuAn, _ghiChu, _giayPhep, DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"), _taiKhoanId, _secretKey, _lastBurn, _folderPath, _zipPath);
             var sql = new SQLite();
             checkSuccess = sql.SQLExcuteNonQuery(strInsert);
             return checkSuccess;
@@ -97,7 +101,7 @@ namespace PVSPlayerExample
         public bool Update()
         {
             var checkSuccess = false;
-            string strUpdate = string.Format("UPDATE kekhai SET ten_dieu_tra = '{0}', don_vi = '{1}', ten_doi_tuong = '{2}', dia_diem = '{3}', ten_vu_an = '{4}', ghi_chu = '{5}',giay_phep ='{6}' WHERE ke_khai_id = '{7}'", _tenDieuTra, _donVi, _tenDoiTuong, _diaDiem, _tenVuAn, _ghiChu, _giayPhep, _keKhaiId);
+            string strUpdate = string.Format("UPDATE kekhai SET ten_dieu_tra = '{0}', don_vi = '{1}', ten_doi_tuong = '{2}', dia_diem = '{3}', ten_vu_an = '{4}', ghi_chu = '{5}',giay_phep ='{6}', tai_khoan_id = '{8}', secret_key = '{9}', last_burn = '{10}', folder_path = '{11}', zip_path = '{12}' WHERE ke_khai_id = '{7}'", _tenDieuTra, _donVi, _tenDoiTuong, _diaDiem, _tenVuAn, _ghiChu, _giayPhep, _keKhaiId, _taiKhoanId, _secretKey, _lastBurn, _folderPath, _zipPath);
             var sql = new SQLite();
             checkSuccess = sql.SQLExcuteNonQuery(strUpdate);
             return checkSuccess;

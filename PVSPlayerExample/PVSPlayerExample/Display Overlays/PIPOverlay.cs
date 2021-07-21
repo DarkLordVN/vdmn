@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     public sealed partial class PIPOverlay : OverlayForm, IOverlay
     {

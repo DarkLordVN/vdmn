@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class PIPOverlay
     {
@@ -20,9 +20,9 @@ namespace PVSPlayerExample
         {
             this.components = new System.ComponentModel.Container();
             this.pipPanel = new System.Windows.Forms.Panel();
-            this.stopButton = new PVSPlayerExample.CustomButton();
-            this.pauseButton = new PVSPlayerExample.CustomButton();
-            this.playButton = new PVSPlayerExample.DropDownButton();
+            this.stopButton = new MediaKCTech.CustomButton();
+            this.pauseButton = new MediaKCTech.CustomButton();
+            this.playButton = new MediaKCTech.DropDownButton();
             this.playMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addMediaFilesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -46,7 +46,7 @@ namespace PVSPlayerExample
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.switchScreensMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sizePanelNS = new System.Windows.Forms.Panel();
-            this.positionSlider = new PVSPlayerExample.CustomSlider();
+            this.positionSlider = new MediaKCTech.CustomSlider();
             this.playSubMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.playSubMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeFromListMenuItem = new System.Windows.Forms.ToolStripMenuItem();

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class PlaylistDialog
     {
@@ -32,9 +32,9 @@ namespace PVSPlayerExample
         private void InitializeComponent()
         {
             this.bottomPanel = new System.Windows.Forms.Panel();
-            this.saveButton = new PVSPlayerExample.CustomButton();
-            this.noSaveButton = new PVSPlayerExample.CustomButton();
-            this.cancelButton = new PVSPlayerExample.CustomButton();
+            this.saveButton = new MediaKCTech.CustomButton();
+            this.noSaveButton = new MediaKCTech.CustomButton();
+            this.cancelButton = new MediaKCTech.CustomButton();
             this.pvsPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();

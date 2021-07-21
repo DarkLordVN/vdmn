@@ -7,7 +7,7 @@ using PVS.MediaPlayer;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
 
     // Webcam Copy Overlay

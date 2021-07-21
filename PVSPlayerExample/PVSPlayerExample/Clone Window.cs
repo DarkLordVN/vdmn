@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // Clone Window
     // A Form used as a display clone of the main player.

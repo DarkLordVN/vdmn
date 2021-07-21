@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class Mp3CoverOverlay
     {
@@ -60,10 +60,10 @@ namespace PVSPlayerExample
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.restoreDefaultsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.optionsPanel = new System.Windows.Forms.Panel();
-			this.optionsButton = new PVSPlayerExample.DropDownButton();
-			this.bottomLabel = new PVSPlayerExample.SmoothLabel();
-			this.topLabel = new PVSPlayerExample.SmoothLabel();
-			this.imageBox1 = new PVSPlayerExample.ImageBox();
+			this.optionsButton = new MediaKCTech.DropDownButton();
+			this.bottomLabel = new MediaKCTech.SmoothLabel();
+			this.topLabel = new MediaKCTech.SmoothLabel();
+			this.imageBox1 = new MediaKCTech.ImageBox();
 			this.optionsMenu.SuspendLayout();
 			this.optionsPanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();

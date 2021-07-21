@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class ScribbleOverlay
     {
@@ -20,8 +20,8 @@ namespace PVSPlayerExample
         {
             this.components = new System.ComponentModel.Container();
             this.scribblePanel = new System.Windows.Forms.Panel();
-            this.clearButton = new PVSPlayerExample.CustomButton();
-            this.optionsButton = new PVSPlayerExample.DropDownButton();
+            this.clearButton = new MediaKCTech.CustomButton();
+            this.optionsButton = new MediaKCTech.DropDownButton();
             this.optionsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.scribbleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawLineMenuItem = new System.Windows.Forms.ToolStripMenuItem();

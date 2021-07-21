@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class BigTimeOverlay
     {
@@ -34,7 +34,7 @@ namespace PVSPlayerExample
             this.components = new System.ComponentModel.Container();
             this.endTimerLabel = new System.Windows.Forms.Label();
             this.optionsPanel = new System.Windows.Forms.Panel();
-            this.optionsButton = new PVSPlayerExample.DropDownButton();
+            this.optionsButton = new MediaKCTech.DropDownButton();
             this.optionsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timeModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trackTimeMenuItem = new System.Windows.Forms.ToolStripMenuItem();

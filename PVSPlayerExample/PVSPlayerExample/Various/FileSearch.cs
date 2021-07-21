@@ -6,7 +6,7 @@ using System.Text;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // Search for subtitles and karaoke files
     // Fast and efficient thread-safe variable-depth file search

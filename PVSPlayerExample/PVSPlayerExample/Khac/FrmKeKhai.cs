@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     public partial class FrmKeKhai : Form
     {
@@ -31,6 +31,7 @@ namespace PVSPlayerExample
                 var check = obj.Insert();
                 if (check)
                 {
+                    this.Dispose();
                     MessageBox.Show("Thêm mới thông tin kê khai thành công", "Thêm mới", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

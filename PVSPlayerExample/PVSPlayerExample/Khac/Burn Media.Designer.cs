@@ -1,4 +1,4 @@
-﻿namespace PVSPlayerExample
+﻿namespace MediaKCTech
 {
     partial class BurnMedia
     {
@@ -40,12 +40,12 @@
             this.statusProgressBar = new System.Windows.Forms.ProgressBar();
             this.labelStatusText = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonDetectMedia = new PVSPlayerExample.CustomButton();
+            this.buttonDetectMedia = new MediaKCTech.CustomButton();
             this.labelMediaType = new System.Windows.Forms.Label();
             this.backgroundFormatWorker = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonBurn = new PVSPlayerExample.CustomButton();
-            this.btnHuy = new PVSPlayerExample.CustomButton();
+            this.buttonBurn = new MediaKCTech.CustomButton();
+            this.btnHuy = new MediaKCTech.CustomButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO.Compression;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     internal class ZipControl
     {

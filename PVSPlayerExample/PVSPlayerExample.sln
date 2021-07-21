@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PVSPlayerExample", "PVSPlayerExample\PVSPlayerExample.csproj", "{D34F9437-EAD0-4F4F-85E7-DC65F5788BB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaKCTech", "PVSPlayerExample\MediaKCTech.csproj", "{D34F9437-EAD0-4F4F-85E7-DC65F5788BB6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PVS.MediaPlayer", "PVS.MediaPlayer\PVS.MediaPlayer.csproj", "{A5CB09C4-E484-4A60-A020-888A95EB2150}"
 EndProject

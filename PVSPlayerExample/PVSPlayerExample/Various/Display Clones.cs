@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // Display Clones
     // Forms with display clones of the main player.

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     public partial class FrmDSKeKhai : Form
     {
@@ -80,30 +80,21 @@ namespace PVSPlayerExample
 
         private void btnThietLapVideo_Click(object sender, EventArgs e)
         {
-            FrmThietLapVideo frm = new FrmThietLapVideo();
-            frm.ShowDialog();
+            var keKhaiId = getKeKhaiIdSelected();
+            if (keKhaiId > 0)
+            {
+                FrmThietLapVideo frm = new FrmThietLapVideo(keKhaiId);
+                frm.ShowDialog();
+            }
         }
 
         private void btnGhiDia1_Click(object sender, EventArgs e)
         {
-            var rowSelected = grvKeKhai.SelectedRows;
-            if(rowSelected != null && rowSelected.Count > 0)
+            var keKhaiId = getKeKhaiIdSelected();
+            if (keKhaiId > 0)
             {
-                var idSelected = rowSelected[0].Cells["ke_khai_id"];
-                if(idSelected != null && idSelected.Value != null)
-                {
-                    var keKhaiId = 0;
-                    int.TryParse(idSelected.Value + "", out keKhaiId);
-                    if(keKhaiId > 0)
-                    {
-                        BurnDVD frm = new BurnDVD(keKhaiId);
-                        frm.ShowDialog();
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Chưa chọn thông tin kê khai!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                BurnDVD frm = new BurnDVD(keKhaiId);
+                frm.ShowDialog();
             }
         }
 
@@ -111,6 +102,25 @@ namespace PVSPlayerExample
         {
             BurnMedia frm = new BurnMedia();
             frm.ShowDialog();
+        }
+
+        private int getKeKhaiIdSelected()
+        {
+            var keKhaiId = 0;
+            var rowSelected = grvKeKhai.SelectedRows;
+            if (rowSelected != null && rowSelected.Count > 0)
+            {
+                var idSelected = rowSelected[0].Cells["ke_khai_id"];
+                if (idSelected != null && idSelected.Value != null)
+                {
+                    int.TryParse(idSelected.Value + "", out keKhaiId);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn thông tin kê khai!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return keKhaiId;
         }
     }
 }

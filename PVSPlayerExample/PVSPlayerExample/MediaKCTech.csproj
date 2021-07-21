@@ -9,8 +9,8 @@
     <ProjectGuid>{D34F9437-EAD0-4F4F-85E7-DC65F5788BB6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PVSPlayerExample</RootNamespace>
-    <AssemblyName>PVSPlayerExample</AssemblyName>
+    <RootNamespace>MediaKCTech</RootNamespace>
+    <AssemblyName>MediaKCTech</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>

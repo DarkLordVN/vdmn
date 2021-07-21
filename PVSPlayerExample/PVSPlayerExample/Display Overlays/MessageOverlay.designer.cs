@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class MessageOverlay
     {
@@ -20,8 +20,8 @@ namespace PVSPlayerExample
         {
             this.components = new System.ComponentModel.Container();
             this.messagePanel = new System.Windows.Forms.Panel();
-            this.setButton = new PVSPlayerExample.CustomButton();
-            this.optionsButton = new PVSPlayerExample.DropDownButton();
+            this.setButton = new MediaKCTech.CustomButton();
+            this.optionsButton = new MediaKCTech.DropDownButton();
             this.optionsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showTextMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allTextMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,8 +61,8 @@ namespace PVSPlayerExample
             this.invertTransparency_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textboxPanel = new System.Windows.Forms.Panel();
-            this.centerTextLabel = new PVSPlayerExample.SmoothLabel();
-            this.scrollingTextLabel = new PVSPlayerExample.BlendLabel();
+            this.centerTextLabel = new MediaKCTech.SmoothLabel();
+            this.scrollingTextLabel = new MediaKCTech.BlendLabel();
             this.messagePanel.SuspendLayout();
             this.optionsMenu.SuspendLayout();
             this.SuspendLayout();

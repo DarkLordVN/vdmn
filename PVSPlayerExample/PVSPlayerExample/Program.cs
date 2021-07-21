@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using PVS.MediaPlayer;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     static class Program
     {

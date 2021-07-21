@@ -1,5 +1,5 @@
 ﻿
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class FrmKeKhai
     {
@@ -29,23 +29,23 @@ namespace PVSPlayerExample
         /// </summary>
         private void InitializeComponent()
         {
-            this.smoothLabel1 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel1 = new MediaKCTech.SmoothLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtGhiChu = new System.Windows.Forms.RichTextBox();
-            this.smoothLabel6 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel6 = new MediaKCTech.SmoothLabel();
             this.txtTenVuAn = new System.Windows.Forms.TextBox();
-            this.smoothLabel5 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel5 = new MediaKCTech.SmoothLabel();
             this.txtDiaDiem = new System.Windows.Forms.TextBox();
-            this.smoothLabel4 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel4 = new MediaKCTech.SmoothLabel();
             this.txtTenDoiTuong = new System.Windows.Forms.TextBox();
-            this.smoothLabel3 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel3 = new MediaKCTech.SmoothLabel();
             this.txtDonVi = new System.Windows.Forms.TextBox();
-            this.smoothLabel2 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel2 = new MediaKCTech.SmoothLabel();
             this.txtDieuTraVien = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCancel = new PVSPlayerExample.CustomButton();
-            this.btnClear = new PVSPlayerExample.CustomButton();
-            this.btnAdd = new PVSPlayerExample.CustomButton();
+            this.btnCancel = new MediaKCTech.CustomButton();
+            this.btnClear = new MediaKCTech.CustomButton();
+            this.btnAdd = new MediaKCTech.CustomButton();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();

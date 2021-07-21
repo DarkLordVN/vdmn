@@ -1,4 +1,4 @@
-﻿namespace PVSPlayerExample
+﻿namespace MediaKCTech
 {
     partial class AspectRatioDialog
     {
@@ -34,7 +34,7 @@
             this.widthBox = new System.Windows.Forms.TextBox();
             this.heightBox = new System.Windows.Forms.TextBox();
             this.colonLabel = new System.Windows.Forms.Label();
-            this.presetButton = new PVSPlayerExample.DropDownButton();
+            this.presetButton = new MediaKCTech.DropDownButton();
             this.presetRatesMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,13 +53,13 @@
             this.widthErrorPanel = new System.Windows.Forms.Panel();
             this.heightErrorPanel = new System.Windows.Forms.Panel();
             this.bottomPanel = new System.Windows.Forms.Panel();
-            this.updateButton = new PVSPlayerExample.CustomButton();
+            this.updateButton = new MediaKCTech.CustomButton();
             this.pvsPanel = new System.Windows.Forms.Panel();
-            this.cancelButton = new PVSPlayerExample.CustomButton();
-            this.okButton = new PVSPlayerExample.CustomButton();
+            this.cancelButton = new MediaKCTech.CustomButton();
+            this.okButton = new MediaKCTech.CustomButton();
             this.useRatioCheckBox = new System.Windows.Forms.CheckBox();
             this.displayPanel = new System.Windows.Forms.Panel();
-            this.videoPanel = new PVSPlayerExample.VideoPanel();
+            this.videoPanel = new MediaKCTech.VideoPanel();
             this.nameLabel = new System.Windows.Forms.Label();
             this.sizeTitleLabel = new System.Windows.Forms.Label();
             this.sizeLabel = new System.Windows.Forms.Label();

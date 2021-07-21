@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class MainWindow
     {
@@ -21,20 +21,20 @@ namespace PVSPlayerExample
             this.components = new System.ComponentModel.Container();
             this.leftFramePanel = new System.Windows.Forms.Panel();
             this.speedPanel = new System.Windows.Forms.Panel();
-            this.speedSlider = new PVSPlayerExample.CustomSlider2();
+            this.speedSlider = new MediaKCTech.CustomSlider2();
             this.sliderMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.sliderMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.speedLabelPanel = new PVSPlayerExample.CustomPanel();
+            this.speedLabelPanel = new MediaKCTech.CustomPanel();
             this.speedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.speedLight = new PVSPlayerExample.LightPanel();
+            this.speedLight = new MediaKCTech.LightPanel();
             this.speedLabelText = new System.Windows.Forms.Label();
             this.displayModePanel = new System.Windows.Forms.Panel();
-            this.repeatLight = new PVSPlayerExample.LightPanel();
-            this.repeatButton = new PVSPlayerExample.DropDownButton();
+            this.repeatLight = new MediaKCTech.LightPanel();
+            this.repeatButton = new MediaKCTech.DropDownButton();
             this.repeatMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.repeatOneMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repeatChapterMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,10 +44,10 @@ namespace PVSPlayerExample
             this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
             this.repeatOffMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repeatMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayLight = new PVSPlayerExample.LightPanel();
+            this.displayLight = new MediaKCTech.LightPanel();
             this.videoTracksLabel = new System.Windows.Forms.Label();
-            this.fullScreenLight = new PVSPlayerExample.LightPanel();
-            this.fullScreenModeButton = new PVSPlayerExample.DropDownButton();
+            this.fullScreenLight = new MediaKCTech.LightPanel();
+            this.fullScreenModeButton = new MediaKCTech.DropDownButton();
             this.fullScreenModeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fullScreenFormMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullScreenFormAllMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,14 +58,14 @@ namespace PVSPlayerExample
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.fullScreenOffMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullScreenModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayModeLabel = new PVSPlayerExample.HeadLabel();
+            this.displayModeLabel = new MediaKCTech.HeadLabel();
             this.playPanel = new System.Windows.Forms.Panel();
-            this.stopButton = new PVSPlayerExample.CustomButton();
-            this.nextButton = new PVSPlayerExample.CustomButton();
-            this.previousButton = new PVSPlayerExample.CustomButton();
-            this.pauseButton = new PVSPlayerExample.CustomButton();
-            this.playButtonLight = new PVSPlayerExample.LightPanel();
-            this.playButton = new PVSPlayerExample.DropDownButton();
+            this.stopButton = new MediaKCTech.CustomButton();
+            this.nextButton = new MediaKCTech.CustomButton();
+            this.previousButton = new MediaKCTech.CustomButton();
+            this.pauseButton = new MediaKCTech.CustomButton();
+            this.playButtonLight = new MediaKCTech.LightPanel();
+            this.playButton = new MediaKCTech.DropDownButton();
             this.playMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.playListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newPlayListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +81,7 @@ namespace PVSPlayerExample
             this.addMediaURLMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.playDisplayMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.titlePanel = new PVSPlayerExample.CustomPanel();
+            this.titlePanel = new MediaKCTech.CustomPanel();
             this.webSiteLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.clockLabel = new System.Windows.Forms.Label();
@@ -218,23 +218,23 @@ namespace PVSPlayerExample
             this.balanceDialLabel = new System.Windows.Forms.Label();
             this.volumeDialLabel = new System.Windows.Forms.Label();
             this.channelCountLabel = new System.Windows.Forms.Label();
-            this.rightLevelMeterPanel = new PVSPlayerExample.BufferedPanel();
-            this.leftLevelMeterPanel = new PVSPlayerExample.BufferedPanel();
-            this.audioDeviceButton = new PVSPlayerExample.DropDownButton();
-            this.balanceDial = new PVSPlayerExample.Dial();
-            this.volumeDial = new PVSPlayerExample.Dial();
-            this.volumeLabelPanel = new PVSPlayerExample.CustomPanel();
-            this.audioLight = new PVSPlayerExample.LightPanel();
+            this.rightLevelMeterPanel = new MediaKCTech.BufferedPanel();
+            this.leftLevelMeterPanel = new MediaKCTech.BufferedPanel();
+            this.audioDeviceButton = new MediaKCTech.DropDownButton();
+            this.balanceDial = new MediaKCTech.Dial();
+            this.volumeDial = new MediaKCTech.Dial();
+            this.volumeLabelPanel = new MediaKCTech.CustomPanel();
+            this.audioLight = new MediaKCTech.LightPanel();
             this.audioTracksLabel = new System.Windows.Forms.Label();
             this.audioVolumeLabelText = new System.Windows.Forms.Label();
-            this.stretchRightButton = new PVSPlayerExample.CustomButton();
-            this.stretchLeftButton = new PVSPlayerExample.CustomButton();
-            this.stretchDownButton = new PVSPlayerExample.CustomButton();
-            this.stretchUpButton = new PVSPlayerExample.CustomButton();
-            this.zoomOutButton = new PVSPlayerExample.CustomButton();
-            this.zoomInButton = new PVSPlayerExample.CustomButton();
-            this.stretchLabel = new PVSPlayerExample.HeadLabel();
-            this.positionSlider = new PVSPlayerExample.CustomSlider();
+            this.stretchRightButton = new MediaKCTech.CustomButton();
+            this.stretchLeftButton = new MediaKCTech.CustomButton();
+            this.stretchDownButton = new MediaKCTech.CustomButton();
+            this.stretchUpButton = new MediaKCTech.CustomButton();
+            this.zoomOutButton = new MediaKCTech.CustomButton();
+            this.zoomInButton = new MediaKCTech.CustomButton();
+            this.stretchLabel = new MediaKCTech.HeadLabel();
+            this.positionSlider = new MediaKCTech.CustomSlider();
             this.positionSliderMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.sliderAlwaysVisibleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sliderShowsProgressMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -280,13 +280,13 @@ namespace PVSPlayerExample
             this.positionLabel2 = new System.Windows.Forms.Label();
             this.positionLabel1 = new System.Windows.Forms.Label();
             this.displayParentPanel = new System.Windows.Forms.Panel();
-            this.positionSliderPanel = new PVSPlayerExample.SliderPanel();
+            this.positionSliderPanel = new MediaKCTech.SliderPanel();
             this.rightFramePanel = new System.Windows.Forms.Panel();
             this.audioPanel = new System.Windows.Forms.Panel();
             this.balanceDialTitle = new System.Windows.Forms.Label();
             this.volumeDialTitle = new System.Windows.Forms.Label();
             this.zoomPanel = new System.Windows.Forms.Panel();
-            this.zoomLabel = new PVSPlayerExample.HeadLabel();
+            this.zoomLabel = new MediaKCTech.HeadLabel();
             this.playSubMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.playMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator28 = new System.Windows.Forms.ToolStripSeparator();
@@ -673,7 +673,6 @@ namespace PVSPlayerExample
             this.toolStripSeparator3,
             this.fullScreenOffMenuItem});
             this.fullScreenModeMenu.Name = "fullScreenModeMenu";
-            this.fullScreenModeMenu.OwnerItem = this.fullScreenModeMenuItem;
             this.fullScreenModeMenu.Size = new System.Drawing.Size(271, 192);
             this.fullScreenModeMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.FullScreenModeMenu_Closed);
             this.fullScreenModeMenu.Opening += new System.ComponentModel.CancelEventHandler(this.FullScreenModeMenu_Opening);
@@ -1839,7 +1838,6 @@ namespace PVSPlayerExample
             this.toolStripSeparator31,
             this.systemDefaultToolStripMenuItem});
             this.audioDeviceMenu.Name = "audioDeviceMenu";
-            this.audioDeviceMenu.OwnerItem = this.audioDevicesMenuItem;
             this.audioDeviceMenu.Size = new System.Drawing.Size(221, 172);
             this.audioDeviceMenu.Closing += new System.Windows.Forms.ToolStripDropDownClosingEventHandler(this.AudioDeviceMenu_Closing);
             this.audioDeviceMenu.Opening += new System.ComponentModel.CancelEventHandler(this.AudioDeviceMenu_Opening);
@@ -2188,7 +2186,7 @@ namespace PVSPlayerExample
             // balanceDial
             // 
             this.balanceDial.ContextMenuStrip = this.sliderMenu;
-            this.balanceDial.Image = global::PVSPlayerExample.Properties.Resources.Dial_Normal_2;
+            this.balanceDial.Image = global::MediaKCTech.Properties.Resources.Dial_Normal_2;
             this.balanceDial.Location = new System.Drawing.Point(97, 74);
             this.balanceDial.Margin = new System.Windows.Forms.Padding(4);
             this.balanceDial.MaximumSize = new System.Drawing.Size(55, 55);
@@ -2204,7 +2202,7 @@ namespace PVSPlayerExample
             // volumeDial
             // 
             this.volumeDial.ContextMenuStrip = this.sliderMenu;
-            this.volumeDial.Image = global::PVSPlayerExample.Properties.Resources.Dial_Normal_2;
+            this.volumeDial.Image = global::MediaKCTech.Properties.Resources.Dial_Normal_2;
             this.volumeDial.Location = new System.Drawing.Point(15, 74);
             this.volumeDial.Margin = new System.Windows.Forms.Padding(4);
             this.volumeDial.MaximumSize = new System.Drawing.Size(55, 55);
@@ -2907,7 +2905,7 @@ namespace PVSPlayerExample
             this.copyListToolStripMenuItem});
             this.playSubMenu.Name = "playSubMenu";
             this.playSubMenu.ShowImageMargin = false;
-            this.playSubMenu.Size = new System.Drawing.Size(173, 166);
+            this.playSubMenu.Size = new System.Drawing.Size(185, 166);
             this.playSubMenu.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.PlaySubMenu_Closed);
             this.playSubMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.PlaySubMenu_ItemClicked);
             this.playSubMenu.MouseLeave += new System.EventHandler(this.PlaySubMenu_MouseLeave);
@@ -2916,53 +2914,53 @@ namespace PVSPlayerExample
             // 
             this.playMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.playMenuItem.Name = "playMenuItem";
-            this.playMenuItem.Size = new System.Drawing.Size(172, 24);
-            this.playMenuItem.Text = "Play";
+            this.playMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.playMenuItem.Text = "Phát";
             // 
             // toolStripSeparator28
             // 
             this.toolStripSeparator28.Name = "toolStripSeparator28";
-            this.toolStripSeparator28.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator28.Size = new System.Drawing.Size(182, 6);
             // 
             // openLocationMenuItem
             // 
             this.openLocationMenuItem.Name = "openLocationMenuItem";
-            this.openLocationMenuItem.Size = new System.Drawing.Size(172, 24);
-            this.openLocationMenuItem.Text = "Open file location";
+            this.openLocationMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.openLocationMenuItem.Text = "Mở đường dẫn tệp";
             // 
             // propertiesMenuItem
             // 
             this.propertiesMenuItem.Name = "propertiesMenuItem";
-            this.propertiesMenuItem.Size = new System.Drawing.Size(172, 24);
-            this.propertiesMenuItem.Text = "Properties";
+            this.propertiesMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.propertiesMenuItem.Text = "Thuộc tính";
             // 
             // toolStripSeparator29
             // 
             this.toolStripSeparator29.Name = "toolStripSeparator29";
-            this.toolStripSeparator29.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator29.Size = new System.Drawing.Size(182, 6);
             // 
             // removeFromListMenuItem
             // 
             this.removeFromListMenuItem.Name = "removeFromListMenuItem";
-            this.removeFromListMenuItem.Size = new System.Drawing.Size(172, 24);
-            this.removeFromListMenuItem.Text = "Remove from List";
+            this.removeFromListMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.removeFromListMenuItem.Text = "Xóa khỏi danh sách";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(182, 6);
             // 
             // sortListMenuItem
             // 
             this.sortListMenuItem.Name = "sortListMenuItem";
-            this.sortListMenuItem.Size = new System.Drawing.Size(172, 24);
-            this.sortListMenuItem.Text = "Sort List";
+            this.sortListMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.sortListMenuItem.Text = "Sắp xếp danh sách";
             // 
             // copyListToolStripMenuItem
             // 
             this.copyListToolStripMenuItem.Name = "copyListToolStripMenuItem";
-            this.copyListToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
-            this.copyListToolStripMenuItem.Text = "Copy List as Text";
+            this.copyListToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.copyListToolStripMenuItem.Text = "Sao chép danh sách";
             // 
             // video3DMenu
             // 
@@ -2973,19 +2971,19 @@ namespace PVSPlayerExample
             this.toolStripSeparator43,
             this.video3DStereoMenuItem});
             this.video3DMenu.Name = "video3DMenu";
-            this.video3DMenu.Size = new System.Drawing.Size(165, 88);
+            this.video3DMenu.Size = new System.Drawing.Size(211, 116);
             // 
             // video3DLeftMenuItem
             // 
             this.video3DLeftMenuItem.Name = "video3DLeftMenuItem";
-            this.video3DLeftMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.video3DLeftMenuItem.Size = new System.Drawing.Size(210, 26);
             this.video3DLeftMenuItem.Text = "Left Image";
             this.video3DLeftMenuItem.Click += new System.EventHandler(this.Video3DLeftMenuItem_Click);
             // 
             // video3DTopMenuItem
             // 
             this.video3DTopMenuItem.Name = "video3DTopMenuItem";
-            this.video3DTopMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.video3DTopMenuItem.Size = new System.Drawing.Size(210, 26);
             this.video3DTopMenuItem.Text = "Top Image";
             this.video3DTopMenuItem.Click += new System.EventHandler(this.Video3DTopMenuItem_Click);
             // 

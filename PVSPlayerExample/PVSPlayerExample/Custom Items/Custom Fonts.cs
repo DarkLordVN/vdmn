@@ -8,7 +8,7 @@ using System.Reflection;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     public partial class MainWindow
     {
@@ -21,7 +21,7 @@ namespace PVSPlayerExample
             if (FontCollection != null) return; // return if already installed
             //or: throw new InvalidOperationException("Custom fonts already installed.");
 
-            string[] customFonts = { "PVSPlayerExample.Resources.Crystal Italic1.ttf", "PVSPlayerExample.Resources.WingDings3a.ttf" };
+            string[] customFonts = { "MediaKCTech.Resources.Crystal Italic1.ttf", "MediaKCTech.Resources.WingDings3a.ttf" };
             Assembly assembly = GetType().Assembly;
             Stream   fontStream;
             byte[]   fontData;

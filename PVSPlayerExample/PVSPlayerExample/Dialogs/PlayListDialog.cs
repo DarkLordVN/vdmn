@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // PlayListBox - asks (save/don't save/cancel) if user wants to save the current playlist
     // before opening another one.

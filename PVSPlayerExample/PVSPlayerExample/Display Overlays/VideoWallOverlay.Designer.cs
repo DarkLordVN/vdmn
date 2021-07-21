@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class VideoWall
     {
@@ -33,7 +33,7 @@ namespace PVSPlayerExample
         {
             this.components = new System.ComponentModel.Container();
             this.screensPanel = new System.Windows.Forms.Panel();
-            this.optionsButton = new PVSPlayerExample.DropDownButton();
+            this.optionsButton = new MediaKCTech.DropDownButton();
             this.optionsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.displayModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stretchMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +68,7 @@ namespace PVSPlayerExample
             this.displaySettingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.startMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.startButton = new PVSPlayerExample.CustomButton();
+            this.startButton = new MediaKCTech.CustomButton();
             this.screensPanel.SuspendLayout();
             this.optionsMenu.SuspendLayout();
             this.SuspendLayout();

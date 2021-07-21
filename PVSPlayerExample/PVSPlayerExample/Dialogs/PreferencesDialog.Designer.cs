@@ -1,4 +1,4 @@
-﻿namespace PVSPlayerExample
+﻿namespace MediaKCTech
 {
     partial class PreferencesDialog
     {
@@ -33,8 +33,8 @@
 			this.pvsPanel = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.cancelButton = new PVSPlayerExample.CustomButton();
-			this.OKButton = new PVSPlayerExample.CustomButton();
+			this.cancelButton = new MediaKCTech.CustomButton();
+			this.OKButton = new MediaKCTech.CustomButton();
 			this.saveWindowBox = new System.Windows.Forms.CheckBox();
 			this.autoOverlayBox = new System.Windows.Forms.CheckBox();
 			this.mediaFilesLabel = new System.Windows.Forms.Label();

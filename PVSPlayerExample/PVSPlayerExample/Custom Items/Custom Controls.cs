@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // PVS.MediaPlayer Example Application - Custom Controls
 

@@ -1,5 +1,5 @@
 ﻿
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class FrmThietLapVideo
     {
@@ -31,14 +31,14 @@ namespace PVSPlayerExample
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTenVuAn = new System.Windows.Forms.TextBox();
-            this.smoothLabel5 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel5 = new MediaKCTech.SmoothLabel();
             this.txtDiaDiem = new System.Windows.Forms.TextBox();
-            this.smoothLabel4 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel4 = new MediaKCTech.SmoothLabel();
             this.txtTenDoiTuong = new System.Windows.Forms.TextBox();
-            this.smoothLabel3 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel3 = new MediaKCTech.SmoothLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCancel = new PVSPlayerExample.CustomButton();
-            this.btnAdd = new PVSPlayerExample.CustomButton();
+            this.btnCancel = new MediaKCTech.CustomButton();
+            this.btnAdd = new MediaKCTech.CustomButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grvKeKhai = new System.Windows.Forms.DataGridView();
@@ -50,6 +50,10 @@ namespace PVSPlayerExample
             this.do_phan_giai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ti_le_khung_hinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kich_co = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.file_path = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.file_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.video_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ke_khai_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -225,7 +229,11 @@ namespace PVSPlayerExample
             this.audio_name,
             this.do_phan_giai,
             this.ti_le_khung_hinh,
-            this.kich_co});
+            this.kich_co,
+            this.file_path,
+            this.file_name,
+            this.video_id,
+            this.ke_khai_id});
             this.grvKeKhai.Location = new System.Drawing.Point(0, 26);
             this.grvKeKhai.Margin = new System.Windows.Forms.Padding(4);
             this.grvKeKhai.Name = "grvKeKhai";
@@ -310,6 +318,42 @@ namespace PVSPlayerExample
             this.kich_co.Visible = false;
             this.kich_co.Width = 125;
             // 
+            // file_path
+            // 
+            this.file_path.DataPropertyName = "file_path";
+            this.file_path.HeaderText = "file_path";
+            this.file_path.MinimumWidth = 6;
+            this.file_path.Name = "file_path";
+            this.file_path.Visible = false;
+            this.file_path.Width = 125;
+            // 
+            // file_name
+            // 
+            this.file_name.DataPropertyName = "file_name";
+            this.file_name.HeaderText = "file_name";
+            this.file_name.MinimumWidth = 6;
+            this.file_name.Name = "file_name";
+            this.file_name.Visible = false;
+            this.file_name.Width = 125;
+            // 
+            // video_id
+            // 
+            this.video_id.DataPropertyName = "video_id";
+            this.video_id.HeaderText = "video_id";
+            this.video_id.MinimumWidth = 6;
+            this.video_id.Name = "video_id";
+            this.video_id.Visible = false;
+            this.video_id.Width = 125;
+            // 
+            // ke_khai_id
+            // 
+            this.ke_khai_id.DataPropertyName = "ke_khai_id";
+            this.ke_khai_id.HeaderText = "ke_khai_id";
+            this.ke_khai_id.MinimumWidth = 6;
+            this.ke_khai_id.Name = "ke_khai_id";
+            this.ke_khai_id.Visible = false;
+            this.ke_khai_id.Width = 125;
+            // 
             // FrmThietLapVideo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -357,5 +401,9 @@ namespace PVSPlayerExample
         private System.Windows.Forms.DataGridViewTextBoxColumn do_phan_giai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ti_le_khung_hinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn kich_co;
+        private System.Windows.Forms.DataGridViewTextBoxColumn file_path;
+        private System.Windows.Forms.DataGridViewTextBoxColumn file_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn video_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ke_khai_id;
     }
 }

@@ -10,7 +10,7 @@ using IMAPI2.Interop;
 using IMAPI2.MediaItem;
 
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
 
     public partial class BurnDVD : Form
@@ -27,7 +27,9 @@ namespace PVSPlayerExample
         private bool _ejectMedia;
         private string _pathFile;
         private string _pathFolder;
-        private int _keKhaiId;
+        private int _keKhaiId; 
+
+        private System.Windows.Forms.ListBox listBoxFiles;
 
         private BurnData _burnData = new BurnData();
 
@@ -51,6 +53,32 @@ namespace PVSPlayerExample
         {
             if(_keKhaiId > 0)
             {
+                VideoObj eVideo = new VideoObj();
+                var dsVideo = eVideo.LoadListByKeKhaiId(_keKhaiId);
+                if(dsVideo != null && dsVideo.Tables != null && dsVideo.Tables.Count > 0)
+                {
+                    if(dsVideo.Tables[0].Rows.Count <= 0)
+                    {
+                        MessageBox.Show("Thông tin kê khai chưa có video! \nĐề nghị thiết lập video trước khi ghi đĩa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        listBoxFiles = new ListBox();
+                        for(int i = 0; i< dsVideo.Tables[0].Rows.Count; i++)
+                        {
+                            var fullPath = "";
+                            var filePath = dsVideo.Tables[0].Rows[i]["file_path"];
+                            var fileName = dsVideo.Tables[0].Rows[i]["file_name"];
+                            if (filePath != null && fileName != null && !string.IsNullOrEmpty(filePath + "") && !string.IsNullOrEmpty(fileName + ""))
+                            {
+                                fullPath = filePath + "\\" + fileName + ".mp4";
+                            }
+                            var fileItem = new FileItem(fullPath);
+                            listBoxFiles.Items.Add(fileItem);
+                        }
+                    }
+                }
                 KeKhaiObj obj = new KeKhaiObj();
                 obj.GetById(_keKhaiId);
                 if(obj != null && obj.KeKhaiId > 0)
@@ -59,6 +87,11 @@ namespace PVSPlayerExample
                     txtTenDoiTuong.Text = obj.TenDoiTuong;
                     txtTenVuAn.Text = obj.TenVuAn;
                 }
+                //var fileItem = new FileItem(@"C:\Users\lekha\OneDrive\Documents\VideoManagement\test.zip");
+                //listBoxFiles.Items.Add(fileItem);
+
+                UpdateCapacity();
+                EnableBurnButton();
             }
             //
             // Determine the current recording devices
@@ -456,10 +489,10 @@ namespace PVSPlayerExample
             //// Calculate the size of the files
             ////
             Int64 totalMediaSize = 0;
-            //foreach (IMediaItem mediaItem in listBoxFiles.Items)
-            //{
-            //    totalMediaSize += mediaItem.SizeOnDisc;
-            //}
+            foreach (IMediaItem mediaItem in listBoxFiles.Items)
+            {
+                totalMediaSize += mediaItem.SizeOnDisc;
+            }
 
             if (totalMediaSize == 0)
             {
@@ -809,21 +842,21 @@ namespace PVSPlayerExample
                 //
                 // Add Files and Directories to File System Image
                 //
-                //foreach (IMediaItem mediaItem in listBoxFiles.Items)
-                //{
-                //    //
-                //    // Check if we've cancelled
-                //    //
-                //    if (backgroundBurnWorker.CancellationPending)
-                //    {
-                //        break;
-                //    }
+                foreach (IMediaItem mediaItem in listBoxFiles.Items)
+                {
+                    //
+                    // Check if we've cancelled
+                    //
+                    if (backgroundBurnWorker.CancellationPending)
+                    {
+                        break;
+                    }
 
-                //    //
-                //    // Add to File System
-                //    //
-                //    mediaItem.AddToFileSystem(rootItem);
-                //}
+                    //
+                    // Add to File System
+                    //
+                    mediaItem.AddToFileSystem(rootItem);
+                }
 
                 fileSystemImage.Update -= fileSystemImage_Update;
 
@@ -900,7 +933,7 @@ namespace PVSPlayerExample
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 var fileItem = new FileItem(openFileDialog.FileName);
-                //listBoxFiles.Items.Add(fileItem);
+                listBoxFiles.Items.Add(fileItem);
 
                 UpdateCapacity();
                 EnableBurnButton();
@@ -917,7 +950,7 @@ namespace PVSPlayerExample
             if (folderBrowserDialog.ShowDialog(this) == DialogResult.OK)
             {
                 var directoryItem = new DirectoryItem(folderBrowserDialog.SelectedPath);
-                //listBoxFiles.Items.Add(directoryItem);
+                listBoxFiles.Items.Add(directoryItem);
 
                 UpdateCapacity();
                 EnableBurnButton();
@@ -931,18 +964,18 @@ namespace PVSPlayerExample
         /// <param name="e"></param>
         private void buttonRemoveFiles_Click(object sender, EventArgs e)
         {
-            //var mediaItem = (IMediaItem)listBoxFiles.SelectedItem;
-            //if (mediaItem == null)
-            //    return;
+            var mediaItem = (IMediaItem)listBoxFiles.SelectedItem;
+            if (mediaItem == null)
+                return;
 
-            //if (MessageBox.Show("Are you sure you want to remove \"" + mediaItem + "\"?",
-            //    "Remove item", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-            //    listBoxFiles.Items.Remove(mediaItem);
+            if (MessageBox.Show("Are you sure you want to remove \"" + mediaItem + "\"?",
+                "Remove item", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                listBoxFiles.Items.Remove(mediaItem);
 
-            //    EnableBurnButton();
-            //    UpdateCapacity();
-            //}
+                EnableBurnButton();
+                UpdateCapacity();
+            }
         }
 
         #endregion
@@ -966,11 +999,11 @@ namespace PVSPlayerExample
         /// <param name="e"></param>
         private void listBoxFiles_DrawItem(object sender, DrawItemEventArgs e)
         {
-            //var mediaItem = (IMediaItem)listBoxFiles.Items[e.Index];
-            //if (mediaItem == null)
-            //{
-            //    return;
-            //}
+            var mediaItem = (IMediaItem)listBoxFiles.Items[e.Index];
+            if (mediaItem == null)
+            {
+                return;
+            }
 
             e.DrawBackground();
 

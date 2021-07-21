@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class SubtitlesOverlay
     {
@@ -78,15 +78,15 @@ namespace PVSPlayerExample
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.noAntiAliasingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsPanel = new System.Windows.Forms.Panel();
-            this.optionsButton = new PVSPlayerExample.DropDownButton();
+            this.optionsButton = new MediaKCTech.DropDownButton();
             this.subtitleListBox = new System.Windows.Forms.ListBox();
             this.findPanel1 = new System.Windows.Forms.Panel();
-            this.findCancelButton = new PVSPlayerExample.CustomButton();
-            this.findSetButton = new PVSPlayerExample.CustomButton();
+            this.findCancelButton = new MediaKCTech.CustomButton();
+            this.findSetButton = new MediaKCTech.CustomButton();
             this.findPanel2 = new System.Windows.Forms.Panel();
             this.findPanel3 = new System.Windows.Forms.Panel();
             this.findTextBox = new System.Windows.Forms.TextBox();
-            this.findButton = new PVSPlayerExample.CustomButton();
+            this.findButton = new MediaKCTech.CustomButton();
             this.optionsMenu.SuspendLayout();
             this.optionsPanel.SuspendLayout();
             this.findPanel1.SuspendLayout();

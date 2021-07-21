@@ -1,4 +1,4 @@
-﻿namespace PVSPlayerExample
+﻿namespace MediaKCTech
 {
     partial class WebcamDialog
     {
@@ -90,28 +90,28 @@
             this.hz60Box = new System.Windows.Forms.CheckBox();
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.autoMessageLabel = new System.Windows.Forms.Label();
-            this.OKButton = new PVSPlayerExample.CustomButton();
-            this.resetButton = new PVSPlayerExample.CustomButton();
+            this.OKButton = new MediaKCTech.CustomButton();
+            this.resetButton = new MediaKCTech.CustomButton();
             this.pvsPanel = new System.Windows.Forms.Panel();
             this.flashLabel = new System.Windows.Forms.Label();
             this.backlightLabel = new System.Windows.Forms.Label();
             this.colorEnableLabel = new System.Windows.Forms.Label();
             this.powerLineLabel = new System.Windows.Forms.Label();
-            this.rollSlider = new PVSPlayerExample.CustomSlider2();
-            this.tiltSlider = new PVSPlayerExample.CustomSlider2();
-            this.panSlider = new PVSPlayerExample.CustomSlider2();
-            this.irisSlider = new PVSPlayerExample.CustomSlider2();
-            this.exposureSlider = new PVSPlayerExample.CustomSlider2();
-            this.focusSlider = new PVSPlayerExample.CustomSlider2();
-            this.zoomSlider = new PVSPlayerExample.CustomSlider2();
-            this.gainSlider = new PVSPlayerExample.CustomSlider2();
-            this.whiteBalanceSlider = new PVSPlayerExample.CustomSlider2();
-            this.gammaSlider = new PVSPlayerExample.CustomSlider2();
-            this.sharpnessSlider = new PVSPlayerExample.CustomSlider2();
-            this.saturationSlider = new PVSPlayerExample.CustomSlider2();
-            this.hueSlider = new PVSPlayerExample.CustomSlider2();
-            this.contrastSlider = new PVSPlayerExample.CustomSlider2();
-            this.brightnessSlider = new PVSPlayerExample.CustomSlider2();
+            this.rollSlider = new MediaKCTech.CustomSlider2();
+            this.tiltSlider = new MediaKCTech.CustomSlider2();
+            this.panSlider = new MediaKCTech.CustomSlider2();
+            this.irisSlider = new MediaKCTech.CustomSlider2();
+            this.exposureSlider = new MediaKCTech.CustomSlider2();
+            this.focusSlider = new MediaKCTech.CustomSlider2();
+            this.zoomSlider = new MediaKCTech.CustomSlider2();
+            this.gainSlider = new MediaKCTech.CustomSlider2();
+            this.whiteBalanceSlider = new MediaKCTech.CustomSlider2();
+            this.gammaSlider = new MediaKCTech.CustomSlider2();
+            this.sharpnessSlider = new MediaKCTech.CustomSlider2();
+            this.saturationSlider = new MediaKCTech.CustomSlider2();
+            this.hueSlider = new MediaKCTech.CustomSlider2();
+            this.contrastSlider = new MediaKCTech.CustomSlider2();
+            this.brightnessSlider = new MediaKCTech.CustomSlider2();
             this.autoFlashBox = new System.Windows.Forms.CheckBox();
             this.autoBacklightBox = new System.Windows.Forms.CheckBox();
             this.propertyMenu.SuspendLayout();

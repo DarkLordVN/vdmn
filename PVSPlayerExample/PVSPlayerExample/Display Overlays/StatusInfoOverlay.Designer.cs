@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class StatusInfoOverlay
     {
@@ -61,7 +61,7 @@ namespace PVSPlayerExample
 			this.fullScreenLabel = new System.Windows.Forms.Label();
 			this.label23 = new System.Windows.Forms.Label();
 			this.frameRateLabel = new System.Windows.Forms.Label();
-			this.fadeOutButton = new PVSPlayerExample.CustomButton();
+			this.fadeOutButton = new MediaKCTech.CustomButton();
 			this.warningLabel = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 

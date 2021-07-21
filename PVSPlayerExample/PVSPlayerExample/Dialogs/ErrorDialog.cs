@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // ErrorBox - a dialog window to show errors and messages.
 

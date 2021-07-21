@@ -5,7 +5,7 @@ using System.Data.SQLite;
 using System.IO;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     public partial class FormMain : Form
     {
@@ -36,10 +36,10 @@ namespace PVSPlayerExample
         {
             showDSKeKhai();
         }
-        void showMainWindow()
+        public void showMainWindow(string path = "")
         {
             this.pnlDisplayContainer.Controls.Clear();
-            MainWindow frmMainWindows = new MainWindow();
+            MainWindow frmMainWindows = new MainWindow(path);
             frmMainWindows.TopLevel = false;
             this.pnlDisplayContainer.Controls.Add(frmMainWindows);
             frmMainWindows.FormBorderStyle = FormBorderStyle.None;
@@ -68,7 +68,7 @@ namespace PVSPlayerExample
 
         private void videoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDSVideo frm = new FrmDSVideo();
+            FrmDSVideo frm = new FrmDSVideo(this);
             frm.ShowDialog();
         }
 

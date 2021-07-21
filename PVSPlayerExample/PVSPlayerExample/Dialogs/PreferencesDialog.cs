@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // Preferences dialog - application settings.
 

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class Mp3KaraokeOverlay
     {
@@ -33,7 +33,7 @@ namespace PVSPlayerExample
         {
             this.components = new System.ComponentModel.Container();
             this.optionsPanel = new System.Windows.Forms.Panel();
-            this.optionsButton = new PVSPlayerExample.DropDownButton();
+            this.optionsButton = new MediaKCTech.DropDownButton();
             this.optionsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.sizeModeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zoomMenuItem = new System.Windows.Forms.ToolStripMenuItem();

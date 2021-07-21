@@ -1,5 +1,5 @@
 ﻿
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
 	partial class VideoOverlayDialog
 	{
@@ -31,14 +31,14 @@ namespace PVSPlayerExample
 		{
             this.components = new System.ComponentModel.Container();
             this.bitmapLabel = new System.Windows.Forms.Label();
-            this.transparencyButton = new PVSPlayerExample.DropDownButton();
+            this.transparencyButton = new MediaKCTech.DropDownButton();
             this.transparencyMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fromDialogMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fromMouseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fromScanMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.offMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacityButton = new PVSPlayerExample.DropDownButton();
+            this.opacityButton = new MediaKCTech.DropDownButton();
             this.opacityMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,20 +50,20 @@ namespace PVSPlayerExample
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearButton = new PVSPlayerExample.CustomButton();
-            this.openButton = new PVSPlayerExample.CustomButton();
-            this.placementButton = new PVSPlayerExample.DropDownButton();
+            this.clearButton = new MediaKCTech.CustomButton();
+            this.openButton = new MediaKCTech.CustomButton();
+            this.placementButton = new MediaKCTech.DropDownButton();
             this.placementMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bottomPanel = new System.Windows.Forms.Panel();
-            this.applyButton = new PVSPlayerExample.CustomButton();
-            this.okButton = new PVSPlayerExample.CustomButton();
-            this.cancelButton = new PVSPlayerExample.CustomButton();
+            this.applyButton = new MediaKCTech.CustomButton();
+            this.okButton = new MediaKCTech.CustomButton();
+            this.cancelButton = new MediaKCTech.CustomButton();
             this.pvsPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.transparencyColorPanel = new System.Windows.Forms.Panel();
-            this.placementLight = new PVSPlayerExample.LightPanel();
-            this.opacityLight = new PVSPlayerExample.LightPanel();
-            this.bitmapPanel = new PVSPlayerExample.BufferedPanel();
+            this.placementLight = new MediaKCTech.LightPanel();
+            this.opacityLight = new MediaKCTech.LightPanel();
+            this.bitmapPanel = new MediaKCTech.BufferedPanel();
             this.displayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.flipXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flipYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

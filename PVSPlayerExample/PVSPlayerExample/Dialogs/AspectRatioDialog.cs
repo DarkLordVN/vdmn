@@ -8,7 +8,7 @@ using PVS.MediaPlayer;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     /*
 

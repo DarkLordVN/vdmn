@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class WebSiteDialog
     {
@@ -35,8 +35,8 @@ namespace PVSPlayerExample
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.bottomPanel = new System.Windows.Forms.Panel();
-            this.cancelButton = new PVSPlayerExample.CustomButton();
-            this.OKButton = new PVSPlayerExample.CustomButton();
+            this.cancelButton = new MediaKCTech.CustomButton();
+            this.OKButton = new MediaKCTech.CustomButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pvsPanel = new System.Windows.Forms.Panel();
             this.bottomPanel.SuspendLayout();

@@ -1,4 +1,4 @@
-﻿namespace PVSPlayerExample
+﻿namespace MediaKCTech
 {
     partial class VideoColorDialog
     {
@@ -38,25 +38,25 @@
             this.clearAllMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.closeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.brightnessLight = new PVSPlayerExample.LightPanel();
+            this.brightnessLight = new MediaKCTech.LightPanel();
             this.brightnessValue = new System.Windows.Forms.Label();
             this.brightnessLabel = new System.Windows.Forms.Label();
-            this.brightnessSlider = new PVSPlayerExample.CustomSlider2();
+            this.brightnessSlider = new MediaKCTech.CustomSlider2();
             this.contrastPanel = new System.Windows.Forms.Panel();
-            this.contrastLight = new PVSPlayerExample.LightPanel();
+            this.contrastLight = new MediaKCTech.LightPanel();
             this.contrastValue = new System.Windows.Forms.Label();
             this.contrastLabel = new System.Windows.Forms.Label();
-            this.contrastSlider = new PVSPlayerExample.CustomSlider2();
+            this.contrastSlider = new MediaKCTech.CustomSlider2();
             this.huePanel = new System.Windows.Forms.Panel();
-            this.hueLight = new PVSPlayerExample.LightPanel();
+            this.hueLight = new MediaKCTech.LightPanel();
             this.hueValue = new System.Windows.Forms.Label();
             this.hueLabel = new System.Windows.Forms.Label();
-            this.hueSlider = new PVSPlayerExample.CustomSlider2();
+            this.hueSlider = new MediaKCTech.CustomSlider2();
             this.saturationPanel = new System.Windows.Forms.Panel();
-            this.saturationLight = new PVSPlayerExample.LightPanel();
+            this.saturationLight = new MediaKCTech.LightPanel();
             this.saturationValue = new System.Windows.Forms.Label();
             this.saturationLabel = new System.Windows.Forms.Label();
-            this.saturationSlider = new PVSPlayerExample.CustomSlider2();
+            this.saturationSlider = new MediaKCTech.CustomSlider2();
             this.brightnessPanel.SuspendLayout();
             this.colorDialogMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brightnessSlider)).BeginInit();

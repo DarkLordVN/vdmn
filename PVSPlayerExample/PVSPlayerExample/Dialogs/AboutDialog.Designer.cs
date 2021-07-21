@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class AboutDialog
     {
@@ -39,7 +39,7 @@ namespace PVSPlayerExample
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pvsPanel = new System.Windows.Forms.Panel();
-            this.OKButton = new PVSPlayerExample.CustomButton();
+            this.OKButton = new MediaKCTech.CustomButton();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.bottomPanel.SuspendLayout();
             this.SuspendLayout();

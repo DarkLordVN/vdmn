@@ -7,7 +7,7 @@ using PVS.MediaPlayer;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     public partial class WebcamDialog : Form
     {

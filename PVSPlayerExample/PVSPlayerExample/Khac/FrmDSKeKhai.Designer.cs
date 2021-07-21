@@ -1,4 +1,4 @@
-﻿namespace PVSPlayerExample
+﻿namespace MediaKCTech
 {
     partial class FrmDSKeKhai
     {
@@ -32,14 +32,14 @@
             this.txtSearchKey = new System.Windows.Forms.TextBox();
             this.grvKeKhai = new System.Windows.Forms.DataGridView();
             this.btnTimKiem = new System.Windows.Forms.GroupBox();
-            this.customButton1 = new PVSPlayerExample.CustomButton();
-            this.btnThietLapVideo = new PVSPlayerExample.CustomButton();
-            this.btnGhiDia2 = new PVSPlayerExample.CustomButton();
-            this.customButton5 = new PVSPlayerExample.CustomButton();
-            this.customButton4 = new PVSPlayerExample.CustomButton();
-            this.btnAddKeKhai = new PVSPlayerExample.CustomButton();
-            this.btnCancel = new PVSPlayerExample.CustomButton();
-            this.btnGhiDia1 = new PVSPlayerExample.CustomButton();
+            this.customButton1 = new MediaKCTech.CustomButton();
+            this.btnThietLapVideo = new MediaKCTech.CustomButton();
+            this.btnGhiDia2 = new MediaKCTech.CustomButton();
+            this.customButton5 = new MediaKCTech.CustomButton();
+            this.customButton4 = new MediaKCTech.CustomButton();
+            this.btnAddKeKhai = new MediaKCTech.CustomButton();
+            this.btnCancel = new MediaKCTech.CustomButton();
+            this.btnGhiDia1 = new MediaKCTech.CustomButton();
             this.ke_khai_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.don_vi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ten_dieu_tra = new System.Windows.Forms.DataGridViewTextBoxColumn();

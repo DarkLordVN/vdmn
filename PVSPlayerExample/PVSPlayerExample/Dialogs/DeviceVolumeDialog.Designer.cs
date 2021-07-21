@@ -1,5 +1,5 @@
 ﻿
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
 	partial class DeviceVolumeDialog
 	{
@@ -32,8 +32,8 @@ namespace PVSPlayerExample
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceVolumeDialog));
             this.deviceNameLabel = new System.Windows.Forms.Label();
-            this.volumeDial = new PVSPlayerExample.Dial();
-            this.volumeSlider = new PVSPlayerExample.CustomSlider2();
+            this.volumeDial = new MediaKCTech.Dial();
+            this.volumeSlider = new MediaKCTech.CustomSlider2();
             this.volumeLabel = new System.Windows.Forms.Label();
             this.volumeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.muteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,8 +42,8 @@ namespace PVSPlayerExample
             this.highVolumeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maximumVolumeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bottomPanel = new System.Windows.Forms.Panel();
-            this.muteButton = new PVSPlayerExample.CustomButton();
-            this.OKButton = new PVSPlayerExample.CustomButton();
+            this.muteButton = new MediaKCTech.CustomButton();
+            this.OKButton = new MediaKCTech.CustomButton();
             this.pvsPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.volumeSlider)).BeginInit();
             this.volumeMenu.SuspendLayout();
@@ -79,7 +79,7 @@ namespace PVSPlayerExample
             this.volumeDial.TabIndex = 1;
             this.volumeDial.Text = "dial1";
             this.volumeDial.Value = 0;
-            this.volumeDial.ValueChanged += new System.EventHandler<PVSPlayerExample.Dial.ValueChangedEventArgs>(this.VolumeDial_ValueChanged);
+            this.volumeDial.ValueChanged += new System.EventHandler<MediaKCTech.Dial.ValueChangedEventArgs>(this.VolumeDial_ValueChanged);
             this.volumeDial.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VolumeControl_MouseDown);
             this.volumeDial.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VolumeControl_MouseUp);
             // 

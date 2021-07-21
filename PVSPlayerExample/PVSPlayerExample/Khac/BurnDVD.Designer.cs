@@ -1,4 +1,4 @@
-﻿namespace PVSPlayerExample
+﻿namespace MediaKCTech
 {
     partial class BurnDVD
     {
@@ -39,31 +39,31 @@
             this.progressBarCapacity = new System.Windows.Forms.ProgressBar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageBurn = new System.Windows.Forms.TabPage();
-            this.buttonBurn = new PVSPlayerExample.CustomButton();
+            this.btnCancel = new MediaKCTech.CustomButton();
+            this.buttonBurn = new MediaKCTech.CustomButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtTenVuAn = new System.Windows.Forms.TextBox();
-            this.smoothLabel5 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel5 = new MediaKCTech.SmoothLabel();
             this.txtDiaDiem = new System.Windows.Forms.TextBox();
             this.textBoxLabel = new System.Windows.Forms.TextBox();
-            this.smoothLabel4 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel4 = new MediaKCTech.SmoothLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenDoiTuong = new System.Windows.Forms.TextBox();
-            this.smoothLabel3 = new PVSPlayerExample.SmoothLabel();
+            this.smoothLabel3 = new MediaKCTech.SmoothLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.statusProgressBar = new System.Windows.Forms.ProgressBar();
             this.labelStatusText = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonDetectMedia = new PVSPlayerExample.CustomButton();
+            this.buttonDetectMedia = new MediaKCTech.CustomButton();
             this.labelMediaType = new System.Windows.Forms.Label();
             this.tabPageFormat = new System.Windows.Forms.TabPage();
+            this.btnCancel1 = new MediaKCTech.CustomButton();
+            this.buttonFormat = new MediaKCTech.CustomButton();
             this.checkBoxQuickFormat = new System.Windows.Forms.CheckBox();
             this.checkBoxEjectFormat = new System.Windows.Forms.CheckBox();
             this.formatProgressBar = new System.Windows.Forms.ProgressBar();
             this.labelFormatStatusText = new System.Windows.Forms.Label();
             this.backgroundFormatWorker = new System.ComponentModel.BackgroundWorker();
-            this.buttonFormat = new PVSPlayerExample.CustomButton();
-            this.btnCancel = new PVSPlayerExample.CustomButton();
-            this.btnCancel1 = new PVSPlayerExample.CustomButton();
             this.tabControl1.SuspendLayout();
             this.tabPageBurn.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -74,11 +74,12 @@
             // 
             // devicesComboBox
             // 
+            this.devicesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.devicesComboBox.FormattingEnabled = true;
             this.devicesComboBox.Location = new System.Drawing.Point(16, 15);
             this.devicesComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.devicesComboBox.Name = "devicesComboBox";
-            this.devicesComboBox.Size = new System.Drawing.Size(260, 24);
+            this.devicesComboBox.Size = new System.Drawing.Size(260, 25);
             this.devicesComboBox.TabIndex = 1;
             this.devicesComboBox.SelectedIndexChanged += new System.EventHandler(this.devicesComboBox_SelectedIndexChanged);
             this.devicesComboBox.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.devicesComboBox_Format);
@@ -86,6 +87,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label1.Location = new System.Drawing.Point(349, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -116,6 +118,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label3.Location = new System.Drawing.Point(8, 90);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -127,6 +130,7 @@
             // 
             this.labelTotalSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTotalSize.AutoSize = true;
+            this.labelTotalSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.labelTotalSize.Location = new System.Drawing.Point(291, 87);
             this.labelTotalSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTotalSize.Name = "labelTotalSize";
@@ -148,6 +152,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPageBurn);
             this.tabControl1.Controls.Add(this.tabPageFormat);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabControl1.Location = new System.Drawing.Point(16, 71);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
@@ -164,17 +169,31 @@
             this.tabPageBurn.Controls.Add(this.groupBox4);
             this.tabPageBurn.Controls.Add(this.groupBox3);
             this.tabPageBurn.Controls.Add(this.groupBox2);
-            this.tabPageBurn.Location = new System.Drawing.Point(4, 25);
+            this.tabPageBurn.Location = new System.Drawing.Point(4, 26);
             this.tabPageBurn.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageBurn.Name = "tabPageBurn";
             this.tabPageBurn.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageBurn.Size = new System.Drawing.Size(816, 406);
+            this.tabPageBurn.Size = new System.Drawing.Size(816, 405);
             this.tabPageBurn.TabIndex = 0;
             this.tabPageBurn.Text = "Ghi đĩa";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(714, 371);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(92, 28);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "Hủy bỏ";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // buttonBurn
             // 
             this.buttonBurn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.buttonBurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonBurn.ForeColor = System.Drawing.Color.White;
             this.buttonBurn.Location = new System.Drawing.Point(616, 371);
             this.buttonBurn.Name = "buttonBurn";
@@ -198,9 +217,10 @@
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.txtTenDoiTuong);
             this.groupBox4.Controls.Add(this.smoothLabel3);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(395, 361);
+            this.groupBox4.Size = new System.Drawing.Size(395, 360);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Kê khai thông tin";
@@ -209,14 +229,16 @@
             // 
             this.txtTenVuAn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTenVuAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtTenVuAn.Location = new System.Drawing.Point(19, 47);
             this.txtTenVuAn.Name = "txtTenVuAn";
-            this.txtTenVuAn.Size = new System.Drawing.Size(363, 22);
+            this.txtTenVuAn.Size = new System.Drawing.Size(363, 23);
             this.txtTenVuAn.TabIndex = 9;
             // 
             // smoothLabel5
             // 
             this.smoothLabel5.AutoSize = true;
+            this.smoothLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.smoothLabel5.Location = new System.Drawing.Point(16, 27);
             this.smoothLabel5.Name = "smoothLabel5";
             this.smoothLabel5.Size = new System.Drawing.Size(128, 17);
@@ -228,22 +250,25 @@
             // 
             this.txtDiaDiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDiaDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtDiaDiem.Location = new System.Drawing.Point(19, 167);
             this.txtDiaDiem.Name = "txtDiaDiem";
-            this.txtDiaDiem.Size = new System.Drawing.Size(363, 22);
+            this.txtDiaDiem.Size = new System.Drawing.Size(363, 23);
             this.txtDiaDiem.TabIndex = 7;
             // 
             // textBoxLabel
             // 
+            this.textBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.textBoxLabel.Location = new System.Drawing.Point(22, 228);
             this.textBoxLabel.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLabel.Name = "textBoxLabel";
-            this.textBoxLabel.Size = new System.Drawing.Size(360, 22);
+            this.textBoxLabel.Size = new System.Drawing.Size(360, 23);
             this.textBoxLabel.TabIndex = 5;
             // 
             // smoothLabel4
             // 
             this.smoothLabel4.AutoSize = true;
+            this.smoothLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.smoothLabel4.Location = new System.Drawing.Point(16, 147);
             this.smoothLabel4.Name = "smoothLabel4";
             this.smoothLabel4.Size = new System.Drawing.Size(108, 17);
@@ -254,6 +279,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label2.Location = new System.Drawing.Point(19, 207);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -265,14 +291,16 @@
             // 
             this.txtTenDoiTuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTenDoiTuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtTenDoiTuong.Location = new System.Drawing.Point(19, 107);
             this.txtTenDoiTuong.Name = "txtTenDoiTuong";
-            this.txtTenDoiTuong.Size = new System.Drawing.Size(363, 22);
+            this.txtTenDoiTuong.Size = new System.Drawing.Size(363, 23);
             this.txtTenDoiTuong.TabIndex = 5;
             // 
             // smoothLabel3
             // 
             this.smoothLabel3.AutoSize = true;
+            this.smoothLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.smoothLabel3.Location = new System.Drawing.Point(16, 87);
             this.smoothLabel3.Name = "smoothLabel3";
             this.smoothLabel3.Size = new System.Drawing.Size(96, 17);
@@ -285,6 +313,7 @@
             this.groupBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.groupBox3.Controls.Add(this.statusProgressBar);
             this.groupBox3.Controls.Add(this.labelStatusText);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox3.Location = new System.Drawing.Point(405, 177);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
@@ -304,6 +333,7 @@
             // 
             // labelStatusText
             // 
+            this.labelStatusText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.labelStatusText.Location = new System.Drawing.Point(12, 22);
             this.labelStatusText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatusText.Name = "labelStatusText";
@@ -320,6 +350,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.labelTotalSize);
             this.groupBox2.Controls.Add(this.progressBarCapacity);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox2.Location = new System.Drawing.Point(405, 3);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -327,11 +358,12 @@
             this.groupBox2.Size = new System.Drawing.Size(401, 166);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Selected media type:";
+            this.groupBox2.Text = "Chọn định dạng:";
             // 
             // buttonDetectMedia
             // 
             this.buttonDetectMedia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.buttonDetectMedia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonDetectMedia.ForeColor = System.Drawing.Color.White;
             this.buttonDetectMedia.Location = new System.Drawing.Point(8, 25);
             this.buttonDetectMedia.Name = "buttonDetectMedia";
@@ -343,6 +375,7 @@
             // 
             // labelMediaType
             // 
+            this.labelMediaType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.labelMediaType.Location = new System.Drawing.Point(156, 25);
             this.labelMediaType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMediaType.Name = "labelMediaType";
@@ -359,13 +392,37 @@
             this.tabPageFormat.Controls.Add(this.checkBoxEjectFormat);
             this.tabPageFormat.Controls.Add(this.formatProgressBar);
             this.tabPageFormat.Controls.Add(this.labelFormatStatusText);
-            this.tabPageFormat.Location = new System.Drawing.Point(4, 25);
+            this.tabPageFormat.Location = new System.Drawing.Point(4, 26);
             this.tabPageFormat.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageFormat.Name = "tabPageFormat";
             this.tabPageFormat.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageFormat.Size = new System.Drawing.Size(816, 406);
+            this.tabPageFormat.Size = new System.Drawing.Size(816, 405);
             this.tabPageFormat.TabIndex = 1;
             this.tabPageFormat.Text = "Định dạng lại đĩa";
+            // 
+            // btnCancel1
+            // 
+            this.btnCancel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.btnCancel1.ForeColor = System.Drawing.Color.White;
+            this.btnCancel1.Location = new System.Drawing.Point(719, 371);
+            this.btnCancel1.Name = "btnCancel1";
+            this.btnCancel1.Size = new System.Drawing.Size(90, 28);
+            this.btnCancel1.TabIndex = 16;
+            this.btnCancel1.Text = "Hủy bỏ";
+            this.btnCancel1.UseVisualStyleBackColor = true;
+            this.btnCancel1.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // buttonFormat
+            // 
+            this.buttonFormat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
+            this.buttonFormat.ForeColor = System.Drawing.Color.White;
+            this.buttonFormat.Location = new System.Drawing.Point(590, 371);
+            this.buttonFormat.Name = "buttonFormat";
+            this.buttonFormat.Size = new System.Drawing.Size(123, 28);
+            this.buttonFormat.TabIndex = 15;
+            this.buttonFormat.Text = "Định dạng lại";
+            this.buttonFormat.UseVisualStyleBackColor = true;
+            this.buttonFormat.Click += new System.EventHandler(this.buttonFormat_Click);
             // 
             // checkBoxQuickFormat
             // 
@@ -418,42 +475,6 @@
             this.backgroundFormatWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundFormatWorker_DoWork);
             this.backgroundFormatWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundFormatWorker_ProgressChanged);
             this.backgroundFormatWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundFormatWorker_RunWorkerCompleted);
-            // 
-            // buttonFormat
-            // 
-            this.buttonFormat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
-            this.buttonFormat.ForeColor = System.Drawing.Color.White;
-            this.buttonFormat.Location = new System.Drawing.Point(590, 371);
-            this.buttonFormat.Name = "buttonFormat";
-            this.buttonFormat.Size = new System.Drawing.Size(123, 28);
-            this.buttonFormat.TabIndex = 15;
-            this.buttonFormat.Text = "Định dạng lại";
-            this.buttonFormat.UseVisualStyleBackColor = true;
-            this.buttonFormat.Click += new System.EventHandler(this.buttonFormat_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(714, 371);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(92, 28);
-            this.btnCancel.TabIndex = 14;
-            this.btnCancel.Text = "Hủy bỏ";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnCancel1
-            // 
-            this.btnCancel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(200)))));
-            this.btnCancel1.ForeColor = System.Drawing.Color.White;
-            this.btnCancel1.Location = new System.Drawing.Point(719, 371);
-            this.btnCancel1.Name = "btnCancel1";
-            this.btnCancel1.Size = new System.Drawing.Size(90, 28);
-            this.btnCancel1.TabIndex = 16;
-            this.btnCancel1.Text = "Hủy bỏ";
-            this.btnCancel1.UseVisualStyleBackColor = true;
-            this.btnCancel1.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // BurnDVD
             // 

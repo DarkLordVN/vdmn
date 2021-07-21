@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // ******************************** DLL Import - Native Methods
     // ******************************** Thanks to www.pinvoke.net and others

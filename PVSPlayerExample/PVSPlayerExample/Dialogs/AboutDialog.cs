@@ -7,7 +7,7 @@ using PVS.MediaPlayer;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     // About dialog - shows some information about this sample application (with auto close).
 

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     internal class VideoObj
     {
@@ -47,16 +47,26 @@ namespace PVSPlayerExample
         public VideoObj()
         {
         }
+        public VideoObj(int videoId)
+        {
+            GetById(videoId);
+        }
 
         public DataSet LoadList()
         {
-            var strQuery = "select * from videos ORDER BY video_id desc";
+            var strQuery = "select * from videos t1 left join kekhai t2 ON t1.ke_khai_id = t2.ke_khai_id ORDER BY video_id desc";
             var sql = new SQLite();
             return sql.SQLSelect(strQuery);
         }
-        public DataSet LoadListNew()
+        public DataSet LoadListNew(int id)
         {
-            var strQuery = "select * from videos WHERE ke_khai_id IS NULL OR ke_khai_id = 0 OR ke_khai_id NOT IN (SELECT ke_khai_id FROM kekhai) ORDER BY video_id desc";
+            var strQuery = string.Format("select * from videos WHERE ke_khai_id IS NULL OR ke_khai_id = 0 OR ke_khai_id NOT IN (SELECT ke_khai_id FROM kekhai WHERE ke_khai_id != '{0}') ORDER BY ke_khai_id desc, video_id desc", id);
+            var sql = new SQLite();
+            return sql.SQLSelect(strQuery);
+        }
+        public DataSet LoadListByKeKhaiId(int id)
+        {
+            var strQuery = string.Format("select * from videos WHERE ke_khai_id = '{0}' ORDER BY video_id desc", id);
             var sql = new SQLite();
             return sql.SQLSelect(strQuery);
         }

@@ -10,7 +10,7 @@ using IMAPI2.Interop;
 using IMAPI2.MediaItem;
 
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
 
     public partial class BurnMedia : Form

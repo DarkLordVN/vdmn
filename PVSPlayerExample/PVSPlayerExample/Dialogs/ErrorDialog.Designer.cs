@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class ErrorDialog
     {
@@ -35,7 +35,7 @@ namespace PVSPlayerExample
             this.label1 = new System.Windows.Forms.Label();
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.pvsPanel = new System.Windows.Forms.Panel();
-            this.OKButton = new PVSPlayerExample.CustomButton();
+            this.OKButton = new MediaKCTech.CustomButton();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.copyMenu = new System.Windows.Forms.ContextMenuStrip(this.components);

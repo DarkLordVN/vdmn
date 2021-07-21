@@ -9,12 +9,13 @@ using System.IO;
 using System.IO.Compression;
 using System.Text;
 using System.Windows.Forms;
+using IMAPI2.MediaItem;
 using PVS.AVPlayer;
 using PVS.MediaPlayer;
 
 #endregion
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     /*
         A simple webcam window
@@ -1346,6 +1347,7 @@ namespace PVSPlayerExample
                 startInfo.Arguments = strCmdText;
                 process.StartInfo = startInfo;
                 process.Start();
+
                 //Them vao video
                 VideoObj obj = new VideoObj();
                 obj.FilePath = _pathFolder;
@@ -1357,6 +1359,7 @@ namespace PVSPlayerExample
                     obj.AudioName = _audioInDeviceSelected.Name;
                     obj.AudioId = _audioInDeviceSelected.Id;
                 }
+               
                 obj.ThoiGianGhiHinh = _startRecordTime.ToString("dd/MM/yyyy HH:mm:ss");
                 obj.TiLeKhungHinh = webcamFormatButton.Text;
                 obj.Insert();

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PVSPlayerExample
+namespace MediaKCTech
 {
     partial class TilesOverlay
     {
@@ -20,8 +20,8 @@ namespace PVSPlayerExample
         {
             this.components = new System.ComponentModel.Container();
             this.tilesPanel = new System.Windows.Forms.Panel();
-            this.setButton = new PVSPlayerExample.CustomButton();
-            this.optionsButton = new PVSPlayerExample.DropDownButton();
+            this.setButton = new MediaKCTech.CustomButton();
+            this.optionsButton = new MediaKCTech.DropDownButton();
             this.optionsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tileSourceMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.videoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
